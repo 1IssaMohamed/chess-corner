@@ -35,23 +35,14 @@ export default function PracticePage() {
     opening && line ? makeLineKey(opening.id, line.id) : undefined;
 
   useEffect(() => {
-    if (state.phase === "line_complete" && opening && line) {
-      recordAttempt(
-        opening.id,
-        line.id,
-        state.wrongSteps.length,
-        state.wrongSteps,
-      );
+    const isTerminal =
+      state.phase === "line_complete" || state.phase === "gave_up";
+    if (isTerminal && opening && line) {
+      const penalty =
+        state.wrongSteps.length + (state.phase === "gave_up" ? 1 : 0);
+      recordAttempt(opening.id, line.id, penalty, state.wrongSteps);
     }
-    if (state.phase === "gave_up" && opening && line) {
-      recordAttempt(
-        opening.id,
-        line.id,
-        state.wrongSteps.length + 1,
-        state.wrongSteps,
-      );
-    }
-  }, [state.phase]);
+  }, [state.phase, opening, line, recordAttempt]);
 
   useMoveSounds(state.currentStepIndex, state.phase);
 

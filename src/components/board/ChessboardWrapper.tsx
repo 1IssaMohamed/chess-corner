@@ -35,7 +35,6 @@ export default function ChessboardWrapper({
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    setBoardWidth(Math.floor(el.getBoundingClientRect().width));
     const ro = new ResizeObserver(([entry]) => {
       setBoardWidth(Math.floor(entry.contentRect.width));
     });

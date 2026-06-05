@@ -4,7 +4,7 @@ import {
   Link,
   useSearchParams,
 } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { findLine } from "@/data/openings";
 import { useLearnMode } from "@/hooks/useLearnMode";
 import { useProgress } from "@/hooks/useProgress";
@@ -49,7 +49,7 @@ export default function LearnPage() {
     if (state.phase === "line_complete" && openingId && lineId) {
       markSeen(openingId, lineId);
     }
-  }, [state.phase]);
+  }, [state.phase, openingId, lineId, markSeen]);
 
   useMoveSounds(state.currentStepIndex, state.phase);
 
@@ -114,9 +114,6 @@ export default function LearnPage() {
   const mergedSquareStyles = { ...state.highlightSquares, ...clickHighlights };
 
   const currentMove = line.moves[state.currentStepIndex] ?? null;
-  const wrongMove = state.wrongMoveSan
-    ? line.moves[state.currentStepIndex]
-    : null;
   const expectedSan =
     state.currentStepIndex < line.moves.length
       ? getExpectedSan(line, state.currentStepIndex)
@@ -132,13 +129,20 @@ export default function LearnPage() {
         ) ?? null)
       : null;
 
-  const arrows = state.arrowHint
-    ? [{ startSquare: state.arrowHint[0], endSquare: state.arrowHint[1] }]
-    : [];
+  const arrows = useMemo(
+    () =>
+      state.arrowHint
+        ? [{ startSquare: state.arrowHint[0], endSquare: state.arrowHint[1] }]
+        : [],
+    [state.arrowHint],
+  );
 
-  const orderedLines = getOrderedLines(opening);
-  const currentLineIndex = orderedLines.findIndex((l) => l.id === line.id);
-  const nextSeqLine = orderedLines[currentLineIndex + 1] ?? null;
+  // Stable across the session — opening and line don't change while on this page
+  const nextSeqLine = useMemo(() => {
+    const ordered = getOrderedLines(opening);
+    const idx = ordered.findIndex((l) => l.id === line.id);
+    return ordered[idx + 1] ?? null;
+  }, [opening, line.id]);
 
   return (
     <div className="max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-6 flex flex-col gap-4">
@@ -234,8 +238,8 @@ export default function LearnPage() {
             visible={state.phase === "wrong_move"}
             wrongSan={state.wrongMoveSan ?? ""}
             correctSan={expectedSan}
-            correctMoveExplanation={wrongMove?.explanation}
-            warningMessage={wrongMove?.wrongMoveWarning}
+            correctMoveExplanation={currentMove?.explanation}
+            warningMessage={currentMove?.wrongMoveWarning}
             alternativeLine={wrongMoveAlternativeLine?.name ?? null}
             onDismiss={dismissWrong}
           />
@@ -261,6 +265,7 @@ export default function LearnPage() {
         {/* Info panel */}
         <div className="flex-1 flex flex-col gap-4 min-w-0">
           <MoveExplanation
+            key={state.currentStepIndex}
             move={currentMove}
             stepIndex={state.currentStepIndex}
             totalSteps={line.moves.length}

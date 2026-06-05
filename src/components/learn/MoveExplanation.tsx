@@ -1,4 +1,5 @@
 import type { MoveAnnotation, Side } from "@/types";
+import { isUsersTurn } from "@/utils/chess";
 
 interface MoveExplanationProps {
   move: MoveAnnotation | null;
@@ -27,15 +28,11 @@ export default function MoveExplanation({
   }
 
   const moveNumber = Math.floor(stepIndex / 2) + 1;
-  const isWhiteMove = stepIndex % 2 === 0;
-  const movingColor = isWhiteMove ? "White" : "Black";
-  const isYourMove =
-    (isWhiteMove && learningSide === "white") ||
-    (!isWhiteMove && learningSide === "black");
+  const movingColor = stepIndex % 2 === 0 ? "White" : "Black";
+  const isYourMove = isUsersTurn(stepIndex, learningSide);
 
   return (
     <div
-      key={stepIndex}
       className="rounded-lg p-4 animate-fade-in"
       style={{ background: "var(--bg-elevated)" }}
     >

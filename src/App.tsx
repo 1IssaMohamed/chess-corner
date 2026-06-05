@@ -12,14 +12,11 @@ export default function App() {
         <Route path="/" element={<AppShell />}>
           <Route index element={<HomePage />} />
           <Route path="opening/:openingId" element={<OpeningPage />} />
-          <Route path="learn">
-            <Route index element={<Navigate to="/" replace />} />
-            <Route path=":openingId/:lineId" element={<LearnPage />} />
-          </Route>
-          <Route path="practice">
-            <Route index element={<Navigate to="/" replace />} />
-            <Route path=":openingId/:lineId" element={<PracticePage />} />
-          </Route>
+          <Route path="learn/:openingId/:lineId" element={<LearnPage />} />
+          <Route
+            path="practice/:openingId/:lineId"
+            element={<PracticePage />}
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
