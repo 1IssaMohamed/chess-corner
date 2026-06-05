@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme (default) */
+:root,
+[data-theme="dark"] {
+  --bg-base: #0d0d14;
+  --bg-surface: #14141f;
+  --bg-elevated: #1e1e2e;
+  --border: #2d2d44;
+  --border-subtle: #22223a;
+  --text-primary: #e8e6d9;
+  --text-secondary: #9994a8;
+  --text-muted: #5f5c72;
+  --accent-amber: #d4a017;
+  --accent-amber-hover: #e8b520;
+  --accent-amber-dim: rgba(212, 160, 23, 0.12);
+  --square-dark: #4a7c59;
+  --square-light: #d4c5a9;
+  --danger: #d64545;
+  --danger-bg: rgba(214, 69, 69, 0.1);
+  --success: #2db572;
+  --success-bg: rgba(45, 181, 114, 0.1);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Light theme (warm parchment — clear separation between surface layers) */
+[data-theme="light"] {
+  --bg-base: #ffedd8;
+  --bg-surface: #f3d5b5;
+  --bg-elevated: #e7bc91;
+  --border: #bc8a5f;
+  --border-subtle: #d4a276;
+  --text-primary: #2b1a0a;
+  --text-secondary: #6f4518;
+  --text-muted: #8b5e34;
+  --accent-amber: #a8700c;
+  --accent-amber-hover: #c0820e;
+  --accent-amber-dim: rgba(168, 112, 12, 0.15);
+  --square-dark: #4a7c59;
+  --square-light: #d4c5a9;
+  --danger: #b03a28;
+  --danger-bg: rgba(176, 58, 40, 0.1);
+  --success: #1c8a50;
+  --success-bg: rgba(28, 138, 80, 0.1);
+  --shadow: 0 2px 12px rgba(70, 40, 10, 0.18);
+  --shadow-lg: 0 8px 32px rgba(70, 40, 10, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.opening-card {
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.opening-card:hover {
+  border-color: var(--accent-amber) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

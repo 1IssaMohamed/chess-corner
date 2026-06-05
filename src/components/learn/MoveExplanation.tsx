@@ -1,0 +1,94 @@
+import type { MoveAnnotation, Side } from "@/types";
+
+interface MoveExplanationProps {
+  move: MoveAnnotation | null;
+  stepIndex: number;
+  totalSteps: number;
+  learningSide: Side;
+}
+
+export default function MoveExplanation({
+  move,
+  stepIndex,
+  totalSteps,
+  learningSide,
+}: MoveExplanationProps) {
+  if (!move) {
+    return (
+      <div
+        className="rounded-lg p-4"
+        style={{ background: "var(--bg-elevated)" }}
+      >
+        <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+          Select a line to begin learning.
+        </p>
+      </div>
+    );
+  }
+
+  const moveNumber = Math.floor(stepIndex / 2) + 1;
+  const isWhiteMove = stepIndex % 2 === 0;
+  const movingColor = isWhiteMove ? "White" : "Black";
+  const isYourMove =
+    (isWhiteMove && learningSide === "white") ||
+    (!isWhiteMove && learningSide === "black");
+
+  return (
+    <div
+      key={stepIndex}
+      className="rounded-lg p-4 animate-fade-in"
+      style={{ background: "var(--bg-elevated)" }}
+    >
+      <div className="flex items-center justify-between mb-2">
+        <span
+          className="text-xs font-semibold uppercase tracking-wider"
+          style={{ color: "var(--text-secondary)" }}
+        >
+          Move {moveNumber} ({movingColor})
+        </span>
+        <span className="text-xs" style={{ color: "var(--text-secondary)" }}>
+          {stepIndex + 1}/{totalSteps}
+        </span>
+      </div>
+
+      <div className="flex items-center gap-3 mb-3">
+        <span
+          className="font-mono text-2xl font-bold"
+          style={{ color: "var(--accent-amber)" }}
+        >
+          {move.san}
+        </span>
+        {move.isKeyMove && (
+          <span
+            className="text-xs px-1.5 py-0.5 rounded"
+            style={{
+              background: "rgba(212,160,23,0.15)",
+              color: "var(--accent-amber)",
+            }}
+          >
+            KEY MOVE
+          </span>
+        )}
+        {isYourMove ? (
+          <span className="ml-auto text-xs text-green-400 font-medium">
+            Your move
+          </span>
+        ) : (
+          <span
+            className="ml-auto text-xs"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            Computer plays
+          </span>
+        )}
+      </div>
+
+      <p
+        className="text-sm leading-relaxed"
+        style={{ color: "var(--text-primary)" }}
+      >
+        {move.explanation}
+      </p>
+    </div>
+  );
+}
