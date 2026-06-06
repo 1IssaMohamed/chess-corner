@@ -1,3 +1,5 @@
+// sticky top-0 z-50 keeps the header on top while the page content scrolls under it.
+
 import { Link } from "react-router-dom";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -22,7 +24,7 @@ export default function TopBar() {
           <span className="text-xl" style={{ color: "var(--accent-amber)" }}>
             ♟
           </span>
-          CheesyChess
+          Chess Corner
         </Link>
 
         <button

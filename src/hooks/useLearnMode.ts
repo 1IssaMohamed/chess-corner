@@ -1,3 +1,9 @@
+// The Learn mode brain. All state lives in a useReducer so the whole flow is
+// predictable: dispatch an action, get a new state, React re-renders.
+// Phases: idle → playing → awaiting_user ↔ wrong_move/hint_shown → line_complete
+// "browsing" is a special phase for when you're manually stepping through moves —
+// it works like "playing" but does NOT auto-advance the computer's moves.
+
 import { useReducer, useEffect, useCallback, useRef } from "react";
 import type { LearnState, LearnPhase, Opening, OpeningLine } from "@/types";
 import {
@@ -39,9 +45,9 @@ function makeInitialState(): LearnState {
   };
 }
 
-// Move to an arbitrary step. `restPhase` is the phase used when the landed-on
-// step is the computer's move: "playing" auto-advances (JUMP), "browsing" stops
-// for manual navigation (BACK/BROWSE).
+// Jumps to any step in the line. restPhase decides what happens when you land on
+// a computer move: "playing" kicks off the 700ms auto-advance timer, "browsing"
+// just stops there so you can look around without the computer rushing ahead.
 function goToIndex(
   state: LearnState,
   opening: Opening,
@@ -247,6 +253,8 @@ export function useLearnMode(
   opening: Opening | null,
   line: OpeningLine | null,
 ) {
+  // Refs so closures (event listeners, timeouts) always see the latest values
+  // without needing to be recreated every time opening/line changes.
   const openingRef = useRef(opening);
   const lineRef = useRef(line);
   openingRef.current = opening;
@@ -258,6 +266,8 @@ export function useLearnMode(
     makeInitialState(),
   );
 
+  // Same idea — handleUserMove reads from this ref so it doesn't need to be
+  // re-created every time state changes (which would break drag/click handlers).
   const stateRef = useRef(state);
   stateRef.current = state;
 
@@ -277,6 +287,9 @@ export function useLearnMode(
     }
   }, [state.phase]);
 
+  // Auto-advance the computer's moves. When phase is "playing" and it's not
+  // the user's turn, we wait 700ms then play the next move automatically.
+  // If it IS the user's turn somehow, we dispatch JUMP to flip to awaiting_user.
   useEffect(() => {
     if (state.phase !== "playing") return;
     if (!opening || !line) return;
@@ -290,6 +303,9 @@ export function useLearnMode(
     return () => clearTimeout(timer);
   }, [state.phase, state.currentStepIndex]);
 
+  // Called by the board when the user drags or clicks a piece. Returns true if
+  // the move was accepted (legal + correct), false if not. The board uses this
+  // to know whether to animate the piece or snap it back.
   const handleUserMove = useCallback((from: string, to: string): boolean => {
     const s = stateRef.current;
     if (

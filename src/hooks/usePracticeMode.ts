@@ -1,3 +1,8 @@
+// The Practice mode brain. No hints available here — the user plays from memory.
+// Key difference from Learn mode: wrong moves record a penalty and can show a
+// refutation (opponent capturing the hanging piece) so you see WHY it was bad.
+// Phases: computer_move (800ms delay) ↔ awaiting_user → wrong_move → line_complete/gave_up
+
 import { useReducer, useEffect, useCallback, useRef } from "react";
 import type {
   PracticeState,
@@ -41,6 +46,8 @@ function makeInitialState(): PracticeState {
   };
 }
 
+// Figure out which phase to start in — if step 0 is the user's move, go
+// straight to awaiting_user. Otherwise, let the computer play first.
 function initialPhase(opening: Opening): PracticePhase {
   return isUsersTurn(0, opening.side) ? "awaiting_user" : "computer_move";
 }
@@ -118,10 +125,9 @@ function reduce(
           highlightSquares: buildSquareStyles({ lastMove }),
         };
       }
-      // Play the wrong move out and look for a punishing reply, so the user
-      // sees *why* the move was bad instead of just "try again". If it hangs
-      // material, advance the board through the capture and highlight it;
-      // otherwise leave the board on the wrong move.
+      // Play the wrong move and look for a punishing reply — if the wrong move
+      // hangs a piece, we actually show the opponent capturing it on the board
+      // so the user sees WHY the move was bad, not just "that's wrong, try again".
       const afterWrong = buildGameUpToStep(line, state.currentStepIndex);
       afterWrong.move({ from: action.from, to: action.to, promotion: "q" });
       const ref = findRefutation(afterWrong.fen());
@@ -151,8 +157,8 @@ function reduce(
       };
     }
     case "DISMISS_WRONG": {
-      // Restore the position the user must retry from (the refutation demo, if
-      // any, advanced the board past it).
+      // Restore the position to retry from — the refutation demo might have
+      // advanced the board one extra move, so we rebuild from the line data.
       const fen = line ? getFenAtStep(line, state.currentStepIndex) : state.fen;
       return {
         ...state,
@@ -209,6 +215,8 @@ export function usePracticeMode(
     dispatch({ type: "START", opening, line });
   }, [opening?.id, line?.id]);
 
+  // When it's the computer's turn, wait 800ms then play its move automatically.
+  // The delay makes it feel like the opponent is "thinking" rather than instant.
   useEffect(() => {
     if (state.phase !== "computer_move") return;
     const timer = setTimeout(() => {

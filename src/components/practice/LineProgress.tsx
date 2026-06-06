@@ -1,3 +1,6 @@
+// Shows your personal stats for this specific line — mastery level, attempt
+// count, success rate, and streak. Hidden until you've actually practiced.
+
 import type { LineProgress as LineProgressType } from "@/types";
 import ProgressBar from "@/components/ui/ProgressBar";
 

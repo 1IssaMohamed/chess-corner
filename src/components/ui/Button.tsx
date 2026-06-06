@@ -1,3 +1,6 @@
+// General-purpose button. Pass variant for colour and size for padding/text size.
+// All HTML button attributes (onClick, disabled, title, etc.) work as usual.
+
 import { type ButtonHTMLAttributes } from "react";
 
 type Variant = "primary" | "secondary" | "ghost" | "danger";

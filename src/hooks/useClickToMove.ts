@@ -1,3 +1,7 @@
+// Handles click-to-move: first click selects a piece and highlights its legal
+// destinations, second click on a destination submits the move. Also works
+// alongside drag — both use handleUserMove, which does the actual validation.
+
 import { useState, useCallback, useEffect } from "react";
 import type { CSSProperties } from "react";
 import { Chess } from "chess.js";
@@ -25,15 +29,17 @@ export function useClickToMove(
       }
 
       if (selectedSquare) {
+        // second click — try to complete the move
         const success = handleUserMove(selectedSquare, square);
         if (success) {
           clearSelection();
           return;
         }
-        // Failed — maybe they clicked another piece of their own color
+        // move failed — maybe they clicked a different piece of their own color,
+        // so fall through and try to select that square instead
       }
 
-      // Try to select this square
+      // first click (or re-select after failed move) — highlight legal destinations
       try {
         const chess = new Chess(fen);
         const moves = chess.moves({
@@ -45,11 +51,11 @@ export function useClickToMove(
           return;
         }
         const highlights: Record<string, CSSProperties> = {
-          [square]: {
-            background: "rgba(255,224,102,0.85)",
-          },
+          // yellow tint on the selected piece
+          [square]: { background: "rgba(255,224,102,0.85)" },
         };
         for (const m of moves) {
+          // small dot on each square the piece can legally go to
           highlights[m.to] = {
             background:
               "radial-gradient(circle, rgba(0,0,0,0.35) 28%, transparent 28%)",

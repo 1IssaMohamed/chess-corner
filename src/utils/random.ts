@@ -1,3 +1,6 @@
+// Weighted random line selection — lines you haven't practiced much or that you
+// get wrong a lot get picked more often. The idea is to focus you on weak spots.
+
 import type { Opening, ProgressStore } from "@/types";
 import { getLineProgress } from "@/stores/progressStore";
 
@@ -11,6 +14,9 @@ function errorWeight(
   return 1 + Math.min(errorRate * 3, 3); // 1× to 4× boost for error-prone lines
 }
 
+// Base weight comes from mastery level (unseen=4, mastered=1) so you never
+// completely stop seeing mastered lines — they're just less frequent.
+// Then multiplied by errorWeight so your trouble lines surface more often.
 function lineWeight(
   store: ProgressStore,
   openingId: string,
@@ -24,6 +30,8 @@ function lineWeight(
   );
 }
 
+// Standard weighted random: roll a number in [0, totalWeight), then walk the
+// list subtracting each weight until you go negative — that's your pick.
 function weightedPick<T extends { weight: number }>(candidates: T[]): T {
   const total = candidates.reduce((s, c) => s + c.weight, 0);
   let rand = Math.random() * total;

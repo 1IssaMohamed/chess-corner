@@ -1,6 +1,12 @@
+// Pure functions for reading and writing progress to localStorage.
+// Every function that "changes" something returns a NEW ProgressStore object
+// rather than mutating the existing one — keeps state management predictable.
+
 import type { LineProgress, MasteryLevel, ProgressStore } from "@/types";
 
-const STORAGE_KEY = "cheesychess_progress";
+// The localStorage key and schema version. Bump CURRENT_VERSION + add a
+// migration case in migrateProgressStore whenever the LineProgress shape changes.
+const STORAGE_KEY = "chesscorner_progress";
 const CURRENT_VERSION = 2;
 
 export function makeLineKey(openingId: string, lineId: string): string {
@@ -30,6 +36,8 @@ function emptyStore(): ProgressStore {
   };
 }
 
+// Handles loading data saved by an older version of the app. When we add new
+// fields to LineProgress, old saved data won't have them — this backfills them.
 export function migrateProgressStore(raw: unknown): ProgressStore {
   if (typeof raw !== "object" || raw === null) return emptyStore();
   const obj = raw as Record<string, unknown>;
@@ -81,6 +89,10 @@ export function getLineProgress(
   );
 }
 
+// The mastery level ladder:
+//   0 = never opened  1 = finished Learn  2 = practiced at least once
+//   3 = mastered — requires 3 clean practice runs AND a current streak of ≥ 2
+// The streak requirement means you can't just lucky your way to mastered in one go.
 export function computeMastery(lp: LineProgress): MasteryLevel {
   if (lp.practiceSuccesses >= 3 && lp.currentStreak >= 2) return 3;
   if (lp.practiceSuccesses >= 1) return 2;
@@ -88,6 +100,8 @@ export function computeMastery(lp: LineProgress): MasteryLevel {
   return 0;
 }
 
+// Called when a user finishes Learn mode on a line for the first time.
+// Only bumps mastery to 1 if they haven't practiced it yet (higher mastery wins).
 export function markLineSeen(
   store: ProgressStore,
   openingId: string,
@@ -109,6 +123,9 @@ export function markLineSeen(
   };
 }
 
+// Called at the end of a practice session (whether the user finished or gave up).
+// penalties = number of wrong moves + 1 if gave up. A perfect run = penalties 0.
+// wrongSteps tracks which step indices you got wrong, so we can show "stumbles on X" in the UI.
 export function recordPracticeAttempt(
   store: ProgressStore,
   openingId: string,

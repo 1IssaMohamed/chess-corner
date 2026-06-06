@@ -1,3 +1,7 @@
+// Opening detail page — shows the description, "Learn All" / "Practice Random"
+// buttons, and all lines grouped by difficulty. Also shows per-line stats like
+// accuracy percentage and which move you stumble on most often.
+
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { findOpening } from "@/data/openings";
 import { useProgress } from "@/hooks/useProgress";
@@ -20,6 +24,8 @@ function difficultyStyle(d: OpeningLine["difficulty"]) {
   return { color: "var(--danger)", bg: "var(--danger-bg)" };
 }
 
+// Shows success% on the line card — hidden until you've actually attempted it.
+// Color-coded: green ≥80%, amber ≥60%, red below.
 function AccuracyBadge({ progress }: { progress: LineProgress }) {
   if (progress.practiceAttempts === 0) return null;
   const pct = Math.round(
@@ -41,6 +47,8 @@ function AccuracyBadge({ progress }: { progress: LineProgress }) {
   );
 }
 
+// Digs out the single step you've gotten wrong most often and shows it as
+// "Stumbles on: Nf6". Only appears if you've gotten the same step wrong ≥2 times.
 function WeakMoveHint({
   progress,
   line,
@@ -91,6 +99,8 @@ export default function OpeningPage() {
 
   const orderedLines = getOrderedLines(opening);
 
+  // Group lines by difficulty for the section headers. Filter out empty groups
+  // so we don't render a "Beginner" header if there happen to be no beginner lines.
   const byDifficulty = DIFFICULTY_ORDER.map((diff) => ({
     difficulty: diff,
     lines: orderedLines.filter((l) => l.difficulty === diff),

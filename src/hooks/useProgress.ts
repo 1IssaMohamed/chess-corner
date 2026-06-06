@@ -1,3 +1,6 @@
+// React hook that wraps progressStore. Holds the current store in React state
+// so components re-render when progress changes, and keeps localStorage in sync.
+
 import { useState, useCallback, useMemo } from "react";
 import {
   loadProgress,
@@ -11,6 +14,8 @@ import type { LineProgress, ProgressStore } from "@/types";
 export function useProgress() {
   const [store, setStore] = useState<ProgressStore>(loadProgress);
 
+  // Saves to localStorage AND updates React state in one shot — always do both
+  // together so the UI and the persisted data stay in sync.
   const update = useCallback((next: ProgressStore) => {
     saveProgress(next);
     setStore(next);

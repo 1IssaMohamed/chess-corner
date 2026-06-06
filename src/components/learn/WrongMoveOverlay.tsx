@@ -1,3 +1,7 @@
+// Slides up from the bottom-right corner when you play a wrong move.
+// Fixed positioning so it floats over the layout. Width is capped at 360px
+// but also uses calc(100vw - 48px) so it doesn't overflow on small screens.
+
 interface WrongMoveOverlayProps {
   visible: boolean;
   wrongSan: string;

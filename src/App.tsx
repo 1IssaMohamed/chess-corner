@@ -1,3 +1,8 @@
+// HashRouter instead of BrowserRouter because GitHub Pages serves static files —
+// it doesn't know about /learn/xyz, so any direct URL would 404. With HashRouter,
+// routes live in the URL fragment (#/learn/xyz) which is client-side only and
+// never sent to the server. All navigation just works.
+
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import AppShell from "@/components/layout/AppShell";
 import HomePage from "@/components/home/HomePage";

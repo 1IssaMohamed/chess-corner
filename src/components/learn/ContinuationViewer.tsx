@@ -1,3 +1,7 @@
+// The "see the idea" mini-board that auto-plays after line_complete.
+// Shows continuation moves with a 900ms delay between each, then stops and lets
+// you step through manually or replay. The board is read-only — no dragging.
+
 import { useState, useEffect, useMemo } from "react";
 import type { OpeningLine, Side } from "@/types";
 import { buildContinuationFens } from "@/utils/chess";
@@ -42,6 +46,8 @@ export default function ContinuationViewer({
     setPlaying(true);
   };
 
+  // step is the FEN index (0 = starting position of continuation), so the move
+  // that GOT us to this position is continuation[step - 1].
   const currentMove = step > 0 ? continuation[step - 1] : null;
   const atStart = step === 0;
   const atEnd = step >= fens.length - 1;

@@ -34,6 +34,10 @@ export default function PracticePage() {
   const currentKey =
     opening && line ? makeLineKey(opening.id, line.id) : undefined;
 
+  // Record the attempt when the session ends (either completed or gave up).
+  // Giving up adds an extra penalty point on top of any wrong moves so far.
+  // This fires on phase change — the effect re-runs any time phase changes,
+  // but only does anything when the phase is actually terminal.
   useEffect(() => {
     const isTerminal =
       state.phase === "line_complete" || state.phase === "gave_up";
@@ -54,6 +58,18 @@ export default function PracticePage() {
       navigate("/");
     }
   };
+
+  // Hooks must come before early returns (React rules) — null-safe here.
+  const isUserTurn =
+    !!opening &&
+    state.phase === "awaiting_user" &&
+    isUsersTurn(state.currentStepIndex, opening.side);
+
+  const { onSquareClick, clickHighlights } = useClickToMove(
+    state.fen,
+    isUserTurn,
+    handleUserMove,
+  );
 
   if (!opening || !line) {
     return (
@@ -76,16 +92,6 @@ export default function PracticePage() {
     state.currentStepIndex < line.moves.length
       ? getExpectedSan(line, state.currentStepIndex)
       : "";
-
-  const isUserTurn =
-    state.phase === "awaiting_user" &&
-    isUsersTurn(state.currentStepIndex, opening.side);
-
-  const { onSquareClick, clickHighlights } = useClickToMove(
-    state.fen,
-    isUserTurn,
-    handleUserMove,
-  );
 
   const mergedSquareStyles = { ...state.highlightSquares, ...clickHighlights };
 

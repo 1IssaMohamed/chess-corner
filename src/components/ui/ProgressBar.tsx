@@ -1,3 +1,6 @@
+// Simple horizontal progress bar. value/max get turned into a percentage.
+// Math.min(100, ...) guards against value > max so the bar never overflows.
+
 interface ProgressBarProps {
   value: number;
   max: number;

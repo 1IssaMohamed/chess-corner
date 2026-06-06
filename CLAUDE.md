@@ -1,4 +1,4 @@
-# CheesyChess — CLAUDE.md
+# Chess Corner — CLAUDE.md
 
 ## What This Is
 
@@ -68,7 +68,7 @@ gave_up → (retry or next line)
 
 ## Progress Schema
 
-- localStorage key: `cheesychess_progress`
+- localStorage key: `chesscorner_progress`
 - Line key format: `${openingId}::${lineId}`
 - Mastery levels: 0=unseen, 1=seen (completed Learn), 2=practiced, 3=mastered
 - Upgrade to mastery 3: practiceSuccesses >= 3 AND currentStreak >= 2

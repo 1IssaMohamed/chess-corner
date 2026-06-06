@@ -1,9 +1,16 @@
+// All chess.js helpers live here. Nothing stateful — every function takes what
+// it needs and spits out a result, so they're safe to call from anywhere.
+
 import { Chess } from "chess.js";
+import type { CSSProperties } from "react";
 import type { OpeningLine, Side, ContinuationMove } from "@/types";
 
 export const STARTING_FEN =
   "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
+// Replays moves[0..stepIndex-1] on a fresh Chess instance and returns it.
+// We NEVER reuse a Chess instance across renders — chess.js is mutable and if
+// you hold onto one across renders you'll get wrong positions. Always build fresh.
 export function buildGameUpToStep(line: OpeningLine, stepIndex: number): Chess {
   const chess = new Chess();
   const moves = line.moves.slice(0, stepIndex);
@@ -18,6 +25,7 @@ export function buildGameUpToStep(line: OpeningLine, stepIndex: number): Chess {
   return chess;
 }
 
+// Shortcut when you only need the FEN string, not the full chess.js instance.
 export function getFenAtStep(line: OpeningLine, stepIndex: number): string {
   return buildGameUpToStep(line, stepIndex).fen();
 }
@@ -26,6 +34,8 @@ export function getExpectedSan(line: OpeningLine, stepIndex: number): string {
   return line.moves[stepIndex]?.san ?? "";
 }
 
+// Tries the move on the given chess instance. Returns the SAN if legal, null if
+// not. Promotion always defaults to queen — we skip the picker dialog entirely.
 export function isMoveLegal(
   chess: Chess,
   from: string,
@@ -40,18 +50,23 @@ export function isMoveLegal(
   }
 }
 
+// Strips check (+), checkmate (#), and annotation symbols before comparing.
+// Without this, a correct move like "Nf3+" would fail to match "Nf3" in the data.
 export function movesMatch(attempted: string, expected: string): boolean {
   const normalize = (san: string) => san.replace(/[+#!?]/g, "").trim();
   return normalize(attempted) === normalize(expected);
 }
 
+// Even step index = White's move, odd = Black's. So if you're learning White,
+// your turns are steps 0, 2, 4… and the computer plays 1, 3, 5… etc.
 export function isUsersTurn(stepIndex: number, learningSide: Side): boolean {
   const moveColor = stepIndex % 2 === 0 ? "white" : "black";
   return moveColor === learningSide;
 }
 
-// Returns the sequence of FENs for the line's continuation moves, starting with
-// the final position of the line itself. Stops gracefully on any invalid SAN.
+// Builds the list of FEN positions for a line's continuation moves, starting
+// with the final position of the line itself. Used by ContinuationViewer to
+// step through the "here's what happens next" mini-board.
 export function buildContinuationFens(
   line: OpeningLine,
   continuation: ContinuationMove[],
@@ -66,6 +81,8 @@ export function buildContinuationFens(
   return fens;
 }
 
+// Pawns don't count in the hanging-piece check — losing a pawn in an opening
+// isn't always a blunder, so we only flag knights/bishops and above.
 const PIECE_VALUES: Record<string, number> = {
   p: 1,
   n: 3,
@@ -92,10 +109,13 @@ export function pieceName(letter: string): string {
   }
 }
 
-// Conservatively finds a punishing reply for the side to move in `fen`: the
-// highest-value capture (minor piece or better) of a piece that the opponent
-// CANNOT recapture on that square — i.e. a genuinely hanging piece. Returns null
-// when the position has no such clean win, so we never falsely cry "blunder".
+// ok so this is the fun one — when you play a wrong move in Practice, we check
+// whether your move just left a piece hanging. Algorithm:
+//   1. Find all captures the opponent can make on the resulting position
+//   2. Only look at captures worth ≥ 3 (knight/bishop minimum)
+//   3. For each capture candidate, simulate it and check if YOU can recapture
+//   4. If not — the piece is genuinely hanging. Show that capture on the board.
+// Returns null if nothing hangs, so we don't cry "blunder" on every wrong move.
 export function findRefutation(
   fen: string,
 ): { san: string; from: string; to: string; capturedPiece: string } | null {
@@ -112,6 +132,7 @@ export function findRefutation(
   for (const cap of captures) {
     const probe = new Chess(fen);
     probe.move({ from: cap.from, to: cap.to, promotion: "q" });
+    // after the capture, can the side who just got hit recapture on that square?
     const canRecapture = probe
       .moves({ verbose: true })
       .some((r) => r.to === cap.to && r.captured);
@@ -127,16 +148,19 @@ export function findRefutation(
   return null;
 }
 
+// Builds the square highlight styles object that react-chessboard expects.
+// Pass in whichever combination you need — they get merged together.
+// Amber = last move or hint target, red = wrong move, green = selected piece.
 export function buildSquareStyles(opts: {
   lastMove?: { from: string; to: string } | null;
   wrongSquares?: { from: string; to: string } | null;
   hintSquares?: { from: string; to: string } | null;
   selectedSquare?: string | null;
-}): Record<string, React.CSSProperties> {
-  const styles: Record<string, React.CSSProperties> = {};
+}): Record<string, CSSProperties> {
+  const styles: Record<string, CSSProperties> = {};
 
   if (opts.lastMove) {
-    const lastMoveStyle: React.CSSProperties = {
+    const lastMoveStyle: CSSProperties = {
       backgroundColor: "rgba(212, 160, 23, 0.25)",
     };
     styles[opts.lastMove.from] = lastMoveStyle;
@@ -144,7 +168,7 @@ export function buildSquareStyles(opts: {
   }
 
   if (opts.wrongSquares) {
-    const wrongStyle: React.CSSProperties = {
+    const wrongStyle: CSSProperties = {
       backgroundColor: "rgba(192, 57, 43, 0.5)",
     };
     styles[opts.wrongSquares.from] = wrongStyle;

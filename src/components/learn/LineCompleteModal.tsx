@@ -1,3 +1,7 @@
+// Full-screen overlay shown when you finish a line. In Learn mode it can show
+// the continuation viewer ("See the idea →"). In Practice mode it shows your
+// mistake count and offers retry or next line.
+
 import { useState } from "react";
 import type { OpeningLine, Side } from "@/types";
 import ContinuationViewer from "./ContinuationViewer";

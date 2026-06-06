@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 type BadgeVariant =
   | "white"
   | "black"
@@ -9,7 +11,7 @@ type BadgeVariant =
 
 interface BadgeProps {
   variant?: BadgeVariant;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 

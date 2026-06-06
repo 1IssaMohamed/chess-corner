@@ -1,3 +1,7 @@
+// Shows the current move's number, SAN, "Your move / Computer plays" label,
+// and explanation text. Gets remounted on each step change via key={stepIndex}
+// in LearnPage, which re-fires the fade-in animation.
+
 import type { MoveAnnotation, Side } from "@/types";
 import { isUsersTurn } from "@/utils/chess";
 
@@ -27,6 +31,8 @@ export default function MoveExplanation({
     );
   }
 
+  // Convert linear step index to chess move number (1-based, one number per pair
+  // of moves). Step 0 and 1 = move 1, step 2 and 3 = move 2, etc.
   const moveNumber = Math.floor(stepIndex / 2) + 1;
   const movingColor = stepIndex % 2 === 0 ? "White" : "Black";
   const isYourMove = isUsersTurn(stepIndex, learningSide);

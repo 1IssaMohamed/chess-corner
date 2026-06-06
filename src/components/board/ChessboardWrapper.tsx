@@ -1,3 +1,9 @@
+// ok so this is the tricky bit — react-chessboard requires an explicit pixel
+// boardWidth prop, it doesn't size itself from CSS. So we use a ResizeObserver
+// on the container div to measure its actual width and pass that number in.
+// This also fixes zoom issues: when the user zooms in/out, CSS pixel sizes change
+// and the ResizeObserver fires, so the board re-renders at the correct size.
+
 import { Chessboard } from "react-chessboard";
 import type { Side } from "@/types";
 import { useRef, useState, useEffect } from "react";
@@ -38,15 +44,19 @@ export default function ChessboardWrapper({
     const ro = new ResizeObserver(([entry]) => {
       setBoardWidth(Math.floor(entry.contentRect.width));
     });
+    // ResizeObserver fires immediately with the current size on the first observe()
+    // call, so we don't need a separate getBoundingClientRect() to get the initial size.
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // react-chessboard's customArrows type is [string, string, string?][] but the
+  // library's TS definitions don't export it cleanly, so we cast through unknown.
   const boardArrows = arrows.map((a) => [
     a.startSquare,
     a.endSquare,
     a.color ?? "rgba(212, 160, 23, 0.75)",
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ]) as unknown as any[];
 
   return (
@@ -54,6 +64,8 @@ export default function ChessboardWrapper({
       ref={containerRef}
       className="w-full rounded-lg overflow-hidden ring-2 ring-chess-border/40 shadow-2xl"
     >
+      {/* Don't render the board until we have a real pixel measurement — avoids
+          a frame where the board renders at 0px width and then jumps to full size */}
       {boardWidth > 0 && (
         <Chessboard
           boardWidth={boardWidth}

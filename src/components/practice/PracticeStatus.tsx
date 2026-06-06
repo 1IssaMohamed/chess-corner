@@ -1,3 +1,6 @@
+// Shows your current position in the line, mistake count (✗ marks), and a
+// status label that changes based on the current phase.
+
 import type { PracticePhase } from "@/types";
 
 interface PracticeStatusProps {
@@ -13,6 +16,8 @@ export default function PracticeStatus({
   stepIndex,
   totalSteps,
 }: PracticeStatusProps) {
+  // Cap the displayed ✗ marks at 5 — more than that and we just show the count
+  // as a number. Otherwise the row gets too wide.
   const penalties = Math.min(penaltyCount, 5);
 
   return (

@@ -1,21 +1,25 @@
+// Dark/light mode toggle. Theme is stored in localStorage between sessions and
+// applied via a `data-theme` attribute on the <html> element, which the CSS
+// variables in index.css pick up to swap the whole colour palette at once.
+
 import { useState, useEffect } from "react";
 
-export type Theme = "dark" | "light";
+export type Theme = "light" | "light";
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("cheesychess_theme") as Theme) ?? "dark";
+      return (localStorage.getItem("chesscorner_theme") as Theme) ?? "light";
     }
-    return "dark";
+    return "light";
   });
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("cheesychess_theme", theme);
+    localStorage.setItem("chesscorner_theme", theme);
   }, [theme]);
 
-  const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+  const toggle = () => setTheme((t) => (t === "light" ? "light" : "light"));
 
   return { theme, toggle };
 }

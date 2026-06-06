@@ -1,3 +1,6 @@
+// Clickable move list showing all moves paired up (White then Black per row).
+// Clicking any move jumps to that step in the line.
+
 import type { MoveAnnotation } from "@/types";
 
 interface MoveListProps {
@@ -11,6 +14,8 @@ export default function MoveList({
   currentIndex,
   onClickStep,
 }: MoveListProps) {
+  // Group the flat moves array into [{ moveNumber, white, black }] pairs so we
+  // can render them on the same row like a real chess score sheet.
   const pairs: Array<{
     white: MoveAnnotation | null;
     black: MoveAnnotation | null;
@@ -81,6 +86,8 @@ function MoveChip({
   currentIndex: number;
   onClick: () => void;
 }) {
+  // "active" = the move you just played (one behind the current step pointer)
+  // "future" = moves you haven't reached yet (dimmed so past moves stand out)
   const isActive = index === currentIndex - 1;
   const isFuture = index >= currentIndex;
 

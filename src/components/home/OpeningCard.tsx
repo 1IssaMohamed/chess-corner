@@ -1,3 +1,6 @@
+// Opening card on the home page. Clicking anywhere navigates to the opening
+// detail page. role="button" + onKeyDown makes it accessible via keyboard too.
+
 import { useNavigate } from "react-router-dom";
 import type { Opening, ProgressStore } from "@/types";
 import { getOpeningMasteryPercent } from "@/utils/progress";

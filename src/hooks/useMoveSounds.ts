@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { playMove, playWrong, playComplete } from "@/utils/sounds";
 
-// Plays a click on each move, a buzz on a wrong move, and a chime on completion.
-// Works for both Learn and Practice phases (the excluded phases simply never occur
-// in one mode or the other).
+// Plays sound effects based on what just changed. We track previous values in
+// refs so we can detect when step or phase actually changes inside the effect.
+// Using refs instead of state means we don't trigger extra re-renders.
 export function useMoveSounds(currentStepIndex: number, phase: string) {
   const prevStep = useRef(currentStepIndex);
   const prevPhase = useRef(phase);

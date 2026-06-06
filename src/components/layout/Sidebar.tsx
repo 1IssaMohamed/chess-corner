@@ -22,7 +22,7 @@ export default function Sidebar() {
               className="font-bold text-base"
               style={{ color: "var(--accent-amber)" }}
             >
-              CheesyChess
+              Chess Corner
             </div>
             <div className="text-xs" style={{ color: "var(--text-secondary)" }}>
               Opening Repertoire

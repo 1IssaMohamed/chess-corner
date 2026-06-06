@@ -1,3 +1,11 @@
+// All sound synthesis happens here via the Web Audio API. No audio files needed —
+// we generate everything programmatically. Two types of sounds:
+//   percussive — shaped noise burst, used for move clicks
+//   chime      — sine wave with a fade, used for wrong-move buzz and completion
+
+// Single AudioContext shared across all sounds. Browsers require a user gesture
+// before audio can play — the resume() call handles the "suspended" state that
+// happens when the context is first created before any interaction.
 let ctx: AudioContext | null = null;
 
 function getCtx(): AudioContext {
@@ -6,11 +14,14 @@ function getCtx(): AudioContext {
   return ctx;
 }
 
+// Makes a clicky thud sound. Fills a buffer with white noise, then shapes it
+// with a steep exponential decay so it goes from loud to silent fast, and runs
+// it through a bandpass filter to give it a pitched "character" (higher freq = brighter).
 function percussive(freq: number, durationSec: number, vol: number) {
   const c = getCtx();
   const now = c.currentTime;
 
-  // Short noise burst shaped with an exponential decay envelope
+  // exponential decay: loud at start, nearly silent by the end of the buffer
   const bufLen = Math.ceil(c.sampleRate * durationSec);
   const buf = c.createBuffer(1, bufLen, c.sampleRate);
   const data = buf.getChannelData(0);
@@ -35,6 +46,8 @@ function percussive(freq: number, durationSec: number, vol: number) {
   src.start(now);
 }
 
+// Pure sine wave tone that fades in quickly then decays. Multiple chime calls
+// with different delays stack up to make the completion "ding ding ding" sound.
 function chime(freq: number, durationSec: number, vol: number, delay = 0) {
   const c = getCtx();
   const now = c.currentTime + delay;

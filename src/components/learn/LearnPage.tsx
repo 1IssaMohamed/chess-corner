@@ -53,7 +53,8 @@ export default function LearnPage() {
 
   useMoveSounds(state.currentStepIndex, state.phase);
 
-  // Current step held in a ref so the nav listeners bind once, not per move.
+  // stepRef lets the keyboard and scroll handlers always read the latest step
+  // without needing to re-attach listeners every time the step changes.
   const stepRef = useRef(state.currentStepIndex);
   stepRef.current = state.currentStepIndex;
 
@@ -67,7 +68,9 @@ export default function LearnPage() {
     return () => window.removeEventListener("keydown", handleKey);
   }, [goBack, browseTo]);
 
-  // Scroll wheel navigation on the board column
+  // Scroll wheel navigation, scoped to the board column only. passive: false is
+  // required so e.preventDefault() can stop the page from scrolling at the same
+  // time — otherwise you'd scroll through moves AND scroll the page at once.
   const boardColRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = boardColRef.current;
@@ -80,6 +83,42 @@ export default function LearnPage() {
     el.addEventListener("wheel", handleWheel, { passive: false });
     return () => el.removeEventListener("wheel", handleWheel);
   }, [goBack, browseTo]);
+
+  // Hooks must be called before any early return — React requires consistent
+  // hook call order on every render. These are safe to call with null opening/line
+  // because they handle the null case internally.
+
+  const isUserTurn =
+    !!opening &&
+    (state.phase === "awaiting_user" ||
+      state.phase === "hint_shown" ||
+      state.phase === "browsing") &&
+    isUsersTurn(state.currentStepIndex, opening.side);
+
+  // clickHighlights overlay on top of state highlights (last move, hint, etc.)
+  const { onSquareClick, clickHighlights } = useClickToMove(
+    state.fen,
+    isUserTurn,
+    handleUserMove,
+  );
+
+  const arrows = useMemo(
+    () =>
+      state.arrowHint
+        ? [{ startSquare: state.arrowHint[0], endSquare: state.arrowHint[1] }]
+        : [],
+    [state.arrowHint],
+  );
+
+  // Pre-compute the next line in sequential mode so the complete modal can show
+  // "Next up: X". opening and line.id don't change while on this page, so this
+  // only recalculates if you somehow navigate to a different opening.
+  const nextSeqLine = useMemo(() => {
+    if (!opening || !line) return null;
+    const ordered = getOrderedLines(opening);
+    const idx = ordered.findIndex((l) => l.id === line.id);
+    return ordered[idx + 1] ?? null;
+  }, [opening, line?.id]);
 
   if (!opening || !line) {
     return (
@@ -98,19 +137,6 @@ export default function LearnPage() {
     );
   }
 
-  const isUserTurn =
-    (state.phase === "awaiting_user" ||
-      state.phase === "hint_shown" ||
-      state.phase === "browsing") &&
-    isUsersTurn(state.currentStepIndex, opening.side);
-
-  // Click-to-move
-  const { onSquareClick, clickHighlights } = useClickToMove(
-    state.fen,
-    isUserTurn,
-    handleUserMove,
-  );
-
   const mergedSquareStyles = { ...state.highlightSquares, ...clickHighlights };
 
   const currentMove = line.moves[state.currentStepIndex] ?? null;
@@ -119,7 +145,8 @@ export default function LearnPage() {
       ? getExpectedSan(line, state.currentStepIndex)
       : "";
 
-  // Detect if wrong move belongs to another line in the opening
+  // If the wrong move happens to be the book move for a different line in the
+  // same opening, we tell the user "that's the move for the X line — wrong line!"
   const wrongMoveAlternativeLine =
     state.wrongMoveSan && opening
       ? (opening.lines.find(
@@ -128,21 +155,6 @@ export default function LearnPage() {
             l.moves[state.currentStepIndex]?.san === state.wrongMoveSan,
         ) ?? null)
       : null;
-
-  const arrows = useMemo(
-    () =>
-      state.arrowHint
-        ? [{ startSquare: state.arrowHint[0], endSquare: state.arrowHint[1] }]
-        : [],
-    [state.arrowHint],
-  );
-
-  // Stable across the session — opening and line don't change while on this page
-  const nextSeqLine = useMemo(() => {
-    const ordered = getOrderedLines(opening);
-    const idx = ordered.findIndex((l) => l.id === line.id);
-    return ordered[idx + 1] ?? null;
-  }, [opening, line.id]);
 
   return (
     <div className="max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-6 flex flex-col gap-4">
@@ -264,6 +276,10 @@ export default function LearnPage() {
 
         {/* Info panel */}
         <div className="flex-1 flex flex-col gap-4 min-w-0">
+          {/* key here is important — it makes React fully unmount and remount
+              MoveExplanation on each step change, which re-triggers the
+              animate-fade-in CSS animation. Without key, React reuses the element
+              and the animation never fires again after the first step. */}
           <MoveExplanation
             key={state.currentStepIndex}
             move={currentMove}
