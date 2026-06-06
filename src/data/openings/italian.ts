@@ -161,6 +161,30 @@ const italian: Opening = {
             "Black recaptures with the f-pawn, but the doubled e-pawns are a weakness.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "O-O",
+          idea: "White castles and prepares to exploit Black's passive pieces. Development and activity beat passive defense.",
+        },
+        {
+          san: "Ke7",
+          idea: "Black's king steps toward the center to connect the rooks — but it's slightly awkward.",
+        },
+        {
+          san: "Rfe1",
+          idea: "White's f-rook moves to e1, targeting the weak e6 pawn and keeping pressure on the e-file.",
+        },
+        {
+          san: "Kd6",
+          idea: "Black's king marches to d6 — unusual, but necessary to support the e6 pawn.",
+        },
+        {
+          san: "Nd5",
+          idea: "White's knight jumps to the dominant d5 outpost. The Hungarian Defence illustrates the danger of passive play — small advantages accumulate into a clearly worse endgame with no counterplay in sight.",
+        },
+      ],
+      continuationIdea:
+        "The Hungarian Defence gives White a free hand. Black's pieces are passive, the e6 pawn is a target, and the king is slightly awkward. White simply develops normally and puts pressure on Black's weaknesses. It's a great opening to practice against — beating passive setups is a fundamental skill.",
     },
     {
       id: "giuoco-piano",
@@ -226,6 +250,30 @@ const italian: Opening = {
             "White pushes d5 to drive back Black's pieces and open more lines.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bb3",
+          idea: "White retreats the bishop to b3, safe and still controlling d5.",
+        },
+        {
+          san: "O-O",
+          idea: "Black castles into safety before White's development advantage becomes overwhelming.",
+        },
+        {
+          san: "Re1",
+          idea: "White centralises the rook, reinforcing e4 and preparing central pressure.",
+        },
+        {
+          san: "Bg4",
+          idea: "Black pins the Nf3, trying to relieve the pressure on the kingside.",
+        },
+        {
+          san: "Bxd5",
+          idea: "White recaptures the pawn with the bishop. The Open Italian consistently gives White active piece play — the bishop pair and central control are long-term assets.",
+        },
+      ],
+      continuationIdea:
+        "The Giuoco Piano's d4 push creates open lines and active piece play for White. The bishop pair and strong center give a lasting structural advantage. Black has to defend precisely and find counterplay — not easy with White's pieces already well-placed.",
     },
     {
       id: "evans-gambit",
@@ -287,6 +335,30 @@ const italian: Opening = {
         },
         { san: "Nxd5", explanation: "Black recaptures with the knight." },
       ],
+      continuationMoves: [
+        {
+          san: "Bb3",
+          idea: "White retreats the bishop to safety before the central complications unfold.",
+        },
+        {
+          san: "O-O",
+          idea: "Black castles — getting the king to safety while material is still flying.",
+        },
+        {
+          san: "Bxd5",
+          idea: "White captures the centrally placed knight, gaining back the piece.",
+        },
+        {
+          san: "Qxd5",
+          idea: "Black recaptures with the queen — centrally placed but somewhat exposed.",
+        },
+        {
+          san: "Nc3",
+          idea: "White develops and attacks the queen. The Evans Gambit's development lead is the point — Black can't castle efficiently while White's pieces all coordinate instantly. This is 19th-century attacking chess at its finest.",
+        },
+      ],
+      continuationIdea:
+        "The Evans Gambit gives White a monstrous development lead and attacking chances that never stop. Black scrambles to return the pawn and stabilize, but White's pieces are already optimally placed. Morphy, Kasparov, and countless attacking players have wielded this gambit for 200 years — the practical problems it creates are just too difficult to solve over the board.",
     },
     {
       id: "scotch-gambit",
@@ -347,6 +419,30 @@ const italian: Opening = {
         { san: "O-O", explanation: "White castles." },
         { san: "Be7", explanation: "Black develops and prepares to castle." },
       ],
+      continuationMoves: [
+        {
+          san: "Nb5",
+          idea: "White's knight leaps to b5, threatening to invade on c7 or d6.",
+        },
+        {
+          san: "cxb5",
+          idea: "Black captures the knight — getting a material advantage but creating a passed pawn.",
+        },
+        {
+          san: "c3",
+          idea: "White supports d4 and prepares to activate the bishop pair.",
+        },
+        {
+          san: "Nc5",
+          idea: "Black centralises the knight to an active post, threatening d3.",
+        },
+        {
+          san: "b4",
+          idea: "White kicks the knight and gains queenside space. The Scotch Gambit creates imbalanced positions — White has compensation in space and bishop pair against Black's extra material.",
+        },
+      ],
+      continuationIdea:
+        "The Scotch Gambit via the Italian creates open lines and targets Black's doubled c-pawns. White has easy development and the bishop pair; Black has to prove the structural damage isn't too costly. A great practical weapon — White plays naturally and Black must find accurate defensive moves.",
     },
     {
       id: "four-knights-italian",
@@ -395,6 +491,30 @@ const italian: Opening = {
         },
         { san: "Nh5", explanation: "Black's knight attacks the g3 bishop." },
       ],
+      continuationMoves: [
+        {
+          san: "Na4",
+          idea: "White's knight attacks the Bc5, forcing it to move before it becomes annoying on the long diagonal.",
+        },
+        {
+          san: "Bb6",
+          idea: "Black retreats the bishop to b6, keeping it active.",
+        },
+        {
+          san: "Nxb6",
+          idea: "White captures the bishop on b6, eliminating a potential problem piece.",
+        },
+        {
+          san: "axb6",
+          idea: "Black recaptures with the a-pawn, opening the a-file for counterplay.",
+        },
+        {
+          san: "d4",
+          idea: "White strikes in the center. The Four Knights gives White a clear plan — central pawns, pressure on the kingside, and piece activity that Black struggles to match.",
+        },
+      ],
+      continuationIdea:
+        "The Four Knights Italian rewards patient positional play. After the knight trade on g3, White gains weakened kingside pawns to target and a powerful d5 outpost. The plan is simple: Nd5, c3-d4, and gradual queenside expansion while Black struggles to coordinate with the compromised king structure.",
     },
     {
       id: "two-knights",
@@ -462,6 +582,30 @@ const italian: Opening = {
             "Black's pawn advances, and the position is dynamically balanced.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "d4",
+          idea: "White pushes d4, fighting back in the center and opening lines for the bishops.",
+        },
+        {
+          san: "Bc5",
+          idea: "Black develops actively to c5, targeting f2.",
+        },
+        {
+          san: "Bg5",
+          idea: "White pins the Nf6, adding pressure and making it harder for Black to hold the e4 pawn.",
+        },
+        {
+          san: "O-O",
+          idea: "Black castles into safety before the complications intensify.",
+        },
+        {
+          san: "Nfd2",
+          idea: "White's f3-knight attacks the e4 pawn. The Two Knights leads to rich, tactical positions — Black has the compensation of active pieces and central pawns, but White's development and bishop pair are long-term assets.",
+        },
+      ],
+      continuationIdea:
+        "After the Two Knights sideline, Black's active pieces compensate for the pawn deficit — but only temporarily. White's plan is to consolidate with d4, develop the bishop pair, and convert the extra pawn in a technical endgame. Black must generate enough activity before White's structural advantages solidify.",
     },
     {
       id: "fried-liver-attack",
@@ -528,6 +672,30 @@ const italian: Opening = {
         },
         { san: "c6", explanation: "Black fights back, trying to consolidate." },
       ],
+      continuationMoves: [
+        {
+          san: "d4",
+          idea: "White opens the center while Black's king is still exposed — every open line is a weapon.",
+        },
+        {
+          san: "Nxc2",
+          idea: "Black forks the queen and rook — a desperate attempt to complicate things.",
+        },
+        {
+          san: "Qf7+",
+          idea: "White gives check — the queen crashes to f7, attacking the exposed king on e6.",
+        },
+        {
+          san: "Kd6",
+          idea: "Black's king flees to d6 — but there is nowhere safe. Every move keeps the king in the open.",
+        },
+        {
+          san: "Qxg7",
+          idea: "White wins another pawn and keeps attacking. The Fried Liver Attack is the ultimate example of opening theory as a weapon — memorizing White's attacking moves wins games even against players rated higher.",
+        },
+      ],
+      continuationIdea:
+        "The Fried Liver creates a mating attack that practically plays itself. Black's king is dragged to e6, every White piece joins the attack, and Black has to find exact defensive moves while managing forks, checks, and pins simultaneously. Not theoretically sound, but extremely dangerous and fun to play.",
     },
     {
       id: "traxler-counterattack",
@@ -588,6 +756,30 @@ const italian: Opening = {
             "Black adds the rook to the attack — the position remains extremely wild.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Ke2",
+          idea: "White's king steps to e2 — forced to march into the center to escape the attack.",
+        },
+        {
+          san: "Rxf7",
+          idea: "Black's rook captures the White knight on f7 — regaining material while increasing the attack.",
+        },
+        {
+          san: "Bxf7+",
+          idea: "White captures the rook with check — the bishop crashes through and the Black king is again in check.",
+        },
+        {
+          san: "Ke7",
+          idea: "Black's king flees to e7 — the only square to escape the bishop check.",
+        },
+        {
+          san: "d4",
+          idea: "White strikes in the center, opening lines. The Traxler is one of the wildest openings in chess — both kings are exposed, material is unbalanced, and tiny inaccuracies decide the game instantly.",
+        },
+      ],
+      continuationIdea:
+        "The Traxler Counterattack is pure tactical chaos. Both kings are exposed, both players are down material, and the position defies normal evaluation. It's one of the most fun and terrifying openings to play — ideal for testing tactical vision and catching unprepared opponents off guard.",
     },
   ],
 };

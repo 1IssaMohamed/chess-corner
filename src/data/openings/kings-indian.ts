@@ -222,6 +222,30 @@ const kingsIndian: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "g4",
+          idea: "White launches the kingside attack — g4-g5-h5 is coming to crack open lines.",
+        },
+        {
+          san: "b4",
+          idea: "Our queenside counter launches! b4 hits the Nc3 and opens lines toward White's castled king.",
+        },
+        {
+          san: "g5",
+          idea: "White presses the kingside attack — the h-file will open.",
+        },
+        {
+          san: "Nb6",
+          idea: "Our knight jumps to b6, hitting the c4 pawn and joining the queenside pressure.",
+        },
+        {
+          san: "Bxc5",
+          idea: "White captures on c5. The Sämisch vs c5 creates a pure race — both sides attack on their respective wings with maximum urgency. Who breaks through first wins.",
+        },
+      ],
+      continuationIdea:
+        "The Sämisch's opposite-side castling creates a pure race. White's g4-g5 kingside storm vs Black's b5-b4-a5 queenside counterattack. The side that breaks through first wins. Black's queenside attack often arrives faster because b4 disrupts the knight on c3 immediately.",
     },
     {
       id: "four-pawns",
@@ -293,6 +317,30 @@ const kingsIndian: Opening = {
             "We develop — Black has excellent compensation with active pieces against White's weakened center.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "e5",
+          idea: "White pushes e5 to restore the center pawn mass.",
+        },
+        {
+          san: "Nd7",
+          idea: "We retreat — the knight will go to c5 to fight the e5 pawn.",
+        },
+        {
+          san: "Be3",
+          idea: "White develops and supports the center.",
+        },
+        {
+          san: "Nb6",
+          idea: "Our knight heads to b6 — it will swing to c4 or d5 from there, targeting the e-pawn.",
+        },
+        {
+          san: "Nd2",
+          idea: "White defends e5. The Four Pawns Attack is one of the most aggressive setups against the King's Indian, but Black's e6 break creates immediate counterplay and targets the overextended center.",
+        },
+      ],
+      continuationIdea:
+        "The Four Pawns Attack aims to steamroll Black with four central pawns, but the e6 break creates immediate counterplay. After fxe6 and Nc6, Black has active pieces fighting against White's now-weakened center. The key is to attack the pawn mass before it consolidates.",
     },
     {
       id: "averbakh",
@@ -366,6 +414,30 @@ const kingsIndian: Opening = {
             "We strike! Black starts the kingside attack before White's pawns get too far.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "exf5",
+          idea: "White captures — accepting the open e-file in exchange for eliminating our f5 pawn.",
+        },
+        {
+          san: "gxf5",
+          idea: "We recapture with the g-pawn, keeping the pawn center intact and aiming for f4.",
+        },
+        {
+          san: "Nf3",
+          idea: "White develops and prepares central pressure.",
+        },
+        {
+          san: "f4",
+          idea: "We advance — the f4 pawn is powerful and our kingside attack is rolling.",
+        },
+        {
+          san: "Nd2",
+          idea: "White repositions. In the Averbakh, Black's Ne8-f5 maneuver combined with g4 and f5 creates a powerful kingside attack — the h6 was key to preventing the bishop from pinning this whole plan.",
+        },
+      ],
+      continuationIdea:
+        "Against the Averbakh's Bg5 pin, h6 is critical — it forces the bishop to commit before the center closes. Then the Ne8-f5 plan launches the kingside attack. With the f5-f4 advance and the Bg7 on the long diagonal, Black creates powerful attacking chances.",
     },
     {
       id: "petrosian",
@@ -443,6 +515,30 @@ const kingsIndian: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "g3",
+          idea: "White prepares Bg2 to contest the long diagonal against our Bg7.",
+        },
+        {
+          san: "Nf4",
+          idea: "Our knight reaches f4 — the best square in the position. It targets d3 and h3.",
+        },
+        {
+          san: "Nf3",
+          idea: "White's knight returns to f3 from d2, reinforcing the center.",
+        },
+        {
+          san: "a5",
+          idea: "We expand on the queenside while the knight dominates on f4.",
+        },
+        {
+          san: "a4",
+          idea: "White counters on the queenside. The Petrosian with d5 creates a locked center — Black's kingside knight maneuver (Nh5-Nf4) and the Bg7's long diagonal pressure are the key attacking ideas.",
+        },
+      ],
+      continuationIdea:
+        "The Petrosian System closes the center early to prevent Black's e5 plan. Black responds by fighting on both wings: the Nh5-Nf4 knight maneuver dominates the kingside while a5 expands the queenside. The Bg7 remains a long-term weapon once the pawn structure finally opens.",
     },
     {
       id: "fianchetto",
@@ -519,6 +615,30 @@ const kingsIndian: Opening = {
           explanation: "We exchange in the center, relieving the tension.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Nxd4",
+          idea: "White recaptures — the center is open and pieces can become active.",
+        },
+        {
+          san: "Re8",
+          idea: "We centralise the rook, preparing e5 or supporting an e-pawn push.",
+        },
+        {
+          san: "e5",
+          idea: "White pushes e5, gaining central space and attacking our d6 pawn.",
+        },
+        {
+          san: "Ne4",
+          idea: "Our knight jumps to e4 — a powerful centralised outpost, fighting against White's center.",
+        },
+        {
+          san: "Nxe4",
+          idea: "White captures. In the Fianchetto KID, both Bg7 and Bg2 are strong — the game becomes a battle of the long diagonal bishops. Black's e5-Ne4 counterplay creates active piece play against White's center.",
+        },
+      ],
+      continuationIdea:
+        "The Fianchetto variation creates a mirror battle of the g-bishops — both sides have powerful fianchettos. Black's response is to challenge White's superior bishop with active piece play: the exd4-Ne4 sequence creates central outposts and fighting positions where the Bg7 can become the dominant piece.",
     },
     {
       id: "bayonet-attack",
@@ -599,6 +719,30 @@ const kingsIndian: Opening = {
             "Our knight occupies f4 — a powerful outpost targeting d3 and g2.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "g3",
+          idea: "White tries to kick the Nf4 by preparing Bg2.",
+        },
+        {
+          san: "g5",
+          idea: "We advance the kingside pawns — the attack continues before White stabilises.",
+        },
+        {
+          san: "Bxf4",
+          idea: "White trades the bishop to eliminate the powerful Nf4.",
+        },
+        {
+          san: "gxf4",
+          idea: "We recapture with the g-pawn — now the g5 advance has cleared a path for the rook on the g-file.",
+        },
+        {
+          san: "Kg2",
+          idea: "White's king moves away from g1. The Bayonet Attack is one of the sharpest King's Indian lines — Nh5-Nf4 is the only correct antidote, launching the kingside attack before White's queenside expansion gets going.",
+        },
+      ],
+      continuationIdea:
+        "The Bayonet Attack's b4-c5 queenside expansion must be met immediately with Nh5-Nf4, launching the kingside attack. After Nf4, the g5 advance and g4 pawn storm follows — the Bg7 will power the attack once lines open. The race is extremely sharp and both sides must play precisely.",
     },
     {
       id: "gligoric",
@@ -693,6 +837,30 @@ const kingsIndian: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "c5",
+          idea: "White strikes on the queenside! The c5 advance claims space before we can consolidate.",
+        },
+        {
+          san: "g5",
+          idea: "We continue the pawn avalanche — g5 prepares h5 and expands the attack.",
+        },
+        {
+          san: "Ne2",
+          idea: "White repositions the knight to e2, eyeing d4 and f4.",
+        },
+        {
+          san: "Nbd7",
+          idea: "We develop the queenside knight — heading for c5 to fight back on the queenside.",
+        },
+        {
+          san: "a4",
+          idea: "White counters on the queenside. The Gligoric is a deeply strategic King's Indian — both sides pursue their plans methodically, and the first to create a concrete breakthrough wins.",
+        },
+      ],
+      continuationIdea:
+        "The Gligoric's f5-f4-g5 kingside attack is the King's Indian at its most beautiful. After the Ne8-f6 rerouting and the pawn storm, the Bg7 becomes a devastating long-range weapon pointing at White's queenside. The key is timing — the attack must begin before White's queenside expansion gains momentum.",
     },
     {
       id: "leningrad",
@@ -771,6 +939,30 @@ const kingsIndian: Opening = {
             "We fight back on the kingside — a tense race on both wings!",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bd2",
+          idea: "White develops and prepares to support the queenside c5-c6 plan.",
+        },
+        {
+          san: "f4",
+          idea: "We continue the kingside attack — f4 advances the pawn storm.",
+        },
+        {
+          san: "b4",
+          idea: "White's queenside counterattack launches — the b-pawn storms forward.",
+        },
+        {
+          san: "g5",
+          idea: "We keep pushing — g5 prepares the final pawn storm h5-g4.",
+        },
+        {
+          san: "c6",
+          idea: "White's c5 pawn advances to c6, driving into Black's queenside. The Leningrad KID is a classic race — both sides attack simultaneously on opposite wings. Black's f5-f4-g5 vs White's b4-c5-c6.",
+        },
+      ],
+      continuationIdea:
+        "The Leningrad System's h3 preparation doesn't change Black's plan at all — we still play e5, castle, and launch the f5-f4-g5 kingside attack. The race against White's queenside expansion is the same as in all closed KID positions — attack faster than the other side.",
     },
     {
       id: "orthodox-main",
@@ -862,6 +1054,30 @@ const kingsIndian: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "c5",
+          idea: "White's queenside counterattack launches — the race is on.",
+        },
+        {
+          san: "g5",
+          idea: "We keep pushing — g5 prepares the final pawn storm h5 and g4.",
+        },
+        {
+          san: "Na4",
+          idea: "White's knight leaps to a4, targeting the b6 square and putting pressure on the queenside.",
+        },
+        {
+          san: "Nf6",
+          idea: "We redevelop the knight from d7 back to f6, joining the kingside attack.",
+        },
+        {
+          san: "Nb6",
+          idea: "White's knight arrives on b6 — a dominant outpost. The Orthodox Main Line is the most deeply analyzed King's Indian position — played by Kasparov, Fischer, and every great attacking player.",
+        },
+      ],
+      continuationIdea:
+        "The Orthodox Main Line is the King's Indian at its most complex. White's Ne1-Nd3-Nc2-Nb4 plan creates queenside pressure while Black's f4-g5-h5 pawn storm targets the king. Both attacks are direct and forceful — this position has been analyzed to 40+ moves by computers. Understanding the plans is more important than memorising the lines.",
     },
   ],
 };

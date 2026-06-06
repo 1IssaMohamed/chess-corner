@@ -189,6 +189,30 @@ const caroKann: Opening = {
             "We develop the kingside knight. Black has completed solid development with the bishop pair gone but an easy game.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "O-O",
+          idea: "White castles — the king is safe and the position is ready to sharpen.",
+        },
+        {
+          san: "Ne5",
+          idea: "We centralise the knight to e5 — a powerful outpost that eyes c4 and d3.",
+        },
+        {
+          san: "Ne4",
+          idea: "White brings a knight to e4, challenging our Ne5.",
+        },
+        {
+          san: "Ned7",
+          idea: "We retreat the knight to d7 — it will come back to c5 or e5 when the time is right.",
+        },
+        {
+          san: "c3",
+          idea: "White supports d4 solidly. The Classical Caro-Kann is perfect for players who want reliability over sharpness — no weaknesses, easy development, and clear plans.",
+        },
+      ],
+      continuationIdea:
+        "The Classical Caro-Kann gives Black a solid, harmonious position. After trading the g6 bishop for White's d3 bishop, Black has no weaknesses and easy development. The c5 counterattack in the center keeps the position alive and prevents White from simply building a big center without resistance.",
     },
     {
       id: "exchange",
@@ -261,6 +285,30 @@ const caroKann: Opening = {
             "We castle! Black has a very comfortable, equal position.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bg5",
+          idea: "White pins the Nf6 — adding pressure before we can build counterplay.",
+        },
+        {
+          san: "h6",
+          idea: "We challenge the pin immediately — the bishop must decide.",
+        },
+        {
+          san: "Bh4",
+          idea: "White maintains the pin, hoping to keep tension.",
+        },
+        {
+          san: "g5",
+          idea: "We chase the bishop! Aggressive, but the position supports it — our king is safe.",
+        },
+        {
+          san: "Bg3",
+          idea: "White retreats. The Exchange Caro-Kann is one of Black's most solid systems — no weaknesses, easy development, and confident piece activity.",
+        },
+      ],
+      continuationIdea:
+        "The Exchange Variation gives Black a symmetrical structure with no weaknesses. White's minority attack (b4-b5) is the main plan, while Black fights back with c5 to break up the center. It's one of the most reliable Caro-Kann setups for players who want a solid, drawish game.",
     },
     {
       id: "panov-botvinnik",
@@ -337,6 +385,30 @@ const caroKann: Opening = {
             "We castle! Both sides are fully developed with an interesting strategic battle ahead.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Re1",
+          idea: "White centralises the rook, targeting the Nd5.",
+        },
+        {
+          san: "Nxc3",
+          idea: "We capture — trading the strong Nd5 to eliminate White's pressure.",
+        },
+        {
+          san: "bxc3",
+          idea: "White recaptures with the b-pawn, opening the b-file.",
+        },
+        {
+          san: "b6",
+          idea: "We prepare Bb7 to develop the c8 bishop — the IQP structure creates active piece play.",
+        },
+        {
+          san: "Qe2",
+          idea: "White prepares to target the IQP. The Panov-Botvinnik gives Black the IQP in exchange for active pieces — a typical positional tradeoff that requires precise understanding.",
+        },
+      ],
+      continuationIdea:
+        "The Panov creates an IQP for Black, which is a double-edged structure. Black's active pieces and control of key squares compensate for the long-term pawn weakness. The key is to use the Nd5 outpost, develop the remaining bishops, and create attacking chances before White can target the d5 pawn in an endgame.",
     },
     {
       id: "modern-karpov",
@@ -410,6 +482,30 @@ const caroKann: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "dxc5",
+          idea: "White captures, keeping the center open.",
+        },
+        {
+          san: "Nxc5",
+          idea: "We recapture with the knight — now the Nc5 eyes d3 and e4.",
+        },
+        {
+          san: "Ne5",
+          idea: "We centralise the knight — it heads to the dominant e5 outpost.",
+        },
+        {
+          san: "Ncd7",
+          idea: "We trade off the knight, but the Bd6 remains and Black keeps the initiative.",
+        },
+        {
+          san: "Nf3",
+          idea: "White develops. The Karpov Variation is Anatoly Karpov's personal system — deeply solid, no weaknesses, easy development. The Bd6 targets h2 and the c5 break gives active counterplay. Karpov won hundreds of games in this structure.",
+        },
+      ],
+      continuationIdea:
+        "The Karpov/Modern Variation is Anatoly Karpov's personal weapon in the Caro-Kann. After Nd7-Ngf6-Bd6, Black has an extremely solid position with the Bd6 eyeing h2 and the c5 break as the main counterplay. It's less committal than Bf5 and gives Black excellent flexibility.",
     },
     {
       id: "fantasy-variation",
@@ -489,6 +585,30 @@ const caroKann: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "exd5",
+          idea: "White recaptures, maintaining a pawn on d5.",
+        },
+        {
+          san: "Nxd5",
+          idea: "We capture — the Nd5 is a powerful central piece, and White's doubled f-pawns are a structural weakness.",
+        },
+        {
+          san: "Nxd5",
+          idea: "White captures the knight to simplify.",
+        },
+        {
+          san: "Qxd5",
+          idea: "We recapture with the queen — very active, eyeing d4 and threatening Qxd4.",
+        },
+        {
+          san: "Be3",
+          idea: "White defends d4. The Fantasy Variation backfires against accurate play — the f3 pawn weakening becomes a long-term issue for White, while Black's c5-exd5-Nd5 counter creates real pressure.",
+        },
+      ],
+      continuationIdea:
+        "Against the Fantasy Variation, the Bb4 pin and dxe4 capture reveal the weakness of White's f3 move. After the central exchanges, Black's pieces are more active and White's kingside is slightly weakened. The Fantasy is aggressive but playable only if Black doesn't know the response — with accurate play, Black gets a comfortable game.",
     },
     {
       id: "two-knights-caro",
@@ -565,6 +685,30 @@ const caroKann: Opening = {
             "We develop — Black has excellent compensation for the pawns.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bd4",
+          idea: "White develops the bishop to an active square, fighting for control of the long diagonal.",
+        },
+        {
+          san: "Nxd4",
+          idea: "We capture the bishop, simplifying in our favour.",
+        },
+        {
+          san: "cxd4",
+          idea: "White recaptures, but the king on d2 is awkwardly placed.",
+        },
+        {
+          san: "Ke7",
+          idea: "Our king steps toward safety — the pawn ending is comfortable for Black.",
+        },
+        {
+          san: "Ke2",
+          idea: "White's king centralises. The Two Knights Caro-Kann's Qh4+ check is the key — it forces the king to d2 before White has completed development, creating lasting disruption.",
+        },
+      ],
+      continuationIdea:
+        "The Two Knights Caro-Kann's Qh4+ check is the key move — it disrupts White's development by forcing the king to d2 before White has completed development. Combined with the Nxc3 doubling of White's c-pawns, Black gets excellent compensation and a sharp, dynamic position.",
     },
     {
       id: "short-system",
@@ -636,6 +780,30 @@ const caroKann: Opening = {
             "We complete development — Black has an easy, comfortable position.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "O-O",
+          idea: "White castles — the king is safe and the position is ready to sharpen.",
+        },
+        {
+          san: "Ne5",
+          idea: "We centralise the knight to e5 — a powerful outpost that eyes c4 and d3.",
+        },
+        {
+          san: "Ne4",
+          idea: "White brings a knight to e4, challenging our Ne5.",
+        },
+        {
+          san: "Ned7",
+          idea: "We retreat the knight to d7 — it will come back to c5 or e5 when the time is right.",
+        },
+        {
+          san: "c3",
+          idea: "White supports d4. The Short System gives Black the same ideas as the Classical: Bf5, the bishop trade on d3, and easy central counterplay. Simple and reliable.",
+        },
+      ],
+      continuationIdea:
+        "The Short System (Nd2) tries to avoid the Bf5 pin, but Black simply plays the same moves as the Classical — dxe4, Bf5, Bg6, h6, Nd7, Bxd3. The result is almost identical. Black's development is easy and the c5 break provides all the counterplay needed.",
     },
     {
       id: "hillbilly-attack",
@@ -712,6 +880,30 @@ const caroKann: Opening = {
           explanation: "We develop the bishop aggressively, eyeing h2.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bg5",
+          idea: "White pins the Nf6, adding pressure.",
+        },
+        {
+          san: "h6",
+          idea: "We challenge the pin — the bishop must either trade or retreat.",
+        },
+        {
+          san: "Bh4",
+          idea: "White maintains the pin, hoping to keep pressure on the Nf6.",
+        },
+        {
+          san: "g5",
+          idea: "We chase the bishop! The Bd6 + Nc6 setup gives us great piece activity. White's Hillbilly Attack gets nothing if we respond accurately with d5.",
+        },
+        {
+          san: "Bg3",
+          idea: "White retreats. Against the Hillbilly Attack, our d5 counter and solid development completely neutralise White's early bishop play — the bishop on b3 is no longer pointing at f7 and has no targets.",
+        },
+      ],
+      continuationIdea:
+        "Against the Hillbilly Attack (Bc4), our d5 counter immediately challenges the bishop and forces it to retreat to b3 where it has no attacking chances. After solid development with Nf6-e6-Be7-O-O-Nc6, Black has a completely normal Caro-Kann position with no weaknesses. The Hillbilly is a surprise weapon but nothing to worry about.",
     },
     {
       id: "gurgenidze",
@@ -786,6 +978,30 @@ const caroKann: Opening = {
             "We counterattack d4 — Black has excellent counterplay with the Dragon bishop.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "dxc5",
+          idea: "White captures the c5 pawn, creating an open d-file.",
+        },
+        {
+          san: "Qd5",
+          idea: "We centralise the queen — it hits c5 and b3, recovering the pawn with tempo.",
+        },
+        {
+          san: "Bc4",
+          idea: "White repositions the bishop to fight for the center.",
+        },
+        {
+          san: "Qe4",
+          idea: "We centralise the queen further — it attacks g2 and dominates the center.",
+        },
+        {
+          san: "Bd3",
+          idea: "White blocks. The Gurgenidze gives Black a Dragon-like position in the Caro-Kann — the Bg7 dominates the long diagonal and active queen play provides excellent compensation.",
+        },
+      ],
+      continuationIdea:
+        "The Gurgenidze System combines the Caro-Kann's solidity with the Dragon's attacking fianchetto. After the c5-d4 pawn advances, the Bg7 has a completely open diagonal — pointing at White's queenside. The extra c6 move (compared to a normal Dragon) gives Black extra stability to support the central pawn advances.",
     },
   ],
 };

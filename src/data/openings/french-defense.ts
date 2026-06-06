@@ -189,6 +189,30 @@ const frenchDefense: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bg3",
+          idea: "White retreats the bishop — the g5 push worked!",
+        },
+        {
+          san: "Ne4",
+          idea: "We centralise the knight to e4 — an excellent outpost in the symmetric structure.",
+        },
+        {
+          san: "Nxe4",
+          idea: "White trades the knight, resolving the central tension.",
+        },
+        {
+          san: "dxe4",
+          idea: "We recapture — our d-pawn advances to e4, creating a strong passed pawn.",
+        },
+        {
+          san: "c3",
+          idea: "White blockades the e4 pawn. The Exchange French is genuinely equal — the g5-Ne4 plan gives Black active piece play and an advanced e4 pawn to work with.",
+        },
+      ],
+      continuationIdea:
+        "The Exchange French gives Black a completely equal and comfortable game. The g5-Ne4 plan is the most active approach — chase the bishop, centralise the knight, and fight for the initiative. White has very few winning chances in this structure.",
     },
     {
       id: "tarrasch",
@@ -264,6 +288,30 @@ const frenchDefense: Opening = {
             "We retreat the bishop — Black has excellent activity and is very comfortable.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bxc6+",
+          idea: "White captures on c6, giving check — trading the bishop for the strong Nc6.",
+        },
+        {
+          san: "bxc6",
+          idea: "We recapture with the b-pawn, opening the b-file. The doubled c-pawns are slightly weak but the open b-file and active pieces compensate.",
+        },
+        {
+          san: "Re1",
+          idea: "White centralises the rook, fighting for the e-file.",
+        },
+        {
+          san: "O-O",
+          idea: "We castle — the king is safe and we have excellent piece activity.",
+        },
+        {
+          san: "c4",
+          idea: "White strikes with c4, fighting against our d5 pawn. The Tarrasch IQP gives Black active bishops, an open d-file, and excellent piece play — the classic IQP compensation.",
+        },
+      ],
+      continuationIdea:
+        "The Tarrasch's IQP gives Black active, well-placed pieces and the open d-file. The plan is to use the Bd6-Ng6 battery against h2 and the d-file pressure to create a kingside attack. If White manages to blockade the d5 pawn and reach an endgame, the isolated pawn becomes a weakness — so Black must act quickly.",
     },
     {
       id: "classical",
@@ -337,6 +385,30 @@ const frenchDefense: Opening = {
         { san: "Qd2", explanation: "White defends d4." },
         { san: "Nc6", explanation: "We develop and increase pressure on d4." },
       ],
+      continuationMoves: [
+        {
+          san: "dxc5",
+          idea: "White captures — now our d5 pawn is isolated but very active.",
+        },
+        {
+          san: "Nxc5",
+          idea: "We recapture with the knight, immediately occupying the strong c5 outpost.",
+        },
+        {
+          san: "Nd4",
+          idea: "White's knight jumps to d4, fighting for central control.",
+        },
+        {
+          san: "Nxd4",
+          idea: "We trade on d4 — simplifying and keeping our piece activity.",
+        },
+        {
+          san: "Qxd4",
+          idea: "White recaptures. The Classical French c5 counterattack gives Black excellent piece activity — the strategic battle revolves around White's f4 pawn attack vs Black's queenside counterplay.",
+        },
+      ],
+      continuationIdea:
+        "The Classical French is a battle of White's kingside f4-f5 attack versus Black's c5-Nc6-Nb4 queenside counterplay. Black's plan after the c5 break is to trade pieces on d4 and use the active Nd7-f8-e6 maneuver to fight the e5 pawn. The closed center makes this a long, strategic fight.",
     },
     {
       id: "winawer",
@@ -425,6 +497,30 @@ const frenchDefense: Opening = {
           explanation: "We capture d4, opening lines for our counterattack.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "cxd4",
+          idea: "White captures on d4. We now have an open c-file and strong counterplay despite being behind on pawns.",
+        },
+        {
+          san: "Nd7",
+          idea: "Our knight heads to d7, preparing to jump to f8 and then e6 to fight the e5 pawn.",
+        },
+        {
+          san: "Nf3",
+          idea: "White develops — the knight joins the fight for d4.",
+        },
+        {
+          san: "Nc5",
+          idea: "Our knight reaches the strong c5 outpost, attacking d3 and b3.",
+        },
+        {
+          san: "Bb2",
+          idea: "White develops the bishop. The Winawer's Qxg7-Rg8 counterplay shows the whole point: the queen is awkwardly stuck and our active pieces compensate for the sacrificed pawns.",
+        },
+      ],
+      continuationIdea:
+        "The Winawer Poisoned Pawn is one of chess's most analyzed positions. After Qxg7 Rg8 Qxh7, Black has sacrificed two pawns but gotten the queen stuck on h7 and created powerful counterplay with the Ne7-f5 attack and open c-file. White must navigate extremely complex positions where Black's initiative can be devastating.",
     },
     {
       id: "rubinstein",
@@ -496,6 +592,30 @@ const frenchDefense: Opening = {
           explanation: "We castle! Black has achieved complete equality.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "dxc5",
+          idea: "White captures the c5 pawn — now we can recapture and win it back with activity.",
+        },
+        {
+          san: "Bxc5",
+          idea: "We recapture with the bishop — landing on a very active square.",
+        },
+        {
+          san: "Nd4",
+          idea: "White's knight jumps to the strong d4 outpost, attacking our Bc5.",
+        },
+        {
+          san: "Bb6",
+          idea: "We retreat the bishop to b6, keeping it active and safe.",
+        },
+        {
+          san: "c4",
+          idea: "White attacks d5. The Rubinstein is one of the easiest French systems — no blocked c8 bishop, no cramped positions. Black just develops normally and gets complete equality.",
+        },
+      ],
+      continuationIdea:
+        "The Rubinstein is Black's most solid and straightforward French system. By capturing dxe4 early, Black releases the central tension and gets easy development — no locked c8 bishop, no cramped positions. The resulting game is roughly equal with good counterplay for Black.",
     },
     {
       id: "kia-vs-french",
@@ -575,6 +695,30 @@ const frenchDefense: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "Nf1",
+          idea: "White repositions the knight toward g3 for a kingside attack.",
+        },
+        {
+          san: "c4",
+          idea: "We strike in the center! The c4 break challenges White's center before the kingside attack builds.",
+        },
+        {
+          san: "dxc4",
+          idea: "White captures, opening the d-file.",
+        },
+        {
+          san: "bxc4",
+          idea: "We recapture with the b-pawn, gaining queenside space.",
+        },
+        {
+          san: "N1d2",
+          idea: "White's knight repositions — the kingside attack is building. Against the KIA, our b5-c4 expansion on the queenside races against White's Nd2-f1-g3 kingside attack — a classic French strategic battle.",
+        },
+      ],
+      continuationIdea:
+        "Against the King's Indian Attack, our b5-c4 queenside expansion is the key plan. We race White's kingside attack with our own queenside pressure — b4 hits the Nc3 or creates a passed pawn, while c4 undermines White's d3 pawn. Black's counterplay is excellent when the queenside pawns advance quickly.",
     },
     {
       id: "maccutcheon",
@@ -656,6 +800,30 @@ const frenchDefense: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "dxc5",
+          idea: "White captures the c5 pawn — opening lines before we can consolidate.",
+        },
+        {
+          san: "Nc6",
+          idea: "We develop the knight — fighting back in the center and threatening to win the c5 pawn.",
+        },
+        {
+          san: "Nf3",
+          idea: "White develops, supporting the advanced pawns.",
+        },
+        {
+          san: "Ne7",
+          idea: "Our knight heads toward d5 or f5 — the ideal outpost squares.",
+        },
+        {
+          san: "Bd3",
+          idea: "White develops. The MacCutcheon is a bold and aggressive choice — the Bxc3 and Ne4 ideas give Black active, fighting positions. It's the sharpest Classical French line.",
+        },
+      ],
+      continuationIdea:
+        "The MacCutcheon's Bxc3 gives up the bishop pair to double White's c-pawns and plant the knight on e4. Combined with g6 and c5, Black creates a powerful counterattacking position. White has the bishop pair but Black's piece activity and central control compensate.",
     },
     {
       id: "steinitz",
@@ -730,6 +898,30 @@ const frenchDefense: Opening = {
             "We castle — Black has solved all the opening problems with active piece play.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Qe2",
+          idea: "White centralises the queen and defends e5.",
+        },
+        {
+          san: "Nf6",
+          idea: "We develop and attack the e5 pawn — putting White under immediate pressure.",
+        },
+        {
+          san: "f5",
+          idea: "White advances! The f-pawn storm continues — this is what the f4 setup was aiming for.",
+        },
+        {
+          san: "Ne4",
+          idea: "We centralise the knight — it attacks d2 and forces White to defend.",
+        },
+        {
+          san: "fxe6",
+          idea: "White captures on e6, opening the f-file. The Steinitz f4 variation is White's most aggressive Classical French setup, but Black's Bc5 and Ne4 create real counterplay in this sharp position.",
+        },
+      ],
+      continuationIdea:
+        "The Steinitz (e5 f4) is White's most aggressive Classical French setup, but Black's c5-cxd4-Bc5 sequence creates excellent counterplay. The Bc5 targets d4 and f2, and after the Nd4-Nxc6 trade, the open b-file gives Black a rook battery. White's f4 space is real but Black has concrete counterplay.",
     },
     {
       id: "two-knights-french",
@@ -801,6 +993,30 @@ const frenchDefense: Opening = {
             "We develop the bishop aggressively — Black has excellent counterplay.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Qd2",
+          idea: "White defends d4 and prepares to castle queenside.",
+        },
+        {
+          san: "Qh4+",
+          idea: "We give check! The queen lands on h4 with tempo, creating immediate pressure.",
+        },
+        {
+          san: "g3",
+          idea: "White blocks the check — forced.",
+        },
+        {
+          san: "Qe7",
+          idea: "We retreat the queen, attacking the e5 pawn. The Two Knights French c5-cxd4 gives Black excellent activity.",
+        },
+        {
+          san: "a3",
+          idea: "White prepares queenside expansion. The Two Knights French is a sharp system — the pawn center dissolves quickly and Black's Bc5 + Nxd4 create active fighting positions.",
+        },
+      ],
+      continuationIdea:
+        "In the Two Knights French, Black's c5 break dissolves the center and the resulting Bc5 development gives excellent piece activity. The Qh4+ check disrupts White and the Qe7 follow-up targets the e5 pawn. Black has good counterplay in this rich, double-edged position.",
     },
   ],
 };

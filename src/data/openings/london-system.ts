@@ -172,6 +172,30 @@ const londonSystem: Opening = {
           explanation: "Black recaptures, establishing the pawn on e5.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Ne4",
+          idea: "White's knight occupies e4 — a powerful central outpost. The London against the King's Indian always aims for this structure.",
+        },
+        {
+          san: "Nd4",
+          idea: "Black centralises in response, fighting for control of the center.",
+        },
+        {
+          san: "Nxc5",
+          idea: "White captures the c5 pawn with the knight — winning a pawn and forcing Black to react.",
+        },
+        {
+          san: "Ndb5",
+          idea: "Black's d4-knight leaps to b5, fighting back and threatening to recapture on c7.",
+        },
+        {
+          san: "Na4",
+          idea: "White's knight retreats to a4, maintaining the c5 outpost. The London vs King's Indian is a test of pawn structure understanding — White's solid triangle vs Black's dynamic Bg7.",
+        },
+      ],
+      continuationIdea:
+        "Against the King's Indian fianchetto, the London aims to establish the Ne4 outpost in the center. The Bg7 is a long-term weapon but the Ne4 controls d6 and c5 — keeping Black passive. White's plan is slow queenside expansion while neutralizing the Bg7's pressure.",
     },
     {
       id: "london-vs-dutch",
@@ -228,6 +252,30 @@ const londonSystem: Opening = {
             "White's bishop sidesteps to g3, keeping it on the strong diagonal.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "d5",
+          idea: "Black advances the d-pawn, striking White's e5 pawn and fighting for central control.",
+        },
+        {
+          san: "Ne5",
+          idea: "White's knight jumps to e5 — the signature London outpost. Against the Dutch, this is even more powerful because Black's f5 pawn can't attack it.",
+        },
+        {
+          san: "Nxe5",
+          idea: "Black captures the knight, exchanging off the annoying outpost piece.",
+        },
+        {
+          san: "dxe5",
+          idea: "White recaptures with the d-pawn, restoring the strong e5 pawn.",
+        },
+        {
+          san: "Ng4",
+          idea: "Black's knight attacks the e5 pawn from the side. The London vs Dutch shows the Bf4's strength — it's perfectly placed facing Black's f5 setup and creates lasting pressure.",
+        },
+      ],
+      continuationIdea:
+        "Against the Dutch, the London bishop on f4 is ideally placed — directly opposing Black's f5 pawn structure. White aims for Ne5, f4 (to close the center), and a queenside expansion. Black's kingside attack comes too slowly compared to White's solid, advancing center.",
     },
     {
       id: "london-vs-bf5",
@@ -274,6 +322,30 @@ const londonSystem: Opening = {
         { san: "Ne5", explanation: "White occupies the powerful e5 outpost." },
         { san: "Nd7", explanation: "Black challenges the Ne5." },
       ],
+      continuationMoves: [
+        {
+          san: "Nxd7",
+          idea: "White trades — removing the Nd7 that challenged the outpost knight.",
+        },
+        {
+          san: "Qxd7",
+          idea: "Black recaptures, centralising the queen.",
+        },
+        {
+          san: "dxc5",
+          idea: "White captures the c5 pawn, gaining material and opening the d-file.",
+        },
+        {
+          san: "Bxc5",
+          idea: "Black recaptures with the bishop, landing on an active square.",
+        },
+        {
+          san: "Bg3",
+          idea: "White's bishop retreats to the long diagonal. The London vs Bf5 is about outpost control — the Ne5 on the strong square versus Black's pieces fighting to contest it.",
+        },
+      ],
+      continuationIdea:
+        "When Black mirrors the London with Bf5, White's response is to target the bishop with Bd3, then use the Ne5 outpost as the game's focal point. After trading bishops and establishing Ne5, White plays f4 to anchor it permanently and build a kingside attack. It's methodical but very effective.",
     },
     {
       id: "jobava-london",
@@ -343,6 +415,30 @@ const londonSystem: Opening = {
         },
         { san: "Nc6", explanation: "Black blocks the check and develops." },
       ],
+      continuationMoves: [
+        {
+          san: "Nf3",
+          idea: "White develops the last minor piece — now all pieces are active and the king is safe after castling.",
+        },
+        {
+          san: "Nd3+",
+          idea: "Black's knight leaps to d3 with check — forking the king and f4 pawn while disrupting White's coordination.",
+        },
+        {
+          san: "Ke2",
+          idea: "White's king steps to e2, the only way to escape the check.",
+        },
+        {
+          san: "Nf4+",
+          idea: "Black continues with Nf4+, giving another check and winning the f4 pawn.",
+        },
+        {
+          san: "Ke3",
+          idea: "White's king marches to e3 — exposed in the center. The Jobava London is the aggressive alternative to the solid main-line London, but Black must play precisely to exploit White's commitments.",
+        },
+      ],
+      continuationIdea:
+        "The Jobava London trades the typical London solidity for sharp, aggressive play. The g4-g5 space grab and f4 pawn create immediate kingside pressure. White must act quickly before Black consolidates — but if White keeps pushing, the position becomes incredibly difficult for Black to handle.",
     },
     {
       id: "london-vs-e5",
@@ -396,6 +492,30 @@ const londonSystem: Opening = {
         { san: "bxc6", explanation: "Black recaptures." },
         { san: "Nbd2", explanation: "White completes development." },
       ],
+      continuationMoves: [
+        {
+          san: "Bg4",
+          idea: "Black pins White's Nf3 — attempting to complicate and reduce White's coordination.",
+        },
+        {
+          san: "h3",
+          idea: "White challenges the pin, forcing Black to commit.",
+        },
+        {
+          san: "Bxf3",
+          idea: "Black accepts the trade, giving White the bishop pair.",
+        },
+        {
+          san: "Qxf3",
+          idea: "White recaptures with the queen, centralizing and activating it immediately.",
+        },
+        {
+          san: "Nd7",
+          idea: "Black repositions the knight. Against e5, the London's flexibility shines — White's bishop pair and active queen create persistent pressure despite the symmetric pawn structure.",
+        },
+      ],
+      continuationIdea:
+        "After dxe5, White targets the weak d6 pawn and aims to establish a knight on d6 — a powerful deep outpost. Black's doubled c-pawns add to the structural issues. The London vs e5 shows the opening's flexibility: even against sharp setups, White finds solid positional advantages.",
     },
     {
       id: "barry-attack",
@@ -441,6 +561,30 @@ const londonSystem: Opening = {
         { san: "Ne5", explanation: "White occupies the powerful e5 outpost." },
         { san: "Nxe5", explanation: "Black challenges White's outpost." },
       ],
+      continuationMoves: [
+        {
+          san: "dxe5",
+          idea: "White recaptures with the d-pawn, maintaining a strong pawn on e5.",
+        },
+        {
+          san: "Bg4",
+          idea: "Black pins the Nf3, trying to pressure White's central setup.",
+        },
+        {
+          san: "Bg5",
+          idea: "White responds symmetrically — pinning Black's knight and fighting for the e7 square.",
+        },
+        {
+          san: "Nd7",
+          idea: "Black breaks the pin by moving the knight to d7.",
+        },
+        {
+          san: "Bxe7",
+          idea: "White trades off the bishop, maintaining the e5 stronghold. The Barry Attack creates persistent pressure against the King's Indian/Grünfeld setup.",
+        },
+      ],
+      continuationIdea:
+        "The Barry Attack aims to establish a powerful center and then push for a kingside attack similar to the Stonewall. After the Ne5 captures and f4 follow-up, White has a locked center that's hard to break. Black's fianchettoed bishop is often neutralized by the pawn on e5 blocking its diagonal.",
     },
     {
       id: "london-stonewall",
@@ -506,6 +650,30 @@ const londonSystem: Opening = {
             "Black must weaken the kingside to stop the immediate threats.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Nxg6",
+          idea: "White captures on g6! The knight sacrifice crashes through Black's weakened kingside.",
+        },
+        {
+          san: "hxg6",
+          idea: "Black must recapture — the g6 pawn is already weak.",
+        },
+        {
+          san: "Qh7+",
+          idea: "White's queen delivers check on h7 — the Black king is in serious danger.",
+        },
+        {
+          san: "Kxh7",
+          idea: "The Black king captures the queen's square, stepping into the attack.",
+        },
+        {
+          san: "Bxg6+",
+          idea: "White crashes through with another capture, completely destroying Black's pawn cover. The London Stonewall's Qh5 + Ne5 combination is a direct mating attack — one of the London's most powerful attacking motifs.",
+        },
+      ],
+      continuationIdea:
+        "The London Stonewall attack is one of the most brutal attacking patterns in the London System. The Ne5 + Qh5 combination forces Black to weaken with g6 — and then White sacrifices on g6 to crash through. This attacking pattern works because the f4 pawn supports everything and Black has no counterplay.",
     },
     {
       id: "torre-attack",
@@ -553,6 +721,30 @@ const londonSystem: Opening = {
         },
         { san: "Bb7", explanation: "Black fianchettos the c8 bishop." },
       ],
+      continuationMoves: [
+        {
+          san: "Ne4",
+          idea: "White's knight jumps to e4 — the other London outpost, supporting d6 and f6.",
+        },
+        {
+          san: "Ne4",
+          idea: "Black mirrors, centralising a knight too.",
+        },
+        {
+          san: "Bxe7",
+          idea: "White trades off Black's Be7, leaving Black's king slightly exposed.",
+        },
+        {
+          san: "Qxe7",
+          idea: "Black recaptures. The Torre's Bh4 pin has served its purpose — Nf6 can't easily break free.",
+        },
+        {
+          san: "f3",
+          idea: "White kicks the Ne4 and prepares f4-f5. The Torre Attack's Bh4 pin creates lasting pressure that forces Black to constantly deal with the Nf6 pin before doing anything else.",
+        },
+      ],
+      continuationIdea:
+        "The Torre Attack's Bh4 pin is the whole point — while the Nf6 is pinned, Black struggles to coordinate. White plays Ne4, prepares f4-f5, and attacks the kingside while Black is stuck dealing with the pin. It's a flexible, aggressive alternative to the standard Bf4 London.",
     },
   ],
 };

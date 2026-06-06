@@ -144,6 +144,30 @@ const ponziani: Opening = {
           explanation: "Black castles, reaching a solid balanced position.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "h3",
+          idea: "White prevents Bg4 before pushing the center — a prophylactic move.",
+        },
+        {
+          san: "Re8",
+          idea: "Black centralises the rook, supporting e5 and preparing counterplay.",
+        },
+        {
+          san: "Re1",
+          idea: "White centralises the rook to the e-file, adding pressure.",
+        },
+        {
+          san: "Nd7",
+          idea: "Black repositions the knight, planning Nf8-e6 to fight for the center.",
+        },
+        {
+          san: "Nbd2",
+          idea: "White develops the last piece. The vs d6 Ponziani gives White a comfortable space advantage with a broad center — no immediate winning plan but Black is cramped and must defend for a long time.",
+        },
+      ],
+      continuationIdea:
+        "The vs d6 line gives White a comfortable Ruy López-like space advantage. Both sides are solid, but White's broad d4-e4 center cramps Black's position. White's plan is simple: develop harmoniously, then advance in the center or on the kingside when Black has no counterplay.",
     },
     {
       id: "ponziani-steinitz",
@@ -192,6 +216,30 @@ const ponziani: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "d5",
+          idea: "Black fights back in the center — the critical test of White's e5 pawn.",
+        },
+        {
+          san: "exd6",
+          idea: "White captures en passant — the e5 pawn takes on d6, a key tactical motif.",
+        },
+        {
+          san: "Qxd6",
+          idea: "Black recaptures, centralising the queen and fighting for equality.",
+        },
+        {
+          san: "O-O",
+          idea: "White castles and lets the position breathe. The Steinitz variation creates sharp imbalances that reward preparation.",
+        },
+        {
+          san: "Be7",
+          idea: "Black develops and prepares to castle. The Steinitz is a sharp practical weapon — if Black doesn't know the theory, White's space advantage and development lead become decisive quickly.",
+        },
+      ],
+      continuationIdea:
+        "The Steinitz Variation's e5 push seizes space and creates immediate tactical complications. After cxd4, White has a broad center that Black must challenge immediately — delay means a cramped, passive position. The sharp lines are well-analyzed but extremely complex over the board.",
     },
     {
       id: "ponziani-vs-d5",
@@ -245,6 +293,30 @@ const ponziani: Opening = {
             "White breaks the pin and prepares to castle, accepting a slightly inferior pawn structure but maintaining the initiative.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Ke7",
+          idea: "Black's king steps to e7 — a slow move that invites tactics.",
+        },
+        {
+          san: "Nc3",
+          idea: "White develops the knight, immediately attacking Black's undefended queen on d5.",
+        },
+        {
+          san: "Nh6",
+          idea: "Black develops the knight — but the queen on d5 is still hanging!",
+        },
+        {
+          san: "Nxd5+",
+          idea: "White's knight captures the queen with check — a decisive fork! This is the tactical blow Black must avoid.",
+        },
+        {
+          san: "Ke8",
+          idea: "The king retreats. Black must move the queen immediately after Be2 to avoid losing it. The vs d5 Ponziani rewards precise tactical awareness.",
+        },
+      ],
+      continuationIdea:
+        "After the 3...d5 counter-attack, the game opens up rapidly and both sides must play aggressively. The resulting positions often feature opposite-side castling and mutual attacks — whoever attacks faster wins. White's d4-e4 center gives attacking chances but Black's queenside counterplay is real.",
     },
     {
       id: "ponziani-vs-bc5",
@@ -296,6 +368,30 @@ const ponziani: Opening = {
             "White develops the bishop to a good diagonal, targeting h7 and preparing to castle.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "O-O",
+          idea: "Black castles, securing the king before the center opens.",
+        },
+        {
+          san: "d5",
+          idea: "White advances d5, gaining space and restricting Black's pieces.",
+        },
+        {
+          san: "Nb8",
+          idea: "Black's knight retreats to avoid being locked out by the advancing d5 pawn.",
+        },
+        {
+          san: "e5",
+          idea: "White extends the pawn chain to e5, claiming a dominant center.",
+        },
+        {
+          san: "Na6",
+          idea: "Black repositions the knight to a6, ready to jump to c5. The vs Bc5 Ponziani gives White a strong pawn center — Black must maneuver carefully to find counterplay.",
+        },
+      ],
+      continuationIdea:
+        "Against the Bc5 Bishop Defence, the Ponziani becomes a dynamic Open Game after the d4-exd4-Bb4+ sequence. White must deal with the pin while maintaining the center — the resulting positions are rich and unbalanced, with both sides having active pieces and real winning chances.",
     },
     {
       id: "ponziani-steinitz-sharp",
@@ -353,6 +449,30 @@ const ponziani: Opening = {
             "White's knight captures the d4 pawn, restoring material balance in a sharp, unbalanced position.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Ke7",
+          idea: "Black's king steps to e7 — the only square available after the pawn storm.",
+        },
+        {
+          san: "Nxc6+",
+          idea: "White's knight captures on c6 with check! A fork attacking the king while eliminating a key defender.",
+        },
+        {
+          san: "bxc6",
+          idea: "Black recaptures with the b-pawn, shattering the queenside structure.",
+        },
+        {
+          san: "Qd4",
+          idea: "White's queen centralises to d4, dominating the board and threatening multiple targets at once.",
+        },
+        {
+          san: "a5",
+          idea: "Black advances the a-pawn, seeking queenside counterplay. The Sharp Steinitz creates one of the most theoretically dense positions in the Ponziani — both sides must know the lines precisely or fall into immediate tactical disasters.",
+        },
+      ],
+      continuationIdea:
+        "The Sharp Steinitz is the Ponziani at its most forcing and tactical. The en passant capture exd6 and the Nxd4 create immediate material imbalances where both players race to activate their pieces. Precise knowledge of the resulting positions is essential — this is the line to study when you want to take Ponziani opponents by surprise.",
     },
   ],
 };

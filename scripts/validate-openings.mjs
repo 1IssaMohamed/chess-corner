@@ -52,8 +52,17 @@ for (const file of files) {
     // Validate main moves
     for (let i = 0; i < line.moves.length; i++) {
       const san = line.moves[i].san;
-      const result = chess.move(san);
-      if (!result) {
+      try {
+        const result = chess.move(san);
+        if (!result) {
+          console.error(
+            `  ILLEGAL MAIN    ${opening.id} / ${line.id} / move[${i}] "${san}"`,
+          );
+          illegalMain++;
+          lineOk = false;
+          break;
+        }
+      } catch (e) {
         console.error(
           `  ILLEGAL MAIN    ${opening.id} / ${line.id} / move[${i}] "${san}"`,
         );
@@ -72,8 +81,16 @@ for (const file of files) {
       linesWithContinuation++;
       for (let i = 0; i < line.continuationMoves.length; i++) {
         const san = line.continuationMoves[i]?.san ?? line.continuationMoves[i];
-        const result = chess.move(san);
-        if (!result) {
+        try {
+          const result = chess.move(san);
+          if (!result) {
+            console.error(
+              `  ILLEGAL CONT    ${opening.id} / ${line.id} / cont[${i}] "${san}"`,
+            );
+            illegalCont++;
+            break;
+          }
+        } catch (e) {
           console.error(
             `  ILLEGAL CONT    ${opening.id} / ${line.id} / cont[${i}] "${san}"`,
           );

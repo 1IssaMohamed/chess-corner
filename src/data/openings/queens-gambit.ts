@@ -211,6 +211,30 @@ const queensGambit: Opening = {
             "Black develops the last minor piece, completing the setup.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Rc1",
+          idea: "White centralises the rook to the c-file, targeting the c6 pawn if Black ever plays c5.",
+        },
+        {
+          san: "c5",
+          idea: "Black strikes the center — the only real way to fight for equality in the Orthodox.",
+        },
+        {
+          san: "cxd5",
+          idea: "White captures, opening the c-file for the rook that just moved to c1.",
+        },
+        {
+          san: "exd5",
+          idea: "Black recaptures, reaching the hanging pawns or IQP depending on whether Black plays cxd4.",
+        },
+        {
+          san: "dxc5",
+          idea: "White captures — now Black must recapture and manage the IQP. The Orthodox QGD is all about whether Black can activate the d5 pawn or whether it becomes a weakness.",
+        },
+      ],
+      continuationIdea:
+        "The Orthodox QGD's central tension revolves around Black's c5 break. White's Rc1 prepares to use the c-file after the exchanges, and if Black doesn't break with c5, White just improves pieces and eventually plays e4 anyway. The key strategic question is whether Black's IQP after the pawn exchanges is a strength (active pieces) or a weakness (endgame target).",
     },
     {
       id: "exchange-variation",
@@ -278,6 +302,30 @@ const queensGambit: Opening = {
         },
         { san: "Be7", explanation: "Black prepares to castle." },
       ],
+      continuationMoves: [
+        {
+          san: "O-O",
+          idea: "White castles and prepares the minority attack — b4-b5 to weaken Black's c6 pawn.",
+        },
+        {
+          san: "O-O",
+          idea: "Black castles too. Both sides are fully developed.",
+        },
+        {
+          san: "b4",
+          idea: "The minority attack begins! White advances the b-pawn to challenge Black's queenside majority — 2 pawns vs 3.",
+        },
+        {
+          san: "Re8",
+          idea: "Black centralises the rook and prepares counterplay. The minority attack is White's signature plan in the Exchange Variation.",
+        },
+        {
+          san: "b5",
+          idea: "White presses on — the goal is to trade the b-pawn for Black's c-pawn, leaving a weak, isolated c6 pawn as a permanent target. Simple, logical, and effective.",
+        },
+      ],
+      continuationIdea:
+        "The Exchange Variation's plan is beautifully clear: White uses the minority attack (b4-b5-bxc6) to saddle Black with a weak isolated c-pawn. With no active counterplay, Black must defend this pawn passively for the entire middlegame and endgame. Understanding this plan teaches you one of the most important positional concepts in chess — the minority attack.",
     },
     {
       id: "slav-defense",
@@ -345,6 +393,30 @@ const queensGambit: Opening = {
         },
         { san: "Nbd7", explanation: "Black completes development." },
       ],
+      continuationMoves: [
+        {
+          san: "a5",
+          idea: "White advances a5, clamping the queenside and taking away the b6 square from Black's pieces.",
+        },
+        {
+          san: "Bxc3",
+          idea: "Black trades the bishop for White's knight, accepting structural damage to eliminate a key defender.",
+        },
+        {
+          san: "bxc3",
+          idea: "White recaptures with the b-pawn, opening the b-file.",
+        },
+        {
+          san: "Ne4",
+          idea: "Black's knight leaps to the strong e4 outpost — the classic Slav counterplay, centralising the knight on an excellent square.",
+        },
+        {
+          san: "Bd3",
+          idea: "White attacks the Ne4, fighting for control of the center. The Slav gives Black active piece play with a solid structure — White has the bishop pair but Black's pieces are well-coordinated.",
+        },
+      ],
+      continuationIdea:
+        "The Slav Defence rewards concrete understanding of the bishop pair versus solid structure tradeoff. Black's Bf5 outside the pawn chain is the whole point of c6 — without it, Black would be stuck with a passive bishop. After castling, the game revolves around whether White can use the e4 break to open lines for the bishops, or Black can neutralize them.",
     },
     {
       id: "semi-slav",
@@ -398,6 +470,30 @@ const queensGambit: Opening = {
         { san: "O-O", explanation: "White castles." },
         { san: "b4", explanation: "Black continues the queenside expansion." },
       ],
+      continuationMoves: [
+        {
+          san: "Ne2",
+          idea: "White repositions the knight — from e2 it goes to g3, supporting the center and preparing kingside action.",
+        },
+        {
+          san: "a5",
+          idea: "Black continues queenside expansion — the b4-b5 pawn roller is the Semi-Slav's main source of counterplay.",
+        },
+        {
+          san: "Ng3",
+          idea: "The knight arrives on g3, eyeing f5 and h5 for kingside attack.",
+        },
+        {
+          san: "c5",
+          idea: "Black strikes the center, fighting back before White builds a huge center.",
+        },
+        {
+          san: "e4",
+          idea: "White pushes e4 — the center opens and both players race. The Semi-Slav Meran is one of the most deeply analyzed variations in chess, with theory going 30+ moves deep.",
+        },
+      ],
+      continuationIdea:
+        "The Meran Variation is a race: White attacks in the center with e4, Black pushes queenside pawns with b4-b5-c5. Both plans are direct and forceful — this is why the Semi-Slav is one of the most theoretically dense openings in chess. Whoever knows the theory better usually wins in the complications.",
     },
     {
       id: "tarrasch-defense",
@@ -453,6 +549,30 @@ const queensGambit: Opening = {
           explanation: "Black recaptures, keeping the bishops active.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Na4",
+          idea: "White's knight jumps to a4, immediately targeting Black's active Bc5.",
+        },
+        {
+          san: "Bg4",
+          idea: "Black pins the Nf3, trying to create complications before the bishop is lost.",
+        },
+        {
+          san: "Nxc5",
+          idea: "White's knight captures the Bc5, winning material.",
+        },
+        {
+          san: "Qd7",
+          idea: "Black centralises the queen to d7, defending and preparing queenside counterplay.",
+        },
+        {
+          san: "Nxb7",
+          idea: "White's knight grabs another pawn on b7 — the material advantage proves decisive. The Tarrasch IQP position is a duel between Black's piece activity and White's long-term structural advantage — a fascinating positional battleground.",
+        },
+      ],
+      continuationIdea:
+        "The Tarrasch IQP position is the most famous illustration of a positional tradeoff: Black has active piece play and the open d-file, while White targets the isolated d5 pawn long-term. If Black can attack before White consolidates, the pawn doesn't matter. If White blockades it successfully and reaches an endgame, d5 becomes a decisive weakness.",
     },
     {
       id: "catalan",
@@ -504,6 +624,30 @@ const queensGambit: Opening = {
         },
         { san: "Bc6", explanation: "Black challenges the g2 bishop." },
       ],
+      continuationMoves: [
+        {
+          san: "Qxc6",
+          idea: "White's queen captures the c6 pawn — winning material while maintaining queenside pressure.",
+        },
+        {
+          san: "bxc6",
+          idea: "Black recaptures with the b-pawn, maintaining material but creating a weak doubled pawn structure.",
+        },
+        {
+          san: "Ne5",
+          idea: "White's knight jumps to the powerful e5 outpost, targeting the weak c6 pawn.",
+        },
+        {
+          san: "Nbd7",
+          idea: "Black develops the knight to d7 to challenge the Ne5.",
+        },
+        {
+          san: "Nxd7",
+          idea: "White trades the knight, keeping a lasting structural advantage with the doubled c-pawns. The Catalan rewards patient play — the Bg2 provides pressure for the entire game, and Black's queenside pawns can become permanent targets.",
+        },
+      ],
+      continuationIdea:
+        "The Catalan's Bg2 is the most patient bishop in chess — it pressures the a8-h1 diagonal all game, targets weak pawns on c4 and a6, and generates slow but relentless pressure that's nearly impossible to neutralize. Magnus Carlsen has turned this opening into a precision weapon at the elite level.",
     },
     {
       id: "cambridge-springs",
@@ -569,6 +713,30 @@ const queensGambit: Opening = {
           isKeyMove: true,
         },
       ],
+      continuationMoves: [
+        {
+          san: "Qxc6+",
+          idea: "White's queen captures on c6 with check — winning the pawn while forcing Black to spend a tempo.",
+        },
+        {
+          san: "bxc6",
+          idea: "Black blocks with the b-pawn, but the queenside structure is now shattered.",
+        },
+        {
+          san: "Nd2",
+          idea: "White repositions the knight to d2, maintaining central control and preparing to redeploy.",
+        },
+        {
+          san: "c5",
+          idea: "Black strikes in the center, fighting for activity.",
+        },
+        {
+          san: "dxc5",
+          idea: "White captures. The Cambridge Springs shows a key principle: an early queen sortie (Qa5) can disrupt White's plans and give Black easy equality — even if queens come off early.",
+        },
+      ],
+      continuationIdea:
+        "The Cambridge Springs demonstrates the power of early queen activity in the QGD. Black's Qa5 creates immediate tactical threats that force White to react defensively. Once the queenside tension is resolved, Black has comfortable equality — a reliable weapon against the Orthodox QGD.",
     },
     {
       id: "nimzo-indian",
@@ -625,6 +793,30 @@ const queensGambit: Opening = {
           explanation: "Black gains queenside space, preparing b5.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Bb3",
+          idea: "White repositions the bishop, keeping the diagonal while avoiding a7-b6 pressure.",
+        },
+        {
+          san: "b5",
+          idea: "Black expands on the queenside — typical Nimzo-Indian counterplay.",
+        },
+        {
+          san: "e4",
+          idea: "White pushes for the center, the bishop pair and extra space justify this aggressive approach.",
+        },
+        {
+          san: "cxd4",
+          idea: "Black captures — clearing the center and activating pieces.",
+        },
+        {
+          san: "Nxd4",
+          idea: "White's knight captures on d4, resolving the tension. The Nimzo-Indian is one of the most theory-rich openings in chess — the bishop pair vs. structural damage tradeoff has been analyzed by the world's best players for a century.",
+        },
+      ],
+      continuationIdea:
+        "The Nimzo-Indian's Bxc3 trade is the ultimate positional gamble: Black gives up the bishop pair to saddle White with doubled c-pawns. Whether this is good depends entirely on whether White can use the bishop pair for an attack, or Black can neutralize them and target the pawn weaknesses. World Champions from Botvinnik to Kasparov have argued about this for decades.",
     },
     {
       id: "chigorin-defense",
@@ -689,6 +881,30 @@ const queensGambit: Opening = {
             "Black develops the last minor piece — the position is dynamically complex.",
         },
       ],
+      continuationMoves: [
+        {
+          san: "Qa4",
+          idea: "White's queen swings to a4, pinning the Bb4 and attacking the Nc6 simultaneously.",
+        },
+        {
+          san: "Qd6",
+          idea: "Black's queen defends the Nc6 and creates counterplay by eyeing d4.",
+        },
+        {
+          san: "O-O-O",
+          idea: "White castles queenside — the king is safe and the rook immediately joins the attack on the d-file.",
+        },
+        {
+          san: "O-O-O",
+          idea: "Black castles queenside too — a wild double-opposite-side castling position emerges.",
+        },
+        {
+          san: "d5",
+          idea: "White's d-pawn storms forward to d5, opening the center and fighting for the initiative. The Chigorin Defence creates rich, unconventional positions that reward dynamic players who are comfortable in chaos.",
+        },
+      ],
+      continuationIdea:
+        "The Chigorin Defence creates rich, chaotic positions far outside normal QGD theory. Black sacrifices the bishop pair for active piece play and dynamic counterplay — particularly against White's doubled f-pawns. It's an excellent weapon for players who want to fight and avoid well-worn theoretical paths.",
     },
   ],
 };
