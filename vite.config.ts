@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  base: process.env.GITHUB_ACTIONS ? "/chess-corner/" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
