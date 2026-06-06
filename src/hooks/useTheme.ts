@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from "react";
 
-export type Theme = "light" | "light";
+export type Theme = "light" | "dark";
 
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
@@ -19,7 +19,7 @@ export function useTheme() {
     localStorage.setItem("chesscorner_theme", theme);
   }, [theme]);
 
-  const toggle = () => setTheme((t) => (t === "light" ? "light" : "light"));
+  const toggle = () => setTheme((t) => (t === "light" ? "dark" : "light"));
 
   return { theme, toggle };
 }
