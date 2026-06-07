@@ -121,3 +121,15 @@ export interface PracticeState {
   refutation: Refutation | null;
   refutationMessage: string | null;
 }
+
+// A Stockfish evaluation. cp = centipawns (100 = one pawn). mate = moves-to-mate.
+// Exactly one of cp/mate is non-null. Stored from WHITE's perspective so the bar
+// can render directly (positive = White better).
+export interface EngineScore {
+  cp: number | null;
+  mate: number | null;
+}
+
+// Free-play opponent behaviour: "engine" = Stockfish replies as the other side,
+// "both" = you move both colours yourself and just watch the eval bar.
+export type FreePlayMode = "engine" | "both";

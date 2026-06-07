@@ -29,12 +29,19 @@ Configured in both `vite.config.ts` and `tsconfig.json`.
 - `src/hooks/useProgress.ts` — React hook wrapping progressStore
 - `src/hooks/useClickToMove.ts` — click-a-piece-then-click-a-square input (alongside drag)
 - `src/hooks/useMoveSounds.ts` — Web Audio click/buzz/chime on move/wrong/complete (shared by both pages)
+- `src/hooks/useStockfish.ts` — owns the Stockfish web-worker lifecycle; lazy (only mounts on FreePlayPage)
+- `src/hooks/useFreePlay.ts` — free-play game state (plain useState, NOT a reducer): SAN move list, engine/both mode toggle, eval effect
 - `src/utils/chess.ts` — chess.js integration (buildGameUpToStep, movesMatch, getFenAtStep, buildContinuationFens, findRefutation, pieceName)
+- `src/utils/engine.ts` — UCI wrapper around the Stockfish worker (`evaluate`, `bestMove`, serialized command chain)
+- `src/utils/evalScore.ts` — engine score → White-perspective, bar fill % (logistic), `formatEval` label
 - `src/utils/sounds.ts` — synthesised sounds via Web Audio (no audio files)
+- `src/components/board/EvalBar.tsx` — vertical engine eval bar shown next to the board in free play
+- `src/components/freeplay/FreePlayPage.tsx` — free-play "Play from here" mode page
 - `src/components/learn/ContinuationViewer.tsx` — "see the idea" mini-board that auto-plays a line's `continuationMoves`
 - `src/utils/progress.ts` — mastery percentage helpers + `getOrderedLines(opening)` (beginner→intermediate→advanced)
 - `src/utils/random.ts` — weighted random line selection
-- `src/components/` — UI components grouped by feature (layout/, board/, learn/, practice/, home/, ui/)
+- `src/components/` — UI components grouped by feature (layout/, board/, learn/, practice/, freeplay/, home/, ui/)
+- `public/engine/` — vendored Stockfish (`stockfish.wasm.js` worker + `stockfish.wasm`), single-threaded; see Free-Play Mode
 
 ## Key Design Rules
 
@@ -65,6 +72,59 @@ idle → computer_move (800ms delay) → awaiting_user
 wrong_move (manual dismiss via "Got it" button) → awaiting_user
 line_complete → (retry or next line)
 gave_up → (retry or next line)
+
+## Free-Play Mode + Engine Eval Bar
+
+"Play from here" mode: branch off a scripted line at any point and play the
+position out for real, with a live Stockfish eval bar. Built for "why does THIS
+move work and that one doesn't" — the scripted Learn/Practice lines stay ~0.0 by
+design, so the bar only earns its keep once you're in unscripted territory.
+
+### Entry & route
+
+- A **"▶ Play from here"** button in `LearnPage` (under `LearnControls`, hidden on
+  `line_complete`) navigates to `/play/:openingId/:lineId?step=N`.
+- `N` is the Learn `currentStepIndex`. `FreePlayPage` clamps it and computes the
+  start FEN via `getFenAtStep(line, N)`. The board orientation is the opening's side.
+
+### Two modes (user toggle in the right panel)
+
+- **`engine`** (default): you play `opening.side`; Stockfish replies as the other
+  side via `bestMove`. `userSide = opening.side`.
+- **`both`**: you move both colours yourself; no auto-reply. For comparing ideas.
+
+### `useFreePlay` (NOT a reducer)
+
+Unlike Learn/Practice (useReducer state machines), free play is plain `useState`
+because the engine calls are async side-effects. It holds a `moves: string[]` (SAN)
+and rebuilds a fresh `Chess` from `startFen` on every render (same "never hold a
+Chess instance across renders" rule). Key bits:
+
+- `playMove(from,to)`: validate via chess.js, push SAN. In `engine` mode, if it's
+  now the opponent's turn, call `engine.bestMove(fen)` and append the reply (via a
+  functional `setMoves` updater so it can't append to a stale position).
+- `takeBack()`: pop one move; in `engine` mode pop the engine's reply too so it
+  lands back on the user's turn. `reset()`: clear to `startFen`.
+- Eval effect: on every FEN change, `engine.evaluate(fen)` → store score converted
+  to White's perspective (`toWhitePerspective` + `sideToMoveFromFen`). An id-ref
+  guard drops stale evals from superseded positions.
+
+### The engine
+
+- Vendored `stockfish.js@10` in `public/engine/` — the **single-threaded** WASM
+  build. This is deliberate: the multithreaded `stockfish.wasm` needs
+  `SharedArrayBuffer` → COOP/COEP headers, which **GitHub Pages can't set**. The
+  single-threaded build needs no special headers.
+- Worker URL is `${import.meta.env.BASE_URL}engine/stockfish.wasm.js` so it
+  resolves under the `/chess-corner/` Pages base path. The worker fetches
+  `stockfish.wasm` relative to itself, so the two files MUST stay co-located.
+- `useStockfish` creates the worker only on `FreePlayPage` mount and disposes on
+  unmount → the ~0.5MB wasm never loads on the rest of the app.
+- `engine.ts` serializes all UCI commands through an internal promise chain (the
+  engine is single-threaded; one search at a time). Fixed `go depth 12` for evals,
+  `go movetime 800` for opponent moves.
+- `import.meta.env` requires `src/vite-env.d.ts` (`/// <reference types="vite/client" />`).
+- `public/` is in the ESLint `ignores` (don't lint the minified engine).
 
 ## Progress Schema
 

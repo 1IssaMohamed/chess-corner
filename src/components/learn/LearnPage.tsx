@@ -220,6 +220,24 @@ export default function LearnPage() {
             onDismissHint={dismissHint}
           />
 
+          {/* Branch off the script and play the current position out against the
+              engine, with a live eval bar — "why does this move work, not that?" */}
+          {state.phase !== "line_complete" && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="self-start"
+              onClick={() =>
+                navigate(
+                  `/play/${opening.id}/${line.id}?step=${state.currentStepIndex}`,
+                )
+              }
+              title="Play this position out against Stockfish with an eval bar"
+            >
+              ▶ Play from here
+            </Button>
+          )}
+
           {/* Hint banner */}
           {state.phase === "hint_shown" && state.arrowHint && (
             <div

@@ -25,6 +25,15 @@ export function buildGameUpToStep(line: OpeningLine, stepIndex: number): Chess {
   return chess;
 }
 
+// Like buildGameUpToStep, but starts from an arbitrary FEN and takes raw SAN
+// strings. Used by free-play, which tracks its own move list. Same rule applies:
+// rebuild fresh every time, never hold a Chess instance across renders.
+export function buildGameFromMoves(startFen: string, sans: string[]): Chess {
+  const chess = new Chess(startFen);
+  for (const san of sans) chess.move(san);
+  return chess;
+}
+
 // Shortcut when you only need the FEN string, not the full chess.js instance.
 export function getFenAtStep(line: OpeningLine, stepIndex: number): string {
   return buildGameUpToStep(line, stepIndex).fen();

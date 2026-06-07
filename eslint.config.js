@@ -12,6 +12,7 @@ export default [
       "dist",
       "node_modules",
       "scripts",
+      "public", // vendored, minified assets (e.g. the Stockfish engine) — not ours to lint
       "**/*.d.ts",
       "tailwind.config.ts",
     ],

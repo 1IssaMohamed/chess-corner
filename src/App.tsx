@@ -9,6 +9,7 @@ import HomePage from "@/components/home/HomePage";
 import OpeningPage from "@/components/opening/OpeningPage";
 import LearnPage from "@/components/learn/LearnPage";
 import PracticePage from "@/components/practice/PracticePage";
+import FreePlayPage from "@/components/freeplay/FreePlayPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             path="practice/:openingId/:lineId"
             element={<PracticePage />}
           />
+          <Route path="play/:openingId/:lineId" element={<FreePlayPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
