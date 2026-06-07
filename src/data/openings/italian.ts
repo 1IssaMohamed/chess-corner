@@ -16,7 +16,11 @@ const italian: Opening = {
       description:
         "White plays d3 instead of d4, keeping the center closed for a slow, strategic buildup. This modern system avoids early tactical battles and is easy to learn — highly recommended for beginners.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game — one of the oldest and most played openings in chess — begins here, staking a central claim that will define the whole game. After Bc4 targeting the sensitive f7 pawn, this main line (the Giuoco Pianissimo) builds with c3 and then the quiet d3 rather than the sharper d4, choosing strategic patience over an early explosion. The signature plan is the Nbd2–f1–g3 knight reroute, building kingside pressure while the bishop sits comfortably on the b3–g8 diagonal — all without overextending. This approach is loved from beginner to World Championship level because it's easy to play correctly, hard to go wrong in, and quietly generates a lasting advantage.",
+        },
         { san: "e5", explanation: "Black mirrors White's center." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -103,7 +107,11 @@ const italian: Opening = {
       description:
         "Black plays Be7 instead of Bc5 or Nf6, a solid and drawish defence. The bishop on e7 is passive but safe, leading to quiet strategic positions. Great for learning to exploit passive setups.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4 this line diverges when Black plays Be7 instead of the main-line Bc5 — a very passive choice that sidesteps all sharp theory at the cost of a completely inactive bishop. Unlike the main Giuoco Pianissimo where both sides develop actively, here White gets to play d4 freely, trade queens early, and reach a technically favourable endgame where Black's pieces have nothing useful to do. The Hungarian teaches a key lesson: passive play in the opening is a slow death. Your job is to develop calmly, convert the queen trade into a technical edge, and grind it out.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -193,7 +201,11 @@ const italian: Opening = {
       description:
         "White plays d4 early, leading to sharp tactical battles after the pawn exchanges. The Open Italian creates dynamic positions where both sides fight for the initiative from the very first moves.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4 Bc5 c3 this line diverges from the main Giuoco Pianissimo when White plays the more ambitious d4 instead of d3 — blowing open the center for an immediate tactical battle rather than a slow strategic squeeze. The pawn exchanges create open lines for White's bishop pair, the c-file becomes active, and both sides must calculate precisely instead of maneuvering patiently. This is the sharper, more combative face of the Italian: mistakes get punished quickly rather than accumulating over 40 moves.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -247,7 +259,7 @@ const italian: Opening = {
         {
           san: "d5",
           explanation:
-            "White pushes d5 to drive back Black's pieces and open more lines.",
+            "Black strikes back with d5! Returning the extra piece to free the position and blunt White's initiative — the key resource in this line.",
         },
       ],
       continuationMoves: [
@@ -282,7 +294,11 @@ const italian: Opening = {
       description:
         "White sacrifices the b4 pawn to rapidly develop and attack. This 19th-century gambit was played by World Champions and remains theoretically respectable and practically very dangerous.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4 Bc5, this line takes a dramatic detour at move 4: White plays b4, the Evans Gambit, sacrificing a pawn to gain a massive development lead and attack immediately. Forget the slow Pianissimo build-up — the Evans is 19th-century chess at its finest: White gets all pieces out in record time, Black spends three moves retreating a bishop, and the initiative practically plays itself. Kasparov, Morphy, and countless attacking players have wielded this for 200 years because the practical pressure it creates over the board is enormous.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -367,7 +383,11 @@ const italian: Opening = {
       description:
         "White plays d4 in the Italian setup, often transposing into Scotch Gambit territory if Black captures. This accelerated central attack leads to open, tactical positions with active piece play for both sides.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4, this line diverges when Black plays Nf6 instead of the main-line Bc5 — immediately counterattacking e4 rather than developing the bishop symmetrically. White responds with d4, entering Scotch Gambit territory, then the aggressive e5 push drives back the knight and seizes central space while the c4 bishop stays active on its diagonal. A completely different character from the slow Pianissimo — open lines, quick tactical pressure, and central space define this variation.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -451,7 +471,11 @@ const italian: Opening = {
       description:
         "Both sides develop all four knights, creating a symmetrical but dynamic position. White uses the c4 bishop to create attacking chances while Black looks for counterplay in the center.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4, this line diverges from the Giuoco Pianissimo when White develops with Nc3 instead of the c3 preparation — allowing both sides to bring out all four knights in a symmetric setup. The c4 bishop gives White a subtle but consistent edge: after castling and Bg5, the pin on Black's f6 knight creates kingside pressure that builds slowly. Patient, positional play is the theme here — the d5 outpost and eventual central pawn push are the long-term rewards.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -523,7 +547,11 @@ const italian: Opening = {
       description:
         "Black plays Nf6 instead of Bc5, immediately counterattacking e4. This leads to sharp tactical positions, especially after the aggressive 4.Ng5 threatening f7.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4, this line diverges sharply when Black plays Nf6 instead of the main-line Bc5 — immediately counterattacking e4 with both knights out rather than developing the bishop symmetrically. White replies with the aggressive Ng5, threatening Nxf7 straight away — a completely different character from the slow strategic Pianissimo. Black must fight back precisely with d5, accepting an unbalanced position where active piece play and central pawns compensate for a compromised structure.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -614,7 +642,11 @@ const italian: Opening = {
       description:
         "White sacrifices the knight on f7, exposing Black's king for a ferocious attack. The king gets chased across the board. Not objectively best but extremely dangerous in practice.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4 Nf6 Ng5 d5 exd5 Nxd5, this line diverges with the shocking Nxf7 — a knight sacrifice to drag Black's king into the open. While the main Giuoco Pianissimo builds quiet strategic pressure over many moves, the Fried Liver is pure attack from move 6: Black's king gets chased from f7 to e6 and beyond while every White piece joins the hunt. Not objectively refuted with best play, but terrifying to face over the board — it has won brilliancies at all levels for over 150 years.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -704,7 +736,11 @@ const italian: Opening = {
       description:
         "Black ignores the Ng5 threat to f7 and counterattacks with Bc5, leading to incredibly wild positions where both kings are exposed. Memorising the key variations is essential.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Italian Game starts with e4 e5, and after Nf3 Nc6 Bc4 Nf6 Ng5, instead of the standard d5 counter this line sees Black play the stunning Bc5 — the Traxler Counterattack — ignoring White's threat to f7 entirely and preparing to sacrifice a bishop. Unlike anything else in the Italian, this is pure tactical warfare from both sides: both kings get exposed, material swings wildly, and only the player who knows the theory better survives. An extreme variation that sharpens tactical vision and catches unprepared opponents completely off guard.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },

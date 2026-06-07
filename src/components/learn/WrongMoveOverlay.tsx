@@ -95,7 +95,7 @@ export default function WrongMoveOverlay({
         </div>
         <button
           onClick={onDismiss}
-          className="flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all hover:opacity-80"
+          className="flex-shrink-0 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:opacity-80 active:opacity-70"
           style={{
             background: "var(--danger)",
             color: "#fff",

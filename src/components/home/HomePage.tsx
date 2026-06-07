@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { REPERTOIRE } from "@/data/openings";
+import { OPENING_STATS } from "@/data/openingStats";
 import { useProgress } from "@/hooks/useProgress";
 import OpeningCard from "./OpeningCard";
 
@@ -7,11 +8,19 @@ export default function HomePage() {
   const { store } = useProgress();
 
   const whiteOpenings = useMemo(
-    () => REPERTOIRE.filter((o) => o.side === "white"),
+    () =>
+      REPERTOIRE.filter((o) => o.side === "white").sort(
+        (a, b) =>
+          (OPENING_STATS[b.id]?.games ?? 0) - (OPENING_STATS[a.id]?.games ?? 0),
+      ),
     [],
   );
   const blackOpenings = useMemo(
-    () => REPERTOIRE.filter((o) => o.side === "black"),
+    () =>
+      REPERTOIRE.filter((o) => o.side === "black").sort(
+        (a, b) =>
+          (OPENING_STATS[b.id]?.games ?? 0) - (OPENING_STATS[a.id]?.games ?? 0),
+      ),
     [],
   );
 

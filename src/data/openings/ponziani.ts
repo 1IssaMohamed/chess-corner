@@ -18,7 +18,8 @@ const ponziani: Opening = {
       moves: [
         {
           san: "e4",
-          explanation: "White stakes a claim in the center.",
+          explanation:
+            "The Ponziani Opening — 1.e4 e5 2.Nf3 Nc6 3.c3 — is one of chess's oldest and most underestimated weapons, preparing d4 two moves earlier than the Italian and Ruy López while giving nothing away in development. White's idea is deceptively simple: support d4 with c3, build a broad central pawn duo, and use the resulting space advantage to squeeze Black for the rest of the game. After 3...Nf6 4.d4 exd4 5.cxd4, the e5 push kicks the knight and creates an imposing pawn center that Black must fight or suffocate under. The Ponziani is beloved as a surprise weapon because almost nobody knows how to handle the resulting positions, and White's plan remains the same every game — dominate the center and never let Black breathe.",
           isKeyMove: true,
         },
         {
@@ -104,7 +105,12 @@ const ponziani: Opening = {
       description:
         "Black opts for a solid, flexible structure. White develops naturally and castles, reaching a balanced position with a slight space advantage.",
       moves: [
-        { san: "e4", explanation: "White claims the center.", isKeyMove: true },
+        {
+          san: "e4",
+          explanation:
+            "The Ponziani starts with e4 e5 Nf3 Nc6 c3, and this line diverges when Black plays d6 instead of the main-line Nf6, leading to a solid but passive structure where White builds the ideal d4 center unopposed and steadily accumulates a spatial advantage that slowly squeezes Black's position into passivity.",
+          isKeyMove: true,
+        },
         { san: "e5", explanation: "Black matches in the center." },
         { san: "Nf3", explanation: "Attacks e5 and develops." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -176,7 +182,12 @@ const ponziani: Opening = {
       description:
         "After 3...Nf6 4.d4 exd4, White plays 5.e5 instead of recapturing — a sharp pawn sacrifice that drives the knight around and seizes space. Requires precise play from both sides.",
       moves: [
-        { san: "e4", explanation: "White opens the center.", isKeyMove: true },
+        {
+          san: "e4",
+          explanation:
+            "The Ponziani starts with e4 e5 Nf3 Nc6 c3 Nf6 d4 exd4, and this line diverges when White plays the sharp 5.e5 instead of recapturing, leading to the Steinitz Variation where White sacrifices the recapture to gain space immediately — kicking the knight around and entering sharp, forcing positions where Black must find precise defensive moves.",
+          isKeyMove: true,
+        },
         { san: "e5", explanation: "Black replies symmetrically." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -248,7 +259,12 @@ const ponziani: Opening = {
       description:
         "Black's most energetic reply — immediately striking at the center. White captures and enters an open game where precise play is key.",
       moves: [
-        { san: "e4", explanation: "White claims the center.", isKeyMove: true },
+        {
+          san: "e4",
+          explanation:
+            "The Ponziani starts with e4 e5 Nf3 Nc6 c3, and this line diverges when Black plays the bold d5 counter-attack — the sharpest response — leading to immediately open positions where the d4 pawn becomes the central battleground and whoever handles the resulting tactical complications better takes control.",
+          isKeyMove: true,
+        },
         { san: "e5", explanation: "Black matches." },
         { san: "Nf3", explanation: "Develops and pressures e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -327,7 +343,8 @@ const ponziani: Opening = {
       moves: [
         {
           san: "e4",
-          explanation: "White occupies the center.",
+          explanation:
+            "The Ponziani starts with e4 e5 Nf3 Nc6 c3, and this line diverges when Black develops the bishop to c5 instead of playing Nf6, leading to a lively Open Game after the Bb4+ check disrupts White's development — both sides have active pieces and the resulting unbalanced positions reward concrete calculation over theoretical preparation.",
           isKeyMove: true,
         },
         { san: "e5", explanation: "Black mirrors." },
@@ -400,7 +417,12 @@ const ponziani: Opening = {
       description:
         "The most forcing line of the Steinitz Variation. White plays Bc4, Black retreats with Nb6, then bombs with d5. White captures en passant, launching a tactical melee that tests both players' preparation.",
       moves: [
-        { san: "e4", explanation: "White opens.", isKeyMove: true },
+        {
+          san: "e4",
+          explanation:
+            "The Ponziani starts with e4 e5 Nf3 Nc6 c3 Nf6 d4 exd4 e5 Nd5 Bc4, and this line diverges when White plays the sharp Bc4 instead of cxd4, leading to the most forcing Steinitz line where Black's Nb6 d5 counter-blast is met with the dramatic en passant capture exd6, launching one of the most tactically intense positions in the entire Ponziani repertoire.",
+          isKeyMove: true,
+        },
         { san: "e5", explanation: "Black replies." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },

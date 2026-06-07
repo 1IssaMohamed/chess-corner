@@ -18,7 +18,8 @@ const qgdDeclined: Opening = {
       moves: [
         {
           san: "d4",
-          explanation: "White occupies the center with the queen's pawn.",
+          explanation:
+            "The Queen's Gambit Declined — 1...d5 followed by 2...e6 — is chess's most solid and time-tested response to the Queen's Gambit, choosing central stability over the tactical complications of accepting the pawn. Black's idea is perfectly simple: support d5 with e6, develop Nf6 and Be7, castle, then wait for the right moment to break with c5 or e5 to free the position. The QGD is the opening of choice for players who want a genuinely sound foundation — no gambits, no speculative sacrifices, no early fireworks — just classical development and a solid structure that leads to rich strategic middlegames where superior understanding wins. It was the main weapon of Anatoly Karpov throughout his entire career, and remains one of the most reliable ways to handle 1.d4 at every level from club player to World Championship.",
         },
         {
           san: "d5",
@@ -100,7 +101,11 @@ const qgdDeclined: Opening = {
       description:
         "White trades on d5 early, reaching a symmetrical pawn structure. We get easy development and actively look to fight for the initiative.",
       moves: [
-        { san: "d4", explanation: "White opens with the queen's pawn." },
+        {
+          san: "d4",
+          explanation:
+            "The QGD starts with d4 d5 c4 e6, and this line diverges when White plays cxd5 early — the Exchange Variation — leading to a symmetrical pawn structure where Black's c8 bishop is immediately free to develop via Bf5 and the e5 central break becomes the main counterplay idea while White executes the minority attack with b4-b5.",
+        },
         {
           san: "d5",
           explanation: "We respond with our own central claim.",
@@ -182,7 +187,11 @@ const qgdDeclined: Opening = {
       description:
         "Emanuel Lasker's clever idea: after Bg5, we play Ne4! — attacking the bishop and simplifying. Trading pieces eases our position and equalizes quickly.",
       moves: [
-        { san: "d4", explanation: "White opens." },
+        {
+          san: "d4",
+          explanation:
+            "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Bg5 Be7 e3 O-O Nf3, and this line diverges when Black plays Ne4 — the Lasker Defence — leading to a clever piece trade where the bishop on g5 is attacked and simplification eases Black's cramped position, resulting in a comfortable, equality-oriented game that Emanuel Lasker used to neutralize White's pressure.",
+        },
         { san: "d5", explanation: "We claim the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         {
@@ -249,7 +258,11 @@ const qgdDeclined: Opening = {
       description:
         "One of the richest systems in chess. After ...h6 and ...b6, we fianchetto the queen's bishop and create a dynamic position where both sides have long-term plans.",
       moves: [
-        { san: "d4", explanation: "White opens." },
+        {
+          san: "d4",
+          explanation:
+            "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Bg5 Be7 e3 O-O Nf3, and this line diverges when Black plays h6 and then b6 — the Tartakower-Makogonov-Bondarevsky — leading to the fianchetto of the 'bad' light-squared bishop to b7, transforming it from a passive piece locked behind its own pawns into the game's most powerful long-range weapon on the a8-h1 diagonal.",
+        },
         { san: "d5", explanation: "We occupy the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "We decline solidly.", isKeyMove: true },
@@ -318,7 +331,11 @@ const qgdDeclined: Opening = {
       description:
         "A hybrid of the QGD and Nimzo-Indian — we play Bb4 early to pin the knight and create structural imbalances. Dynamic and fighting.",
       moves: [
-        { san: "d4", explanation: "White occupies the center." },
+        {
+          san: "d4",
+          explanation:
+            "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Nf3, and this line diverges when Black plays Bb4 — the Ragozin Variation — leading to a hybrid of the QGD and Nimzo-Indian where the c3 knight is pinned, the dxc4-c5 sequence creates an IQP structure, and Black's active piece play and fighting character give far more winning potential than standard Orthodox QGD lines.",
+        },
         { san: "d5", explanation: "We reply in the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         {
@@ -391,7 +408,11 @@ const qgdDeclined: Opening = {
       description:
         "A sharp, aggressive variation where we play Qa5 to attack White's Nc3 diagonally and disrupt the whole setup. Requires concrete knowledge but gives Black excellent winning chances.",
       moves: [
-        { san: "d4", explanation: "White opens with d4." },
+        {
+          san: "d4",
+          explanation:
+            "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Bg5 Nbd7 e3 c6 Nf3, and this line diverges when Black plays Qa5 — the Cambridge Springs Defence — leading to an aggressive queen sortie that attacks the Nc3 diagonally, disrupts White's entire queenside setup, and allows the e5 central break far earlier than White expects, giving Black excellent winning chances.",
+        },
         { san: "d5", explanation: "We stake out the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "We decline.", isKeyMove: true },
@@ -481,7 +502,11 @@ const qgdDeclined: Opening = {
       description:
         "We accept the gambit pawn on c4, then play Bb4 to pin the knight and justify keeping the pawn. Leads to sharp, unbalanced positions with excellent practical chances.",
       moves: [
-        { san: "d4", explanation: "White opens." },
+        {
+          san: "d4",
+          explanation:
+            "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Nf3, and this line diverges when Black actually accepts the gambit with dxc4 — the Vienna Variation — leading to sharp, unbalanced positions where the Bb4 pin and Nxe4 pawn capture create a tactical battle where Black fights to hold the material while White's bishop pair and open lines provide dynamic compensation.",
+        },
         { san: "d5", explanation: "We claim the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "Declining with e6.", isKeyMove: true },

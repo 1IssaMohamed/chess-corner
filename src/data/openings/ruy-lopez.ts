@@ -18,7 +18,9 @@ const ruyLopez: Opening = {
       moves: [
         {
           san: "e4",
-          explanation: "Controls the center. The most classical opening move.",
+          explanation:
+            "The Ruy López — also known as the Spanish Game — is one of the oldest and most deeply studied openings in chess, beloved by World Champions from Morphy to Carlsen. White's Bb5 attacks the knight defending Black's e5 pawn, creating a subtle long-term pressure that Black must respect for the entire game. The Exchange Variation resolves the tension early: White captures on c6, gives Black doubled pawns, and steers the game toward a clean endgame plan. The goal is elegantly simple — trade queens, reach a 4-vs-3 kingside pawn majority endgame, and convert that structural edge into a passed pawn that Black's doubled c-pawns can never match.",
+          isKeyMove: true,
         },
         {
           san: "e5",
@@ -99,7 +101,11 @@ const ruyLopez: Opening = {
       description:
         "Black plays d6, the oldest and most solid defence. Very easy to understand — Black simply supports e5 with a pawn. Leads to a somewhat cramped but completely solid position.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges when Black plays the passive d6 instead of the main-line a6 or Nf6, leading to a cramped but solid position where White systematically dismantles Black's structure through central pawn breaks and piece trades.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -183,7 +189,11 @@ const ruyLopez: Opening = {
       description:
         "Black immediately develops the bishop to c5, fighting for the center and eyeing f2. White usually replies c3 to prepare d4. A mirror image of the Italian Game that can transpose in several ways.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges when Black develops the bishop actively to c5 instead of chasing the Bb5 with a6, leading to Italian-like positions where both sides build solid pawn chains and maneuver for long-term advantage in a rich strategic battle.",
+        },
         { san: "e5", explanation: "Black mirrors White's central pawn." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -274,7 +284,8 @@ const ruyLopez: Opening = {
       moves: [
         {
           san: "e4",
-          explanation: "Controls the center — the most classical first move.",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and the Morphy Defence — Black's a6 chasing the bishop — is the most theoretically rich system in the opening, diverging when White retreats Ba4 instead of capturing, leading to the deeply complex Closed Ruy López where both sides follow long-established plans over 30–40 moves.",
         },
         {
           san: "e5",
@@ -387,7 +398,11 @@ const ruyLopez: Opening = {
       description:
         "Black plays Na5 to exchange White's bishop on b3, then advances c5 to fight for the center. A classic strategic system that remains popular at all levels, named after Mikhail Chigorin.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O, and this line diverges when Black plays Na5 to chase the bishop off b3, leading to comfortable, flexible positions where Black gets queenside counterplay at the cost of allowing White's full Nf1–g3 kingside plan.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -467,7 +482,11 @@ const ruyLopez: Opening = {
       description:
         "Black captures on e4, accepting a pawn but gaining active piece play. The Open Ruy López requires both sides to know deep theory — the material imbalances are temporary but the middlegame is sharp.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6, and this line diverges when Black captures the e4 pawn instead of developing further, leading to sharp, knife-edge positions where White's d4 recovers the pawn with a strong pawn center and lasting positional compensation against Black's active pieces.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -554,7 +573,11 @@ const ruyLopez: Opening = {
       description:
         "Black plays f5 to immediately challenge White's center and create wild tactical play. This gambit sacrifices structural solidity for immediate counterplay. As White, you must know the critical refutation.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges dramatically when Black plays the aggressive f5 instead of any normal development move, leading to wild tactical complications that White must know precisely — the Bxc6+ zwischenzug restores material equality while leaving Black with a permanently shattered queenside.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -599,49 +622,50 @@ const ruyLopez: Opening = {
         {
           san: "Nxc6",
           explanation:
-            "White takes on c6, disrupting Black's queenside pawn structure.",
+            "White takes on c6, smashing Black's queenside pawn structure.",
           isKeyMove: true,
         },
         {
-          san: "Qd5",
+          san: "bxc6",
           explanation:
-            "Black's queen comes to d5 with tempo, attacking the c6 knight.",
+            "Black recaptures with the b-pawn — the queenside is now shattered into isolated a- and c-pawns.",
         },
         {
-          san: "c3",
+          san: "Bxc6+",
           explanation:
-            "White defends, preparing to consolidate the extra pawn.",
+            "The key zwischenzug! Before Black can untangle, the bishop grabs c6 with check and wins back the material.",
+          isKeyMove: true,
         },
         {
-          san: "Qxc6",
+          san: "Bd7",
           explanation:
-            "Black recaptures, regaining material and leveling the position.",
+            "Black blocks the check, offering to trade off the strong bishop.",
         },
       ],
       continuationMoves: [
         {
+          san: "Bxe4",
+          idea: "White scoops up the loose e4 pawn — material is level again and Black's wrecked queenside is a lasting weakness.",
+        },
+        {
+          san: "Nf6",
+          idea: "Black develops the knight, hitting the Be4 and gaining a tempo.",
+        },
+        {
+          san: "Bd3",
+          idea: "The bishop retreats to d3, safe and still eyeing the h7 square.",
+        },
+        {
+          san: "Bd6",
+          idea: "Black develops the dark-squared bishop, aiming at h2 and preparing to castle.",
+        },
+        {
           san: "O-O",
-          idea: "White castles quickly — development first, then the structural advantages will tell.",
-        },
-        {
-          san: "Ne7",
-          idea: "Black develops the knight, preparing to castle and fight for the center.",
-        },
-        {
-          san: "d4",
-          idea: "White builds a strong center — with Black's doubled c-pawns, White has a lasting structural plus.",
-        },
-        {
-          san: "Ng6",
-          idea: "Black's knight jumps to g6, putting pressure on e5 and actively developing.",
-        },
-        {
-          san: "Be3",
-          idea: "White defends calmly and develops. The Schliemann creates wild complications that level out into a position where White's structural advantage and bishop pair are lasting assets against Black's active pieces.",
+          idea: "White castles. The complications have burned out: material is equal, but Black's split a- and c-pawns hand White a pleasant, risk-free structural edge for the long game.",
         },
       ],
       continuationIdea:
-        "The Schliemann is a dangerous gambit at club level but White emerges with real structural advantages after accurate play: the bishop pair and Black's doubled c-pawns are long-term assets. Black's compensation is active piece play and practical complications — making this a great weapon against unprepared opponents, less so against booked-up ones.",
+        "The Schliemann is a dangerous gambit at club level, but after the Bxc6+ zwischenzug White equalises the material and emerges with the healthier position: Black's queenside is split into weak, isolated a- and c-pawns. Black's compensation is active piece play and practical complications — making this a great weapon against unprepared opponents, less so against booked-up ones.",
     },
     {
       id: "archangel-variation",
@@ -650,7 +674,11 @@ const ruyLopez: Opening = {
       description:
         "Black develops the bishop to b7 after b5, creating pressure on e4 while maintaining solidity. A sharp and modern alternative to the main Closed lines, named after the Russian city where it was developed.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O b5 Bb3, and this line diverges when Black develops the bishop to b7 instead of d6 or Be7, leading to double-edged positions where the Bb7 exerts constant pressure on e4 and enables an early d5 central break that opens the game for both sides.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -726,7 +754,11 @@ const ruyLopez: Opening = {
       description:
         "Black retreats the knight to b8 on move 9 to reroute it to d7, creating an ultra-flexible position. Favoured by World Champions Spassky, Karpov, and Kasparov — this is one of the deepest strategic systems in chess.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with the full Morphy Defence main line, and this line diverges when Black plays the counterintuitive Nb8 retreat on move 9 to reroute the knight to d7, leading to one of the most strategically profound systems in chess — used by World Champions Spassky, Karpov, and Kasparov for its perfectly flexible position and hidden resources.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -804,7 +836,11 @@ const ruyLopez: Opening = {
       description:
         "Black sacrifices a pawn on move 8 to launch a powerful kingside attack. Developed by Frank Marshall in 1918, this gambit creates a lasting initiative. One of the most famous attacks in all of chess theory.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with the Morphy Defence main line through castling, and this line diverges when Black sacrifices a pawn on move 8 with d5, leading to one of the most famous gambits in chess theory — a lasting kingside initiative that doesn't evaporate even with accurate defense, developed secretly by Frank Marshall for 11 years before unleashing it against Capablanca in 1918.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },
@@ -889,7 +925,11 @@ const ruyLopez: Opening = {
       description:
         "Black challenges e4 immediately with Nf6 instead of chasing the bishop. After the endgame arising from 4.O-O Nxe4 5.d4, Black has a solid but passive position. The top drawing weapon in elite chess — used by Magnus Carlsen and Vladimir Kramnik.",
       moves: [
-        { san: "e4", explanation: "Controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges when Black plays Nf6 to counter-attack e4 instead of the standard a6, leading to the famous Berlin Endgame where queens come off early — a deceptively rich positional battleground that became Magnus Carlsen and Vladimir Kramnik's primary drawing weapon at the elite level.",
+        },
         { san: "e5", explanation: "Black fights for equal space." },
         { san: "Nf3", explanation: "Develops and attacks e5." },
         { san: "Nc6", explanation: "Defends e5." },

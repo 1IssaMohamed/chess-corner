@@ -18,7 +18,8 @@ const queensGambit: Opening = {
       moves: [
         {
           san: "d4",
-          explanation: "Controls the center with the d-pawn.",
+          explanation:
+            "The Queen's Gambit — 1.d4 d5 2.c4 — is one of the oldest and most respected openings in chess, a staple of World Championship play from Capablanca to Kasparov. White offers the c4 pawn not as a true sacrifice but as a temporary gambit: whether Black accepts or declines, White aims to control the center with the d-pawn and develop all pieces to their ideal squares. In the accepted line, Black takes the c4 pawn but finds White regaining it with the bishop, emerging with harmonious development and a stable center. The long-term plan is satisfying and repeatable: active minor pieces, the Nc4 outpost, and a5 clamping Black's queenside — White gets a pleasant, risk-free edge every time.",
           isKeyMove: true,
         },
         {
@@ -140,7 +141,11 @@ const queensGambit: Opening = {
       description:
         "Black declines the gambit and builds a solid defensive setup with e6. The QGD Orthodox is one of Black's most reliable systems — solid, well-tested, used by World Champions for over a century.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4, and this line diverges when Black declines with e6 — the most solid approach — leading to the Orthodox QGD where both sides build classical pawn structures and the game revolves around whether Black's timely c5 break can free a position that is solid but potentially cramped.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit.", isKeyMove: true },
         {
@@ -198,7 +203,7 @@ const queensGambit: Opening = {
         {
           san: "Bb7",
           explanation:
-            "Black develops the dark-squared bishop to the long diagonal.",
+            "Black develops the light-squared bishop to the long diagonal.",
         },
         {
           san: "O-O",
@@ -243,7 +248,11 @@ const queensGambit: Opening = {
       description:
         "White captures on d5 early, creating a symmetrical structure. White then aims for the minority attack on the queenside — pushing b4-b5 to create weaknesses in Black's pawn majority.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4, and this line diverges when White captures cxd5 early, leading to the Exchange Variation where White trades the c-pawn to execute the minority attack — pushing b4-b5 to saddle Black with a permanently weak isolated c-pawn.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "Black declines, supporting d5." },
@@ -334,7 +343,11 @@ const queensGambit: Opening = {
       description:
         "Black plays c6 to support d5 without blocking the c8 bishop. The Slav is a rock-solid defence with excellent counterplay potential — very popular at all levels up to the elite.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4, and this line diverges when Black plays c6 instead of e6, leading to the rock-solid Slav Defence — Black's most important advantage is developing the c8 bishop to f5 before the pawn chain closes, solving the QGD's main structural problem.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit.", isKeyMove: true },
         {
@@ -425,7 +438,11 @@ const queensGambit: Opening = {
       description:
         "Black combines e6 and c6, creating a very solid pawn structure that is also the basis for sharp variations like the Meran and Moscow. One of the most studied openings in all of chess.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4, and this line diverges when Black combines e6 and c6 to create the ultra-solid Semi-Slav structure, leading to the theoretically dense Meran Variation where both sides race — White pushing e4 in the center while Black advances b5-c5 on the queenside.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "c6", explanation: "Black prepares a Slav structure." },
@@ -502,7 +519,11 @@ const queensGambit: Opening = {
       description:
         "Black plays c5 early to achieve an isolated queen's pawn (IQP) position with active piece play. The IQP gives Black dynamic chances in exchange for a long-term endgame weakness.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4 e6, and this line diverges when Black plays c5 early to deliberately create an isolated queen's pawn, leading to dynamic IQP positions where Black's active pieces and open d-file compensate for a pawn that becomes a potential endgame weakness.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "Black prepares to decline." },
@@ -552,23 +573,23 @@ const queensGambit: Opening = {
       continuationMoves: [
         {
           san: "Na4",
-          idea: "White's knight jumps to a4, immediately targeting Black's active Bc5.",
+          idea: "White's knight hits the active Bc5 — the standard way to challenge the bishop guarding the f2-a7 diagonal.",
         },
         {
-          san: "Bg4",
-          idea: "Black pins the Nf3, trying to create complications before the bishop is lost.",
+          san: "Bd6",
+          idea: "Black retreats the bishop to an active diagonal, eyeing h2 and keeping the pieces coordinated.",
         },
         {
-          san: "Nxc5",
-          idea: "White's knight captures the Bc5, winning material.",
+          san: "Be3",
+          idea: "White develops and heads for the d4 blockade square in front of the isolated pawn.",
         },
         {
-          san: "Qd7",
-          idea: "Black centralises the queen to d7, defending and preparing queenside counterplay.",
+          san: "Re8",
+          idea: "Black centralises the rook on the open e-file — active piece play is the IQP's compensation.",
         },
         {
-          san: "Nxb7",
-          idea: "White's knight grabs another pawn on b7 — the material advantage proves decisive. The Tarrasch IQP position is a duel between Black's piece activity and White's long-term structural advantage — a fascinating positional battleground.",
+          san: "Rc1",
+          idea: "White piles onto the c-file. The Tarrasch IQP position is a duel between Black's piece activity and White's long-term pressure on the isolated d5 pawn — a fascinating positional battleground.",
         },
       ],
       continuationIdea:
@@ -581,7 +602,11 @@ const queensGambit: Opening = {
       description:
         "White fianchettos the king's bishop while controlling the center with d4 and c4. The Catalan creates long-term pressure on the queenside and is a favourite of elite players including Magnus Carlsen.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4, and this line diverges when White plays g3 to fianchetto the king's bishop, leading to the patient, long-term pressure of the Catalan Opening — the Bg2 aims down the a8-h1 diagonal all game and creates a slow squeeze on Black's queenside pawns that Magnus Carlsen has turned into an elite precision weapon.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "Black declines." },
@@ -626,24 +651,24 @@ const queensGambit: Opening = {
       ],
       continuationMoves: [
         {
-          san: "Qxc6",
-          idea: "White's queen captures the c6 pawn — winning material while maintaining queenside pressure.",
-        },
-        {
-          san: "bxc6",
-          idea: "Black recaptures with the b-pawn, maintaining material but creating a weak doubled pawn structure.",
-        },
-        {
-          san: "Ne5",
-          idea: "White's knight jumps to the powerful e5 outpost, targeting the weak c6 pawn.",
+          san: "Bg5",
+          idea: "White develops with tempo, pinning the Nf6 to the queen and completing the minor pieces behind the Catalan bishop.",
         },
         {
           san: "Nbd7",
-          idea: "Black develops the knight to d7 to challenge the Ne5.",
+          idea: "Black develops the knight, adding a defender and taking the sting out of the pin.",
         },
         {
-          san: "Nxd7",
-          idea: "White trades the knight, keeping a lasting structural advantage with the doubled c-pawns. The Catalan rewards patient play — the Bg2 provides pressure for the entire game, and Black's queenside pawns can become permanent targets.",
+          san: "Nc3",
+          idea: "White's last knight comes out, eyeing the d5 and e4 outposts and adding a second attacker against the Bc6 on the long diagonal.",
+        },
+        {
+          san: "Bxf3",
+          idea: "Black trades the light-squared bishops to relieve the pressure the Catalan bishop pours down the a8-h1 diagonal.",
+        },
+        {
+          san: "Bxf3",
+          idea: "White recaptures with the bishop — even after the trade, the Bf3 keeps raking the long diagonal at b7. The Catalan's signature pressure never really goes away.",
         },
       ],
       continuationIdea:
@@ -656,7 +681,11 @@ const queensGambit: Opening = {
       description:
         "Black plays Qa5 to attack White's Nc3 diagonally and disrupt the whole setup. This tricky defence forces White to react carefully and can lead to very sharp tactical complications.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4 e6 Nc3 Nf6 Bg5, and this line diverges when Black plays the tricky Qa5, leading to the Cambridge Springs Defence — where the queen disrupts White's entire Bg5-Nc3 setup, forces defensive reactions, and allows an early e5 central break that gives Black excellent winning chances.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit." },
         { san: "e6", explanation: "Black declines." },
@@ -715,24 +744,24 @@ const queensGambit: Opening = {
       ],
       continuationMoves: [
         {
-          san: "Qxc6+",
-          idea: "White's queen captures on c6 with check — winning the pawn while forcing Black to spend a tempo.",
+          san: "Bd3",
+          idea: "White develops the bishop toward the kingside, eyeing h7 and preparing to castle.",
         },
         {
-          san: "bxc6",
-          idea: "Black blocks with the b-pawn, but the queenside structure is now shattered.",
+          san: "O-O",
+          idea: "Black castles — the king is safe and the Cambridge Springs has equalised comfortably.",
         },
         {
-          san: "Nd2",
-          idea: "White repositions the knight to d2, maintaining central control and preparing to redeploy.",
+          san: "O-O",
+          idea: "White castles too; both sides are fully developed.",
         },
         {
-          san: "c5",
-          idea: "Black strikes in the center, fighting for activity.",
+          san: "Qc7",
+          idea: "Black reroutes the offside queen back to c7, eyeing h2 alongside the Bd6 and supporting a future ...e5 break.",
         },
         {
-          san: "dxc5",
-          idea: "White captures. The Cambridge Springs shows a key principle: an early queen sortie (Qa5) can disrupt White's plans and give Black easy equality — even if queens come off early.",
+          san: "e4",
+          idea: "White claims central space, but it's fully balanced. The early ...Qa5 disrupted White's setup and gave Black an easy, comfortable game.",
         },
       ],
       continuationIdea:
@@ -745,7 +774,11 @@ const queensGambit: Opening = {
       description:
         "After 2.Nf3 Nf6 3.Nc3, Black plays Bb4, pinning the knight and fighting for the center strategically. The Nimzo is one of the richest and most theoretically deep openings in chess.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 c4, and this line diverges when Black plays Nf6 and then Bb4 after Nc3, leading to the Nimzo-Indian Defence — one of the richest openings in chess where Black pins the knight to control the e4 square, creating an enduring debate between the bishop pair and pawn structure that World Champions have argued about for a century.",
+        },
         { san: "Nf6", explanation: "Black develops and fights for e4." },
         { san: "c4", explanation: "White expands in the center." },
         { san: "e6", explanation: "Black prepares d5 or Bb4." },
@@ -825,7 +858,11 @@ const queensGambit: Opening = {
       description:
         "Black plays Nc6 instead of e6 or c6, developing a knight on a square where it blocks the c7 pawn. This dynamic and unorthodox defence gives Black immediate counterplay and rich tactical complications.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The Queen's Gambit starts with d4 d5 c4, and this line diverges when Black plays Nc6 instead of e6 or c6, leading to the dynamic Chigorin Defence where Black deliberately places the knight on a square that blocks the c7 pawn to generate immediate piece activity and rich tactical complications far outside normal QGD theory.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "c4", explanation: "The Queen's Gambit." },
         {
@@ -884,7 +921,7 @@ const queensGambit: Opening = {
       continuationMoves: [
         {
           san: "Qa4",
-          idea: "White's queen swings to a4, pinning the Bb4 and attacking the Nc6 simultaneously.",
+          idea: "White's queen swings to a4, pinning the Nc6 to the king on e8 and piling on the pressure.",
         },
         {
           san: "Qd6",

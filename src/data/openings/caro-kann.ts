@@ -16,7 +16,11 @@ const caroKann: Opening = {
       description:
         "White advances e5 to gain space. We immediately develop the bishop to f5 outside the pawn chain — the key advantage of the Caro-Kann over the French Defence. Then we fight back with c5.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann Defence — 1...c6 followed by 2...d5 — is chess's most structurally sound response to 1.e4, building a solid center while keeping the c8 bishop free to develop before the pawn chain closes. Unlike the French Defence where the light-squared bishop is permanently buried behind the pawns, the Caro-Kann's defining advantage is that Bf5 develops outside the chain immediately — solving the biggest structural problem of defending against e4. In the Advance Variation, White grabs space with e5 but Black counterattacks immediately with c5, refusing to be passive, and the resulting plan is instructive: Rc8 occupies the open c-file, Ng6 targets the overextended e5 pawn, and Black achieves comfortable equality with zero structural weaknesses. The Caro-Kann is the ideal opening for players who want genuine solidity without the French's passivity.",
+        },
         {
           san: "c6",
           explanation:
@@ -118,7 +122,11 @@ const caroKann: Opening = {
       description:
         "Black captures on e4 and develops the bishop to f5 outside the pawn chain. This leads to solid, strategic positions where Black enjoys comfortable development and the bishop pair.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5, and this line diverges when Black plays dxe4 and then Bf5 — the Classical Variation — leading to the defining Caro-Kann structure where the c8 bishop develops outside the pawn chain with complete freedom, directly solving the French Defence problem and giving Black a comfortable, weakness-free position from the very first moves.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann! We prepare d5.",
@@ -221,7 +229,11 @@ const caroKann: Opening = {
       description:
         "White exchanges on d5, leading to a symmetrical position. This is one of the simplest lines for both sides. White aims for the minority attack while Black has easy, comfortable development.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5, and this line diverges when White plays exd5 early — the Exchange Variation — leading to a fully symmetrical pawn structure with no weaknesses where Black has easy development and the minority attack (b4-b5) is White's only plan, while Black counterattacks with c5 and comfortable equality.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -317,7 +329,11 @@ const caroKann: Opening = {
       description:
         "White plays c4 after the exchange, fighting for control of the d5 square and creating an IQP position. The Panov is one of the sharpest lines against the Caro-Kann — Black must know how to handle the IQP.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5 exd5 cxd5, and this line diverges when White plays c4 — the aggressive Panov-Botvinnik Attack — leading to an IQP structure where Black must use the active Nd5 outpost and piece activity to compensate for the long-term isolated d5 pawn, creating a strategic tension similar to the Queen's Gambit.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -417,7 +433,11 @@ const caroKann: Opening = {
       description:
         "Instead of Bf5, Black plays Nd7 — a more flexible approach popularised by Anatoly Karpov. The knight goes to d7 preparing Ngf6 and keeping more options open.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5 Nc3 dxe4 Nxe4, and this line diverges when Black plays Nd7 instead of Bf5 — the Karpov/Modern Variation — leading to an even more flexible position where the Bd6 becomes Black's attacking piece targeting h2, and the c5 central break gives Black excellent counterplay without the committal Bf5-Bg6 maneuver.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -514,7 +534,11 @@ const caroKann: Opening = {
       description:
         "White plays f3, trying to hold the e4 pawn aggressively. This leads to sharp positions where Black must find accurate counter-play with e5 or dxe4 to exploit the weakening of White's kingside.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5, and this line diverges when White plays f3 — the Fantasy Variation — leading to an aggressive attempt to hold the center at the cost of weakening the kingside, which Black exploits with e6-Bb4-dxe4 to expose White's structural damage and win the long-term strategic battle.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -617,7 +641,11 @@ const caroKann: Opening = {
       description:
         "White plays Nc3 instead of the usual setup. Black responds with Bg4, pinning the Nf3 for active piece play. This leads to positions where Black has easy development and good counterplay.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5 Nc3, and this line diverges when Black plays Nf6 instead of the usual dxe4 structure, leading to the Two Knights Caro-Kann where the spectacular Qh4+ check forces White's king to d2 before development is complete — a tactical disruption that gives Black excellent compensation and sharp, dynamic positions far outside normal Caro-Kann theory.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -717,7 +745,11 @@ const caroKann: Opening = {
       description:
         "White plays Nd2 instead of the more common Nc3, keeping options open. We respond with Bf5 to develop the c8 bishop early — the same key idea as in the Classical Caro-Kann.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5, and this line diverges when White plays Nd2 instead of Nc3 — the Short System — leading to the same Caro-Kann structure as the Classical but without the pin on c3, allowing Black to develop identically with dxe4-Bf5-Bg6-h6-Nd7-Bxd3 and reach the same comfortable, weakness-free position.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -812,7 +844,11 @@ const caroKann: Opening = {
       description:
         "White plays Bc4 early, trying to control e6 and d5 with the bishop. Black must respond accurately to avoid early tactical problems around the f7 square.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6, and this line diverges when White plays Bc4 early — the Hillbilly Attack — leading to positions similar to the Italian Game but where Black's d5 immediately challenges the bishop, forces it to b3 where it has no targets, and Black develops comfortably with no problems whatsoever.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -912,7 +948,11 @@ const caroKann: Opening = {
       description:
         "Black fianchettos the king's bishop in the Caro-Kann after the dxe4 capture. The resulting positions are similar to the King's Indian but with the c6 move already played, giving extra solidity.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Caro-Kann starts with e4 c6 d4 d5 Nc3 dxe4 Nxe4, and this line diverges when Black plays g6 instead of Bf5 or Nd7 — the Gurgenidze System — leading to a Dragon-like fianchetto in the Caro-Kann where the Bg7 controls the long diagonal and the c6 move provides extra solidity that makes this fianchetto more resilient than a regular Dragon.",
+        },
         {
           san: "c6",
           explanation: "The Caro-Kann!",
@@ -981,23 +1021,23 @@ const caroKann: Opening = {
       continuationMoves: [
         {
           san: "dxc5",
-          idea: "White captures the c5 pawn, creating an open d-file.",
+          idea: "White grabs the c5 pawn, opening the centre.",
         },
         {
-          san: "Qd5",
-          idea: "We centralise the queen — it hits c5 and b3, recovering the pawn with tempo.",
+          san: "Nbd7",
+          idea: "We retreat the knight from the pawn's attack — and it immediately eyes c5 to win the pawn straight back.",
         },
         {
-          san: "Bc4",
-          idea: "White repositions the bishop to fight for the center.",
+          san: "Be3",
+          idea: "White develops and defends the extra pawn one more time.",
         },
         {
-          san: "Qe4",
-          idea: "We centralise the queen further — it attacks g2 and dominates the center.",
+          san: "Nxc5",
+          idea: "We recover the pawn, landing the knight actively on c5 where it hits the b3 bishop and the e4 square.",
         },
         {
-          san: "Bd3",
-          idea: "White blocks. The Gurgenidze gives Black a Dragon-like position in the Caro-Kann — the Bg7 dominates the long diagonal and active queen play provides excellent compensation.",
+          san: "Qe2",
+          idea: "White centralises the queen. The Gurgenidze gives Black a fully equal, Dragon-like game — the Bg7 rakes the long diagonal and the c5 knight is superbly placed.",
         },
       ],
       continuationIdea:

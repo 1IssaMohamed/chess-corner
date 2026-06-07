@@ -16,7 +16,11 @@ const frenchDefense: Opening = {
       description:
         "White advances e5 to restrict Black's pieces. We immediately counterattack with c5, fighting the d4 pawn. This is the most principled response to the Advance — fight the center immediately.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The French Defence — 1...e6 followed by 2...d5 — is chess's most strategically rich response to 1.e4, immediately staking a claim in the center while building a resilient pawn chain that creates lasting imbalances where White attacks the kingside and Black counterattacks the center with c5. The c8 bishop is the French's one headache — it gets locked behind the e6 pawn — but the tradeoff is a rock-solid structure that is almost impossible for White to break without Black getting powerful central counterplay. Every French game revolves around the same battle: White pushes f4-f5 to crack open the kingside, and Black lashes back with c5-Nc6 to blow up the d4 pawn, and whoever wins their respective attack first decides the game. The French is the opening of fighters — Mikhail Botvinnik, Victor Korchnoi, and Magnus Carlsen all used it as a serious weapon precisely because the resulting positions are so structurally complex that the player with deeper understanding wins.",
+        },
         {
           san: "e6",
           explanation:
@@ -122,7 +126,11 @@ const frenchDefense: Opening = {
       description:
         "White captures on d5, leading to a symmetrical position. The Exchange French is very drawish — White has little winning chances and Black has easy development. Good for learning the basics.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5, and this line diverges when White plays exd5 immediately — the Exchange Variation — leading to a fully symmetrical pawn structure where Black's c8 bishop is immediately free to develop, trading the French's main structural weakness for a sterile but completely equal position where White has very little winning potential.",
+        },
         {
           san: "e6",
           explanation: "The French Defence!",
@@ -221,7 +229,11 @@ const frenchDefense: Opening = {
       description:
         "White plays Nd2 instead of Nc3, avoiding the Winawer pin. We respond with c5, fighting for the center. The Tarrasch leads to positions where Black's c5 counterattack is the central theme.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5, and this line diverges when White plays Nd2 instead of Nc3 — the Tarrasch Variation — leading to a position where White sidesteps the Winawer Bb4 pin entirely, and Black's c5 counter creates an IQP structure where active piece play and the open d-file compensate for the isolated pawn's long-term weakness.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",
@@ -320,7 +332,11 @@ const frenchDefense: Opening = {
       description:
         "White plays Nc3 and Bg5, pinning the Nf6. We must decide whether to maintain the pin or break it. The Classical leads to rich strategic battles with White's central pawn chain vs Black's counterattack.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5 Nc3, and this line diverges when White plays Bg5 to pin the Nf6 — the Classical Variation — leading to a battle between White's f4 kingside space and Black's c5-Nc6 queenside counterplay, with the Be7 breaking the pin and the resulting pawn structure creating one of chess's great strategic imbalances where the side with better long-term planning wins.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",
@@ -417,7 +433,11 @@ const frenchDefense: Opening = {
       description:
         "Black pins the c3 knight with Bb4, creating immediate tension. The Winawer leads to extremely sharp positions — one of the most theoretically rich openings in chess, beloved by elite players.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5 Nc3, and this line diverges when Black pins immediately with Bb4 — the Winawer Variation — leading to the sharpest and most theoretically explosive system in the French Defence where Black doubles White's c-pawns and gets the open c-file, launching a kingside vs queenside tactical race that has fueled elite chess debates for a century.",
+        },
         {
           san: "e6",
           explanation: "The French Defence!",
@@ -529,7 +549,11 @@ const frenchDefense: Opening = {
       description:
         "Instead of challenging with d5, Black captures on e4 immediately, relieving central tension. This leads to a different type of French where Black avoids the closed pawn structure — easier to play.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5 Nc3, and this line diverges when Black captures dxe4 immediately — the Rubinstein Variation — leading to the most accessible French system where the tension is released early, the c8 bishop is never locked in, and Black gets easy piece development and a comfortable, equality-oriented position that requires no theoretical preparation.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",
@@ -624,7 +648,11 @@ const frenchDefense: Opening = {
       description:
         "White plays a King's Indian Attack setup with Nf3, g3, and Bg2 against the French structure. Black should play actively in the center with c5 and Nc6 to avoid being slowly outplayed by White's kingside pressure.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6, and this line diverges when White plays d3 instead of d4 — the King's Indian Attack — leading to a slower, fianchetto-based fight where White builds the g3-Bg2-Nf3 setup and tries to push e5 later, while Black's c5-Nc6-b5 queenside expansion is the antidote that creates excellent counterplay before the kingside attack can develop.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",
@@ -727,7 +755,11 @@ const frenchDefense: Opening = {
       description:
         "After the Classical main line setup, Black pins the Nc3 with Bb4 instead of playing Be7. This creates immediate tactical complications and is more aggressive than the Classical main line.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5 Nc3 Nf6 Bg5, and this line diverges when Black plays Bb4 to pin the Nc3 — the MacCutcheon Variation — leading to one of the most aggressive and tactical French systems where Bxc3 doubles White's c-pawns and the Ne4 central outpost creates immediate attacking chances that transform the normally strategic French into a sharp tactical battle.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",
@@ -832,7 +864,11 @@ const frenchDefense: Opening = {
       description:
         "White plays e5 and f4, creating an Advance-like setup but with the knight on c3 already developed. Black fights back with c5 and Nc6, creating maximum central tension.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5 Nc3 Nf6, and this line diverges when White plays e5 and then f4 — the Steinitz Variation — leading to White's most aggressive Classical French setup where the f4 pawn creates a kingside pawn storm, met by the critical c5-cxd4-Bc5 counterplay that dissolves the center and gives Black excellent active piece play against White's overextended pawns.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",
@@ -905,7 +941,7 @@ const frenchDefense: Opening = {
         },
         {
           san: "Nf6",
-          idea: "We develop and attack the e5 pawn — putting White under immediate pressure.",
+          idea: "We redevelop the knight to f6, heading for the strong e4 outpost where it will hit White's queen and pieces.",
         },
         {
           san: "f5",
@@ -930,7 +966,11 @@ const frenchDefense: Opening = {
       description:
         "White plays Nc3 and then e5 in the Classical French, and Black responds with the knight retreating to d7 while preparing c5 counterplay. The arising positions are rich with attacking chances for both sides.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The French starts with e4 e6 d4 d5 Nc3 Nf6 e5 Nfd7, and this line diverges when White plays f4 and Black fights back with c5-cxd4-Nxd4 — the Two Knights French — leading to the complete dissolution of White's center where the Bc5 development and Qh4+ check give Black sharp counterplay and dynamic positions despite White's advanced e5 pawn.",
+        },
         {
           san: "e6",
           explanation: "The French Defence.",

@@ -67,9 +67,9 @@ export default function ContinuationViewer({
         Why this line works
       </p>
 
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         {/* Board + step controls */}
-        <div style={{ width: "200px" }} className="flex-shrink-0">
+        <div className="flex-shrink-0 sm:w-[200px]">
           <ChessboardWrapper
             fen={fens[step]}
             orientation={orientation}

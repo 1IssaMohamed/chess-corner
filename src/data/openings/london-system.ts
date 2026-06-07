@@ -19,7 +19,7 @@ const londonSystem: Opening = {
         {
           san: "d4",
           explanation:
-            "Controls the center — the foundation of the London System.",
+            "The London System — built on d4, Nf3, and Bf4 — is chess's most reliable opening system, offering White a complete, coherent setup that works against virtually any Black response without requiring deep memorisation. The defining moment is playing Bf4 before e3, which ensures the bishop is active outside the pawn chain — move the bishop first or lose it forever. Every London game funnels toward the same dream position: the knight planted on e5 (supported by the d4 pawn and immovable by any pawn), the bishop targeting h7 from d3, and a kingside attack with f4-Qf3-Qh5 or a rook lift. It's the ideal system for players who want a reliable, repeatable weapon they can play for the rest of their chess career.",
           isKeyMove: true,
         },
         { san: "d5", explanation: "Black mirrors White in the center." },
@@ -116,7 +116,11 @@ const londonSystem: Opening = {
       description:
         "The London against Black's fianchetto with g6 and Bg7. White maintains the same London triangle and aims to undermine Black's setup with a timely c4 or e4 push.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3 Bf4, and this line diverges when Black plays g6 to fianchetto the king's bishop, leading to the London vs King's Indian structure — a strategically rich duel where the Ne4 central outpost is the focal point and White aims for slow queenside expansion while neutralizing the Bg7's long diagonal.",
+        },
         { san: "Nf6", explanation: "Black develops and fights for e4." },
         {
           san: "Nf3",
@@ -204,7 +208,11 @@ const londonSystem: Opening = {
       description:
         "When Black plays f5 (Dutch Defence), White can use the London setup to fight back. The London bishop on f4 becomes very active in this structure, and White aims for e4 to challenge Black's center.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3 Bf4, and this line diverges when Black plays the Dutch Defence with f5, leading to a position where White's Bf4 is ideally placed directly opposing Black's f5 structure — the bishop creates lasting pressure and White aims for the Ne5 outpost to dominate the center.",
+        },
         {
           san: "f5",
           explanation: "The Dutch Defence! Black plays for a kingside attack.",
@@ -255,11 +263,11 @@ const londonSystem: Opening = {
       continuationMoves: [
         {
           san: "d5",
-          idea: "Black advances the d-pawn, striking White's e5 pawn and fighting for central control.",
+          idea: "Black expands in the centre with ...d5, adding a second pawn alongside e5.",
         },
         {
-          san: "Ne5",
-          idea: "White's knight jumps to e5 — the signature London outpost. Against the Dutch, this is even more powerful because Black's f5 pawn can't attack it.",
+          san: "Nxe5",
+          idea: "White's knight grabs the e5 pawn — seizing the strong central square that Black's f5 pawn can never cover.",
         },
         {
           san: "Nxe5",
@@ -284,7 +292,11 @@ const londonSystem: Opening = {
       description:
         "Black develops the bishop to f5, fighting White's Bf4 symmetrically. This leads to a rich strategic middlegame where both sides have active bishops and compete for central space.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3 Bf4, and this line diverges when Black mirrors with Bf5 to fight for the light squares symmetrically, leading to a strategic duel where White's superior Ne5 outpost and the Bd3-h7 battery become the winning plan after the bishops are traded off.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         { san: "Nf3", explanation: "White develops." },
         { san: "Nf6", explanation: "Black develops." },
@@ -354,7 +366,11 @@ const londonSystem: Opening = {
       description:
         "White plays both Nc3 and Bf4 for an aggressive version of the London. The Jobava London has sharp attacking potential and has been popularised by elite players including Fabiano Caruana.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3 Bf4, and this line diverges when White plays Nc3 alongside Bf4 — the aggressive Jobava London — leading to an entirely different attacking character: g4 claims kingside space immediately, the f4 pawn becomes a battering ram, and the resulting positions are far sharper than any standard London line.",
+        },
         { san: "Nf6", explanation: "Black develops." },
         {
           san: "Nc3",
@@ -447,7 +463,11 @@ const londonSystem: Opening = {
       description:
         "When Black plays e5 early, White can use the London setup to fight back with Bg5 plans. This positions the London as a flexible fighting opening, not just a defensive system.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3 Bf4, and this line diverges when Black plays d6 followed by e5 to stake an early central claim, leading to a position where White captures dxe5 to expose the d6 pawn weakness and then plants a knight on the powerful d6 outpost for a lasting positional advantage.",
+        },
         { san: "d6", explanation: "Black prepares e5." },
         { san: "Nf3", explanation: "White develops." },
         { san: "Nf6", explanation: "Black develops." },
@@ -524,7 +544,11 @@ const londonSystem: Opening = {
       description:
         "White plays 1.d4 Nf6 2.Nf3 g6 3.Nc3 d5 4.Bf4 — an aggressive setup against the King's Indian/Grünfeld. The Barry Attack aims for quick queenside expansion and a direct fight for the center.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3 Bf4, and this line diverges when Black plays the Grünfeld-like g6 d5 setup and White adds Nc3 — the Barry Attack — leading to an aggressive structure where White fights directly for the center against the fianchetto and aims to dominate d5 with queenside expansion.",
+        },
         { san: "Nf6", explanation: "Black develops." },
         { san: "Nf3", explanation: "White develops." },
         { san: "g6", explanation: "Black prepares the fianchetto." },
@@ -593,7 +617,11 @@ const londonSystem: Opening = {
       description:
         "White plays the Stonewall pawn structure with d4, e3, f4, and c3, creating a fortified center. This setup is ideal for attacking the kingside while the solid pawn chain prevents counterplay.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Bf4, and this line diverges when White plays e3 before Nf3 and then f4 — the Stonewall structure — leading to an impenetrable pawn fortress where the Ne5-Qh5 kingside attack combination is a direct mating threat that Black must weaken with g6 to stop.",
+        },
         { san: "d5", explanation: "Black controls the center." },
         {
           san: "e3",
@@ -682,7 +710,11 @@ const londonSystem: Opening = {
       description:
         "White plays Bg5 instead of Bf4, pinning the Nf6 against the queen. The Torre is a flexible London-related system with attacking potential based on the pin and quick central action.",
       moves: [
-        { san: "d4", explanation: "Controls the center." },
+        {
+          san: "d4",
+          explanation:
+            "The London System starts with d4 Nf3, and this line diverges when White plays Bg5 instead of Bf4 — the Torre Attack — leading to a pin-based positional system where the Bh4 pin on Nf6 creates lasting pressure and the Ne5 outpost combined with f3-f4 launches a kingside initiative.",
+        },
         { san: "Nf6", explanation: "Black develops." },
         { san: "Nf3", explanation: "White develops." },
         { san: "e6", explanation: "Black prepares to develop the kingside." },

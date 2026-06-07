@@ -16,7 +16,11 @@ const kingsIndian: Opening = {
       description:
         "The main line of the King's Indian. We castle and play e5, challenging White's center. This is the defining King's Indian move — all of Black's counterplay flows from the e5 pawn.",
       moves: [
-        { san: "d4", explanation: "White builds a strong center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian Defence — 1...Nf6 followed by g6, Bg7, d6, O-O, and e5 — is chess's most dynamic and ambitious hypermodern defence, built on the deliberate sacrifice of the center to build an unstoppable kingside attack. Where other openings fight for central squares with pawns, the King's Indian allows White to build the massive d4-c4-e4 triangle and then destroys it with e5 and f5, transforming the position into a pawn storm while the Bg7 rakes the entire a1-h8 diagonal all game. Every King's Indian tells the same story: White attacks the queenside with c5-b4-a4, Black attacks the kingside with f5-g5-h5, and whoever breaks through first wins — a brutal, electric race that defined the careers of Bobby Fischer, Garry Kasparov, and Teimour Radjabov. This is the ideal opening for players who want to WIN, not draw — the positions are imbalanced by design and always give Black genuine winning chances.",
+        },
         {
           san: "Nf6",
           explanation:
@@ -150,7 +154,11 @@ const kingsIndian: Opening = {
       description:
         "White plays f3, preparing e4-f4-g4 for a brutal kingside assault or just keeping control. Black must fight back immediately with c5 or e5 — passive play gets steamrolled.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6, and this line diverges when White plays f3 — the Sämisch Attack — leading to opposite-side castling and a pure pawn storm race where White's g4-g5 kingside assault meets Black's b5-b4-a5 queenside counterattack, creating some of the most violent and decisive positions in all of chess.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -254,7 +262,11 @@ const kingsIndian: Opening = {
       description:
         "White builds an aggressive four-pawn center. Black must react sharply — passive play gets crushed. Our best plan is c5 or e5 to undermine the overextended center.",
       moves: [
-        { san: "d4", explanation: "White plays d4." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6, and this line diverges when White plays f4 — the Four Pawns Attack — leading to an exceptionally aggressive structure where four white pawns dominate the center, but the immediate e6 break exposes the overextension and gives Black excellent active piece play against White's too-ambitious pawn mass.",
+        },
         { san: "Nf6", explanation: "We start the King's Indian." },
         { san: "c4", explanation: "White expands." },
         {
@@ -349,7 +361,11 @@ const kingsIndian: Opening = {
       description:
         "White plays Be2 and Bg5 instead of Nf3, pinning the Nf6 and preparing a different type of positional pressure. Black should fight back with h6 and e5 to free the position.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Be2, and this line diverges when White plays Bg5 to pin the Nf6 — the Averbakh System — leading to a positional battle where h6 immediately dislodges the bishop and Black's Ne8-f5 knight maneuver combined with the f5 advance creates the typical King's Indian kingside attack.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -446,7 +462,11 @@ const kingsIndian: Opening = {
       description:
         "White closes the center early with d5, trying to prevent Black's e5 counterplay. Black must fight on the queenside with c6 and b5, or use different plans than the usual e5 counterattack.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5, and this line diverges when White plays d5 immediately — the Petrosian System — leading to a locked center where the normal e5 strategy is cut off and Black's queenside c6-b5 expansion becomes the main battleground while the Nh5-Nf4 knight maneuver dominates the kingside.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -547,7 +567,11 @@ const kingsIndian: Opening = {
       description:
         "White also fianchettos with g3 and Bg2, creating a mirror fianchetto battle. Black must play actively with d5 or e5 to not be outplayed by White's superior bishop on g2.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6, and this line diverges when White plays Nf3 and then g3 — the Fianchetto Variation — leading to a mirror battle of fianchetto bishops where the Bg2 and Bg7 face each other on the long diagonal, and Black must fight actively with e5-exd4-Ne4 to prevent White's superior bishop from dominating the position.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -647,7 +671,11 @@ const kingsIndian: Opening = {
       description:
         "White advances b4 in the Main Line after White's Nc3, aiming for immediate queenside expansion. Black must respond energetically with Re8 and Nf8 to prepare the typical King's Indian kingside attack.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7, and this line diverges when White plays b4 — the Bayonet Attack — leading to the most aggressive queenside thrust in the King's Indian where the only correct answer is the immediate Nh5-Nf4 kingside counterattack that must begin before White's b5-c5 expansion becomes overwhelming.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -751,7 +779,11 @@ const kingsIndian: Opening = {
       description:
         "White plays Be3 before Nf3, keeping more flexibility. After the center closes with d5, Black plays the classic Knight-to-d7 and prepares the queenside expansion — the Gligoric is strategically rich.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3, and this line diverges when White plays Be3 instead of Be2 — the Gligoric System — leading to a rich strategic battle where the Ne8-f5 kingside attack and the f5-f4-g5 pawn storm are Black's plan, while White's d5-closure gives a classic closed KID with attacking chances on both wings.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -869,7 +901,11 @@ const kingsIndian: Opening = {
       description:
         "White plays h3 to prevent Bg4, then closes the center with d5. Black plays the typical King's Indian setup and focuses on the Nf6-d7-c5 or f5 maneuvers for kingside play.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6, and this line diverges when White plays h3 — the Leningrad System — leading to positions that are strategically identical to the Classical variation where the h3 preparation doesn't change Black's plan at all: e5, castle, Nc6, Ne7, and then the f5-f4-g5 kingside attack rolls forward exactly on schedule.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",
@@ -971,7 +1007,11 @@ const kingsIndian: Opening = {
       description:
         "White plays Ne1 to regroup the knight to c2-d5 or d3, while Black launches the classic kingside attack. Both sides race with their respective wing attacks — extremely complex and theory-heavy.",
       moves: [
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 O-O Nc6 d5 Ne7, and this line diverges when White plays Ne1 — the Orthodox Main Line — leading to the most deeply analyzed King's Indian position in history, where White's Ne1-Nd3-c5 queenside plan races against Black's Nd7-f5-f4-g5 kingside attack in an explosive mutual pawn storm where every tempo is decisive.",
+        },
         {
           san: "Nf6",
           explanation: "We start the King's Indian.",

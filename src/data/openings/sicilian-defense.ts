@@ -16,7 +16,11 @@ const sicilianDefense: Opening = {
       description:
         "Learn the fundamental ideas of the Open Sicilian: the c5 vs d4 pawn battle, the open c-file for Black, and why the position is fundamentally different from symmetric e5 responses.",
       moves: [
-        { san: "e4", explanation: "White controls the center." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian Defence — 1...c5 — is the most popular and ambitious response to 1.e4, played by Bobby Fischer, Garry Kasparov, and Magnus Carlsen as their main weapon throughout their careers. Black's key insight is that c5 fights for the d4 square asymmetrically: instead of mirroring White's center with e5, Black gets the open c-file after cxd4, creating an imbalanced position where both sides have real winning chances. This opening line introduces the core Sicilian idea — opposite-side castling and a race of pawn storms — where White attacks the kingside with g4-g5 while Black counterattacks the queenside with b5-b4, and whoever breaks through first wins. That dynamic tension from the very first move is why the Sicilian is played more often than any other response to 1.e4 at every level from beginner to World Championship.",
+        },
         {
           san: "c5",
           explanation:
@@ -115,7 +119,11 @@ const sicilianDefense: Opening = {
       description:
         "The most popular chess opening at the elite level. After 5...a6, Black prepares b5 and e5 while preventing Bb5+. Used by Fischer, Kasparov, Carlsen, and nearly every World Champion.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5, and this line diverges when Black plays d6 and then 5...a6 — the Najdorf — leading to the most theoretically rich and hotly contested opening in all of chess, where Black prevents Bb5+ and prepares b5-e5, creating the razor-sharp positions that Fischer, Kasparov, and Carlsen all used to win World Championships.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         { san: "d6", explanation: "We prepare Nf6 and e5." },
@@ -202,7 +210,11 @@ const sicilianDefense: Opening = {
       description:
         "Black fianchettos the dark-squared bishop to g7, creating the Dragon pawn structure. The Dragon bishop on g7 is a devastating long-range weapon in one of the most violent openings in chess.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3, and this line diverges when Black plays g6 to fianchetto the dark-squared bishop, leading to the Dragon Variation — one of the most violent openings in chess, where the Bg7 rakes the a1-h8 diagonal all game and the Yugoslav Attack creates a mutual pawn storm that decides the game before move 25.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         { san: "d6", explanation: "We prepare Nf6 and g6." },
@@ -295,7 +307,11 @@ const sicilianDefense: Opening = {
       description:
         "Black plays e6 (instead of e5) creating a small center with d6-e6. This solid structure supports all counterplay plans and was a favourite of Bobby Fischer's opponents and later Garry Kasparov.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3, and this line diverges when Black plays e6 (instead of g6 or a6) to create the Scheveningen small center, leading to a solid d6-e6 structure that supports all counterplay plans — Kasparov won hundreds of games from this position with the timely b5-b4 queenside break.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         { san: "d6", explanation: "We prepare Nf6 and e6." },
@@ -375,7 +391,11 @@ const sicilianDefense: Opening = {
       description:
         "Black plays e6 and a6, the super-flexible Kan structure. Black avoids committing to a specific pawn structure early, maintaining maximum flexibility. The resulting positions suit positional players.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nf3, and this line diverges when Black plays e6 first and then a6 — the Kan/Paulsen variation — leading to the super-flexible structure where Black avoids committing to any specific pawn setup and keeps all queenside options open for longer than any other Sicilian system.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         {
@@ -454,7 +474,11 @@ const sicilianDefense: Opening = {
       description:
         "Black develops the knight to c6 instead of d6. The Taimanov is a flexible and sound system where Black keeps the option to play b6-Bb7 or e5 depending on White's setup.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nf3, and this line diverges when Black plays Nc6 early (instead of d6 or e6) — the Taimanov — leading to a flexible system where Qc7 and the Nc6 together create a solid fighting setup that handles White's f4 attacks better than most Sicilian systems because the knight is already on its ideal square.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         {
@@ -539,7 +563,11 @@ const sicilianDefense: Opening = {
       description:
         "Black plays g6 before d6, aiming to play d5 in one move rather than two. This avoids the Yugoslav Attack and is a slightly more solid version of the Dragon, popular among club players.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nf3 Nc6 d4 cxd4 Nxd4, and this line diverges when Black plays g6 before d6 — the Accelerated Dragon — leading to positions where d5 can be played in a single move (instead of two), allowing Black to sidestep the Yugoslav Attack entirely while still enjoying the powerful Bg7.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         {
@@ -623,7 +651,11 @@ const sicilianDefense: Opening = {
       description:
         "White plays Bb5 instead of entering the Open Sicilian. The Rossolimo avoids the main Sicilian theory and aims to double Black's pawns or use the bishop pair. Black must know how to respond accurately.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nf3 Nc6, and this line diverges when White plays Bb5 instead of d4 — the Rossolimo — leading to a Ruy López-like structure where White avoids all Open Sicilian theory and tries to use the bishop pair after doubling Black's c-pawns, while Black's g6 fianchetto and active pieces provide rich counterplay.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "Nf3", explanation: "White develops." },
         {
@@ -718,7 +750,11 @@ const sicilianDefense: Opening = {
       description:
         "White sacrifices a pawn with c3 after the d4 exchange, gaining fast development and attacking chances. The Smith-Morra is very dangerous for unprepared Black players — learn to handle it correctly.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5, and this line diverges when White plays d4 cxd4 c3 — the Smith-Morra Gambit — leading to a dangerous surprise weapon where White sacrifices a pawn for rapid development and an open c-file, threatening immediate tactical shots that punish unprepared opponents but can be neutralized with the solid Nc6-d6-e6-Nf6-Be7-O-O setup.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         { san: "d4", explanation: "White plays d4." },
         { san: "cxd4", explanation: "We capture." },
@@ -792,11 +828,11 @@ const sicilianDefense: Opening = {
         },
         {
           san: "Bg5",
-          idea: "White develops actively and pins the f6 knight — but it already moved to d7.",
+          idea: "White swings the bishop to g5, pinning the Be7 against the queen on d8 and pressing the dark squares.",
         },
         {
           san: "Nde5",
-          idea: "We centralise the Nd7 to e5! The knight on e5 is very powerful — attacking g6 and supporting future counterplay.",
+          idea: "We centralise the d7-knight to e5! The knight is superb here — it eyes f3, d3 and g4 and anchors our counterplay.",
         },
         {
           san: "Bxe7",
@@ -813,7 +849,11 @@ const sicilianDefense: Opening = {
       description:
         "White plays Nc3 and f4 without going through d4, creating an immediate kingside attack. The Grand Prix is aggressive and avoids Sicilian theory. Black needs to know how to counterattack in the center.",
       moves: [
-        { san: "e4", explanation: "White plays e4." },
+        {
+          san: "e4",
+          explanation:
+            "The Sicilian starts with e4 c5 Nc3, and this line diverges when White plays f4 without going through d4 — the Grand Prix Attack — leading to an immediate kingside assault where f5 threatens to crack open lines before the game even leaves the opening, but the g6 fianchetto and central d5 counterplay defuses the attack and leaves Black with a comfortable position.",
+        },
         { san: "c5", explanation: "The Sicilian!" },
         {
           san: "Nc3",
@@ -902,7 +942,7 @@ const sicilianDefense: Opening = {
         },
         {
           san: "Nxf7",
-          idea: "White's knight forks on f7! The Grand Prix Attack is dangerous against unprepared players but with the fianchetto and active piece play, Black creates strong counterplay. The Bg7 becomes dominant after the exchanges.",
+          idea: "White lunges with Nxf7?! — but it's an unsound sham sacrifice. Black recaptures and the dominant Bg7 plus active pieces leave Black clearly better. The Grand Prix only bites against the unprepared; with the g6 fianchetto and central counterplay, Black is fully equal and more.",
         },
       ],
       continuationIdea:

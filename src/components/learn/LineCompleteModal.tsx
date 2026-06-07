@@ -1,8 +1,9 @@
 // Full-screen overlay shown when you finish a line. In Learn mode it can show
-// the continuation viewer ("See the idea →"). In Practice mode it shows your
-// mistake count and offers retry or next line.
+// the continuation viewer ("See the rest of the idea →"). In Practice mode it
+// shows your mistake count and offers retry or next line.
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import type { OpeningLine, Side } from "@/types";
 import ContinuationViewer from "./ContinuationViewer";
 import Button from "@/components/ui/Button";
@@ -34,9 +35,16 @@ export default function LineCompleteModal({
   onAllDone,
   onNextLine,
 }: LineCompleteModalProps) {
+  const navigate = useNavigate();
   const [showContinuation, setShowContinuation] = useState(false);
   const hasContinuation = (line.continuationMoves?.length ?? 0) > 0;
   const isPerfect = wrongStepsCount === 0;
+
+  // First sentence of the continuationIdea — shown as a teaser before the viewer opens
+  const ideaTeaser = line.continuationIdea
+    ? (line.continuationIdea.match(/^.+?[.!?](?:\s|$)/)?.[0]?.trim() ??
+      line.continuationIdea)
+    : null;
 
   return (
     <div
@@ -49,19 +57,18 @@ export default function LineCompleteModal({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "24px",
+        padding: "12px",
       }}
     >
       <div
-        className="rounded-2xl border"
+        className="rounded-2xl border p-5 sm:p-8"
         style={{
           background: "var(--bg-elevated)",
           borderColor: "var(--success)",
           maxWidth: "600px",
           width: "100%",
-          maxHeight: "85vh",
+          maxHeight: "90vh",
           overflowY: "auto",
-          padding: "32px",
           boxShadow: "0 24px 64px rgba(0,0,0,0.6)",
         }}
       >
@@ -89,31 +96,32 @@ export default function LineCompleteModal({
               : "You know this line. Ready to test yourself?"}
         </p>
 
-        {/* Line description — learn only */}
-        {mode === "learn" && line.description && !showContinuation && (
-          <p
-            className="text-sm leading-relaxed mb-5 text-center px-2"
-            style={{ color: "var(--text-muted)" }}
-          >
-            {line.description}
-          </p>
-        )}
-
-        {/* Continuation viewer — learn only */}
+        {/* Continuation section — learn only */}
         {mode === "learn" && hasContinuation && (
           <div className="mb-5">
             {showContinuation ? (
               <ContinuationViewer line={line} orientation={orientation} />
             ) : (
-              <p className="text-center">
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  onClick={() => setShowContinuation(true)}
-                >
-                  See the idea →
-                </Button>
-              </p>
+              <>
+                {/* Teaser — first sentence of continuationIdea */}
+                {ideaTeaser && (
+                  <p
+                    className="text-sm leading-relaxed text-center mb-3 px-2 italic"
+                    style={{ color: "var(--text-secondary)" }}
+                  >
+                    {ideaTeaser}
+                  </p>
+                )}
+                <p className="text-center">
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    onClick={() => setShowContinuation(true)}
+                  >
+                    See the rest of the idea →
+                  </Button>
+                </p>
+              </>
             )}
           </div>
         )}
@@ -146,6 +154,17 @@ export default function LineCompleteModal({
             </Button>
           )}
         </div>
+
+        {/* Home link */}
+        <p className="text-center mt-4">
+          <button
+            onClick={() => navigate("/")}
+            className="text-xs underline underline-offset-2 transition-opacity hover:opacity-70"
+            style={{ color: "var(--text-muted)" }}
+          >
+            ← All openings
+          </button>
+        </p>
       </div>
     </div>
   );
