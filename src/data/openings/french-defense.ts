@@ -24,74 +24,95 @@ const frenchDefense: Opening = {
         {
           san: "e6",
           explanation:
-            "The French Defence! Black builds a solid pawn chain. The e6 pawn supports d5.",
+            "The French Defence! We prepare ...d5 with the e-pawn. The trade-off to know up front: this shuts in our light-squared bishop (the French's lifelong 'problem child'), but in return we get a granite pawn chain and a clear counterattacking plan. Accept one structural flaw in exchange for a rock-solid, plan-rich position.",
           isKeyMove: true,
           wrongMoveWarning:
             "The French starts with 1...e6 — preparing d5 on the next move.",
         },
-        { san: "d4", explanation: "White builds a powerful center." },
+        {
+          san: "d4",
+          explanation:
+            "White builds the ideal big center with both central pawns.",
+        },
         {
           san: "d5",
           explanation:
-            "The key French move! We challenge the center immediately.",
+            "The key French move — we challenge e4 directly. White must resolve the tension: push (e5), trade (exd5), or defend (Nc3/Nd2), and each choice defines a different French.",
           isKeyMove: true,
         },
         {
           san: "e5",
           explanation:
-            "The Advance Variation! White claims space with e5 — restricting Black's Nf6.",
+            "The Advance Variation — White grabs space and locks the center, gaining room and shutting out our f6-knight. But the pawn chain (d4-e5) has a base on d4, and that base is exactly what we'll attack.",
         },
         {
           san: "c5",
           explanation:
-            "We immediately counterattack! c5 strikes at White's d4 pawn — the most principled response to the Advance.",
+            "We strike at once! The golden rule in a locked pawn chain: attack the BASE, where it's least defended. White's chain runs e5→d4, so d4 is the base, and ...c5 hits it. This break is the heartbeat of the whole French. Don't sit passively behind a closed center — undermine its foundation.",
           isKeyMove: true,
           wrongMoveWarning:
             "After e5, we ALWAYS play c5 immediately — attacking White's d4 pawn.",
         },
         {
           san: "c3",
-          explanation: "White supports d4 — the Milner-Barry setup.",
+          explanation:
+            "White props up the d4 base with the c-pawn — the Milner-Barry/main-line setup, holding the chain together.",
         },
         {
           san: "Nc6",
-          explanation: "We develop the knight, adding more pressure to d4.",
+          explanation:
+            "We develop with a second attacker on d4, increasing the pressure on the base of the chain.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops and defends d4 a third time — the battle for the base intensifies.",
+        },
         {
           san: "Qb6",
           explanation:
-            "Our queen attacks b2 and d4 simultaneously — a powerful double-attack in the Advance French.",
+            "A classic French double-attack: the queen hits the d4-pawn AND the b2-pawn behind it. The queen on b6 is a permanent thorn, pressuring d4 from a square no minor piece can easily chase. Pile on the chain's base from every angle.",
           isKeyMove: true,
         },
         {
           san: "Bd3",
           explanation:
-            "White defends — and prepares the Milner-Barry Gambit with O-O.",
+            "White develops but leaves d4 loose — the Milner-Barry Gambit, offering the d4-pawn for fast development and attacking lines toward our king. A trap is being set.",
         },
         {
           san: "cxd4",
-          explanation: "We capture in the center, simplifying.",
+          explanation:
+            "We capture, beginning to collect the d4-pawn the gambit offers — but carefully, knowing White wants open lines.",
           isKeyMove: true,
         },
-        { san: "cxd4", explanation: "White recaptures." },
+        {
+          san: "cxd4",
+          explanation:
+            "White recaptures, keeping a pawn on d4 for the moment but with an exposed structure.",
+        },
         {
           san: "Bd7",
-          explanation: "We develop the c8 bishop before the position closes.",
+          explanation:
+            "Crucial prophylaxis: we develop the bishop to d7 FIRST so that after we win the d4-pawn, the c6-knight is defended and there's no Bb5+ or Nb5 fork. Prepare the safety net before you grab the pawn.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles, betting that open lines and a development lead outweigh the pawn.",
+        },
         {
           san: "Nxd4",
-          explanation: "We capture! The d4 pawn falls after our preparations.",
+          explanation:
+            "Now we collect the pawn — safely, because ...Bd7 already covered the tactics. Patience before greed.",
           isKeyMove: true,
         },
         { san: "Nxd4", explanation: "White recaptures with the knight." },
         {
           san: "Qxd4",
           explanation:
-            "We take back, winning the pawn. Black has achieved equality with active play.",
+            "We win the pawn and reach a sound position — but the next move is a tightrope (see the continuation). The point: we're up material with a solid structure, IF we don't get greedy.",
         },
       ],
       continuationMoves: [
@@ -133,24 +154,24 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence!",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
         {
           san: "exd5",
           explanation:
-            "The Exchange Variation — White simplifies immediately. This leads to symmetrical positions.",
+            "The Exchange Variation — White releases the tension into total symmetry. Ironically, this hands us our biggest wish: with the e-file open, our 'problem' c8-bishop is suddenly free. White trades all winning chances for a quiet game.",
         },
         {
           san: "exd5",
           explanation:
-            "We recapture with the e-pawn. The position is now completely symmetrical.",
+            "We recapture, and the position is symmetric — but crucially the c8-bishop now has the open diagonal it never gets in other French lines. The French's one drawback has vanished.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Exchange French, we recapture exd5 — keeping the symmetric structure.",
@@ -159,41 +180,52 @@ const frenchDefense: Opening = {
         {
           san: "Nf6",
           explanation:
-            "We develop — in the Exchange French, Black has easy development with the c8 bishop free.",
+            "We develop naturally — in a symmetric structure, just mirror good moves and rely on equal chances.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops the bishop." },
+        {
+          san: "Bd3",
+          explanation: "White develops the bishop toward the kingside.",
+        },
         {
           san: "Bd6",
           explanation:
-            "We develop symmetrically — the light-squared bishops are both active.",
+            "We mirror, the bishop active on d6 eyeing h2. With the position symmetric, copying keeps things equal until someone finds a real plan.",
           isKeyMove: true,
         },
         { san: "O-O", explanation: "White castles." },
         {
           san: "O-O",
           explanation:
-            "We castle! The French Exchange leads to easy, comfortable development for Black.",
+            "We castle — fully equal, both bishops active, no weaknesses. Now we can even play for a win with active piece placement.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
         {
           san: "Nc6",
           explanation:
-            "We develop the queenside knight — Black has perfect equality.",
+            "We develop and defend d5 — symmetric, balanced, comfortable.",
           isKeyMove: true,
         },
-        { san: "Bg5", explanation: "White pins the Nf6." },
+        {
+          san: "Bg5",
+          explanation:
+            "White pins the f6-knight to break the symmetry and create play.",
+        },
         {
           san: "h6",
-          explanation: "We challenge the pin.",
+          explanation:
+            "We question the bishop, forcing it to declare — the standard response to a pin.",
           isKeyMove: true,
         },
-        { san: "Bh4", explanation: "White maintains the pin." },
+        {
+          san: "Bh4",
+          explanation: "White keeps the pin, hoping for kingside chances.",
+        },
         {
           san: "g5",
           explanation:
-            "We chase the bishop! Black can be aggressive in the Exchange French.",
+            "We break the pin by force — bold, but sound here because our king is still on g8 with plenty of cover and we gain the e4-square for our knight. When you have a concrete follow-up, a small king-side loosening is worth seizing the initiative.",
           isKeyMove: true,
         },
       ],
@@ -236,68 +268,83 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
         {
           san: "Nd2",
           explanation:
-            "The Tarrasch! White avoids the Winawer pin by going to d2.",
+            "The Tarrasch — White develops the knight to d2 (not c3) specifically to avoid the ...Bb4 pin. The cost: the knight on d2 is more passive and blocks the c1-bishop, which we'll exploit with an immediate central strike.",
         },
         {
           san: "c5",
           explanation:
-            "We counterattack immediately! c5 fights against White's d4 — the most active Tarrasch response.",
+            "We hit d4 at once. Because the d2-knight is passive and doesn't defend d4 as well, the immediate ...c5 is even stronger here than usual — strike the center while White's pieces are awkwardly placed.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Tarrasch, we play c5 immediately — the most active response.",
         },
-        { san: "exd5", explanation: "White captures." },
+        { san: "exd5", explanation: "White resolves the central tension." },
         {
           san: "exd5",
           explanation:
-            "We recapture — creating an IQP structure where Black has active play.",
+            "We recapture toward the center, accepting that d5 may become isolated. The bonus: with the e-file open, our light-squared bishop is free at last. We trade a slight structural risk for active pieces.",
           isKeyMove: true,
         },
-        { san: "Ngf3", explanation: "White develops." },
+        {
+          san: "Ngf3",
+          explanation: "White develops, heading to blockade the d-pawn.",
+        },
         {
           san: "Nc6",
-          explanation: "We develop the knight, fighting for the center.",
+          explanation:
+            "We develop and defend d5, contesting the center with pieces.",
           isKeyMove: true,
         },
         {
           san: "Bb5",
-          explanation: "White pins the Nc6 — the Rubinstein Tarrasch.",
+          explanation:
+            "White pins the c6-knight (the Rubinstein-style setup) to pressure the d-pawn's defender.",
         },
         {
           san: "Bd6",
-          explanation: "We develop the f8 bishop aggressively.",
+          explanation:
+            "We develop the bishop to its best square, aiming at h2 — active piece play is the IQP-holder's lifeblood.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "Nge7",
           explanation:
-            "We develop the knight, preparing to castle and fight for the center.",
+            "We develop the knight via e7 (keeping f6 clear for the other pieces and heading for g6/f5), preparing to castle. Route the knight where it supports the attack, not where it blocks your own bishop.",
           isKeyMove: true,
         },
-        { san: "dxc5", explanation: "White captures the c5 pawn." },
+        {
+          san: "dxc5",
+          explanation:
+            "White trades to leave our d-pawn isolated as a long-term target.",
+        },
         {
           san: "Bxc5",
-          explanation: "We recapture, keeping active bishops.",
+          explanation:
+            "We recapture with the bishop, keeping it active on the a7-g1 diagonal — activity over structure.",
           isKeyMove: true,
         },
-        { san: "Nb3", explanation: "White attacks the Bc5." },
+        {
+          san: "Nb3",
+          explanation:
+            "White hits the bishop, trying to trade off our active pieces.",
+        },
         {
           san: "Bb6",
           explanation:
-            "We retreat the bishop — Black has excellent activity and is very comfortable.",
+            "We retreat but keep the bishop on its strong diagonal — Black has free, active pieces and the open d/e-files as full compensation for the isolated pawn.",
         },
       ],
       continuationMoves: [
@@ -339,67 +386,93 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        {
+          san: "Nc3",
+          explanation:
+            "White defends e4 by developing, keeping the central tension.",
+        },
         {
           san: "Nf6",
           explanation:
-            "We develop and attack e4. This leads to the Classical French.",
+            "We develop and add a second attacker to e4 — forcing White to resolve the central tension. Pressure the e4-pawn to make White commit.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Classical French, Nf6 — fighting for the center with the knight.",
         },
         {
           san: "Bg5",
-          explanation: "White pins the Nf6! The Classical variation begins.",
+          explanation:
+            "White pins our f6-knight (a key defender of e4) to the queen — the Classical, ratcheting up the pressure on the center.",
         },
         {
           san: "Be7",
           explanation:
-            "We develop and break the pin. The bishop on e7 is solid and supports the king after castling.",
+            "We quietly break the pin by backing up the knight. On e7 the bishop is modest but solid, ready to recapture if White trades on f6, and it shelters our king. Unpin calmly rather than weakening with ...h6/...g5 here.",
           isKeyMove: true,
         },
         {
           san: "e5",
           explanation:
-            "White advances! The center closes and the classical battle begins.",
+            "White pushes, gaining space and kicking the f6-knight — the center locks and the classic French battle (White's kingside vs Black's center) begins.",
         },
         {
           san: "Nfd7",
           explanation:
-            "The knight retreats to d7 — standard French technique. Now we prepare c5 and f6.",
+            "Essential French technique: the kicked knight retreats to d7 (not e4/g8), where it supports the coming ...c5 and ...f6 breaks against White's chain. Whenever e5 hits your f6-knight in the French, ...Nfd7 is almost always right.",
           isKeyMove: true,
         },
-        { san: "Bxe7", explanation: "White trades the bishops." },
+        {
+          san: "Bxe7",
+          explanation:
+            "White trades the dark-squared bishops, the pin having done its job.",
+        },
         {
           san: "Qxe7",
           explanation:
-            "We recapture with the queen — keeping the queen active and fighting for the center.",
+            "We recapture with the queen (keeping it active and connecting toward the queenside), rather than the cramped ...Kxe7. The queen will support ...c5 and the central fight.",
           isKeyMove: true,
         },
-        { san: "f4", explanation: "White builds a kingside attack." },
+        {
+          san: "f4",
+          explanation:
+            "White reinforces e5 and prepares the f5 break — the kingside pawn storm takes shape.",
+        },
         {
           san: "O-O",
-          explanation: "We castle! The king is safe on the kingside.",
+          explanation:
+            "We castle to safety before opening the center — get the king tucked away before the storm.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops, defending d4 and supporting the kingside push.",
+        },
         {
           san: "c5",
           explanation:
-            "The critical French counterattack! We fight the d4 pawn — the whole opening has been building to this.",
+            "The whole opening has built to this — we strike the base of White's chain (d4). This is the French's defining counterblow; everything else was preparation for it.",
           isKeyMove: true,
         },
-        { san: "Qd2", explanation: "White defends d4." },
-        { san: "Nc6", explanation: "We develop and increase pressure on d4." },
+        {
+          san: "Qd2",
+          explanation:
+            "White reinforces d4 and connects toward queenside castling or the kingside attack.",
+        },
+        {
+          san: "Nc6",
+          explanation:
+            "We pile a second attacker onto d4, maximizing the pressure on the chain's base.",
+        },
       ],
       continuationMoves: [
         {
@@ -440,20 +513,20 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence!",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
-        { san: "d4", explanation: "White builds a powerful center." },
+        { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "Bb4",
           explanation:
-            "The Winawer! We pin the Nc3 immediately — sharpest and most ambitious. Chaos is coming.",
+            "The Winawer! We pin the c3-knight — the defender of e4 — so that we threaten ...dxe4 winning a pawn, forcing White to push e5 and commit. The deeper idea: we're prepared to trade this bishop for the knight to shatter White's queenside pawns. Pin the defender to dictate the center.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Winawer, Bb4 is the defining move — pinning the knight for maximum tension.",
@@ -461,60 +534,67 @@ const frenchDefense: Opening = {
         {
           san: "e5",
           explanation:
-            "White advances! The center closes and a fierce kingside vs queenside battle begins.",
+            "White pushes to keep e4 (otherwise ...dxe4 wins a pawn off the pin). The center locks, and a fierce opposite-wing battle begins: White's kingside vs our queenside.",
         },
         {
           san: "c5",
           explanation:
-            "We counterattack d4 immediately — the standard Winawer plan.",
+            "We strike the base of the chain (d4) immediately — the standard Winawer counterblow, opening the position against White's center before he can use his space.",
           isKeyMove: true,
         },
         {
           san: "a3",
           explanation:
-            "White forces the bishop to commit — the Poisoned Pawn setup.",
+            "White 'puts the question' — forcing us to either retreat the bishop or trade it for the knight (the Poisoned Pawn main line).",
         },
         {
           san: "Bxc3+",
           explanation:
-            "We capture the knight! Black gives up the bishop pair to double White's c-pawns.",
+            "We take! The whole point of the Winawer: we give up the bishop pair to permanently DOUBLE and cripple White's c-pawns. We're betting that the long-term structural damage outweighs the two bishops. Trade a bishop for lasting structural ruin.",
           isKeyMove: true,
         },
         {
           san: "bxc3",
-          explanation: "White recaptures — the c-pawns are now doubled.",
+          explanation:
+            "White recaptures, and now has doubled, weak c-pawns and an open b-file — the structural scar we were after.",
         },
         {
           san: "Ne7",
           explanation:
-            "We develop the knight via e7, preparing to castle. It will go to f5 to attack e3.",
+            "We develop the knight via e7 (not f6, blocked by e5), heading for f5 to attack the weak d4/e3 dark squares — routing toward White's weaknesses.",
           isKeyMove: true,
         },
         {
           san: "Qg4",
-          explanation: "White threatens Qxg7! — the critical moment.",
+          explanation:
+            "White pivots to attack: the queen hits g7, exploiting that ...Bxc3 left our kingside dark squares loose. The Poisoned Pawn race is on.",
         },
         {
           san: "Qc7",
           explanation:
-            "We target e5 and set up the Rg8 counter-trap — we're going to let White take g7 and chase the queen back.",
+            "The critical Poisoned Pawn choice: we DON'T defend g7 — we hit e5 and set up ...Rg8 to chase the queen, judging that our queenside counterplay is faster than White's pawn-grab. Calculated greed: let White take a wing pawn while we open lines toward his king.",
           isKeyMove: true,
         },
         {
           san: "Qxg7",
           explanation:
-            "White takes the g7 pawn! The position becomes very sharp.",
+            "White grabs g7 — a real pawn, but the queen is now far from home and about to be harassed.",
         },
         {
           san: "Rg8",
           explanation:
-            "We attack the queen! The Rg8 forces it to h7, gaining counterplay while White's pawns are exposed.",
+            "We hit the queen, forcing it offside to h7, and gain a tempo plus the open g-file toward White's king. The pawn White won comes at the cost of his queen's position.",
           isKeyMove: true,
         },
-        { san: "Qxh7", explanation: "White takes another pawn." },
+        {
+          san: "Qxh7",
+          explanation:
+            "White snatches a second pawn, but the queen is now buried in the corner, out of the real battle.",
+        },
         {
           san: "cxd4",
-          explanation: "We capture d4, opening lines for our counterattack.",
+          explanation:
+            "We cash in our counterplay, opening the c-file and lines against White's wrecked queenside while his queen is on vacation.",
         },
       ],
       continuationMoves: [
@@ -556,64 +636,71 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "dxe4",
           explanation:
-            "The Rubinstein! We capture on e4 immediately, relieving tension. This avoids the complicated closed positions of the Classical and Winawer.",
+            "The Rubinstein! We release the tension immediately, conceding the center for a simpler game. The big payoff: with ...e6 not yet sealed behind a fixed e5-pawn, the c8-bishop will get out (often via ...b6/...Bb7 or ...Bd7-c6). We swap central tension for solving the French's bad-bishop problem.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Rubinstein plays dxe4 — releasing the tension and simplifying.",
         },
         {
           san: "Nxe4",
-          explanation: "White recaptures — the position is now more open.",
+          explanation:
+            "White recaptures, with a freer position and more space — the cost of our simplification.",
         },
         {
           san: "Nd7",
           explanation:
-            "We develop the knight, preparing Ngf6 to challenge the Ne4.",
+            "We develop flexibly, preparing ...Ngf6 to challenge the e4-knight WITHOUT allowing a structure-damaging recapture on f6 (since the d7-knight can recapture). Order your knights so trades don't wreck your pawns.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops, controlling e5." },
         {
           san: "Ngf6",
-          explanation: "We develop and attack the Ne4.",
+          explanation:
+            "We challenge the e4-knight, backed by the d7-knight so we recapture cleanly.",
           isKeyMove: true,
         },
-        { san: "Nxf6+", explanation: "White trades knights, simplifying." },
+        { san: "Nxf6+", explanation: "White trades, simplifying further." },
         {
           san: "Nxf6",
           explanation:
-            "We recapture. Black has a very solid, comfortable position with easy development.",
+            "We recapture with the knight (not the g-pawn), keeping a sound structure. Black has a solid, slightly passive but weakness-free position that's very easy to play.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops." },
+        { san: "Bd3", explanation: "White develops actively, eyeing h7." },
         {
           san: "c5",
           explanation:
-            "We counterattack d4! Black has a free position and good counterplay.",
+            "We strike at d4 — the French's freeing break appears here too, opening lines and giving our pieces (including the soon-to-be-developed light bishop) real scope.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "Be7",
-          explanation: "We develop and prepare to castle.",
+          explanation:
+            "We develop and prepare to castle, untroubled by the usual French cramp.",
           isKeyMove: true,
         },
-        { san: "Qe2", explanation: "White develops the queen." },
+        {
+          san: "Qe2",
+          explanation: "White centralizes the queen, connecting the rooks.",
+        },
         {
           san: "O-O",
-          explanation: "We castle! Black has achieved complete equality.",
+          explanation:
+            "We castle — fully developed and comfortably equal, with no bad bishop to worry about.",
         },
       ],
       continuationMoves: [
@@ -655,71 +742,95 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         {
           san: "d3",
-          explanation: "White plays d3 — the King's Indian Attack setup!",
+          explanation:
+            "White declines the big center for a King's Indian Attack — a flexible, system-based setup aiming for a later e5 and a kingside attack.",
         },
         {
           san: "d5",
           explanation:
-            "We still challenge the center with d5 — the French idea.",
+            "We grab the center anyway. Against White's modest d3, our full center gives us more space — punish a passive setup by taking the space it concedes.",
           isKeyMove: true,
         },
-        { san: "Nd2", explanation: "White develops the knight." },
+        {
+          san: "Nd2",
+          explanation:
+            "White develops the knight, keeping the e-pawn supported and preparing Ngf3.",
+        },
         {
           san: "Nf6",
-          explanation: "We develop naturally.",
+          explanation: "We develop naturally, guarding e4 and d5.",
           isKeyMove: true,
         },
-        { san: "Ngf3", explanation: "White develops." },
+        {
+          san: "Ngf3",
+          explanation: "White develops, heading for the e5 advance later.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack! The c5 break is essential to keep the position active against the KIA.",
+            "Critical: we grab queenside space and prepare the ...b5-b4 expansion. Against the KIA, our attack is on the queenside (where our pawns point) — and we must get it rolling before White's kingside e5/Nf1-g3 attack arrives. Attack where your pawns aim.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the KIA, c5 is critical — we must fight for the center.",
         },
-        { san: "g3", explanation: "White begins the fianchetto." },
+        {
+          san: "g3",
+          explanation:
+            "White begins the fianchetto, the signature of the KIA setup.",
+        },
         {
           san: "Nc6",
-          explanation: "We develop and support d5.",
+          explanation:
+            "We develop and support our center, the knight ready to back the queenside expansion.",
           isKeyMove: true,
         },
         {
           san: "Bg2",
           explanation:
-            "White completes the fianchetto — the bishop pressures the queenside.",
+            "White completes the fianchetto, the bishop eyeing our queenside and center from g2.",
         },
         {
           san: "Be7",
-          explanation: "We develop and prepare to castle.",
+          explanation:
+            "We develop modestly and prepare to castle — flexible, keeping the bishop ready to support ...b5-b4 or reroute.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
         {
           san: "O-O",
-          explanation: "We castle! Now the strategic battle begins.",
+          explanation:
+            "White castles, ready to start the slow kingside build-up.",
+        },
+        {
+          san: "O-O",
+          explanation:
+            "We castle — but our king won't sit idle; we're racing on the queenside while White builds on the kingside.",
           isKeyMove: true,
         },
         {
           san: "Re1",
-          explanation: "White reinforces e4, preparing the e5 push.",
+          explanation:
+            "White over-protects e4 and prepares the e5 push, the start of the KIA's kingside plan.",
         },
         {
           san: "b5",
           explanation:
-            "We expand on the queenside — Black should counterattack before White's e5 advance.",
+            "We launch the queenside attack BEFORE White's e5 lands. In these opposite-wing races, speed is everything — get your pawns rolling first. ...b5-b4 will pry open lines toward White's king.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "White pushes e5." },
+        {
+          san: "e5",
+          explanation:
+            "White finally pushes e5, gaining kingside space and kicking our f6-knight.",
+        },
         {
           san: "Nd7",
           explanation:
-            "We retreat, preparing a knight redeployment and the c4 break.",
+            "The thematic retreat to d7, where the knight supports the ...c4 break and can reroute to b6/c5 — exactly as in the main French lines. Reposition the knight to feed your own attack.",
           isKeyMove: true,
         },
       ],
@@ -762,73 +873,85 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "Nf6",
-          explanation: "We develop — now White has to decide on Bg5 or e5.",
+          explanation: "We develop and add a second attacker to e4.",
           isKeyMove: true,
         },
         {
           san: "Bg5",
-          explanation: "White pins the Nf6 — the Classical French.",
+          explanation: "White pins our f6-knight — the Classical setup.",
         },
         {
           san: "Bb4",
           explanation:
-            "The MacCutcheon! Instead of Be7, we pin the Nc3. This is sharper and more aggressive.",
+            "The MacCutcheon! Instead of the meek ...Be7, we COUNTER-pin: our bishop pins White's c3-knight (defender of e4), creating mutual pins and immediate tactical tension. Answer a pin with a pin to seize the initiative.",
           isKeyMove: true,
           wrongMoveWarning:
             "The MacCutcheon plays Bb4 after Bg5 — pinning the Nc3 for double trouble.",
         },
-        { san: "e5", explanation: "White advances the e-pawn." },
+        {
+          san: "e5",
+          explanation:
+            "White pushes, kicking our f6-knight and gaining space — but our pins still bite.",
+        },
         {
           san: "h6",
           explanation:
-            "We challenge the Bg5 — forcing it to commit before the center closes.",
+            "We question the g5-bishop before deciding our knight's path — forcing White to commit the bishop first. Insert a useful tempo move before resolving the central tension.",
           isKeyMove: true,
         },
         {
           san: "Bd2",
           explanation:
-            "White retreats the bishop to d2, avoiding the trade and keeping the position complex.",
+            "White retreats to keep the tension (Bxf6 or exf6 would help us), unpinning his own pieces.",
         },
         {
           san: "Bxc3",
           explanation:
-            "We capture the knight! We give up the bishop pair to double White's c-pawns.",
+            "We take, doubling White's c-pawns — the MacCutcheon's structural payoff, the same crippling idea as the Winawer. We give up the bishop for lasting damage.",
           isKeyMove: true,
         },
-        { san: "bxc3", explanation: "White recaptures, doubling the c-pawns." },
+        {
+          san: "bxc3",
+          explanation: "White recaptures, accepting the doubled c-pawns.",
+        },
         {
           san: "Ne4",
           explanation:
-            "We centralise the knight immediately — a powerful outpost on e4.",
+            "Our knight leaps to the dominant e4 outpost (the f6-knight was about to be kicked by e5 anyway), hitting White's d2-bishop and dominating the center. Turn a soon-to-be-kicked piece into a powerful central one.",
           isKeyMove: true,
         },
         {
           san: "Qg4",
-          explanation: "White attacks g7 — the tactical complications begin.",
+          explanation:
+            "White switches to attack, the queen hitting g7 to exploit our loosened dark squares — the sharp tactical phase begins.",
         },
         {
           san: "g6",
           explanation:
-            "We defend g7 by playing g6 — weakening the kingside but necessary.",
+            "We defend g7 by shielding it, accepting a slight dark-square weakening — necessary, and our central knight and queenside play compensate. Defend the concrete threat, then rely on your trumps.",
           isKeyMove: true,
         },
-        { san: "h4", explanation: "White attacks further." },
+        {
+          san: "h4",
+          explanation:
+            "White lunges the h-pawn, opening lines toward our slightly loosened kingside.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack d4 — essential fighting back before White's attack becomes overwhelming.",
+            "We hit the d4 base and counterattack before White's kingside assault lands — racing on the center/queenside as always in the French. Counter in the center against a wing attack.",
           isKeyMove: true,
         },
       ],
@@ -871,28 +994,30 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "Nf6",
-          explanation: "We develop — entering the Classical French.",
+          explanation: "We develop and add a second attacker to e4.",
           isKeyMove: true,
         },
         {
           san: "e5",
-          explanation: "White advances — this is the Steinitz Variation.",
+          explanation:
+            "White pushes immediately (the Steinitz), grabbing space and kicking our knight before developing the bishop.",
         },
         {
           san: "Nfd7",
-          explanation: "We retreat the knight — standard French technique.",
+          explanation:
+            "The standard French retreat — the knight goes to d7 to support ...c5 and ...f6, never to the rim.",
           isKeyMove: true,
           wrongMoveWarning:
             "After e5, the knight retreats to d7 — this is always the correct French response.",
@@ -900,38 +1025,51 @@ const frenchDefense: Opening = {
         {
           san: "f4",
           explanation:
-            "White plays f4! The Kingside Attack is coming — very aggressive.",
+            "White bolsters e5 and prepares the f5 break — the most aggressive Classical setup, building a kingside pawn storm.",
         },
         {
           san: "c5",
           explanation:
-            "We immediately counterattack d4 — we must fight back now before White's kingside pawns become overwhelming.",
+            "We hit the d4 base at once — we must open the center NOW before White's f4-f5 storm gathers steam. Counter a pawn storm by breaking in the center immediately.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops and defends d4." },
         {
           san: "Nc6",
-          explanation: "We develop and add more pressure to d4.",
+          explanation:
+            "We pile a second attacker onto the d4 base of the chain.",
           isKeyMove: true,
         },
-        { san: "Be3", explanation: "White develops and supports d4." },
+        {
+          san: "Be3",
+          explanation:
+            "White develops and adds another defender to d4 — the fight for the base intensifies.",
+        },
         {
           san: "cxd4",
-          explanation: "We capture in the center, forcing simplification.",
+          explanation:
+            "We trade to dissolve White's center and open lines for our pieces while White's king is still uncastled.",
           isKeyMove: true,
         },
-        { san: "Nxd4", explanation: "White recaptures." },
+        {
+          san: "Nxd4",
+          explanation: "White recaptures, centralizing the knight.",
+        },
         {
           san: "Bc5",
           explanation:
-            "We develop the bishop aggressively — targeting d4 and eyeing f2.",
+            "We develop with a punch — the bishop pins/pressures the d4-knight and eyes f2, exploiting that White's king is stuck in the center. Develop with threats against an uncastled king.",
           isKeyMove: true,
         },
-        { san: "Qd2", explanation: "White defends d4 with the queen." },
+        {
+          san: "Qd2",
+          explanation:
+            "White defends the d4-knight and prepares to castle queenside out of the danger zone.",
+        },
         {
           san: "O-O",
           explanation:
-            "We castle — Black has solved all the opening problems with active piece play.",
+            "We castle, fully mobilized with active pieces — the opening problems are solved and our pieces are the more active.",
         },
       ],
       continuationMoves: [
@@ -973,64 +1111,77 @@ const frenchDefense: Opening = {
         },
         {
           san: "e6",
-          explanation: "The French Defence.",
+          explanation: "The French Defence — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge e4 directly.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4 with the knight." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "Nf6",
-          explanation: "We develop and fight for e4.",
+          explanation: "We develop and add a second attacker to e4.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "White advances." },
+        {
+          san: "e5",
+          explanation: "White pushes, gaining space and kicking the knight.",
+        },
         {
           san: "Nfd7",
           explanation:
-            "The knight retreats to d7 — standard French technique, preparing c5 and f6.",
+            "The standard retreat — to d7, supporting the coming ...c5 and ...f6 breaks against White's chain. In the French, a knight kicked by e5 belongs on d7.",
           isKeyMove: true,
           wrongMoveWarning:
             "After e5, the knight retreats to d7 — ALWAYS the right move in the French Advance positions.",
         },
         {
           san: "f4",
-          explanation: "White plays f4 — the kingside attack begins.",
+          explanation:
+            "White reinforces e5 and prepares f5 — the kingside pawn storm.",
         },
         {
           san: "c5",
           explanation:
-            "We counterattack d4 immediately! This is the key — we must fight back in the center.",
+            "We strike the d4 base immediately — opening the center before White's storm builds. Always the French recipe: meet a wing attack with a central counter.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops and defends d4." },
         {
           san: "Nc6",
-          explanation:
-            "We develop the queenside knight, adding more pressure to d4.",
+          explanation: "We add a second attacker to the d4 base.",
           isKeyMove: true,
         },
-        { san: "Be3", explanation: "White develops." },
+        {
+          san: "Be3",
+          explanation:
+            "White develops, adding a third defender to the contested d4 point.",
+        },
         {
           san: "cxd4",
-          explanation: "We capture! Forcing simplification in the center.",
+          explanation:
+            "We capture to dissolve the center, opening lines while White's king is uncastled.",
           isKeyMove: true,
         },
-        { san: "Nxd4", explanation: "White recaptures." },
+        { san: "Nxd4", explanation: "White recaptures with the knight." },
         {
           san: "Nxd4",
-          explanation: "We capture the knight! The pawn center is dissolved.",
+          explanation:
+            "We trade off the strong central knight, dismantling White's pawn center entirely.",
           isKeyMove: true,
         },
-        { san: "Bxd4", explanation: "White recaptures." },
+        {
+          san: "Bxd4",
+          explanation:
+            "White recaptures with the bishop, the center now fully dissolved.",
+        },
         {
           san: "Bc5",
           explanation:
-            "We develop the bishop aggressively — Black has excellent counterplay.",
+            "We develop with a punch, challenging the d4-bishop and eyeing f2 against White's uncastled king — excellent, active counterplay.",
         },
       ],
       continuationMoves: [

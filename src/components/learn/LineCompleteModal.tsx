@@ -20,6 +20,8 @@ interface LineCompleteModalProps {
   onNextSeqLine?: () => void;
   onAllDone?: () => void;
   onNextLine?: () => void;
+  // Branch off into free play from a position in the continuation viewer.
+  onPlayFromHere?: (continuationStep: number) => void;
 }
 
 export default function LineCompleteModal({
@@ -34,6 +36,7 @@ export default function LineCompleteModal({
   onNextSeqLine,
   onAllDone,
   onNextLine,
+  onPlayFromHere,
 }: LineCompleteModalProps) {
   const navigate = useNavigate();
   const [showContinuation, setShowContinuation] = useState(false);
@@ -100,7 +103,11 @@ export default function LineCompleteModal({
         {mode === "learn" && hasContinuation && (
           <div className="mb-5">
             {showContinuation ? (
-              <ContinuationViewer line={line} orientation={orientation} />
+              <ContinuationViewer
+                line={line}
+                orientation={orientation}
+                onPlayFromHere={onPlayFromHere}
+              />
             ) : (
               <>
                 {/* Teaser — first sentence of continuationIdea */}
@@ -133,21 +140,20 @@ export default function LineCompleteModal({
           </Button>
 
           {mode === "learn" ? (
-            isSeq ? (
-              nextSeqLine ? (
+            <>
+              <Button variant="secondary" size="sm" onClick={onPractice}>
+                Practice this line →
+              </Button>
+              {nextSeqLine ? (
                 <Button variant="primary" size="sm" onClick={onNextSeqLine}>
-                  Next Line →
+                  Next line →
                 </Button>
               ) : (
                 <Button variant="primary" size="sm" onClick={onAllDone}>
                   All done! Back to opening
                 </Button>
-              )
-            ) : (
-              <Button variant="primary" size="sm" onClick={onPractice}>
-                Practice this line →
-              </Button>
-            )
+              )}
+            </>
           ) : (
             <Button variant="primary" size="sm" onClick={onNextLine}>
               Next line →

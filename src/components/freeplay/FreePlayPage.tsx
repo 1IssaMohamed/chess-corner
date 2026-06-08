@@ -3,6 +3,7 @@
 // the eval bar judges every position so you can see why one move holds and another
 // drops the game. Launched from the "Play from here" button in Learn.
 
+import { useMemo, useRef } from "react";
 import {
   useParams,
   useNavigate,
@@ -13,7 +14,13 @@ import { findLine } from "@/data/openings";
 import { useStockfish } from "@/hooks/useStockfish";
 import { useFreePlay } from "@/hooks/useFreePlay";
 import { useClickToMove } from "@/hooks/useClickToMove";
-import { getFenAtStep, buildSquareStyles, STARTING_FEN } from "@/utils/chess";
+import { useBoardHistoryNav } from "@/hooks/useBoardHistoryNav";
+import {
+  getFenAtStep,
+  buildContinuationFens,
+  buildSquareStyles,
+  STARTING_FEN,
+} from "@/utils/chess";
 import { formatEval } from "@/utils/evalScore";
 import ChessboardWrapper from "@/components/board/ChessboardWrapper";
 import EvalBar from "@/components/board/EvalBar";
@@ -29,12 +36,31 @@ export default function FreePlayPage() {
 
   const { opening, line } = findLine(openingId ?? "", lineId ?? "");
 
-  // Clamp the requested step into the line's range, then compute the start FEN.
-  const requestedStep = parseInt(searchParams.get("step") ?? "0", 10);
-  const step = line
-    ? Math.max(0, Math.min(requestedStep || 0, line.moves.length))
-    : 0;
-  const startFen = line ? getFenAtStep(line, step) : STARTING_FEN;
+  // Compute the start FEN. Two entry points:
+  //   ?step=N  — branch off the scripted line at ply N
+  //   ?cstep=N — branch off the continuation ("see the idea") board at ply N,
+  //              i.e. the line's end plus N continuation moves.
+  // Memoized because the line never changes once loaded, but the page re-renders
+  // on every eval/move (rebuilding the FEN replays the whole line each time).
+  const stepParam = searchParams.get("step");
+  const contStepParam = searchParams.get("cstep");
+  const startFen = useMemo(() => {
+    if (!line) return STARTING_FEN;
+    if (contStepParam !== null) {
+      const contFens = buildContinuationFens(
+        line,
+        line.continuationMoves ?? [],
+      );
+      const ci = Math.max(
+        0,
+        Math.min(parseInt(contStepParam, 10) || 0, contFens.length - 1),
+      );
+      return contFens[ci];
+    }
+    const requestedStep = parseInt(stepParam ?? "0", 10);
+    const step = Math.max(0, Math.min(requestedStep || 0, line.moves.length));
+    return getFenAtStep(line, step);
+  }, [line, stepParam, contStepParam]);
   const userSide = opening?.side ?? "white";
 
   const { engineRef, ready } = useStockfish();
@@ -45,6 +71,14 @@ export default function FreePlayPage() {
     fp.isUserTurn,
     fp.playMove,
   );
+
+  // ← / → keys and scroll wheel (scoped to the board column) step through the
+  // moves played so far.
+  const boardColRef = useRef<HTMLDivElement>(null);
+  useBoardHistoryNav(boardColRef, {
+    onBack: fp.viewBack,
+    onForward: fp.viewForward,
+  });
 
   if (!opening || !line) {
     return (
@@ -70,6 +104,7 @@ export default function FreePlayPage() {
 
   const status = (() => {
     if (!ready) return "Loading engine…";
+    if (fp.isBrowsing) return "Reviewing — ← → or scroll to step";
     if (fp.isGameOver) return "Game over";
     if (fp.engineThinking) return "Opponent thinking…";
     if (fp.mode === "engine") return fp.isUserTurn ? "Your move" : "…";
@@ -114,7 +149,10 @@ export default function FreePlayPage() {
       {/* Main content */}
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Board + eval bar + controls */}
-        <div className="w-full lg:w-[520px] lg:flex-shrink-0 flex flex-col gap-3">
+        <div
+          ref={boardColRef}
+          className="w-full lg:w-[520px] lg:flex-shrink-0 flex flex-col gap-3"
+        >
           <div className="flex gap-2 sm:gap-3 items-stretch">
             <EvalBar
               score={fp.score}
@@ -135,6 +173,24 @@ export default function FreePlayPage() {
 
           {/* Controls */}
           <div className="flex items-center gap-2 flex-wrap">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={fp.viewBack}
+              disabled={!fp.canViewBack}
+              title="Step back through the moves (← or scroll down)"
+            >
+              ← Back
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={fp.viewForward}
+              disabled={!fp.canViewForward}
+              title="Step forward (→ or scroll up)"
+            >
+              Forward →
+            </Button>
             <Button
               variant="secondary"
               size="sm"

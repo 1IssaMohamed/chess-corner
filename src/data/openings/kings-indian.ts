@@ -24,101 +24,110 @@ const kingsIndian: Opening = {
         {
           san: "Nf6",
           explanation:
-            "The King's Indian start — we control e4 with a piece rather than a pawn.",
+            "The hypermodern start: we control the central e4-square with a PIECE instead of occupying the center with a pawn. The whole King's Indian philosophy is to let White build a big pawn center, then attack and undermine it. Influence the center from afar before committing pawns.",
           isKeyMove: true,
           wrongMoveWarning:
             "The King's Indian starts with Nf6 — controlling e4 with a piece, not a pawn.",
         },
         {
           san: "c4",
-          explanation: "White expands, building an imposing center.",
+          explanation:
+            "White grabs maximum central space — exactly what we're inviting, so we can target it later.",
         },
         {
           san: "g6",
           explanation:
-            "We prepare the fianchetto! The g6 pawn prepares Bg7, our powerful long-range piece.",
+            "We prepare the fianchetto. The bishop will sit on g7, controlling the long a1-h8 diagonal straight through White's center — pressuring it from the wing rather than blocking it.",
           isKeyMove: true,
         },
         {
           san: "Nc3",
-          explanation: "White develops the knight to its best square.",
+          explanation:
+            "White develops and prepares e4, building toward the big pawn center.",
         },
         {
           san: "Bg7",
           explanation:
-            "The fianchetto! The g7 bishop controls the long a1-h8 diagonal and is the heart of the King's Indian.",
+            "The fianchetto — the soul of the King's Indian. The g7-bishop aims down the long diagonal at d4 and beyond; when our ...e5/...f5 breaks eventually open that diagonal, this bishop becomes a monster. Develop the bishop to where it will dominate once the center opens.",
           isKeyMove: true,
         },
         {
           san: "e4",
           explanation:
-            "White builds an enormous center. We let them — and then destroy it.",
+            "White builds the imposing d4-c4-e4 center. We deliberately let him — the hypermodern bet is that a big center can become a big target.",
         },
         {
           san: "d6",
           explanation:
-            "We support the future e5 and keep the center flexible. The d6-e5-f6 triangle is the King's Indian foundation.",
+            "The key restraining move: ...d6 controls e5 and prepares our own ...e5 break, while keeping the bishop's diagonal open. It's modest, but it's the foundation the whole counterattack is built on. Restrain before you strike.",
           isKeyMove: true,
         },
         {
           san: "Nf3",
-          explanation: "White completes development, preparing to castle.",
+          explanation:
+            "White develops and supports the center, preparing to castle.",
         },
         {
           san: "O-O",
           explanation:
-            "We castle! The king is safe behind the fianchetto. Now we're ready for the counterattack.",
+            "We castle to safety FIRST — the coming pawn storm will fly forward, so the king must be tucked away behind the fianchetto before we open things up. Get safe, then attack.",
           isKeyMove: true,
         },
         {
           san: "Be2",
-          explanation: "White develops solidly and prepares to castle.",
+          explanation:
+            "White develops solidly and prepares to castle — the Classical main line.",
         },
         {
           san: "e5",
           explanation:
-            "THE key King's Indian move! We strike the center. This pawn on e5 creates the dynamic imbalance — all of Black's play comes from this.",
+            "THE defining King's Indian move. We finally strike the center, challenging d4 directly. White must now choose: trade (dxe5), close (d5), or hold the tension — and each choice sets the structure for the whole game. Everything Black does flows from this break.",
           isKeyMove: true,
           wrongMoveWarning:
             "After castling, ALWAYS play e5 — this is the defining King's Indian counterattack!",
         },
-        { san: "O-O", explanation: "White castles too." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles too, keeping the central tension for now.",
+        },
         {
           san: "Nc6",
           explanation:
-            "We develop the last minor piece, supporting e5 and preparing Nd4 or Nd7-f6.",
+            "We develop the knight to pressure d4 (and provoke White into committing). It looks like it blocks the c-pawn, but in the closed KID structure that doesn't matter — the knight will reroute to e7 and onward to the kingside.",
           isKeyMove: true,
         },
         {
           san: "d5",
           explanation:
-            "White closes the center — the classic KID positional battle: Black plays on the kingside, White on the queenside.",
+            "White closes the center with d5, kicking the c6-knight. This is the most important KID decision: with the center LOCKED, the game splits into two wing battles — we attack the kingside, White the queenside. A locked center is the starting gun for the opposite-wing race.",
         },
         {
           san: "Ne7",
           explanation:
-            "The knight repositions — in closed KID positions, we maneuver to f5 or g5 to launch the kingside attack.",
+            "The knight retreats to e7 — not a loss of time, but a re-route: from e7 it heads to g6 or f5 to join the kingside attack and clears c-file space. In a closed position, maneuver your pieces toward where you'll attack.",
           isKeyMove: true,
         },
         {
           san: "Ne1",
-          explanation: "White repositions the knight — the Orthodox Main Line.",
+          explanation:
+            "White begins his own re-route (Ne1-d3) to support the queenside c5 break — the Orthodox plan.",
         },
         {
           san: "Nd7",
           explanation:
-            "We clear the f6 square first — the knight reroutes so the f-pawn can advance.",
+            "We clear f6 so our f-pawn can advance unobstructed — you must move the f6-knight out of the way before ...f5-f4 can roll. Prepare the pawn storm by unblocking its path.",
           isKeyMove: true,
         },
         {
           san: "Nd3",
           explanation:
-            "White's knight heads to d3, eyeing the c5 and f4 squares.",
+            "White's knight reaches d3, eyeing c5 and supporting the queenside expansion.",
         },
         {
           san: "f5",
           explanation:
-            "We advance! The kingside attack begins — Black will play g5, h5, f4, g4.",
+            "The kingside attack launches! ...f5 strikes at e4 and starts the pawn avalanche (f5-f4-g5-g4) toward White's king. This is what every previous move was preparing. Now it's a race. Throw your pawns at the king you're attacking.",
           isKeyMove: true,
         },
       ],
@@ -161,72 +170,84 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The Dragon bishop is in place.",
+          explanation:
+            "The fianchetto — our bishop eyes the long diagonal through White's center.",
           isKeyMove: true,
         },
-        { san: "e4", explanation: "White builds a massive center." },
+        { san: "e4", explanation: "White builds the big d4-c4-e4 center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5, prepares our break, and keeps the bishop's diagonal open — the King's Indian foundation.",
           isKeyMove: true,
         },
         {
           san: "f3",
           explanation:
-            "The Sämisch Attack! White plays f3, aiming for a powerful pawn center and a kingside attack. Very aggressive.",
+            "The Sämisch! White props up e4 with the f-pawn (rather than a knight on f3) so he can throw g4-h4 forward in a kingside storm. The trade-off: f3 blocks the g1-knight's best square and commits White to a sharp, attacking game — which we'll meet by attacking his king instead.",
           isKeyMove: true,
         },
         {
           san: "O-O",
           explanation:
-            "We castle immediately — we need to fight back before White builds a steamroller.",
+            "We castle quickly — against the Sämisch we must get the king safe and counterattack before White's pawn steamroller rolls. Speed over caution here.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Sämisch, castle immediately and prepare c5 or e5 counterplay.",
         },
-        { san: "Be3", explanation: "White develops the c1 bishop." },
+        {
+          san: "Be3",
+          explanation: "White develops and braces d4, planning Qd2 and O-O-O.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack! The c5 break is one of the best responses to the Sämisch — fighting the d4 pawn directly.",
+            "We hit the center with ...c5! Against the Sämisch this is often better than ...e5: it strikes d4 and, when White plays d5, opens the c-file and gives us a clear queenside attacking plan (...a6, ...b5). Choose the break that points your pawns at the enemy king.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White advances, closing the center." },
+        {
+          san: "d5",
+          explanation:
+            "White closes the center, committing to the wing battle and gaining space.",
+        },
         {
           san: "Nbd7",
           explanation:
-            "We develop the queenside knight, preparing to expand with b5.",
+            "We develop the knight toward b6/e5 and support the coming ...b5 expansion.",
           isKeyMove: true,
         },
-        { san: "Qd2", explanation: "White prepares to castle queenside." },
+        {
+          san: "Qd2",
+          explanation:
+            "White connects rooks and prepares to castle queenside — the storm is brewing.",
+        },
         {
           san: "a6",
           explanation:
-            "We prepare b5! The classic King's Indian queenside expansion plan.",
+            "We prepare ...b5, the standard queenside pawn-storm lever. With White castling queenside, that's exactly where our attack must go. Aim your pawns at where the enemy king will live.",
           isKeyMove: true,
         },
         {
           san: "O-O-O",
           explanation:
-            "White castles queenside — opposite-side castling means a race of attacks!",
+            "White castles queenside — opposite-side castling, so it's now a flat-out race of pawn storms toward each other's kings.",
         },
         {
           san: "b5",
           explanation:
-            "The queenside attack begins! Black will push b4 while White pushes g4-g5-h5.",
+            "The queenside attack launches! ...b5-b4 will hit the c3-knight and rip open lines toward White's king. Note our attack often arrives first because ...b4 hits a piece (the Nc3), gaining a tempo. Strike at the king with tempo.",
           isKeyMove: true,
         },
       ],
@@ -267,66 +288,85 @@ const kingsIndian: Opening = {
           explanation:
             "The King's Indian starts with d4 Nf6 c4 g6 Nc3 Bg7 e4 d6, and this line diverges when White plays f4 — the Four Pawns Attack — leading to an exceptionally aggressive structure where four white pawns dominate the center, but the immediate e6 break exposes the overextension and gives Black excellent active piece play against White's too-ambitious pawn mass.",
         },
-        { san: "Nf6", explanation: "We start the King's Indian." },
-        { san: "c4", explanation: "White expands." },
+        {
+          san: "Nf6",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
+        },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The Dragon bishop is in place.",
+          explanation: "The fianchetto — our bishop eyes the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
         {
           san: "f4",
           explanation:
-            "The Four Pawns Attack! White goes for the maximum center. Very ambitious — but overextended.",
+            "The Four Pawns Attack! White grabs the maximum center with c4-d4-e4-f4. It looks crushing, but four advanced pawns are also four targets, and the more pawns advance, the more squares they leave behind them. We strike before it consolidates.",
           isKeyMove: true,
         },
         {
           san: "O-O",
           explanation:
-            "We castle immediately — we must fight back before White consolidates.",
+            "We castle at once — against this huge center we must get safe and counterattack immediately, never passively.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Four Pawns, castle immediately and prepare c5 or e5.",
         },
-        { san: "Nf3", explanation: "White completes development." },
+        {
+          san: "Nf3",
+          explanation:
+            "White completes development, defending the broad center.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack d4! This is essential — striking White's overextended center immediately.",
+            "We hit the base of the pawn mass with ...c5. The bigger the center, the more urgently it must be challenged — strike before White can support it all. This is essential, not optional.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White advances, closing the center." },
+        {
+          san: "d5",
+          explanation:
+            "White closes with d5, the most testing reply, gaining space.",
+        },
         {
           san: "e6",
           explanation:
-            "We fight back in the center! Black breaks the pawn chain immediately.",
+            "We blast at the chain! ...e6 attacks d5 directly, refusing to let White's center stand. Against an overextended pawn mass, open a second front to crack it. This is the key Four Pawns antidote.",
           isKeyMove: true,
         },
-        { san: "dxe6", explanation: "White captures." },
+        {
+          san: "dxe6",
+          explanation:
+            "White captures, conceding the central tension to avoid being undermined further.",
+        },
         {
           san: "fxe6",
           explanation:
-            "We recapture, keeping the position open — White's center is now undermined.",
+            "We recapture toward the center, keeping the position open and the half-open f-file for our rook. White's grand center is now just two pawns (c4, e4) — both of which we'll target.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops." },
+        {
+          san: "Be2",
+          explanation:
+            "White develops, trying to consolidate the loosened center.",
+        },
         {
           san: "Nc6",
           explanation:
-            "We develop — Black has excellent compensation with active pieces against White's weakened center.",
+            "We develop with pressure — the knight eyes d4 and e5, and our active pieces swarm the weakened center. Full compensation for inviting the pawn mass.",
         },
       ],
       continuationMoves: [
@@ -368,66 +408,82 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The fianchetto is complete.",
+          explanation: "The fianchetto — eyeing the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops solidly." },
+        {
+          san: "Be2",
+          explanation:
+            "White develops the bishop, keeping the g1-knight flexible.",
+        },
         {
           san: "O-O",
-          explanation: "We castle! The king is safe.",
+          explanation: "We castle to safety before counterattacking.",
           isKeyMove: true,
         },
         {
           san: "Bg5",
           explanation:
-            "The Averbakh! White pins the Nf6, planning a positional stranglehold.",
+            "The Averbakh! By delaying Nf3, White can play Bg5 to pin the f6-knight — specifically to discourage our thematic ...e5 (which would hang after the pin). A clever move-order to interfere with our main plan.",
         },
         {
           san: "h6",
           explanation:
-            "We immediately challenge the Bg5 — we must free our pieces.",
+            "We question the pinning bishop at once — it must commit or retreat, and we refuse to let it sit there cramping our ...e5 break. Challenge an annoying pin immediately before it interferes with your plans.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Averbakh's Bg5, play h6 immediately — we cannot allow the pin to continue.",
         },
-        { san: "Be3", explanation: "White retreats the bishop to e3." },
+        {
+          san: "Be3",
+          explanation:
+            "White retreats to e3, keeping the bishop active and bracing d4.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack! c5 fights against White's d4 pawn — the King's Indian counterattack.",
+            "We strike the center with ...c5 (cleaner than ...e5 here given White's setup), challenging d4 and opening a queenside plan after the close. Pick the break that gives you the most active plan.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White closes the center." },
+        {
+          san: "d5",
+          explanation:
+            "White closes the center, gaining space and committing to the wing battle.",
+        },
         {
           san: "Ne8",
           explanation:
-            "We clear f6 for the f5 pawn advance — the knight steps aside so the f-pawn can surge forward and launch the kingside attack.",
+            "We re-route the knight to clear f6 for the f-pawn. ...Ne8 looks backward, but it's the standard KID prep: the f6-knight must step aside so ...f5-f4 can roll. The knight reroutes via e8 toward c7/d6 or back to f6 later.",
           isKeyMove: true,
         },
-        { san: "g4", explanation: "White plays aggressively on the kingside." },
+        {
+          san: "g4",
+          explanation:
+            "White grabs kingside space to slow our ...f5 — a double-edged committal advance that loosens his own king.",
+        },
         {
           san: "f5",
           explanation:
-            "We strike! Black starts the kingside attack before White's pawns get too far.",
+            "We strike anyway! ...f5 opens the kingside before White's pawns get rolling — in the KID, the kingside is OUR battlefield and we must contest it actively.",
         },
       ],
       continuationMoves: [
@@ -469,69 +525,78 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The fianchetto is complete.",
+          explanation: "The fianchetto — eyeing the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops, supporting the center." },
         {
           san: "O-O",
           explanation:
-            "We castle — the king is safe behind the fianchetto, and now e5 is our next move.",
+            "We castle to safety, then strike the center with ...e5.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops." },
+        {
+          san: "Be2",
+          explanation: "White develops, completing the Classical setup.",
+        },
         {
           san: "e5",
-          explanation: "We play our key move, fighting for the center.",
+          explanation: "The key King's Indian break — challenging d4 directly.",
           isKeyMove: true,
         },
         {
           san: "d5",
           explanation:
-            "The Petrosian System! White closes the center early — preventing our e5-d4 push.",
+            "The Petrosian! White closes the center IMMEDIATELY (before ...Nc6), specifically to deny us the ...Nc6 pressure and the usual structure. The locked center still means a wing race — we just adapt our plan.",
           isKeyMove: true,
         },
         {
           san: "c6",
           explanation:
-            "We fight back on the queenside! c6 attacks the d5 pawn — the standard King's Indian response to the Petrosian.",
+            "We attack the head of White's chain (d5) from the queenside. Since the center is locked and ...Nc6 isn't available, ...c6 is the right lever — undermine the d5-pawn and open the c-file. Strike the pawn chain where you can.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Petrosian d5, play c6 — fighting on the queenside.",
         },
         {
           san: "Nd2",
-          explanation: "White retreats the knight, preparing to defend d5.",
+          explanation:
+            "White re-routes the knight to defend the center and support c4/queenside play.",
         },
         {
           san: "cxd5",
-          explanation: "We capture! Opening the c-file for queenside play.",
+          explanation:
+            "We open the c-file for our rooks, giving ourselves concrete queenside play.",
           isKeyMove: true,
         },
-        { san: "cxd5", explanation: "White recaptures." },
+        {
+          san: "cxd5",
+          explanation:
+            "White recaptures, keeping the locked d5-e4 vs d6-e5 structure.",
+        },
         {
           san: "Nh5",
           explanation:
-            "We reposition the knight toward f4 — a key King's Indian attacking maneuver.",
+            "We start the kingside maneuver: the knight heads for the dominant f4-square (...Nh5-Nf4). Even with queenside play available, the KID knight on f4 is too strong to pass up. Route the knight to its best outpost.",
           isKeyMove: true,
         },
       ],
@@ -574,31 +639,36 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops, keeping a flexible, fianchetto-friendly setup (no early e4).",
+        },
         {
           san: "Bg7",
-          explanation: "We complete the fianchetto.",
+          explanation:
+            "We complete the fianchetto, the bishop eyeing the long diagonal.",
           isKeyMove: true,
         },
         {
           san: "g3",
           explanation:
-            "The Fianchetto Variation! White also fianchettos — creating a mirror battle of the g-bishops.",
+            "The Fianchetto Variation — White builds his OWN fianchetto. This is the most solid anti-KID: the g2-bishop directly opposes our g7-bishop and reinforces d5/e4. The character changes from a pawn-storm race to a quieter strategic fight.",
           isKeyMove: true,
         },
         {
           san: "O-O",
           explanation:
-            "We castle — the position is more strategic than tactical in the Fianchetto.",
+            "We castle — in the Fianchetto line the play is more positional than tactical, so calm, sound development comes first.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Fianchetto KID, castle and then play d6 or d5 to fight for the center.",
@@ -606,37 +676,48 @@ const kingsIndian: Opening = {
         {
           san: "Bg2",
           explanation:
-            "White completes the fianchetto. The bishops face each other on g2 and g7.",
+            "White completes his fianchetto. Both long-diagonal bishops now stare at each other — whoever's bishop ends up more active will have the edge.",
         },
         {
           san: "d6",
-          explanation: "We support e5 and keep the center flexible.",
+          explanation:
+            "We support the coming ...e5 and keep the center flexible — the standard KID base, adaptable here.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "Nbd7",
-          explanation: "We develop the queenside knight, preparing e5.",
+          explanation:
+            "We develop the knight to support the ...e5 break (rather than ...Nc6, which the g2-bishop's pressure on the long diagonal discourages).",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and reinforces e4/d5." },
         {
           san: "e5",
           explanation:
-            "Our key counterattack! We fight for the center even in the Fianchetto line.",
+            "Our key break — we challenge the center even here, refusing to be slowly squeezed by White's harmonious fianchetto setup. Activity is the antidote to a positional grip.",
           isKeyMove: true,
         },
-        { san: "e4", explanation: "White builds a center." },
+        {
+          san: "e4",
+          explanation:
+            "White grabs space, transposing toward a Classical-style center.",
+        },
         {
           san: "c6",
           explanation:
-            "We prepare to expand with d5 or fight for a different setup.",
+            "We prepare ...d5 or ...exd4 to fight for the center and challenge White's grip on the long diagonal.",
           isKeyMove: true,
         },
-        { san: "h3", explanation: "White prevents Bg4." },
+        {
+          san: "h3",
+          explanation:
+            "White prevents ...Bg4, securing his kingside before the center clarifies.",
+        },
         {
           san: "exd4",
-          explanation: "We exchange in the center, relieving the tension.",
+          explanation:
+            "We release the tension to open lines for our pieces and our Bg7, fighting White's fianchetto bishop on equal terms.",
         },
       ],
       continuationMoves: [
@@ -678,73 +759,79 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The fianchetto is in place.",
+          explanation: "The fianchetto — eyeing the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops, supporting the center." },
         {
           san: "O-O",
-          explanation:
-            "We castle — the king is safe behind the fianchetto, and now e5 is our next move.",
+          explanation: "We castle to safety, then strike with ...e5.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops." },
+        { san: "Be2", explanation: "White develops, the Classical setup." },
         {
           san: "e5",
-          explanation: "Our key King's Indian counterattack!",
+          explanation: "The key King's Indian break — challenging d4.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles, keeping the tension." },
         {
           san: "Nc6",
-          explanation: "We develop and support e5.",
+          explanation: "We pressure d4, provoking White to close the center.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White closes the center." },
+        {
+          san: "d5",
+          explanation: "White closes the center — the wing race is set.",
+        },
         {
           san: "Ne7",
           explanation:
-            "We reposition the knight, preparing the kingside attack.",
+            "We re-route the knight toward the kingside (g6/f5) for the attack.",
           isKeyMove: true,
         },
         {
           san: "b4",
           explanation:
-            "The Bayonet Attack! White immediately advances on the queenside — a direct confrontation.",
+            "The Bayonet Attack! White skips slow regrouping and lunges b4 straight away to crash through on the queenside as fast as possible. It's the most direct anti-KID try — so we must counter with equal urgency.",
           isKeyMove: true,
         },
         {
           san: "Nh5",
           explanation:
-            "We attack! The knight goes to h5, ready to jump to f4 or g3 — our kingside attack begins immediately.",
+            "The only correct answer: we head for f4 IMMEDIATELY. There's no time for slow prep — against the fast b4, our knight must reach the dominant f4-square at once to get our attack rolling first. In a race, don't waste a single tempo.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Bayonet b4, play Nh5 immediately — the kingside attack must start at once.",
         },
-        { san: "c5", explanation: "White advances on the queenside." },
+        {
+          san: "c5",
+          explanation:
+            "White rolls the queenside pawns forward, racing toward our king's wing.",
+        },
         {
           san: "Nf4",
           explanation:
-            "Our knight occupies f4 — a powerful outpost targeting d3 and g2.",
+            "The knight lands on f4 — the King's Indian dream square, hitting e2/g2/d3 and anchoring the kingside attack. Now ...g5, ...h5, ...g4 will follow.",
         },
       ],
       continuationMoves: [
@@ -786,26 +873,26 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The fianchetto is complete.",
+          explanation: "The fianchetto — eyeing the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
         {
@@ -820,52 +907,58 @@ const kingsIndian: Opening = {
         {
           san: "Be3",
           explanation:
-            "The Gligoric System! White plays Be3, supporting d4 and eyeing a future Qd2.",
+            "The Gligoric! White develops the bishop to e3 (instead of e2) to over-protect d4 and keep the option of meeting ...Ng4 with Bg5. A flexible move that asks us to commit first.",
         },
         {
           san: "e5",
-          explanation: "We play our key move, fighting for the center.",
+          explanation:
+            "Our key break — challenging d4. (If White ever allows ...Ng4 hitting the e3-bishop, that's an extra resource for us.)",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Gligoric, we strike with e5 — the King's Indian counterattack.",
         },
-        { san: "d5", explanation: "White closes the center." },
+        {
+          san: "d5",
+          explanation:
+            "White closes the center, committing to the wing battle.",
+        },
         {
           san: "Ne8",
           explanation:
-            "The knight reroutes via e8, clearing f6 so the f-pawn can advance.",
+            "We clear f6 for the f-pawn — the standard re-route so ...f5-f4 can advance. The knight will return via c7/d6 or f6 later.",
           isKeyMove: true,
         },
         {
           san: "Nd2",
           explanation:
-            "White repositions, preparing to contest f5 and play on the queenside.",
+            "White re-routes the knight to support the c4/c5 queenside push and cover the e4/f3 squares.",
         },
         {
           san: "f5",
           explanation:
-            "We advance on the kingside! This pawn break is the heart of our attack in the closed KID.",
+            "The kingside break — the heart of our attack in the closed KID. ...f5 strikes e4 and opens the f-file for our pieces.",
           isKeyMove: true,
         },
         {
           san: "f3",
-          explanation: "White reinforces e4 and braces for the kingside push.",
+          explanation:
+            "White braces e4 with the f-pawn and prepares to absorb our pawn storm.",
         },
         {
           san: "f4",
           explanation:
-            "We advance further — f4 secures the kingside space and prepares g5.",
+            "We push past, locking f4 in and gaining kingside space — now the bishop on e3 must move and ...g5-g4 will roll. Fix the kingside, then storm.",
           isKeyMove: true,
         },
         {
           san: "Bf2",
           explanation:
-            "White's bishop steps back, out of the path of Black's pawns.",
+            "White's bishop retreats out of the pawns' path, redeploying toward the queenside defense.",
         },
         {
           san: "Nf6",
           explanation:
-            "We redevelop the knight — the pieces are in an ideal attacking configuration.",
+            "We bring the knight back into the attack via f6 (now that the f-pawn is past it), eyeing g4/h5 — the pieces reach their ideal attacking formation.",
           isKeyMove: true,
         },
       ],
@@ -908,71 +1001,77 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The fianchetto is complete.",
+          explanation: "The fianchetto — eyeing the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
         {
           san: "h3",
-          explanation: "White prevents Bg4 — the Leningrad System.",
+          explanation:
+            "The Leningrad — White spends a move on h3 to stop ...Bg4 (a useful prophylaxis before he develops Nf3/Be3). It doesn't address our core plan, so we proceed exactly as in the Classical.",
         },
         {
           san: "O-O",
-          explanation:
-            "We castle — the king is safe behind the fianchetto, and now e5 is our next move.",
+          explanation: "We castle to safety, then strike with ...e5.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops, supporting the center." },
         {
           san: "e5",
-          explanation: "We play our key counterattack!",
+          explanation:
+            "Our key break — the same plan regardless of White's h3.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Leningrad KID, still play e5 — our King's Indian counterattack.",
         },
-        { san: "Be2", explanation: "White develops." },
+        { san: "Be2", explanation: "White develops, completing the setup." },
         {
           san: "Nc6",
-          explanation: "We develop and support e5.",
+          explanation: "We pressure d4, provoking the closure.",
           isKeyMove: true,
         },
         { san: "O-O", explanation: "White castles." },
         {
           san: "Ne7",
-          explanation:
-            "We reposition the knight, preparing for the kingside attack.",
+          explanation: "We re-route the knight toward the kingside attack.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White closes the center." },
+        {
+          san: "d5",
+          explanation: "White closes the center — the wing race begins.",
+        },
         {
           san: "Nd7",
           explanation:
-            "The knight goes to d7, preparing c5 and the typical queenside-kingside race.",
+            "We clear f6 and prepare ...c5/...f5 — the same closed-KID re-routing as always. The plan never changes: unblock the f-pawn, then storm.",
           isKeyMove: true,
         },
-        { san: "c5", explanation: "White strikes on the queenside." },
+        {
+          san: "c5",
+          explanation: "White grabs queenside space, starting his own attack.",
+        },
         {
           san: "f5",
           explanation:
-            "We fight back on the kingside — a tense race on both wings!",
+            "We answer on our wing — the kingside pawn storm vs White's queenside expansion. A tense race on opposite flanks, identical in spirit to every closed KID.",
         },
       ],
       continuationMoves: [
@@ -1014,70 +1113,76 @@ const kingsIndian: Opening = {
         },
         {
           san: "Nf6",
-          explanation: "We start the King's Indian.",
+          explanation: "The hypermodern start — controlling e4 with a piece.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "White expands." },
+        { san: "c4", explanation: "White grabs central space." },
         {
           san: "g6",
           explanation: "We prepare the fianchetto.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and prepares e4." },
         {
           san: "Bg7",
-          explanation: "The fianchetto is complete.",
+          explanation: "The fianchetto — eyeing the long diagonal.",
           isKeyMove: true,
         },
         { san: "e4", explanation: "White builds the center." },
         {
           san: "d6",
           explanation:
-            "d6 shores up the center, prepares our coming e5 push, and completes the King's Indian pawn structure.",
+            "d6 controls e5 and prepares our break — the King's Indian foundation.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops, supporting the center." },
         {
           san: "O-O",
-          explanation:
-            "We castle — the king is safe behind the fianchetto, and now e5 is our next move.",
+          explanation: "We castle to safety, then strike with ...e5.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops." },
+        { san: "Be2", explanation: "White develops, the Classical setup." },
         {
           san: "e5",
-          explanation: "Our key counterattack!",
+          explanation: "Our key break — challenging d4.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles, keeping the tension." },
         {
           san: "Nc6",
-          explanation: "We develop and support e5.",
+          explanation: "We pressure d4, provoking the closure.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White closes the center." },
+        {
+          san: "d5",
+          explanation: "White closes the center — the wing race is set.",
+        },
         {
           san: "Ne7",
-          explanation: "We reposition the knight, preparing f5.",
+          explanation: "We re-route the knight toward the kingside.",
           isKeyMove: true,
         },
         {
           san: "Ne1",
           explanation:
-            "The Orthodox Main Line! White maneuvers the knight to d3 or c2 to support the queenside advance.",
+            "The Orthodox Main Line! White's knight steps back to re-route Ne1-d3, where it supports the c5 break and blockades our coming ...f4. Both sides now re-route knights toward their attacking wings.",
           isKeyMove: true,
         },
         {
           san: "Nd7",
           explanation:
-            "We clear the f6 square first so the f-pawn can advance unobstructed.",
+            "We clear f6 so the f-pawn can advance — the essential prep before ...f5. The knight heads for c5/f6 to support the storm.",
           isKeyMove: true,
         },
-        { san: "Nd3", explanation: "White continues the regrouping plan." },
+        {
+          san: "Nd3",
+          explanation:
+            "White's knight reaches d3, eyeing c5 and f4 — the heart of his blockade-and-expand plan.",
+        },
         {
           san: "f5",
           explanation:
-            "We start the kingside attack! Now both sides race — White on the queenside, we on the kingside.",
+            "The kingside attack begins — both sides are now fully committed to opposite-wing storms. From here it's a pure race: our f5-f4-g5-g4 vs White's c5-cxd6. Whoever lands first wins.",
           isKeyMove: true,
           wrongMoveWarning:
             "We clear f6 with the knight, then play f5 — the kingside attack must begin.",
@@ -1085,12 +1190,12 @@ const kingsIndian: Opening = {
         {
           san: "Bd2",
           explanation:
-            "White redeploys the bishop toward the queenside action.",
+            "White redeploys the bishop toward the queenside, clearing the way for c5 and rook lifts.",
         },
         {
           san: "f4",
           explanation:
-            "We advance our pawns further — the kingside attack is in full swing.",
+            "We push past, locking the kingside and gaining space — now ...g5-g4 will pry open lines toward White's king. The avalanche is rolling.",
           isKeyMove: true,
         },
       ],

@@ -152,6 +152,24 @@ export default function PracticePage() {
             onNextLine={goNextLine}
           />
 
+          {/* Branch off the line and play the current position out against the
+              engine with a live eval bar — same entry point as Learn mode. */}
+          {state.phase !== "line_complete" && state.phase !== "gave_up" && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="self-start"
+              onClick={() =>
+                navigate(
+                  `/play/${opening.id}/${line.id}?step=${state.currentStepIndex}`,
+                )
+              }
+              title="Play this position out against Stockfish with an eval bar"
+            >
+              ▶ Play from here
+            </Button>
+          )}
+
           <WrongMoveOverlay
             visible={state.phase === "wrong_move"}
             wrongSan={state.wrongMoveSan ?? ""}

@@ -23,50 +23,60 @@ const qgdDeclined: Opening = {
         },
         {
           san: "d5",
-          explanation: "We claim our share of the center immediately.",
+          explanation:
+            "We answer in the center at once — refusing to let White's d-pawn dominate unopposed.",
           isKeyMove: true,
         },
         {
           san: "c4",
           explanation:
-            "The Queen's Gambit — White offers a pawn for central control.",
+            "The Queen's Gambit — White offers the c-pawn to deflect our d5-pawn and dominate the center. It's a temporary loan, not a real sacrifice.",
         },
         {
           san: "e6",
           explanation:
-            "We decline the gambit, supporting d5 with the e-pawn. The pawn structure is solid, though our light-squared bishop is temporarily blocked.",
+            "We decline, propping up d5 with the e-pawn for a rock-solid center. The well-known trade-off: this shuts in our light-squared (c8) bishop — solving that 'problem child' is our main strategic task for the whole game. We accept one flaw for a granite structure.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops and supports the c4 push." },
+        {
+          san: "Nc3",
+          explanation:
+            "White develops and adds a second attacker to our d5-pawn.",
+        },
         {
           san: "Nf6",
           explanation:
-            "We develop the knight to its best square, pressuring e4.",
+            "We develop and defend d5 a second time — every piece earns its keep by guarding the central point.",
         },
         {
           san: "Bg5",
-          explanation: "White pins our knight, increasing pressure on d5.",
+          explanation:
+            "White pins our f6-knight (a key defender of d5) to the queen, indirectly increasing the pressure on the center.",
         },
         {
           san: "Be7",
           explanation:
-            "We unpin by developing the bishop, preparing to castle.",
+            "We quietly break the pin by backing up the knight, preparing to castle. Calm, solid unpinning — no weakening pawn moves needed yet.",
           isKeyMove: true,
         },
         {
           san: "e3",
-          explanation: "White consolidates the center and prepares Nf3.",
+          explanation:
+            "White opens his own bishop and reinforces d4 — slow, classical build-up behind a solid center.",
         },
         {
           san: "O-O",
           explanation:
-            "We castle, getting the king safe before the middlegame begins.",
+            "We castle to safety before the middlegame plans clash — finish development first.",
         },
-        { san: "Nf3", explanation: "White completes development." },
+        {
+          san: "Nf3",
+          explanation: "White completes development, guarding e5 and d4.",
+        },
         {
           san: "Nbd7",
           explanation:
-            "We develop the queenside knight. From d7 it supports e5 and c5 breaks and avoids blocking the c8 bishop.",
+            "We develop the last knight to d7 (not c6, which would block the c-pawn needed for the ...c5 break or the ...c6 fortress). From d7 it supports both the ...e5 and ...c5 freeing breaks. Develop so you don't block your own pawn levers.",
         },
       ],
       continuationMoves: [
@@ -108,50 +118,60 @@ const qgdDeclined: Opening = {
         },
         {
           san: "d5",
-          explanation: "We respond with our own central claim.",
+          explanation: "We answer in the center.",
           isKeyMove: true,
         },
-        { san: "c4", explanation: "The Queen's Gambit." },
+        {
+          san: "c4",
+          explanation:
+            "The Queen's Gambit — offering the c-pawn to deflect our center.",
+        },
         {
           san: "e6",
-          explanation: "We decline, supporting d5 solidly.",
+          explanation:
+            "We decline, propping up d5 (and locking in the c8-bishop for now).",
           isKeyMove: true,
         },
         {
           san: "cxd5",
           explanation:
-            "White trades — the Exchange Variation. Symmetrical pawn structure ahead.",
+            "The Exchange Variation — White releases the tension into a symmetric structure with a clear plan (the minority attack), trading any opening advantage for simplicity.",
         },
         {
           san: "exd5",
           explanation:
-            "We recapture with the e-pawn, opening our light-squared bishop and reaching a symmetrical position.",
+            "We recapture with the e-pawn (not the knight), keeping a pawn on d5 and — crucially — reopening the diagonal so our problem c8-bishop can finally get out via ...Bf5. The Exchange hands us our biggest wish.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops the knight." },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
         {
           san: "Nf6",
-          explanation: "We develop naturally, preparing to castle.",
+          explanation: "We develop and defend d5, heading for the kingside.",
         },
-        { san: "Bg5", explanation: "White pins our knight." },
+        {
+          san: "Bg5",
+          explanation:
+            "White pins the f6-knight to develop actively before we do.",
+        },
         {
           san: "Be7",
-          explanation: "We unpin and develop, preparing castling.",
+          explanation: "We unpin calmly and prepare to castle.",
         },
-        { san: "e3", explanation: "White solidifies the center." },
+        { san: "e3", explanation: "White reinforces d4 and opens his bishop." },
         {
           san: "O-O",
           explanation:
-            "We castle, reaching a solid, balanced position. Our plan is ...c5 or ...Bf5 to activate our pieces.",
+            "We castle. The plan is set: get the c8-bishop out with ...Bf5 and prepare ...c6 + ...Re8 to meet White's coming minority attack.",
         },
         {
           san: "Bd3",
-          explanation: "White develops the bishop to target our kingside.",
+          explanation:
+            "White develops, aiming the bishop at h7 and offering to trade off our soon-to-be-active light bishop.",
         },
         {
           san: "Re8",
           explanation:
-            "We centralize the rook, supporting the e5 break and adding pressure on the e-file.",
+            "We put the rook behind the e-file, supporting the ...e5 break and the ...Ne4 jump — active piece play before White's queenside plan rolls. Place the rook where lines will open.",
           isKeyMove: true,
         },
       ],
@@ -192,37 +212,38 @@ const qgdDeclined: Opening = {
           explanation:
             "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Bg5 Be7 e3 O-O Nf3, and this line diverges when Black plays Ne4 — the Lasker Defence — leading to a clever piece trade where the bishop on g5 is attacked and simplification eases Black's cramped position, resulting in a comfortable, equality-oriented game that Emanuel Lasker used to neutralize White's pressure.",
         },
-        { san: "d5", explanation: "We claim the center.", isKeyMove: true },
+        { san: "d5", explanation: "We answer in the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         {
           san: "e6",
-          explanation: "We decline, supporting d5.",
+          explanation: "We decline, propping up d5.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
-        { san: "Nf6", explanation: "We develop the knight." },
-        { san: "Bg5", explanation: "White pins our Nf6." },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
+        { san: "Nf6", explanation: "We develop and defend d5." },
+        { san: "Bg5", explanation: "White pins our f6-knight." },
         { san: "Be7", explanation: "We unpin and prepare to castle." },
-        { san: "e3", explanation: "White supports the center." },
+        { san: "e3", explanation: "White reinforces d4 and opens his bishop." },
         {
           san: "O-O",
-          explanation: "We castle, getting the king safe.",
+          explanation: "We castle to safety.",
         },
         { san: "Nf3", explanation: "White completes development." },
         {
           san: "Ne4",
           explanation:
-            "The Lasker Defence! We attack the bishop on g5 and exchange pieces to ease our cramped position.",
+            "The Lasker Defence! We use the pin against White: ...Ne4 attacks the g5-bishop and offers to trade pieces. The logic is pure: a cramped side benefits from exchanges — every trade gives our pieces more room. Relieve a cramped position by trading, not by passive shuffling.",
           isKeyMove: true,
         },
         {
           san: "Bxe7",
-          explanation: "White trades off the bishop to avoid losing it.",
+          explanation:
+            "White trades to avoid losing the bishop — exactly the simplification we wanted.",
         },
         {
           san: "Qxe7",
           explanation:
-            "We recapture with the queen — now our queen is well-centralized and our position is comfortable and free.",
+            "We recapture with the queen, which lands actively in the center. With a pair of minor pieces off, our once-cramped position breathes easily. Lasker's pragmatic recipe in action.",
           isKeyMove: true,
         },
       ],
@@ -263,40 +284,48 @@ const qgdDeclined: Opening = {
           explanation:
             "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Bg5 Be7 e3 O-O Nf3, and this line diverges when Black plays h6 and then b6 — the Tartakower-Makogonov-Bondarevsky — leading to the fianchetto of the 'bad' light-squared bishop to b7, transforming it from a passive piece locked behind its own pawns into the game's most powerful long-range weapon on the a8-h1 diagonal.",
         },
-        { san: "d5", explanation: "We occupy the center.", isKeyMove: true },
+        { san: "d5", explanation: "We answer in the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
-        { san: "e6", explanation: "We decline solidly.", isKeyMove: true },
-        { san: "Nc3", explanation: "White develops." },
-        { san: "Nf6", explanation: "We develop the knight." },
-        { san: "Bg5", explanation: "White pins our knight." },
+        {
+          san: "e6",
+          explanation: "We decline, propping up d5.",
+          isKeyMove: true,
+        },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
+        { san: "Nf6", explanation: "We develop and defend d5." },
+        { san: "Bg5", explanation: "White pins our f6-knight." },
         { san: "Be7", explanation: "We unpin and prepare to castle." },
-        { san: "e3", explanation: "White consolidates." },
-        { san: "O-O", explanation: "We castle." },
+        { san: "e3", explanation: "White reinforces d4 and opens his bishop." },
+        { san: "O-O", explanation: "We castle to safety." },
         { san: "Nf3", explanation: "White completes development." },
         {
           san: "h6",
           explanation:
-            "We nudge the bishop — forcing it to commit before we develop our queenside.",
+            "We question the g5-bishop first, forcing it to commit (Bh4 or Bxf6) before we reveal our queenside plan. A useful insertion: make the opponent declare his bishop before you commit your structure.",
           isKeyMove: true,
         },
-        { san: "Bh4", explanation: "White maintains the pin." },
+        { san: "Bh4", explanation: "White keeps the pin, retreating to h4." },
         {
           san: "b6",
           explanation:
-            "The hallmark of the Tartakower! We prepare to fianchetto our bad bishop on b7, dramatically improving its scope.",
+            "The hallmark Tartakower move, and the whole point of the system: we prepare ...Bb7 to fianchetto our 'bad' light-squared bishop — the one buried behind e6. From b7 it becomes our STRONGEST piece, raking the long diagonal. The single best way to fix a bad bishop is to re-route it onto an open diagonal.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White retreats the bishop to safety." },
+        {
+          san: "Be2",
+          explanation:
+            "White retreats the bishop to a safe square, completing development.",
+        },
         {
           san: "Bb7",
           explanation:
-            "Our bishop comes to life on b7, bearing down on the long diagonal toward e4.",
+            "The problem bishop comes to life on b7, bearing down the a8-h1 diagonal at e4 and beyond. The QGD's lifelong weakness is now our best asset.",
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "Nbd7",
           explanation:
-            "We develop the queenside knight, preparing ...c5 or ...Ne4 to generate counterplay.",
+            "We develop the last knight, supporting the ...c5 and ...Ne4 breaks that will open the long diagonal for our newly powerful bishop.",
         },
       ],
       continuationMoves: [
@@ -336,43 +365,55 @@ const qgdDeclined: Opening = {
           explanation:
             "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Nf3, and this line diverges when Black plays Bb4 — the Ragozin Variation — leading to a hybrid of the QGD and Nimzo-Indian where the c3 knight is pinned, the dxc4-c5 sequence creates an IQP structure, and Black's active piece play and fighting character give far more winning potential than standard Orthodox QGD lines.",
         },
-        { san: "d5", explanation: "We reply in the center.", isKeyMove: true },
+        { san: "d5", explanation: "We answer in the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
         {
           san: "e6",
-          explanation: "We decline, supporting d5.",
+          explanation: "We decline, propping up d5.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
-        { san: "Nf6", explanation: "We develop." },
-        { san: "Nf3", explanation: "White adds pressure on d5." },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
+        { san: "Nf6", explanation: "We develop and defend d5." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops, supporting d4 and adding pressure on d5.",
+        },
         {
           san: "Bb4",
           explanation:
-            "The Ragozin! We pin White's c3 knight, creating pressure similar to the Nimzo-Indian.",
+            "The Ragozin! We borrow the Nimzo-Indian idea inside the QGD: ...Bb4 pins the c3-knight (a key defender of e4 and d5). It develops a piece actively AND increases central pressure — and crucially, it gets our DARK-squared bishop active before it can become passive, unlike the usual quiet ...Be7. A more fighting, ambitious QGD.",
           isKeyMove: true,
         },
-        { san: "e3", explanation: "White solidifies the center." },
+        {
+          san: "e3",
+          explanation:
+            "White reinforces d4 and opens his bishop, unfazed by the pin.",
+        },
         {
           san: "O-O",
           explanation:
-            "We castle, getting the king safe before the complications begin.",
+            "We castle to safety before the central tension resolves into complications.",
         },
-        { san: "Bd3", explanation: "White develops the bishop." },
+        {
+          san: "Bd3",
+          explanation:
+            "White develops, aiming at h7 and preparing to recapture on c4.",
+        },
         {
           san: "dxc4",
           explanation:
-            "We grab the c4 pawn — now White must spend a tempo recapturing while we accelerate our counterplay.",
+            "We grab the c4-pawn with tempo, forcing White to spend a move recapturing while we accelerate our ...c5 counterplay. Trade central tension for a tempo and active piece play.",
           isKeyMove: true,
         },
         {
           san: "Bxc4",
-          explanation: "White recovers the pawn.",
+          explanation: "White recovers the pawn, the bishop active on c4.",
         },
         {
           san: "c5",
           explanation:
-            "We immediately counter-attack White's center, fighting for central equality and activating our pieces.",
+            "We strike at d4 immediately, fighting for central equality and opening lines for our active pieces — accepting an IQP-type fight where our piece activity is the compensation. The Ragozin plays for a win, not a draw.",
           isKeyMove: true,
         },
       ],
@@ -413,31 +454,45 @@ const qgdDeclined: Opening = {
           explanation:
             "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Bg5 Nbd7 e3 c6 Nf3, and this line diverges when Black plays Qa5 — the Cambridge Springs Defence — leading to an aggressive queen sortie that attacks the Nc3 diagonally, disrupts White's entire queenside setup, and allows the e5 central break far earlier than White expects, giving Black excellent winning chances.",
         },
-        { san: "d5", explanation: "We stake out the center.", isKeyMove: true },
+        { san: "d5", explanation: "We answer in the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
-        { san: "e6", explanation: "We decline.", isKeyMove: true },
-        { san: "Nc3", explanation: "White develops." },
-        { san: "Nf6", explanation: "We develop." },
+        {
+          san: "e6",
+          explanation: "We decline, propping up d5.",
+          isKeyMove: true,
+        },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
+        { san: "Nf6", explanation: "We develop and defend d5." },
         {
           san: "Bg5",
-          explanation: "White pins our knight.",
+          explanation:
+            "White pins our f6-knight — but this commits the bishop away from the queenside, which we'll exploit.",
         },
         {
           san: "Nbd7",
           explanation:
-            "Instead of Be7, we develop the queenside knight — keeping options open for the Cambridge Springs.",
+            "Instead of ...Be7, we develop the knight to d7 — and note its hidden job: it shields the a5-e1 diagonal so our queen can later swing to a5 without dropping the d5-pawn. A quiet move that enables the whole plan.",
         },
-        { san: "e3", explanation: "White supports the center." },
+        {
+          san: "e3",
+          explanation:
+            "White reinforces d4 — but now both his Bg5 and Nc3 sit on the firing line of a queen on a5.",
+        },
         {
           san: "c6",
-          explanation: "We reinforce d5 and prepare the queen sortie.",
+          explanation:
+            "We free the c7-square so the queen can reach a5 next, while also bolstering d5. Prepare the square before you bring the piece.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White completes development." },
+        {
+          san: "Nf3",
+          explanation:
+            "White completes development, unaware of the coming pin.",
+        },
         {
           san: "Qa5",
           explanation:
-            "The Cambridge Springs! Our queen attacks the Nc3 diagonally while threatening to disrupt White's whole setup — forcing difficult choices.",
+            "The Cambridge Springs! The queen creates a double-edged threat: it pins the c3-knight to nothing but, combined with ...Ne4 ideas, hits BOTH the Bg5 and Nc3 at once. White's whole Bg5/Nc3 setup is suddenly loose. Hunt for the move that strains two loosely-defended pieces simultaneously.",
           isKeyMove: true,
           wrongMoveWarning:
             "Try Qa5 here — this is the signature Cambridge Springs move!",
@@ -445,28 +500,33 @@ const qgdDeclined: Opening = {
         {
           san: "Nd2",
           explanation:
-            "White defends c4 and blocks Qa5's diagonal — a common response.",
+            "White defends c4 and unblocks the a5-d2 diagonal to break the queen's pressure — a common, slightly awkward defensive reply our sortie forced.",
         },
         {
           san: "Bb4",
           explanation:
-            "We add more pressure on c3, doubling threats. White must be precise to hold the position together.",
+            "We pile on, adding a second attacker to the pinned c3-knight. White must defend precisely to avoid losing material — exactly the disruption the Cambridge Springs aims for.",
           isKeyMove: true,
         },
         {
           san: "Qc2",
           explanation:
-            "White defends the c3 knight and releases the pin tension.",
+            "White defends the c3-knight and untangles, but the awkward defensive moves are the price our early aggression extracted.",
         },
         {
           san: "O-O",
-          explanation: "We castle, completing our development safely.",
+          explanation:
+            "We castle, completing development safely with White still slightly uncoordinated.",
         },
-        { san: "Bd3", explanation: "White develops the bishop." },
+        {
+          san: "Bd3",
+          explanation:
+            "White develops the bishop, finally getting his pieces in order.",
+        },
         {
           san: "e5",
           explanation:
-            "We unleash the central break — fighting for the initiative and accepting a complex, tactical middlegame.",
+            "We unleash the central break — and the point of the whole line: the early ...Qa5 disruption lets us play ...e5 much sooner than in a normal QGD, seizing the initiative in an open, tactical middlegame. Disruption first, central break second.",
           isKeyMove: true,
         },
       ],
@@ -507,56 +567,62 @@ const qgdDeclined: Opening = {
           explanation:
             "The QGD starts with d4 d5 c4 e6 Nc3 Nf6 Nf3, and this line diverges when Black actually accepts the gambit with dxc4 — the Vienna Variation — leading to sharp, unbalanced positions where the Bb4 pin and Nxe4 pawn capture create a tactical battle where Black fights to hold the material while White's bishop pair and open lines provide dynamic compensation.",
         },
-        { san: "d5", explanation: "We claim the center.", isKeyMove: true },
+        { san: "d5", explanation: "We answer in the center.", isKeyMove: true },
         { san: "c4", explanation: "The Queen's Gambit." },
-        { san: "e6", explanation: "Declining with e6.", isKeyMove: true },
-        { san: "Nc3", explanation: "White develops." },
-        { san: "Nf6", explanation: "We develop." },
-        { san: "Nf3", explanation: "White adds pressure." },
+        { san: "e6", explanation: "We decline... for now.", isKeyMove: true },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
+        { san: "Nf6", explanation: "We develop and defend d5." },
+        {
+          san: "Nf3",
+          explanation: "White develops, supporting d4 and pressing d5.",
+        },
         {
           san: "dxc4",
           explanation:
-            "We accept the gambit! Now we'll fight to hold the c4 pawn with ...b5 or just use it as a tempo.",
+            "The Vienna! Having developed first, we NOW grab the c4-pawn — a more ambitious, double-edged take on the QGD where we'll fight to keep the extra material amid sharp tactics. Delay the capture until your pieces are ready to support it.",
           isKeyMove: true,
         },
         {
           san: "e4",
           explanation:
-            "White immediately takes the center, threatening to dominate.",
+            "White seizes the full center with tempo, betting that his pawn duo and lead in space outweigh the pawn. The position turns sharp at once.",
         },
         {
           san: "Bb4",
           explanation:
-            "The Vienna Variation — we pin the knight and put pressure on White's ambitious center.",
+            "The Vienna's key move: we pin the c3-knight, the defender of e4. This both develops with a threat and undermines White's big center, setting up to win the e4-pawn. Pin the defender of the pawn you want to win.",
           isKeyMove: true,
         },
         {
           san: "Bxc4",
-          explanation: "White recovers the c4 pawn.",
+          explanation:
+            "White regains his pawn, the bishop active on c4 — but the pin on c3 still bites.",
         },
         {
           san: "Nxe4",
           explanation:
-            "We take the e4 pawn! This bold capture kicks off a sharp tactical sequence.",
+            "We snatch the e4-pawn! It works tactically because the c3-knight is pinned to the king by our b4-bishop — it can't recapture. Exploit a pin to win the piece it's guarding. Sharp, but concrete.",
           isKeyMove: true,
         },
         {
           san: "O-O",
-          explanation: "White castles, generating threats against our knight.",
+          explanation:
+            "White castles, unpinning and generating fast threats against our advanced knight — the price of our greed is that we must now defend accurately.",
         },
         {
           san: "Nxc3",
-          explanation: "We capture the knight, picking up the piece.",
+          explanation:
+            "We resolve the tension by capturing the knight, simplifying before White's initiative grows.",
         },
         {
           san: "bxc3",
           explanation:
-            "White recaptures, doubling pawns but opening the b-file.",
+            "White recaptures, his pawns doubled but the b-file open and his bishops raking toward our king — his dynamic compensation.",
         },
         {
           san: "Be7",
           explanation:
-            "We develop the bishop and consolidate. The position is sharp — both sides must play accurately.",
+            "We retreat the bishop to a safe square and prepare to castle — the priority now is consolidation, tucking the king away and keeping the extra pawn. After grabbing material, finish development and get safe.",
         },
       ],
       continuationMoves: [

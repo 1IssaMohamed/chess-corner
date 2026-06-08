@@ -6,12 +6,32 @@
 // Single AudioContext shared across all sounds. Browsers require a user gesture
 // before audio can play — the resume() call handles the "suspended" state that
 // happens when the context is first created before any interaction.
+//
+// Web Audio is feature-detected: older iOS Safari only exposes webkitAudioContext,
+// and some environments (private mode, locked-down WebView) expose neither or throw
+// on construction. getCtx() returns null in those cases and every sound becomes a
+// no-op — a missing click must never crash the whole app.
 let ctx: AudioContext | null = null;
+let audioUnavailable = false;
 
-function getCtx(): AudioContext {
-  if (!ctx) ctx = new AudioContext();
-  if (ctx.state === "suspended") ctx.resume();
-  return ctx;
+function getCtx(): AudioContext | null {
+  if (audioUnavailable) return null;
+  const Ctor =
+    window.AudioContext ??
+    (window as unknown as { webkitAudioContext?: typeof AudioContext })
+      .webkitAudioContext;
+  if (!Ctor) {
+    audioUnavailable = true;
+    return null;
+  }
+  try {
+    if (!ctx) ctx = new Ctor();
+    if (ctx.state === "suspended") void ctx.resume();
+    return ctx;
+  } catch {
+    audioUnavailable = true;
+    return null;
+  }
 }
 
 // Makes a clicky thud sound. Fills a buffer with white noise, then shapes it
@@ -19,6 +39,7 @@ function getCtx(): AudioContext {
 // it through a bandpass filter to give it a pitched "character" (higher freq = brighter).
 function percussive(freq: number, durationSec: number, vol: number) {
   const c = getCtx();
+  if (!c) return;
   const now = c.currentTime;
 
   // exponential decay: loud at start, nearly silent by the end of the buffer
@@ -50,6 +71,7 @@ function percussive(freq: number, durationSec: number, vol: number) {
 // with different delays stack up to make the completion "ding ding ding" sound.
 function chime(freq: number, durationSec: number, vol: number, delay = 0) {
   const c = getCtx();
+  if (!c) return;
   const now = c.currentTime + delay;
 
   const osc = c.createOscillator();

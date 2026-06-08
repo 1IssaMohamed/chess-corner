@@ -25,27 +25,33 @@ const ruyLopez: Opening = {
         {
           san: "e5",
           explanation:
-            "Black mirrors White's pawn, fighting for equal central space.",
+            "Black answers in the center. The point isn't to copy White — it's that letting White own both d4 and e4 leads to a long squeeze, so Black plants a pawn in the center first and develops afterward.",
         },
         {
           san: "Nf3",
-          explanation: "Develops the knight and attacks the e5 pawn.",
+          explanation:
+            "White develops a knight and attacks e5 in the same move — the ideal developing move, because it makes a threat. Black has to react, so White keeps the small initiative of moving first.",
         },
-        { san: "Nc6", explanation: "Defends e5 while developing the knight." },
+        {
+          san: "Nc6",
+          explanation:
+            "Black defends e5 with a developing move. The knight is the natural defender here: it blocks nothing and gets a piece into play, whereas ...d6 or ...Qe7 would defend passively.",
+        },
         {
           san: "Bb5",
           explanation:
-            "The Ruy López move — pinning the Nc6 against Black's king.",
+            "The Ruy López move. The bishop doesn't attack e5 directly — it attacks the knight that GUARDS e5, threatening to undermine the defense. The knight is also loosely pinned to the e8-king along the b5–e8 diagonal. Attack the defender, not just the defended pawn: that's the strategic idea behind the whole Spanish.",
           isKeyMove: true,
         },
         {
           san: "a6",
-          explanation: "Black chases the bishop away to gain queenside space.",
+          explanation:
+            "Black 'puts the question' to the bishop, forcing it to decide: retreat, or capture? This gains a tempo and a little queenside space, and is useful whichever way White answers.",
         },
         {
           san: "Bxc6",
           explanation:
-            "White captures immediately! This gives Black doubled pawns on c6 but concedes the bishop pair.",
+            "White captures immediately! White voluntarily gives up the bishop pair to saddle Black with doubled c-pawns. The trade-off is concrete: long-term structure (a healthier pawn majority) in return for the dynamic two-bishops advantage. The Exchange chooses the endgame over the attack.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Exchange Variation, we capture on c6 rather than retreating to a4.",
@@ -53,28 +59,29 @@ const ruyLopez: Opening = {
         {
           san: "dxc6",
           explanation:
-            "Black recaptures with the d-pawn, creating doubled c-pawns and opening the d-file.",
+            "Black recaptures with the d-pawn (not the b-pawn) to open the queen's diagonal and the d-file and keep a pawn aimed at the center. The cost is permanent: the c-pawns are now doubled and can never produce a passed pawn.",
         },
         {
           san: "O-O",
           explanation:
-            "White castles quickly. Development first, exploitation later.",
+            "White castles before doing anything committal. The doubled pawns aren't going anywhere, so there's no rush — get the king safe and the rook into play first, then exploit the structure. Secure your king before you cash in a long-term edge.",
           isKeyMove: true,
         },
         {
           san: "f6",
           explanation:
-            "Black reinforces the e5 pawn now that the knight is gone.",
+            "Black props up e5 with the f-pawn now that the c6-knight is gone. It's a little ugly (it blocks the f8-bishop's view and weakens the king), but e5 must be held or White's pieces flood the center.",
         },
         {
           san: "d4",
           explanation:
-            "The central pawn break — challenging Black's e5 pawn while the structure is already weakened.",
+            "The central break. White challenges e5 directly, knowing that opening the position favors the side with the better structure and the safer plan — exactly White's situation here. Open lines when your long-term advantage is structural.",
           isKeyMove: true,
         },
         {
           san: "exd4",
-          explanation: "Black captures, opening the d-file for White's rook.",
+          explanation:
+            "Black captures, opening the d-file toward his own queen and accepting the trade that leads into the endgame White is angling for.",
         },
       ],
       continuationMoves: [
@@ -106,55 +113,80 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges when Black plays the passive d6 instead of the main-line a6 or Nf6, leading to a cramped but solid position where White systematically dismantles Black's structure through central pawn breaks and piece trades.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
+        {
+          san: "e5",
+          explanation:
+            "Black claims his share of the center — the sound, principled reply.",
+        },
+        {
+          san: "Nf3",
+          explanation:
+            "Develops and attacks e5 in one move, keeping the initiative.",
+        },
+        {
+          san: "Nc6",
+          explanation: "Defends e5 with a developing move that blocks nothing.",
+        },
         {
           san: "Bb5",
-          explanation: "The Ruy López — pinning the Nc6.",
+          explanation:
+            "The Ruy López — the bishop attacks the knight that guards e5, the signature pressure of the Spanish.",
           isKeyMove: true,
         },
         {
           san: "d6",
           explanation:
-            "The Old Steinitz — solidly defending e5 with a pawn rather than chasing the bishop.",
+            "The Old Steinitz. Black defends e5 with a pawn instead of putting the question to the bishop — solid, but passive. The downside: ...d6 shuts in the f8-bishop and surrenders the initiative. Solidity without activity invites a slow squeeze.",
           isKeyMove: true,
         },
         {
           san: "d4",
           explanation:
-            "White strikes in the center immediately, taking advantage of Black's passive setup.",
+            "White strikes the center at once, precisely because Black's passive setup has no counter-strike ready. Against passive play, expand immediately.",
         },
         {
           san: "Bd7",
           explanation:
-            "Black develops the bishop to prepare O-O, though it's a somewhat passive square.",
+            "Black breaks the pin and prepares to castle. The bishop is passive on d7, but it unties the c6-knight and connects toward the queenside.",
         },
         {
           san: "Nc3",
-          explanation: "White develops the queenside knight toward the center.",
+          explanation:
+            "White develops the last minor piece toward the center with no fuss — when you're better, just complete development.",
         },
-        { san: "Nf6", explanation: "Black develops and counterattacks e4." },
-        { san: "O-O", explanation: "White castles into safety." },
-        { san: "Be7", explanation: "Black prepares to castle kingside." },
+        {
+          san: "Nf6",
+          explanation: "Black develops and finally pressures e4, a touch late.",
+        },
+        {
+          san: "O-O",
+          explanation: "White castles, king to safety, rook toward the center.",
+        },
+        {
+          san: "Be7",
+          explanation:
+            "Black prepares to castle, the bishop on a modest but safe square.",
+        },
         {
           san: "Re1",
-          explanation: "White's rook reinforces the e4 pawn proactively.",
+          explanation:
+            "White over-protects e4 and puts the rook on the file that will open — preparing the central trades on his own terms.",
           isKeyMove: true,
         },
         {
           san: "exd4",
           explanation:
-            "Black releases the central tension, simplifying the position.",
+            "Black releases the tension to relieve his cramped position, but this just hands White a free, centralized knight.",
         },
         {
           san: "Nxd4",
-          explanation: "White recaptures, maintaining a strong central knight.",
+          explanation:
+            "White recaptures with a dominant central knight, ready to trade it for the c6-knight and wreck Black's structure.",
         },
         {
           san: "O-O",
           explanation:
-            "Black finally castles after a somewhat slow development.",
+            "Black finally castles after a slow, reactive opening — safe, but with no active plan in sight.",
         },
       ],
       continuationMoves: [
@@ -194,60 +226,77 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges when Black develops the bishop actively to c5 instead of chasing the Bb5 with a6, leading to Italian-like positions where both sides build solid pawn chains and maneuver for long-term advantage in a rich strategic battle.",
         },
-        { san: "e5", explanation: "Black mirrors White's central pawn." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        {
+          san: "Nc6",
+          explanation: "Defends e5 with a natural developing move.",
+        },
         {
           san: "Bb5",
-          explanation: "The Ruy López, pinning Nc6.",
+          explanation:
+            "The Ruy López — the bishop pressures the defender of e5.",
           isKeyMove: true,
         },
         {
           san: "Bc5",
           explanation:
-            "The Classical Defence — Black develops actively and fights for the center, similar to the Italian.",
+            "The Classical Defence. Instead of fussing over the bishop, Black develops actively and aims his own bishop at f2 — meeting positional pressure with rapid, purposeful development. It often transposes to Italian-style play.",
           isKeyMove: true,
         },
         {
           san: "c3",
           explanation:
-            "White prepares the d4 push, solidifying the center and keeping the bishop active.",
+            "White prepares d4 with pawn support and opens c2 as a future retreat for the bishop — building toward the central break that will hit the c5-bishop.",
         },
-        { san: "Nf6", explanation: "Black develops and counterattacks e4." },
+        {
+          san: "Nf6",
+          explanation:
+            "Black develops and counterattacks e4, refusing to let White expand for free.",
+        },
         {
           san: "O-O",
-          explanation: "White castles, maintaining the initiative.",
+          explanation:
+            "White castles, getting the king safe before opening the center.",
         },
-        { san: "O-O", explanation: "Black castles into safety." },
+        {
+          san: "O-O",
+          explanation:
+            "Black castles too — both kings safe, the strategic battle begins.",
+        },
         {
           san: "d4",
           explanation:
-            "The central break that White has been preparing. Black's Bc5 is now under fire.",
+            "The central break White prepared with c3, and it comes with a gain of time: the d4 pawn attacks the c5-bishop, forcing it to react. Strike in the center when it also harasses an enemy piece.",
           isKeyMove: true,
         },
         {
           san: "Bb6",
           explanation:
-            "Black retreats the bishop to a safe square where it continues to control the long diagonal.",
+            "The bishop retreats but keeps raking the a7-g1 diagonal, staying active rather than passively dropping back to e7.",
         },
         {
           san: "Bg5",
           explanation:
-            "White pins the Nf6, preventing it from comfortably defending e5.",
+            "White pins the f6-knight, weakening Black's grip on e5 and the center — provoking a concession around Black's king.",
         },
         {
           san: "h6",
-          explanation: "Black challenges the pin, forcing White to commit.",
+          explanation:
+            "Black questions the bishop, forcing it to decide whether to keep the pin or trade.",
         },
         {
           san: "Bh4",
           explanation:
-            "White maintains the pin rather than trading off the bishop pair.",
+            "White keeps the pin rather than trading — maintaining the pressure forces Black to spend more moves (and pawn weaknesses) to break free.",
         },
         {
           san: "d6",
           explanation:
-            "Black solidifies the center and prepares to free the position.",
+            "Black cements e5 and opens a path to free his position, accepting a slightly cramped but solid setup.",
         },
       ],
       continuationMoves: [
@@ -289,21 +338,23 @@ const ruyLopez: Opening = {
         },
         {
           san: "e5",
-          explanation: "Black mirrors White's center. The symmetric response.",
+          explanation:
+            "Black claims his share of the center — the principled symmetric reply.",
         },
         {
           san: "Nf3",
-          explanation: "Develops the knight toward the center and attacks e5.",
+          explanation:
+            "Develops and attacks e5 in one move, keeping the initiative of the first move.",
           isKeyMove: true,
         },
         {
           san: "Nc6",
-          explanation: "Defends the e5 pawn with a natural developing move.",
+          explanation: "Defends e5 with a developing move that blocks nothing.",
         },
         {
           san: "Bb5",
           explanation:
-            "The Ruy López! White pins the Nc6 — if it moves, e5 hangs.",
+            "The Ruy López! The bishop attacks the knight guarding e5, putting the trademark Spanish pressure on the center. (Bc4, aiming at f7, would be the Italian instead.)",
           isKeyMove: true,
           wrongMoveWarning:
             "Bb5 is the Ruy López move. Bc4 would be the Italian instead.",
@@ -311,59 +362,61 @@ const ruyLopez: Opening = {
         {
           san: "a6",
           explanation:
-            "The Morphy Defence — chasing the bishop and gaining queenside space.",
+            "The Morphy Defence — putting the question to the bishop. Black gains a tempo and queenside space, and keeps the option of ...b5 to chase the bishop further later.",
         },
         {
           san: "Ba4",
           explanation:
-            "White retreats, maintaining the pin rather than trading on c6.",
+            "White retreats but keeps the bishop on the a4-e8 diagonal, maintaining the pressure on c6 and e5 rather than releasing it with a capture. Keep the tension when retreating preserves your pressure.",
           isKeyMove: true,
         },
         {
           san: "Nf6",
-          explanation: "Black develops and counterattacks the e4 pawn.",
+          explanation:
+            "Black develops and counterattacks e4 — every move should fight for the center or develop, and this does both.",
         },
         {
           san: "O-O",
           explanation:
-            "White castles! The e4 pawn is allowed to be taken — there are hidden resources.",
+            "White castles and calmly allows ...Nxe4! It's not a blunder: after ...Nxe4 the moves d4 and Re1 regain the pawn with a strong initiative. Sometimes the safest reply to a threat is to ignore it because the resulting tactics favor you.",
           isKeyMove: true,
         },
         {
           san: "Be7",
           explanation:
-            "Black prepares to castle, developing the bishop to a solid square.",
+            "Black develops the bishop and prepares to castle, declining the e4 pawn in favor of solid, safe development.",
         },
         {
           san: "Re1",
           explanation:
-            "White reinforces e4 proactively. The rook eyes the e-file.",
+            "White over-protects e4 (now really defending it) and puts the rook on the file that will open after d4. Prepare your break before you play it.",
           isKeyMove: true,
         },
         {
           san: "b5",
-          explanation: "Black gains queenside space, kicking the bishop again.",
+          explanation:
+            "Black gains more queenside space and chases the bishop again, also clearing b7 for the bishop later.",
         },
         {
           san: "Bb3",
           explanation:
-            "The bishop retreats to b3, where it eyes f7 and supports d4.",
+            "The bishop drops to b3, where it's safe but still rakes the a2-g8 diagonal toward f7 and supports the coming d4. Retreat to a square where the piece keeps working.",
         },
         {
           san: "d6",
           explanation:
-            "Black solidifies the center. The d6+e5 chain is solid and prepares castling.",
+            "Black builds the solid d6+e5 chain, securing the center and opening a path for the c8-bishop before castling.",
         },
         {
           san: "c3",
           explanation:
-            "White prepares the d4 central push by supporting it with c3.",
+            "White supports the future d4 with a pawn and gives the b3-bishop the c2 retreat — the standard preparation for the central break.",
           isKeyMove: true,
         },
         {
           san: "O-O",
           explanation:
-            "Black castles, completing development. A rich middlegame begins.",
+            "Black castles, completing development. Both sides now have clear, time-tested plans, and the rich Closed Ruy López middlegame begins.",
         },
       ],
       continuationMoves: [
@@ -403,51 +456,87 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O, and this line diverges when Black plays Na5 to chase the bishop off b3, leading to comfortable, flexible positions where Black gets queenside counterplay at the cost of allowing White's full Nf1–g3 kingside plan.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
         {
           san: "Bb5",
-          explanation: "The Ruy López — the defining move of the Spanish Game.",
+          explanation:
+            "The Ruy López — pressure on the defender of e5, the defining Spanish idea.",
           isKeyMove: true,
         },
-        { san: "a6", explanation: "The Morphy Defence." },
-        { san: "Ba4", explanation: "White maintains the pin." },
-        { san: "Nf6", explanation: "Black develops and attacks e4." },
-        { san: "O-O", explanation: "White castles." },
-        { san: "Be7", explanation: "Black prepares to castle." },
-        { san: "Re1", explanation: "White reinforces the e4 pawn." },
-        { san: "b5", explanation: "Black kicks the bishop." },
-        { san: "Bb3", explanation: "Bishop retreats to b3." },
-        { san: "d6", explanation: "Black solidifies the center." },
-        { san: "c3", explanation: "White prepares d4." },
-        { san: "O-O", explanation: "Black castles." },
-        { san: "h3", explanation: "White stops Bg4 before pushing d4." },
+        {
+          san: "a6",
+          explanation:
+            "The Morphy Defence — putting the question to the bishop and gaining a tempo.",
+        },
+        {
+          san: "Ba4",
+          explanation:
+            "White retreats but keeps the bishop's pressure on the a4-e8 diagonal.",
+        },
+        { san: "Nf6", explanation: "Black develops and counterattacks e4." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles, allowing ...Nxe4 because the tactics favor him.",
+        },
+        { san: "Be7", explanation: "Black develops and prepares to castle." },
+        {
+          san: "Re1",
+          explanation: "White over-protects e4 and readies the d4 break.",
+        },
+        {
+          san: "b5",
+          explanation:
+            "Black gains queenside space and chases the bishop again.",
+        },
+        {
+          san: "Bb3",
+          explanation:
+            "The bishop drops to b3, still eyeing f7 and supporting d4.",
+        },
+        { san: "d6", explanation: "Black builds the solid d6+e5 chain." },
+        {
+          san: "c3",
+          explanation:
+            "White supports the coming d4 and frees c2 for the bishop.",
+        },
+        { san: "O-O", explanation: "Black castles, completing development." },
+        {
+          san: "h3",
+          explanation:
+            "Prophylaxis — White stops ...Bg4 before committing to d4, so the f3-knight can't be pinned at the wrong moment.",
+        },
         {
           san: "Na5",
           explanation:
-            "The Chigorin! Black chases the bishop off b3 to eliminate White's powerful piece.",
+            "The Chigorin! Black accepts an awkward-looking knight on the rim to trade off White's powerful light-squared bishop — the piece that eyes f7 and supports the center. Eliminating your opponent's best piece is worth a temporary loss of activity.",
           isKeyMove: true,
         },
         {
           san: "Bc2",
           explanation:
-            "White retreats the bishop safely, maintaining the diagonal.",
+            "White preserves the bishop instead of allowing ...Nxb3. From c2 it still aims at h7 and backs up e4 — saving the bishop for the kingside attack to come.",
         },
         {
           san: "c5",
-          explanation: "Black fights for central space, the follow-up to Na5.",
+          explanation:
+            "The point of ...Na5: Black grabs queenside space and prepares to recapture toward the center, building his own counterplay there.",
           isKeyMove: true,
         },
         {
           san: "d4",
           explanation:
-            "The central break — both sides now fight for the center.",
+            "The long-prepared central break finally lands, and both sides fight over the center on equal terms.",
         },
         {
           san: "Qc7",
           explanation:
-            "Black centralises the queen and prepares to recapture on d4.",
+            "Black centralizes the queen to support e5 and the ...cxd4 recapture, coordinating his forces around the central tension.",
         },
       ],
       continuationMoves: [
@@ -487,58 +576,79 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6, and this line diverges when Black captures the e4 pawn instead of developing further, leading to sharp, knife-edge positions where White's d4 recovers the pawn with a strong pawn center and lasting positional compensation against Black's active pieces.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        { san: "Bb5", explanation: "The Ruy López.", isKeyMove: true },
-        { san: "a6", explanation: "The Morphy Defence." },
-        { san: "Ba4", explanation: "White maintains the pin." },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
+        {
+          san: "Bb5",
+          explanation: "The Ruy López — pressure on the defender of e5.",
+          isKeyMove: true,
+        },
+        {
+          san: "a6",
+          explanation:
+            "The Morphy Defence, putting the question to the bishop.",
+        },
+        {
+          san: "Ba4",
+          explanation:
+            "White keeps the bishop's pressure on the a4-e8 diagonal.",
+        },
         { san: "Nf6", explanation: "Black develops and counterattacks e4." },
         {
           san: "O-O",
-          explanation: "White castles, allowing e4 to be taken temporarily.",
+          explanation:
+            "White castles, deliberately offering the e4 pawn — the d4 break will recover it with interest.",
         },
         {
           san: "Nxe4",
           explanation:
-            "The Open Spanish! Black takes the pawn — this is perfectly sound. The d4 push will win it back.",
+            "The Open Spanish! Black grabs the pawn and trades structural solidity for active, free-flowing pieces. It's fully sound: Black knows White wins it back, but in return Black's pieces get open lines and concrete play. A principled choice of activity over structure.",
           isKeyMove: true,
         },
         {
           san: "d4",
           explanation:
-            "White immediately challenges Black's knight and recovers the pawn with initiative.",
+            "White hits the center at once, opening lines toward the e4-knight and preparing to regain the pawn with a dominant pawn on e5. Don't chase the pawn directly — undermine its support with a central break.",
           isKeyMove: true,
         },
         {
           san: "b5",
           explanation:
-            "Black kicks the bishop while maintaining the extra pawn.",
+            "Black chases the bishop to safeguard his structure and hold the extra pawn for now, clearing b7 for the bishop too.",
         },
         {
           san: "Bb3",
           explanation:
-            "The bishop retreats to b3 — still active on this diagonal.",
+            "The bishop drops to b3, still on its strong diagonal aiming at f7 and the soon-to-be-loose Black center.",
         },
         {
           san: "d5",
           explanation:
-            "Black advances with tempo, gaining space in the center.",
+            "White plays dxe5 next, but first Black advances ...d5 with tempo, building a protective pawn shield for the e4-knight and grabbing central space. Use a pawn push that gains time to anchor your advanced piece.",
         },
-        { san: "dxe5", explanation: "White recaptures in the center." },
+        {
+          san: "dxe5",
+          explanation:
+            "White recaptures, planting a strong, cramping pawn on e5 that restricts Black's kingside.",
+        },
         {
           san: "Be6",
-          explanation: "Black develops actively, eyeing the b3 bishop.",
+          explanation:
+            "Black develops actively, defending d5 and offering to neutralize White's dangerous b3-bishop.",
         },
         {
           san: "c3",
           explanation:
-            "White supports the center and prepares to complete development.",
+            "White supports d4/d5 squares, gives the bishop the c2 retreat, and prepares to complete development — solidifying before untangling the central tension.",
         },
         {
           san: "Bc5",
           explanation:
-            "Black's bishop takes an aggressive square, targeting f2.",
+            "Black's dark-squared bishop takes an aggressive post aiming at f2, keeping the initiative and discouraging White's Nbd2.",
         },
       ],
       continuationMoves: [
@@ -578,68 +688,75 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges dramatically when Black plays the aggressive f5 instead of any normal development move, leading to wild tactical complications that White must know precisely — the Bxc6+ zwischenzug restores material equality while leaving Black with a permanently shattered queenside.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        { san: "Bb5", explanation: "The Ruy López.", isKeyMove: true },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
+        {
+          san: "Bb5",
+          explanation: "The Ruy López — pressure on the e5-defender.",
+          isKeyMove: true,
+        },
         {
           san: "f5",
           explanation:
-            "The Schliemann Gambit! Black immediately challenges e4 in the most aggressive way possible — creating sharp, double-edged play.",
+            "The Schliemann Gambit! Black strikes at e4 with a wing pawn, a King's Gambit-style idea offered a tempo down. It rips the position open for fast counterplay at the cost of king safety. High risk, high reward — and a real test of White's preparation.",
           isKeyMove: true,
         },
         {
           san: "Nc3",
           explanation:
-            "White develops the knight, not committing to capturing on f5 yet.",
+            "The solid refutation try: White develops with a threat to e4 and f5 rather than grabbing on f5. Meet a flank gambit with calm development plus a counter-threat, not greed.",
         },
         {
           san: "fxe4",
           explanation:
-            "Black captures on e4, opening the f-file for counterplay.",
+            "Black opens the f-file for his rook and removes White's center pawn, committing fully to the gambit's open lines.",
         },
         {
           san: "Nxe4",
           explanation:
-            "White recaptures with the knight, maintaining central control.",
+            "White recaptures with the knight, keeping a strong central piece and refusing to let the position drift into Black's favor.",
           isKeyMove: true,
         },
         {
           san: "d5",
           explanation:
-            "Black pushes d5, trying to drive back the knight and open lines.",
+            "Black gains a tempo by hitting the e4-knight and grabs central space — the only way to keep the initiative alive.",
         },
         {
           san: "Nxe5",
           explanation:
-            "White takes the e5 pawn! The position becomes very sharp.",
+            "The critical resource: instead of meekly retreating, White grabs e5, exploiting that the c6-knight is pinned to the king by the Bb5. Look for in-between captures that exploit a pin before you retreat.",
         },
         {
           san: "dxe4",
           explanation:
-            "Black recaptures in the center, winning material temporarily.",
+            "Black removes the other knight, momentarily up a piece — but the pin on c6 is about to be cashed in.",
         },
         {
           san: "Nxc6",
           explanation:
-            "White takes on c6, smashing Black's queenside pawn structure.",
+            "White collects the pinned knight, smashing Black's queenside structure in the process — restoring material while inflicting lasting damage.",
           isKeyMove: true,
         },
         {
           san: "bxc6",
           explanation:
-            "Black recaptures with the b-pawn — the queenside is now shattered into isolated a- and c-pawns.",
+            "Black must recapture, and the queenside is wrecked: isolated a- and doubled c-pawns. The structural wound is permanent.",
         },
         {
           san: "Bxc6+",
           explanation:
-            "The key zwischenzug! Before Black can untangle, the bishop grabs c6 with check and wins back the material.",
+            "The key zwischenzug! Before retreating or grabbing e4, White checks on c6, regaining the sacrificed material with tempo. Insert the forcing check first — move order wins the extra pawn.",
           isKeyMove: true,
         },
         {
           san: "Bd7",
           explanation:
-            "Black blocks the check, offering to trade off the strong bishop.",
+            "Black blocks the check and offers to trade off White's strong bishop to relieve the pressure.",
         },
       ],
       continuationMoves: [
@@ -679,47 +796,77 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O b5 Bb3, and this line diverges when Black develops the bishop to b7 instead of d6 or Be7, leading to double-edged positions where the Bb7 exerts constant pressure on e4 and enables an early d5 central break that opens the game for both sides.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        { san: "Bb5", explanation: "The Ruy López.", isKeyMove: true },
-        { san: "a6", explanation: "The Morphy Defence." },
-        { san: "Ba4", explanation: "White maintains the pin." },
-        { san: "Nf6", explanation: "Black develops and attacks e4." },
-        { san: "O-O", explanation: "White castles." },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
+        {
+          san: "Bb5",
+          explanation: "The Ruy López — pressure on the e5-defender.",
+          isKeyMove: true,
+        },
+        {
+          san: "a6",
+          explanation: "The Morphy Defence, gaining a tempo on the bishop.",
+        },
+        {
+          san: "Ba4",
+          explanation:
+            "White keeps the bishop's pressure on the a4-e8 diagonal.",
+        },
+        { san: "Nf6", explanation: "Black develops and counterattacks e4." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles, offering e4 with hidden tactical resources.",
+        },
         {
           san: "b5",
           explanation:
-            "Black kicks the bishop and prepares the Archangel setup.",
+            "Black gains queenside space and clears b7 for the bishop — the setup move for the Archangel.",
         },
-        { san: "Bb3", explanation: "Bishop retreats to b3." },
+        {
+          san: "Bb3",
+          explanation:
+            "The bishop drops to b3, still raking the a2-g8 diagonal toward f7.",
+        },
         {
           san: "Bb7",
           explanation:
-            "The Archangel! Black develops the bishop to b7, immediately pressuring e4 from the long diagonal.",
+            "The Archangel! The bishop goes to its most aggressive diagonal, bearing down on e4 from afar instead of the passive ...Be7/...d6. Black plays for piece activity and an early ...d5 break rather than a slow defensive setup. Develop your bishop to where it pressures the enemy center.",
           isKeyMove: true,
         },
         {
           san: "d3",
           explanation:
-            "White plays d3 instead of Re1 — a more conservative setup that keeps the pawn chain solid.",
+            "White solidly defends e4 with a pawn rather than relying on tactics — a calm response that takes the sting out of the Bb7's pressure on e4.",
         },
         {
           san: "Bc5",
           explanation:
-            "Black's kingside bishop develops actively to c5, eyeing f2.",
+            "Black's other bishop joins on an active diagonal aiming at f2, completing a fast, aggressive development scheme.",
         },
-        { san: "c3", explanation: "White prepares d4." },
-        { san: "d6", explanation: "Black solidifies the center." },
+        {
+          san: "c3",
+          explanation:
+            "White supports the center and prepares the d4 break, also giving the b3-bishop a c2 retreat.",
+        },
+        {
+          san: "d6",
+          explanation:
+            "Black secures e5 and opens a path for the queen, settling the center.",
+        },
         {
           san: "Nbd2",
           explanation:
-            "White develops the queenside knight, preparing Nf1-g3 maneuver.",
+            "White develops the last knight toward f1 and g3 — the familiar Ruy López rerouting toward the kingside.",
         },
         {
           san: "O-O",
           explanation:
-            "Black castles. The complex middlegame begins with pressure on both sides.",
+            "Black castles, and a rich, double-edged middlegame begins with chances for both wings.",
         },
       ],
       continuationMoves: [
@@ -759,49 +906,87 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with the full Morphy Defence main line, and this line diverges when Black plays the counterintuitive Nb8 retreat on move 9 to reroute the knight to d7, leading to one of the most strategically profound systems in chess — used by World Champions Spassky, Karpov, and Kasparov for its perfectly flexible position and hidden resources.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        { san: "Bb5", explanation: "The Ruy López.", isKeyMove: true },
-        { san: "a6", explanation: "The Morphy Defence." },
-        { san: "Ba4", explanation: "White maintains the pin." },
-        { san: "Nf6", explanation: "Black develops." },
-        { san: "O-O", explanation: "White castles." },
-        { san: "Be7", explanation: "Black prepares to castle." },
-        { san: "Re1", explanation: "White reinforces e4." },
-        { san: "b5", explanation: "Black kicks the bishop." },
-        { san: "Bb3", explanation: "Bishop to b3." },
-        { san: "d6", explanation: "Black solidifies the center." },
-        { san: "c3", explanation: "White prepares d4." },
-        { san: "O-O", explanation: "Black castles." },
-        { san: "h3", explanation: "White stops Bg4, preparing the d4 push." },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
+        {
+          san: "Bb5",
+          explanation: "The Ruy López — pressure on the e5-defender.",
+          isKeyMove: true,
+        },
+        {
+          san: "a6",
+          explanation: "The Morphy Defence, gaining a tempo on the bishop.",
+        },
+        {
+          san: "Ba4",
+          explanation:
+            "White keeps the bishop's pressure on the a4-e8 diagonal.",
+        },
+        { san: "Nf6", explanation: "Black develops and counterattacks e4." },
+        {
+          san: "O-O",
+          explanation: "White castles, offering e4 with hidden resources.",
+        },
+        { san: "Be7", explanation: "Black develops and prepares to castle." },
+        {
+          san: "Re1",
+          explanation: "White over-protects e4 and prepares the d4 break.",
+        },
+        {
+          san: "b5",
+          explanation: "Black gains queenside space and chases the bishop.",
+        },
+        { san: "Bb3", explanation: "The bishop drops to b3, still eyeing f7." },
+        { san: "d6", explanation: "Black builds the solid d6+e5 chain." },
+        {
+          san: "c3",
+          explanation: "White supports d4 and frees c2 for the bishop.",
+        },
+        { san: "O-O", explanation: "Black castles, completing development." },
+        {
+          san: "h3",
+          explanation: "Prophylaxis — White stops ...Bg4 before playing d4.",
+        },
         {
           san: "Nb8",
           explanation:
-            "The Breyer! The knight retreats to b8, seemingly going backwards — but it will reroute to d7 for a much better post.",
+            "The Breyer! The knight retreats all the way home — seemingly losing time — to reroute via d7, where it doesn't block the c-pawn or the Bb7's diagonal and supports e5 better. The deepest lesson in the Ruy López: a knight's FUTURE square matters more than the tempo spent reaching it.",
           isKeyMove: true,
         },
-        { san: "d4", explanation: "White launches the central attack." },
+        {
+          san: "d4",
+          explanation:
+            "White seizes the moment to play the central break while Black's knight is offside.",
+        },
         {
           san: "Nbd7",
           explanation:
-            "The knight completes its journey to d7, defending e5 and preparing ...c5 or ...Nb6.",
+            "The knight completes its journey to its ideal post, defending e5 and ready to support ...c5 or jump to b6/f8. Re-routing complete — the piece is now far better placed than it ever was on c6.",
           isKeyMove: true,
         },
-        { san: "Nbd2", explanation: "White develops the queenside knight." },
+        {
+          san: "Nbd2",
+          explanation:
+            "White develops the last knight, heading for the f1-g3 reroute.",
+        },
         {
           san: "Bb7",
           explanation:
-            "Black's bishop pressures White's e4 pawn from the long diagonal — a key part of the Breyer's strategic grip.",
+            "Black's bishop takes the long diagonal to pressure e4 — the Breyer's grip is built on this Bb7 plus the flexible knight on d7.",
         },
         {
           san: "Bc2",
           explanation:
-            "White repositions the bishop to c2, supporting e4 and preparing queenside play.",
+            "White tucks the bishop onto c2, supporting e4 (now contested by the Bb7) and clearing b3 for a future queenside expansion with a4/b3.",
         },
         {
           san: "Re8",
-          explanation: "Black centralises the rook, supporting e5.",
+          explanation:
+            "Black puts the rook behind e5 and prepares ...Bf8, the flexible defensive regrouping that defines the Breyer.",
         },
       ],
       continuationMoves: [
@@ -841,56 +1026,85 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with the Morphy Defence main line through castling, and this line diverges when Black sacrifices a pawn on move 8 with d5, leading to one of the most famous gambits in chess theory — a lasting kingside initiative that doesn't evaporate even with accurate defense, developed secretly by Frank Marshall for 11 years before unleashing it against Capablanca in 1918.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        { san: "Bb5", explanation: "The Ruy López.", isKeyMove: true },
-        { san: "a6", explanation: "The Morphy Defence." },
-        { san: "Ba4", explanation: "White maintains the pin." },
-        { san: "Nf6", explanation: "Black develops." },
-        { san: "O-O", explanation: "White castles." },
-        { san: "Be7", explanation: "Black prepares to castle." },
-        { san: "Re1", explanation: "White reinforces e4." },
-        { san: "b5", explanation: "Black kicks the bishop." },
-        { san: "Bb3", explanation: "Bishop to b3." },
-        { san: "O-O", explanation: "Black castles." },
-        { san: "c3", explanation: "White prepares d4." },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
+        {
+          san: "Bb5",
+          explanation: "The Ruy López — pressure on the e5-defender.",
+          isKeyMove: true,
+        },
+        {
+          san: "a6",
+          explanation: "The Morphy Defence, gaining a tempo on the bishop.",
+        },
+        {
+          san: "Ba4",
+          explanation:
+            "White keeps the bishop's pressure on the a4-e8 diagonal.",
+        },
+        { san: "Nf6", explanation: "Black develops and counterattacks e4." },
+        {
+          san: "O-O",
+          explanation: "White castles, offering e4 with hidden resources.",
+        },
+        { san: "Be7", explanation: "Black develops and prepares to castle." },
+        { san: "Re1", explanation: "White over-protects e4 and prepares d4." },
+        {
+          san: "b5",
+          explanation: "Black gains queenside space and chases the bishop.",
+        },
+        { san: "Bb3", explanation: "The bishop drops to b3, still eyeing f7." },
+        {
+          san: "O-O",
+          explanation: "Black castles — and now springs the gambit.",
+        },
+        {
+          san: "c3",
+          explanation:
+            "White prepares d4, the standard slow setup — but Black has a shock prepared.",
+        },
         {
           san: "d5",
           explanation:
-            "The Marshall Attack! Black sacrifices a pawn to immediately open the center and create a powerful kingside attack.",
+            "The Marshall Attack! Black blows the center open with a pawn sacrifice, trading a pawn for a long-lasting initiative against White's king. The idea is positional, not a one-move trap: open lines and active pieces that pressure White for 30+ moves. Sometimes a pawn buys a permanent attack.",
           isKeyMove: true,
           wrongMoveWarning:
             "This is the Marshall gambit — Black is sacrificing a pawn for a ferocious attack.",
         },
         {
           san: "exd5",
-          explanation: "White accepts the gambit, capturing the offered pawn.",
+          explanation:
+            "White accepts — declining lets Black equalize comfortably, so the principled test is to take and try to prove the extra pawn matters.",
         },
         {
           san: "Nxd5",
           explanation:
-            "Black recaptures with the knight, placing it on a powerful central square.",
+            "Black recaptures with the knight, centralizing it and clearing the way for the coming ...Nxe5 and the queen lift.",
         },
         {
           san: "Nxe5",
-          explanation: "White wins back the e5 pawn.",
+          explanation:
+            "White grabs the second pawn — declining gives Black free development, so White takes the material and braces to defend.",
           isKeyMove: true,
         },
         {
           san: "Nxe5",
           explanation:
-            "Black sacrifices the knight for a devastating attack! The game becomes extremely sharp.",
+            "Black gives up the knight to demolish White's center and open every line toward the king. This is the gambit's heart: material is secondary to the attack.",
         },
         {
           san: "Rxe5",
           explanation:
-            "White's rook captures, but now Black's attack crashes through.",
+            "White must recapture, but the rook is now exposed on e5 and Black's pieces come flooding in with tempo.",
         },
         {
           san: "Nf6",
           explanation:
-            "Black repositions to f6, aiming for g4 and attacking White's king position.",
+            "Black regroups the knight toward g4/h5 and clears the way for ...Bd6 and ...Qh4 — assembling the famous Marshall attacking formation.",
         },
       ],
       continuationMoves: [
@@ -930,57 +1144,64 @@ const ruyLopez: Opening = {
           explanation:
             "The Ruy López begins with e4 e5 Nf3 Nc6 Bb5, and this line diverges when Black plays Nf6 to counter-attack e4 instead of the standard a6, leading to the famous Berlin Endgame where queens come off early — a deceptively rich positional battleground that became Magnus Carlsen and Vladimir Kramnik's primary drawing weapon at the elite level.",
         },
-        { san: "e5", explanation: "Black fights for equal space." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        { san: "Bb5", explanation: "The Ruy López.", isKeyMove: true },
+        { san: "e5", explanation: "Black claims his share of the center." },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, gaining a tempo.",
+        },
+        { san: "Nc6", explanation: "Defends e5 naturally." },
+        {
+          san: "Bb5",
+          explanation: "The Ruy López — pressure on the e5-defender.",
+          isKeyMove: true,
+        },
         {
           san: "Nf6",
           explanation:
-            "The Berlin Defence! Instead of a6, Black counterattacks e4. This leads to the famous Berlin Endgame.",
+            "The Berlin Defence! Black ignores the bishop and counterattacks e4 immediately, heading for a structurally solid (if passive) endgame rather than the sharp Closed lines. Counterattack the center instead of reacting to a threat on the wing.",
           isKeyMove: true,
         },
         {
           san: "O-O",
           explanation:
-            "White castles and allows Nxe4 — d4 will recover the pawn with interest.",
+            "White castles and offers e4 — the d4 push will recover it, leading into the famous Berlin Endgame where White accepts queenless play for a structural pull.",
           isKeyMove: true,
         },
         {
           san: "Nxe4",
           explanation:
-            "Black takes the pawn. This is perfectly calculated — the endgame is fine for Black.",
+            "Black grabs the pawn, fully calculated: the resulting endgame is solid for Black despite looking risky.",
         },
         {
           san: "d4",
           explanation:
-            "White immediately recovers the pawn with central pressure.",
+            "White hits the center to undermine the e4-knight's support and prepare to regain the pawn — central pressure rather than a direct chase.",
           isKeyMove: true,
         },
         {
           san: "Nd6",
           explanation:
-            "Black must retreat the knight. The Berlin endgame begins.",
+            "Black retreats the knight to hit the b5-bishop and unblock — the only good square, steering into the Berlin Endgame.",
         },
         {
           san: "Bxc6",
           explanation:
-            "White gives up the bishop pair to create structural damage.",
+            "White gives up the bishop pair to inflict doubled pawns — the same structure-vs-bishops trade as the Exchange Variation, now in an endgame setting.",
         },
         {
           san: "dxc6",
           explanation:
-            "Black recaptures, accepting doubled c-pawns but getting the d-file.",
+            "Black recaptures with the d-pawn, accepting doubled c-pawns but opening the d-file and gaining the bishop pair in return.",
         },
         {
           san: "dxe5",
           explanation:
-            "White wins the e5 pawn, transitioning to the famous Berlin Endgame.",
+            "White grabs e5, and with the d-file open the queens come off next move — entering the famous queenless Berlin middlegame.",
         },
         {
           san: "Nf5",
           explanation:
-            "Black repositions the knight to f5 — an active central square in the endgame, avoiding further piece trades.",
+            "Black activates the knight to f5 rather than allowing more trades — in the endgame, piece activity matters more than ever, so Black keeps a knight that eyes d4 and the kingside.",
         },
       ],
       continuationMoves: [

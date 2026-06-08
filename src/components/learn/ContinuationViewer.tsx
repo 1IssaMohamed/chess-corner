@@ -11,11 +11,15 @@ import Button from "@/components/ui/Button";
 interface ContinuationViewerProps {
   line: OpeningLine;
   orientation: Side;
+  // Branch off into free play from the position currently shown on the mini-board.
+  // Receives the continuation ply index (0 = line end, then each continuation move).
+  onPlayFromHere?: (continuationStep: number) => void;
 }
 
 export default function ContinuationViewer({
   line,
   orientation,
+  onPlayFromHere,
 }: ContinuationViewerProps) {
   const continuation = line.continuationMoves ?? [];
   const fens = useMemo(() => buildContinuationFens(line, continuation), [line]);
@@ -117,6 +121,19 @@ export default function ContinuationViewer({
               className="w-full mt-1"
             >
               ↺ Replay
+            </Button>
+          )}
+
+          {/* Branch off into free play from the position currently on the board */}
+          {onPlayFromHere && (
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => onPlayFromHere(step)}
+              className="w-full mt-1"
+              title="Play this position out against Stockfish with an eval bar"
+            >
+              ▶ Play from here
             </Button>
           )}
         </div>

@@ -24,67 +24,94 @@ const sicilianDefense: Opening = {
         {
           san: "c5",
           explanation:
-            "The Sicilian! We fight for the d4 square without giving White a symmetric center. Black will get the open c-file.",
+            "The Sicilian! Instead of meeting e4 with the symmetric ...e5, we fight for d4 from the side. The big idea: after the c-pawn trades for White's d-pawn, we get a half-open c-file and an extra central pawn, an IMBALANCE — and imbalance means we play to win, not just to draw. Decline symmetry to keep winning chances.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Sicilian always starts with 1...c5 — fighting asymmetrically.",
         },
-        { san: "Nf3", explanation: "White develops and prepares d4." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops and prepares the central d4 break that opens the position.",
+        },
         {
           san: "d6",
           explanation:
-            "We prepare Nf6 and e5 while supporting a future pawn advance. d6 is the most flexible Sicilian move.",
+            "The most flexible Sicilian move: ...d6 controls e5, prepares ...Nf6 without it being kicked away, and keeps our setup open (Najdorf, Dragon, and Scheveningen all branch from here). Keep your options open before committing the pieces.",
           isKeyMove: true,
         },
         {
           san: "d4",
-          explanation: "White opens the center — the Open Sicilian!",
+          explanation:
+            "White opens the center — the Open Sicilian. The d-pawn challenges c5, and the trade that follows defines the whole structure.",
         },
         {
           san: "cxd4",
           explanation:
-            "We capture! Black trades the c-pawn for White's d-pawn. We now have more central pawns and a semi-open c-file.",
+            "We capture, and this is the heart of the Sicilian: we swap a wing pawn (c) for a center pawn (d). The payoff is the half-open c-file pointing at White's queenside — our highway for counterplay all game. Trade a flank pawn for a central one whenever it gives you an open file toward the enemy.",
           isKeyMove: true,
         },
         {
           san: "Nxd4",
           explanation:
-            "White recaptures with the knight, which controls the center powerfully.",
+            "White recaptures with the knight, centralizing it — but note White now has only one central pawn (e4) to our two (d6, e-pawn to come), the structural imbalance we're playing for.",
         },
         {
           san: "Nf6",
           explanation:
-            "We develop and attack the e4 pawn. The Nf6 is Black's most important piece in the Sicilian.",
+            "We develop with a threat to e4, forcing White to spend a move defending. The f6-knight is Black's most important piece in the Sicilian — it pressures e4 and fights for the central squares all game.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4 and develops." },
+        {
+          san: "Nc3",
+          explanation:
+            "White defends e4 by developing — the natural way to meet a threat, improving a piece while guarding the pawn.",
+        },
         {
           san: "a6",
           explanation:
-            "We prevent Bb5+ and prepare queenside expansion with b5. The Najdorf move.",
+            "The Najdorf move. A quiet pawn move with two big jobs: it denies the b5-square to White's pieces (no Bb5+ or Nb5) and prepares our own ...b5 expansion toward White's king. Small move, large purpose.",
         },
         {
           san: "Be3",
           explanation:
-            "White develops the bishop, preparing Qd2 and long castles.",
+            "White develops and signals the plan: Qd2, O-O-O, and a kingside pawn storm. When White's bishop goes to e3 with f3 to come, expect opposite-side castling.",
         },
         {
           san: "e5",
-          explanation: "We kick the Nd4 and establish a strong e5 outpost.",
+          explanation:
+            "We kick the d4-knight and grab central space. The trade-off: it leaves a hole on d5, but our pawn on e5 and active pieces are worth it. Gain space and a tempo, accept a small concession.",
           isKeyMove: true,
         },
-        { san: "Nb3", explanation: "The knight retreats — it was attacked." },
-        { san: "Be6", explanation: "We develop the c8 bishop actively on e6." },
-        { san: "f3", explanation: "White prepares a kingside attack." },
-        { san: "Be7", explanation: "We prepare to castle." },
+        {
+          san: "Nb3",
+          explanation:
+            "The attacked knight retreats to b3, where it eyes a5/c5 and stays useful rather than dropping back passively.",
+        },
+        {
+          san: "Be6",
+          explanation:
+            "We develop the light-squared bishop to guard the d5-hole our ...e5 created — covering the weakness with a piece.",
+        },
+        {
+          san: "f3",
+          explanation:
+            "White braces e4 and clears the way for g4-g5, the kingside pawn storm — the storm warning is now clear.",
+        },
+        {
+          san: "Be7",
+          explanation:
+            "We develop and prepare to castle, the bishop flexible on e7 (it can reroute to g5 to challenge White's good bishop).",
+        },
         {
           san: "Qd2",
           explanation:
-            "White prepares to castle queenside and launch a pawn storm.",
+            "White connects rooks and prepares O-O-O, committing to castling queenside and the pawn-storm race.",
         },
         {
           san: "O-O",
-          explanation: "We castle into safety before the storm begins.",
+          explanation:
+            "We castle kingside — opposite to where White is heading — getting the king to safety before the race of pawn storms begins.",
         },
       ],
       continuationMoves: [
@@ -124,58 +151,85 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5, and this line diverges when Black plays d6 and then 5...a6 — the Najdorf — leading to the most theoretically rich and hotly contested opening in all of chess, where Black prevents Bb5+ and prepares b5-e5, creating the razor-sharp positions that Fischer, Kasparov, and Carlsen all used to win World Championships.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
-        { san: "d6", explanation: "We prepare Nf6 and e5." },
+        {
+          san: "c5",
+          explanation:
+            "The Sicilian — fighting for d4 asymmetrically to keep the imbalance.",
+        },
+        {
+          san: "Nf3",
+          explanation: "White develops and prepares the d4 break.",
+        },
+        {
+          san: "d6",
+          explanation:
+            "We prepare ...Nf6 and control e5 — the flexible Sicilian setup.",
+        },
         { san: "d4", explanation: "White opens the center." },
-        { san: "cxd4", explanation: "We capture the d4 pawn." },
-        { san: "Nxd4", explanation: "White recaptures." },
-        { san: "Nf6", explanation: "We develop and attack e4." },
-        { san: "Nc3", explanation: "White defends e4." },
+        {
+          san: "cxd4",
+          explanation:
+            "We trade the flank c-pawn for the central d-pawn, opening the c-file.",
+        },
+        {
+          san: "Nxd4",
+          explanation: "White recaptures, centralizing the knight.",
+        },
+        {
+          san: "Nf6",
+          explanation: "We develop with a threat to e4, gaining time.",
+        },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "a6",
           explanation:
-            "The Najdorf move! Prevents Bb5+ and prepares b5. This quiet pawn move launches one of the richest opening systems in chess.",
+            "The Najdorf move! It looks modest, but ...a6 takes the b5-square away from White's pieces (no Nb5/Bb5) AND prepares ...b5 to gain queenside space and develop the bishop to b7. A single pawn move that's both prophylaxis and preparation — that economy is why the Najdorf is the king of openings.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Najdorf, 5...a6 is the key move — preparing b5 and preventing Bb5+.",
         },
         {
           san: "Bg5",
-          explanation: "White pins the Nf6 — the Classical Najdorf with Bg5.",
+          explanation:
+            "White pins the f6-knight (the guardian of e4 and d5) to the queen — the sharp Classical main line, eyeing Bxf6 to damage Black's structure.",
         },
         {
           san: "e6",
           explanation:
-            "We support d5 and unpin the knight. Black prepares to counterattack.",
+            "We support the d5-square and give the queen an escape, taking the sting out of the pin. ...e6 keeps the center solid before we counterattack.",
           isKeyMove: true,
         },
-        { san: "f4", explanation: "White builds a kingside pawn storm." },
+        {
+          san: "f4",
+          explanation:
+            "White grabs kingside space and prepares e5 or f5 pawn breaks — the kingside storm takes shape.",
+        },
         {
           san: "Be7",
           explanation:
-            "We prepare to castle. The bishop is solid on e7 — it defends the king and can move to f6 later.",
+            "We develop the bishop to break the pin's bite and prepare to castle. On e7 it defends the king and can swing to f6 to challenge White's dark-square play later.",
           isKeyMove: true,
         },
         {
           san: "Qf3",
           explanation:
-            "White brings the queen to f3 supporting the f4-f5 attack.",
+            "White centralizes the queen toward the kingside, supporting the f4-f5 push and clearing d1 for the rook after O-O-O.",
         },
         {
           san: "Qc7",
           explanation:
-            "We centralise the queen — defending d6 and preparing queenside counterplay on the c-file.",
+            "We centralize our own queen — it defends d6, eyes the half-open c-file toward White's coming queenside castle, and supports ...b5. The Sicilian queen belongs on c7, pointing where we'll attack.",
           isKeyMove: true,
         },
         {
           san: "O-O-O",
           explanation:
-            "White castles queenside — a direct clash! White attacks on the kingside.",
+            "White castles queenside — the battle lines are drawn for opposite-wing castling and a race of pawn storms.",
         },
         {
           san: "Nbd7",
-          explanation: "We develop the last minor piece and prepare to castle.",
+          explanation:
+            "We develop the last knight, supporting e5/b5 breaks and preparing to castle — and the knight clears b8 for the rook to join the queenside attack.",
         },
       ],
       continuationMoves: [
@@ -215,18 +269,25 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3, and this line diverges when Black plays g6 to fianchetto the dark-squared bishop, leading to the Dragon Variation — one of the most violent openings in chess, where the Bg7 rakes the a1-h8 diagonal all game and the Yugoslav Attack creates a mutual pawn storm that decides the game before move 25.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
-        { san: "d6", explanation: "We prepare Nf6 and g6." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        { san: "Nf3", explanation: "White develops and prepares d4." },
+        {
+          san: "d6",
+          explanation: "We control e5 and prepare ...Nf6 and ...g6.",
+        },
         { san: "d4", explanation: "White opens the center." },
-        { san: "cxd4", explanation: "We capture." },
-        { san: "Nxd4", explanation: "White recaptures." },
-        { san: "Nf6", explanation: "We develop." },
-        { san: "Nc3", explanation: "White defends e4." },
+        {
+          san: "cxd4",
+          explanation:
+            "We trade the flank pawn for the center pawn, opening the c-file.",
+        },
+        { san: "Nxd4", explanation: "White recaptures, centralizing." },
+        { san: "Nf6", explanation: "We develop with a threat to e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "g6",
           explanation:
-            "The Dragon! We fianchetto the dark-squared bishop. The Bg7 will be a dominant piece for the rest of the game.",
+            "The Dragon! We prepare to fianchetto on g7, aiming the bishop straight down the a1-h8 diagonal at White's queenside and center. This bishop is the soul of the Dragon — its long-range fire backs up everything we do. Point your bishop at the enemy king before the lines open.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Dragon, g6 is the defining move — preparing the powerful Bg7.",
@@ -234,45 +295,45 @@ const sicilianDefense: Opening = {
         {
           san: "Be3",
           explanation:
-            "White develops — the Yugoslav Attack begins with Be3 f3.",
+            "White develops, beginning the Yugoslav Attack (Be3, f3, Qd2, O-O-O, then h4-g4) — the most testing try, racing to attack before our Dragon bishop's counterplay ignites.",
         },
         {
           san: "Bg7",
           explanation:
-            "The Dragon bishop is placed! It controls the long a1-h8 diagonal and will power Black's counterattack.",
+            "The Dragon bishop is home, raking the long diagonal. Even when blocked by the d4-knight now, once the center opens it becomes one of the most powerful pieces on the board.",
           isKeyMove: true,
         },
         {
           san: "f3",
           explanation:
-            "White starts the Yugoslav Attack — preparing g4-g5 and a kingside assault.",
+            "White braces e4 against ...Ng4 and prepares the g4/h4 storm — the Yugoslav Attack's signature, building toward our king.",
         },
         {
           san: "O-O",
           explanation:
-            "We castle immediately. Black's king is safe behind the Dragon bishop.",
+            "We castle kingside immediately, tucking the king safely behind the Dragon bishop — knowing the storm is coming, but our counterplay comes too.",
           isKeyMove: true,
         },
         {
           san: "Qd2",
           explanation:
-            "White prepares to castle queenside and launch the attack.",
+            "White connects rooks and prepares O-O-O — committing to opposite-side castling and the attacking race.",
         },
         {
           san: "Nc6",
           explanation:
-            "We develop and attack the Nd4. In the Dragon, Black counterattacks on the queenside while White attacks the kingside.",
+            "We develop with a hit on the d4-knight, and the c6-knight is perfectly placed for our counterplay: it supports the ...d5 break and can jump to e5/c4. In the Dragon, we attack the queenside while White attacks the kingside.",
           isKeyMove: true,
         },
         {
           san: "O-O-O",
           explanation:
-            "White castles queenside — opposite wing castling and a race of attacks!",
+            "White castles queenside — opposite wings, and the race is officially on. Now it's our attack on the c/b-files vs White's on the g/h-files.",
         },
         {
           san: "d5",
           explanation:
-            "We advance! Black fights back in the center — this is key to the Dragon counterattack.",
+            "The thematic Dragon break! ...d5 strikes the center, and the point is to OPEN the long diagonal for our g7-bishop. Achieving ...d5 in the Dragon is usually the moment Black's attack catches fire. Free your best piece by breaking the center.",
         },
       ],
       continuationMoves: [
@@ -312,51 +373,71 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3, and this line diverges when Black plays e6 (instead of g6 or a6) to create the Scheveningen small center, leading to a solid d6-e6 structure that supports all counterplay plans — Kasparov won hundreds of games from this position with the timely b5-b4 queenside break.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
-        { san: "d6", explanation: "We prepare Nf6 and e6." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        { san: "Nf3", explanation: "White develops and prepares d4." },
+        {
+          san: "d6",
+          explanation: "We control e5 and prepare ...Nf6 and ...e6.",
+        },
         { san: "d4", explanation: "White opens the center." },
-        { san: "cxd4", explanation: "We capture." },
-        { san: "Nxd4", explanation: "White recaptures." },
-        { san: "Nf6", explanation: "We develop." },
-        { san: "Nc3", explanation: "White defends e4." },
+        {
+          san: "cxd4",
+          explanation:
+            "We open the c-file by trading the flank pawn for the center pawn.",
+        },
+        { san: "Nxd4", explanation: "White recaptures, centralizing." },
+        { san: "Nf6", explanation: "We develop with a threat to e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "e6",
           explanation:
-            "The Scheveningen! We build a small center with d6-e6. Very solid and flexible — Kasparov's favourite.",
+            "The Scheveningen! Instead of the space-grabbing ...e5 (which leaves a d5-hole), we build a modest but rock-solid d6-e6 'small center'. It controls d5 and e5, leaves no holes, and flexibly supports every plan we need. A small, solid center can be stronger than a big, loose one.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Scheveningen plays e6 — creating the small center structure d6-e6.",
         },
         {
           san: "Be2",
-          explanation: "White develops solidly (Classical Variation).",
+          explanation:
+            "White develops solidly (the Classical setup), planning to castle kingside and attack with f4 — a less committal approach than the Najdorf's English Attack.",
         },
         {
           san: "Be7",
           explanation:
-            "We develop and prepare to castle. The bishop on e7 is solid and prepares kingside safety.",
+            "We develop the bishop to its natural defensive square and prepare to castle — modest and flexible, exactly matching the Scheveningen's spirit.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
         {
           san: "O-O",
           explanation:
-            "We castle! Black's king is safe. Now we start our counterplay.",
+            "White castles kingside — signalling a same-side game where the play is slower and more positional.",
+        },
+        {
+          san: "O-O",
+          explanation:
+            "We castle too. With both kings on the same side, the battle becomes about pawn breaks and piece play rather than a raw storm — and our standard plan begins.",
           isKeyMove: true,
         },
-        { san: "f4", explanation: "White prepares a kingside pawn attack." },
+        {
+          san: "f4",
+          explanation:
+            "White grabs kingside space and prepares f5 to pressure e6 — the thematic attacking break.",
+        },
         {
           san: "a6",
           explanation:
-            "We prepare b5! Black's classic queenside expansion — the a6-b5 plan is one of the best in the Scheveningen.",
+            "We start the classic Scheveningen plan: ...a6 prepares ...b5-b4 to chase the c3-knight (the defender of e4) and open the queenside. Counter a wing attack by striking where you're strong. Kasparov's favorite plan.",
           isKeyMove: true,
         },
-        { san: "Be3", explanation: "White develops the bishop." },
+        {
+          san: "Be3",
+          explanation:
+            "White develops the bishop, connecting rooks and supporting d4/e5 ideas.",
+        },
         {
           san: "b5",
           explanation:
-            "Black expands on the queenside! The counterplay has begun.",
+            "We expand on the queenside — the counterplay is underway. ...b5-b4 will hit the knight defending e4 and pry open lines toward White's queenside.",
         },
       ],
       continuationMoves: [
@@ -396,50 +477,73 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nf3, and this line diverges when Black plays e6 first and then a6 — the Kan/Paulsen variation — leading to the super-flexible structure where Black avoids committing to any specific pawn setup and keeps all queenside options open for longer than any other Sicilian system.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        { san: "Nf3", explanation: "White develops and prepares d4." },
         {
           san: "e6",
-          explanation: "We play e6 first — keeping the position flexible.",
+          explanation:
+            "We open the f8-bishop's diagonal and keep the structure flexible — delaying ...d6 and ...Nf6 so White can't aim at a fixed target.",
         },
         { san: "d4", explanation: "White opens the center." },
-        { san: "cxd4", explanation: "We capture." },
-        { san: "Nxd4", explanation: "White recaptures." },
+        {
+          san: "cxd4",
+          explanation: "We open the c-file with the standard central trade.",
+        },
+        { san: "Nxd4", explanation: "White recaptures, centralizing." },
         {
           san: "a6",
           explanation:
-            "The Kan! Combined with e6, this gives Black maximum flexibility — the queenside is ready to expand but nothing is committed.",
+            "The Kan! Combined with ...e6 and NO committed ...d6 or ...Nc6, this is the most flexible Sicilian of all: ...a6 denies b5 to White's pieces and prepares ...b5, while we keep every other piece uncommitted until we see White's setup. Delay your commitments to react ideally. Perfect for players who outplay rather than out-memorize.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Kan plays a6 with e6 already played — the hyper-flexible Sicilian structure.",
         },
-        { san: "Nc3", explanation: "White develops." },
+        {
+          san: "Nc3",
+          explanation: "White develops, defending e4 and eyeing d5/b5.",
+        },
         {
           san: "Qc7",
           explanation:
-            "We centralise the queen early — defending e5, watching c5, and preparing b5. Very flexible.",
+            "We post the queen on its ideal Sicilian square: it eyes the c-file toward White's queenside, covers e5, and supports ...b5. Develop the queen to where the half-open file points.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops the bishop aggressively." },
+        {
+          san: "Bd3",
+          explanation:
+            "White develops aggressively, the bishop aiming at the kingside (h7) — but it's a touch exposed to a later ...Nc5 or ...b5-b4.",
+        },
         {
           san: "Bc5",
           explanation:
-            "We develop the bishop actively on c5, eyeing f2 and d4.",
+            "We develop with tempo, hitting the d4-knight and aiming the bishop at f2. Active piece placement that forces White to react. Develop with a threat whenever you can.",
           isKeyMove: true,
         },
-        { san: "Nb3", explanation: "White retreats the knight." },
+        {
+          san: "Nb3",
+          explanation:
+            "White retreats the attacked knight, hitting our bishop in passing to gain a tempo back.",
+        },
         {
           san: "Ba7",
           explanation:
-            "We move the bishop to a7 — safe and still controlling the f2-a7 diagonal.",
+            "We tuck the bishop onto a7 — out of the knight's reach but still raking the a7-g1 diagonal toward f2. Retreat to a square where the piece keeps working.",
         },
-        { san: "O-O", explanation: "White castles." },
-        { san: "Nf6", explanation: "We develop the knight." },
-        { san: "Re1", explanation: "White reinforces e4." },
+        { san: "O-O", explanation: "White castles to safety." },
+        {
+          san: "Nf6",
+          explanation:
+            "We finally commit the knight, developing with pressure on e4 now that the moment is right.",
+        },
+        {
+          san: "Re1",
+          explanation:
+            "White over-protects e4, putting the rook on a useful central file.",
+        },
         {
           san: "b5",
           explanation:
-            "We expand on the queenside! The Kan's queenside expansion plan.",
+            "We expand on the queenside — the Kan's thematic plan, gaining space and preparing ...Bb7 and ...b4 to pressure White's center and king.",
         },
       ],
       continuationMoves: [
@@ -479,56 +583,74 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nf3, and this line diverges when Black plays Nc6 early (instead of d6 or e6) — the Taimanov — leading to a flexible system where Qc7 and the Nc6 together create a solid fighting setup that handles White's f4 attacks better than most Sicilian systems because the knight is already on its ideal square.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        { san: "Nf3", explanation: "White develops and prepares d4." },
         {
           san: "Nc6",
           explanation:
-            "The Taimanov move — Black develops the knight to c6 immediately, fighting for e4 and d4.",
+            "The Taimanov move — we develop the knight first, fighting for d4 and e5 with a piece and keeping our pawn structure (...d6 vs ...e5 vs ...e6) undecided for now. Develop a piece to a great square before committing pawns.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Taimanov plays Nc6 early — fighting for the center with pieces.",
         },
         { san: "d4", explanation: "White opens the center." },
-        { san: "cxd4", explanation: "We capture." },
-        { san: "Nxd4", explanation: "White recaptures." },
+        {
+          san: "cxd4",
+          explanation: "We open the c-file with the central trade.",
+        },
+        { san: "Nxd4", explanation: "White recaptures, centralizing." },
         {
           san: "e6",
           explanation:
-            "We play e6, combining with Nc6 for a super solid and flexible setup — the Taimanov structure.",
+            "We add ...e6 to the Nc6 setup — a small, solid center with no holes that flexibly supports both ...b5 expansion and ...d5 breaks. Solid and adaptable.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        {
+          san: "Nc3",
+          explanation: "White develops, defending e4 and eyeing d5/b5.",
+        },
         {
           san: "Qc7",
           explanation:
-            "We play Qc7 — the typical Taimanov queen move, centralising and preparing to castle.",
+            "The thematic Taimanov queen move: on c7 it eyes the c-file, guards e5, and supports ...b5 — and it pressures e4/c2 in a way that often discourages White's most aggressive setups.",
           isKeyMove: true,
         },
-        { san: "Be3", explanation: "White develops." },
+        {
+          san: "Be3",
+          explanation:
+            "White develops, connecting rooks and preparing to castle (often queenside).",
+        },
         {
           san: "a6",
           explanation:
-            "We prevent Bb5 and prepare b5. The standard queenside expansion in the Taimanov.",
+            "We deny b5 to White's pieces and prepare our own ...b5 expansion — the standard Sicilian queenside plan, here backed by an already-developed knight.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops." },
+        {
+          san: "Be2",
+          explanation: "White develops solidly, preparing to castle kingside.",
+        },
         {
           san: "Nf6",
           explanation:
-            "We develop the kingside knight. All minor pieces are now developing efficiently.",
+            "We develop the last knight with pressure on e4. All our minor pieces are coming out efficiently with purpose.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles kingside." },
         {
           san: "Be7",
-          explanation: "We develop the king's bishop and prepare to castle.",
+          explanation:
+            "We develop the bishop and prepare to castle, completing a harmonious setup.",
         },
-        { san: "f4", explanation: "White prepares a kingside attack." },
+        {
+          san: "f4",
+          explanation:
+            "White grabs kingside space and prepares f5 — the thematic attack against our e6-pawn.",
+        },
         {
           san: "O-O",
           explanation:
-            "We castle! The position is balanced with counterplay on both wings.",
+            "We castle, and the position is balanced with mutual chances. Crucially, our Nc6+Qc7 are perfectly placed to meet f5 with queenside counterplay.",
         },
       ],
       continuationMoves: [
@@ -568,20 +690,24 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nf3 Nc6 d4 cxd4 Nxd4, and this line diverges when Black plays g6 before d6 — the Accelerated Dragon — leading to positions where d5 can be played in a single move (instead of two), allowing Black to sidestep the Yugoslav Attack entirely while still enjoying the powerful Bg7.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        { san: "Nf3", explanation: "White develops and prepares d4." },
         {
           san: "Nc6",
-          explanation: "We develop the knight to c6, fighting for the center.",
+          explanation:
+            "We develop the knight, fighting for d4 and e5 and keeping ...d6 in reserve — the key to playing ...d5 in one go later.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White opens the center." },
-        { san: "cxd4", explanation: "We capture." },
-        { san: "Nxd4", explanation: "White recaptures." },
+        {
+          san: "cxd4",
+          explanation: "We open the c-file with the central trade.",
+        },
+        { san: "Nxd4", explanation: "White recaptures, centralizing." },
         {
           san: "g6",
           explanation:
-            "The Accelerated Dragon! We fianchetto without playing d6 first — this allows d5 in one move later.",
+            "The Accelerated Dragon! By fianchettoing WITHOUT first playing ...d6, we save a tempo — later ...d5 comes in one move instead of two, and that single tempo lets us dodge the dangerous Yugoslav Attack. Save a move now to unlock a stronger break later.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Accelerated Dragon plays g6 before d6 — we can later play d5 in one move!",
@@ -589,34 +715,45 @@ const sicilianDefense: Opening = {
         {
           san: "c4",
           explanation:
-            "White plays the Maróczy Bind — c4 to restrict Black's d5 advance.",
+            "White plays the Maróczy Bind — a second pawn on c4 clamps the d5-square so we can't get our ...d5 break. White trades attacking chances for a space-based positional grip.",
         },
         {
           san: "Bg7",
           explanation:
-            "We complete the fianchetto. The Dragon bishop is in place, controlling the long diagonal.",
+            "We complete the fianchetto. Even with d5 restrained by the bind, the Dragon bishop pressures the long diagonal and our plan shifts to piece play (...Nd7-c5, ...a5) against White's space.",
           isKeyMove: true,
         },
-        { san: "Be3", explanation: "White develops." },
-        { san: "Nf6", explanation: "We develop and attack e4." },
-        { san: "Nc3", explanation: "White defends e4." },
+        {
+          san: "Be3",
+          explanation: "White develops, supporting d4 and the c4-bind.",
+        },
+        { san: "Nf6", explanation: "We develop with pressure on e4." },
+        {
+          san: "Nc3",
+          explanation: "White defends e4 and reinforces the d5-square.",
+        },
         {
           san: "O-O",
-          explanation: "We castle! The king is safe behind the Dragon bishop.",
+          explanation:
+            "We castle, king safe behind the Dragon bishop, before starting our queenside maneuvers.",
           isKeyMove: true,
         },
-        { san: "Be2", explanation: "White develops solidly." },
+        {
+          san: "Be2",
+          explanation:
+            "White develops solidly, content with the space the bind gives him.",
+        },
         {
           san: "d6",
           explanation:
-            "We play d6 to complete development. Black has a very solid setup.",
+            "Now ...d6 completes a solid setup, covering e5 and preparing the knight maneuvers that fight the bind. In the Maróczy we play positionally, not for the ...d5 break.",
           isKeyMove: true,
         },
         { san: "O-O", explanation: "White castles." },
         {
           san: "Na5",
           explanation:
-            "We attack the c4 pawn with the knight, creating counterplay!",
+            "We hit the c4-pawn — the base of White's bind. The Na5-c4-or-back-to-c6 maneuver pressures the bind and is our main source of counterplay. Attack the pawn that cramps you.",
         },
       ],
       continuationMoves: [
@@ -656,66 +793,90 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nf3 Nc6, and this line diverges when White plays Bb5 instead of d4 — the Rossolimo — leading to a Ruy López-like structure where White avoids all Open Sicilian theory and tries to use the bishop pair after doubling Black's c-pawns, while Black's g6 fianchetto and active pieces provide rich counterplay.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        { san: "Nf3", explanation: "White develops and prepares d4." },
         {
           san: "Nc6",
           explanation:
-            "We develop the knight — now White can play the Rossolimo with Bb5.",
+            "We develop the knight to its best square — though it does invite White's anti-Sicilian Bb5 pin.",
           isKeyMove: true,
         },
         {
           san: "Bb5",
           explanation:
-            "The Rossolimo! White pins the Nc6 like the Ruy López, avoiding the Open Sicilian entirely.",
+            "The Rossolimo! White sidesteps all the Open Sicilian theory, pinning the c6-knight Ruy-López-style. The plan: trade Bxc6 to double our pawns and play a slow positional game where memorization matters less.",
         },
         {
           san: "g6",
           explanation:
-            "We fianchetto! This is one of the best responses — the g7 bishop will challenge the Bb5.",
+            "We fianchetto — the most reliable answer. The point: if White plays Bxc6 dxc6, our g7-bishop becomes a monster on the long diagonal and the doubled pawns control the center. We welcome the trade. Turn the opponent's structural 'damage' into a strength.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Rossolimo, we play g6 to fianchetto and challenge the Bb5.",
         },
-        { san: "O-O", explanation: "White castles quickly." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles quickly, keeping the tension and the bishop on b5.",
+        },
         {
           san: "Bg7",
           explanation:
-            "We complete the fianchetto. The g7 bishop now fights the Bb5 for control.",
+            "We complete the fianchetto. The g7-bishop and the c6-knight together give us a harmonious, flexible setup that's ready to contest the center.",
           isKeyMove: true,
         },
         {
           san: "Re1",
-          explanation: "White reinforces e4 and prepares central action.",
+          explanation:
+            "White over-protects e4 and prepares c3-d4 to build a center — a slow, Ruy-López-like plan.",
         },
         {
           san: "Nf6",
-          explanation: "We develop and counterattack e4.",
+          explanation:
+            "We develop with pressure on e4, forcing White to keep defending it.",
           isKeyMove: true,
         },
-        { san: "c3", explanation: "White supports d4 and prepares to expand." },
+        {
+          san: "c3",
+          explanation:
+            "White supports the coming d4 push and gives the b5-bishop a c2 retreat.",
+        },
         {
           san: "O-O",
           explanation:
-            "We castle! The king is safe and we're ready to fight back.",
+            "We castle, king safe, ready to meet White's central expansion with our own counter-strikes.",
           isKeyMove: true,
         },
-        { san: "d4", explanation: "White finally opens the center." },
-        { san: "cxd4", explanation: "We capture!" },
+        {
+          san: "d4",
+          explanation:
+            "White finally plays the central break he prepared with c3.",
+        },
         {
           san: "cxd4",
-          explanation: "White recaptures, establishing a strong center.",
+          explanation:
+            "We trade to open lines, refusing to let White keep a free big center.",
+        },
+        {
+          san: "cxd4",
+          explanation:
+            "White recaptures, building a broad d4+e4 center — which we challenge at once.",
         },
         {
           san: "d5",
           explanation:
-            "We fight back in the center! Black challenges White's center after solid preparation.",
+            "We strike the center! Having developed safely, we hit e4 with ...d5 to free our position and activate the g7-bishop. Meet a big center with a timely central break.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "White advances." },
+        {
+          san: "e5",
+          explanation:
+            "White pushes past to keep the tension, but this fixes a target and frees our pieces.",
+        },
         {
           san: "Ne4",
-          explanation: "We centralise the knight on the powerful e4 square.",
+          explanation:
+            "We leap into the strong central e4 outpost, where the knight is hard to dislodge and dominates.",
         },
       ],
       continuationMoves: [
@@ -755,66 +916,90 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5, and this line diverges when White plays d4 cxd4 c3 — the Smith-Morra Gambit — leading to a dangerous surprise weapon where White sacrifices a pawn for rapid development and an open c-file, threatening immediate tactical shots that punish unprepared opponents but can be neutralized with the solid Nc6-d6-e6-Nf6-Be7-O-O setup.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
-        { san: "d4", explanation: "White plays d4." },
-        { san: "cxd4", explanation: "We capture." },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
+        {
+          san: "d4",
+          explanation:
+            "White challenges c5 immediately rather than preparing d4 with Nf3.",
+        },
+        { san: "cxd4", explanation: "We capture, winning the central pawn." },
         {
           san: "c3",
           explanation:
-            "The Smith-Morra Gambit! White sacrifices c3 pawn for rapid development.",
+            "The Smith-Morra Gambit! White offers a second pawn to blast open lines: after ...dxc3 Nxc3, White gets the open c- and d-files, fast development, and a long-term initiative for the pawn. A gambit that buys time and open files.",
         },
         {
           san: "dxc3",
           explanation:
-            "We accept the gambit — we take the free pawn while White gains development.",
+            "We accept — declining lets White keep a strong center for free, so we take the pawn and plan to give the material back later if needed to defuse the attack. Accept the gambit, then neutralize with calm development.",
           isKeyMove: true,
           wrongMoveWarning:
             "We accept the Smith-Morra — taking the pawn while preparing solid development.",
         },
         {
           san: "Nxc3",
-          explanation: "White recaptures, developing the knight with tempo.",
+          explanation:
+            "White recaptures, developing the knight with tempo toward the d5/b5 squares — exactly the fast development the gambit pays for.",
         },
         {
           san: "Nc6",
           explanation:
-            "We develop the knight, fighting for the center and preparing e6 or d6.",
+            "We develop and control d4/e5, beginning the standard antidote: get pieces out fast to a solid, hard-to-crack setup. Against a gambit, sound development beats holding onto the extra pawn.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops, eyeing the e5 and d4 squares for his initiative.",
+        },
         {
           san: "d6",
           explanation:
-            "We support the center and prepare Nf6 — solid development against the gambit.",
+            "We control e5 (a key square for White's knights and pieces) and open a path for the c8-bishop — taking the sting out of White's central pressure.",
           isKeyMove: true,
         },
-        { san: "Bc4", explanation: "White develops — the bishop targets f7." },
+        {
+          san: "Bc4",
+          explanation:
+            "White develops the bishop to its most aggressive square, aiming at f7 — the gambit's typical attacking try.",
+        },
         {
           san: "e6",
           explanation:
-            "We solidify the center and prepare to develop the f8 bishop.",
+            "We blunt the c4-bishop's diagonal and prepare ...Be7 and ...Nf6. ...e6 is the key defensive move — it shuts the door on f7 and d5. Close the attacker's lines toward your king.",
           isKeyMove: true,
-        },
-        { san: "O-O", explanation: "White castles and prepares to attack." },
-        {
-          san: "Nf6",
-          explanation: "We develop and counterattack e4.",
-          isKeyMove: true,
-        },
-        { san: "Qe2", explanation: "White prepares e5 or d5 to open lines." },
-        {
-          san: "Be7",
-          explanation: "We develop solidly and prepare to castle.",
-          isKeyMove: true,
-        },
-        {
-          san: "Rd1",
-          explanation: "White activates the rook, adding pressure.",
         },
         {
           san: "O-O",
           explanation:
-            "We castle! The king is safe and the position is balanced.",
+            "White castles and stacks up for an attack on the half-open files.",
+        },
+        {
+          san: "Nf6",
+          explanation:
+            "We develop with pressure on e4, completing the kingside and contesting the center.",
+          isKeyMove: true,
+        },
+        {
+          san: "Qe2",
+          explanation:
+            "White connects to the rooks and prepares e5 or Rd1 to pry open the center.",
+        },
+        {
+          san: "Be7",
+          explanation:
+            "We develop solidly and prepare to castle — every piece on a safe, useful square is one less target for White's initiative.",
+          isKeyMove: true,
+        },
+        {
+          san: "Rd1",
+          explanation:
+            "White piles onto the half-open d-file, pressuring our d6-pawn — the standard Smith-Morra pressure.",
+        },
+        {
+          san: "O-O",
+          explanation:
+            "We castle to safety. With every piece developed and the king tucked away, White's compensation has run dry and we keep the extra pawn — the gambit, correctly met, just leaves us a pawn up.",
         },
       ],
       continuationMoves: [
@@ -854,73 +1039,93 @@ const sicilianDefense: Opening = {
           explanation:
             "The Sicilian starts with e4 c5 Nc3, and this line diverges when White plays f4 without going through d4 — the Grand Prix Attack — leading to an immediate kingside assault where f5 threatens to crack open lines before the game even leaves the opening, but the g6 fianchetto and central d5 counterplay defuses the attack and leaves Black with a comfortable position.",
         },
-        { san: "c5", explanation: "The Sicilian!" },
+        { san: "c5", explanation: "The Sicilian — asymmetric fight for d4." },
         {
           san: "Nc3",
           explanation:
-            "White plays Nc3 — avoiding the Open Sicilian and preparing f4.",
+            "White avoids the Open Sicilian, keeping the d-pawn home to prepare an f4-f5 kingside attack — the Grand Prix approach.",
         },
         {
           san: "Nc6",
-          explanation: "We develop the knight, fighting for the center.",
+          explanation:
+            "We develop the knight, fighting for d4 and e5 and keeping a flexible setup.",
           isKeyMove: true,
         },
         {
           san: "f4",
           explanation:
-            "The Grand Prix Attack! White prepares a kingside attack with f5 without even playing d4.",
+            "The Grand Prix Attack! White grabs kingside space and aims for f5 to open lines toward our king — a fast, theory-light assault. The downside: f4 loosens White's center and king, which we'll target.",
         },
         {
           san: "g6",
           explanation:
-            "We fianchetto! This is the best response — the g7 bishop will fight against White's f4-f5 attack.",
+            "We fianchetto — the best response. The g7-bishop both defends our king and bears down on White's loosened center (d4/e5), and it blunts the f4-f5 attack along the way. Defend the kingside AND counter the center with one move.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Grand Prix, g6 and Bg7 fights most effectively against White's f4 attack.",
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation: "White develops, supporting e5 and preparing to castle.",
+        },
         {
           san: "Bg7",
           explanation:
-            "We complete the fianchetto. The Dragon bishop will be key in our counterplay.",
+            "We complete the fianchetto — the Dragon-style bishop is our key piece against the Grand Prix, raking the long diagonal.",
           isKeyMove: true,
         },
         {
           san: "Bb5",
-          explanation: "White pins the Nc6, preparing to double Black's pawns.",
+          explanation:
+            "White pins the c6-knight, hoping to trade on c6 and damage our structure before pushing f5.",
         },
         {
           san: "Nd4",
           explanation:
-            "We centralise the knight on d4, directly attacking the Bb5 — White ignores it by castling, so we take it for free on the next move.",
+            "We meet the pin with a counterattacking centralization: ...Nd4 attacks the b5-bishop and the f3-knight at once. White can't easily save the bishop, so we'll win it. A centralizing move that double-attacks is the best answer to a pin.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles, choosing king safety over saving the bishop — but that costs material.",
+        },
         {
           san: "Nxb5",
           explanation:
-            "We win the bishop, gaining the bishop pair with good compensation.",
+            "We win the bishop pair, the concrete payoff of ...Nd4. With the two bishops and a sound structure, Black already has the better long-term chances.",
           isKeyMove: true,
         },
-        { san: "d3", explanation: "White supports the center." },
+        {
+          san: "d3",
+          explanation:
+            "White supports e4 and opens the c1-bishop, trying to develop and create play despite the bishop pair concession.",
+        },
         {
           san: "d6",
-          explanation: "We develop solidly, supporting the center.",
+          explanation:
+            "We control e5 and prepare ...Nf6 — solid, taking the air out of White's f5 ambitions.",
           isKeyMove: true,
         },
         {
           san: "Ne2",
-          explanation: "White retreats the knight, planning Nxd4.",
+          explanation:
+            "White reroutes the knight, eyeing Nxd4 to trade off our strong central knight and untangle.",
         },
         {
           san: "Nf6",
           explanation:
-            "We develop — Black has good counterplay and compensation.",
+            "We develop with pressure on e4 — Black is comfortably ahead in the strategic battle, with the bishop pair and a sound position.",
         },
-        { san: "Be3", explanation: "White develops." },
+        {
+          san: "Be3",
+          explanation:
+            "White develops, connecting rooks and bracing the center.",
+        },
         {
           san: "O-O",
-          explanation: "We castle! The position is dynamically balanced.",
+          explanation:
+            "We castle — fully developed, king safe, bishop pair in hand. The Grand Prix has been defused and we stand better.",
         },
       ],
       continuationMoves: [

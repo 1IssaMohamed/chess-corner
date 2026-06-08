@@ -24,74 +24,96 @@ const caroKann: Opening = {
         {
           san: "c6",
           explanation:
-            "The Caro-Kann! We prepare d5 while supporting it with c6. Unlike the French, the c8 bishop won't be locked in.",
+            "The Caro-Kann! Like the French, we prepare ...d5 with pawn support — but with the c-pawn instead of the e-pawn. The crucial difference: this leaves e7 free, so our light-squared bishop can later leave the pawn chain via ...Bf5. Support your center without burying your own bishop.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Caro-Kann starts with 1...c6 — preparing d5 with pawn support.",
         },
-        { san: "d4", explanation: "White builds a strong center." },
+        {
+          san: "d4",
+          explanation:
+            "White builds the ideal big center with both central pawns.",
+        },
         {
           san: "d5",
           explanation:
-            "We challenge the center! The c6 pawn supports d5 — this is the Caro-Kann idea.",
+            "We challenge the center at once, backed by the c6-pawn. White must now decide: push (e5), trade (exd5), or defend (Nc3) — and each choice gives us an easy game.",
           isKeyMove: true,
         },
         {
           san: "e5",
           explanation:
-            "The Advance Variation! White claims space but overextends slightly.",
+            "The Advance Variation — White grabs space and locks the center. But the e5-pawn is also a commitment: it's advanced and can become a target, and (unlike the French) our bishop isn't trapped behind the chain.",
         },
         {
           san: "Bf5",
           explanation:
-            "We immediately develop the bishop outside the pawn chain! This is the key Caro-Kann advantage — our bishop is free.",
+            "The whole point of the Caro-Kann! Before playing ...e6 to lock the chain, we get the light-squared bishop OUTSIDE it. This is the 'good bishop' the French player only dreams of. Always free your bad bishop before you close the pawn chain.",
           isKeyMove: true,
           wrongMoveWarning:
             "After e5, we ALWAYS play Bf5 immediately — this is the whole point of the Caro-Kann!",
         },
         {
           san: "Nf3",
-          explanation: "White develops and prepares to support the e5 pawn.",
+          explanation:
+            "White develops and prepares to bolster the advanced e5-pawn, which Black will soon target.",
         },
         {
           san: "e6",
           explanation:
-            "We solidify the center pawn chain and prepare to develop the f8 bishop.",
+            "NOW ...e6 is correct — the bishop is already outside. This locks the solid c6-d5-e6 chain with our good bishop on the right side of it.",
           isKeyMove: true,
         },
         {
           san: "Be2",
-          explanation: "White develops the bishop, preparing to castle.",
+          explanation:
+            "White develops modestly and prepares to castle, keeping the structure solid.",
         },
         {
           san: "c5",
           explanation:
-            "The critical counterattack! We fight back against White's d4 pawn — this is the standard Caro-Kann plan.",
+            "The critical counter-strike: we attack the base of White's chain (d4). The rule in a locked center is to strike at the base of the enemy pawn chain — that's where it's least defended. Refuse to sit passively.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        {
+          san: "O-O",
+          explanation: "White castles to safety before the center opens.",
+        },
         {
           san: "Nc6",
           explanation:
-            "We develop the queen's knight — Black is now fully mobilised and ready to fight.",
+            "We develop and pile a second attacker onto d4 — fully mobilized and pressing the chain's base.",
           isKeyMove: true,
         },
-        { san: "c3", explanation: "White supports d4." },
+        {
+          san: "c3",
+          explanation:
+            "White shores up d4 with the c-pawn, holding the base of the chain.",
+        },
         {
           san: "Qb6",
           explanation:
-            "We attack b2 and d4 simultaneously — an annoying double threat.",
+            "A double attack: the queen hits b2 AND adds a third attacker to d4, tying White down. Look for one move that creates two threats at once.",
         },
-        { san: "Nbd2", explanation: "White supports d4 with the knight." },
+        {
+          san: "Nbd2",
+          explanation:
+            "White brings the knight to defend d4 and cover the b3/c4 squares.",
+        },
         {
           san: "cxd4",
-          explanation: "We capture in the center, creating an open c-file.",
+          explanation:
+            "We resolve the tension to open the c-file toward White's queenside — our highway for the rooks.",
         },
-        { san: "cxd4", explanation: "White recaptures." },
+        {
+          san: "cxd4",
+          explanation:
+            "White recaptures, holding d4 but conceding the open c-file to us.",
+        },
         {
           san: "Nge7",
           explanation:
-            "We develop the kingside knight — it will go to f5 or g6.",
+            "We develop the knight via e7 (not f6, which would block our own bishop and run into e5), heading for f5 or g6 to hit the e5-pawn. Route your knight to where it attacks the enemy's weakness.",
         },
       ],
       continuationMoves: [
@@ -129,20 +151,26 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann! We prepare d5.",
+          explanation:
+            "The Caro-Kann — preparing ...d5 while keeping the c8-bishop's diagonal open.",
           isKeyMove: true,
         },
-        { san: "d4", explanation: "White builds a strong center." },
+        { san: "d4", explanation: "White builds the big center." },
         {
           san: "d5",
-          explanation: "We challenge the center! c6 supports d5.",
+          explanation:
+            "We challenge the center at once, supported by the c6-pawn.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4 and develops." },
+        {
+          san: "Nc3",
+          explanation:
+            "White defends e4 by developing — choosing to keep the central tension.",
+        },
         {
           san: "dxe4",
           explanation:
-            "We capture! This forces White to recapture and allows the c8 bishop to develop freely.",
+            "We capture, releasing the tension on OUR terms. The point: this opens the diagonal so the c8-bishop can reach f5 before ...e6 ever has to be played. Trade in the center to free your worst piece.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Classical, we capture dxe4 to activate the c8 bishop to f5.",
@@ -150,51 +178,66 @@ const caroKann: Opening = {
         {
           san: "Nxe4",
           explanation:
-            "White recaptures — the e4 square is occupied by a strong knight.",
+            "White recaptures, planting a centralized knight on e4 — but it can be hit, and meanwhile our plan proceeds.",
         },
         {
           san: "Bf5",
           explanation:
-            "The key Caro-Kann move! The bishop develops OUTSIDE the pawn chain before the center closes. This is the main advantage over the French.",
+            "The hallmark Caro-Kann move: the bishop develops OUTSIDE the pawn chain with gain of tempo, hitting the e4-knight. This is the entire point of the opening — the good bishop is free. Develop your problem bishop before locking the structure.",
           isKeyMove: true,
         },
-        { san: "Ng3", explanation: "White chases the bishop to g6." },
+        {
+          san: "Ng3",
+          explanation:
+            "White's attacked knight retreats with tempo, kicking our bishop.",
+        },
         {
           san: "Bg6",
           explanation:
-            "The bishop retreats to g6. It remains active, supporting the kingside.",
+            "The bishop steps back to g6 — still outside the chain, still good, controlling the b1-h7 diagonal. It kept its job while dodging the attack.",
           isKeyMove: true,
         },
-        { san: "h4", explanation: "White immediately attacks the bishop!" },
+        {
+          san: "h4",
+          explanation:
+            "White lunges with the h-pawn, threatening h5 to trap the bishop on g6 — a standard idea worth knowing.",
+        },
         {
           san: "h6",
           explanation:
-            "We prevent h5 from trapping the bishop. Without h6, White would play h5-Bh7 and trap our bishop.",
+            "Essential prophylaxis: ...h6 makes a retreat square on h7 so that after h5 Bh7, the bishop survives. Without it, h5 would win the bishop. Always make luft for a bishop that's about to be hunted by a pawn.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops the second knight." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops the second knight, supporting e5 and d4.",
+        },
         {
           san: "Nd7",
           explanation:
-            "We develop the knight toward the center — it can go to f6, b6, or e5.",
+            "We develop flexibly: the knight covers e5, prepares ...Ngf6, and keeps options for ...Nb6 or ...Ne5. Develop toward the center, keeping choices open.",
           isKeyMove: true,
         },
         {
           san: "Bd3",
           explanation:
-            "White develops aggressively — the bishop eyes the h7 pawn.",
+            "White offers to trade the light-squared bishops; the bishop also eyes h7 in case of a future attack.",
         },
         {
           san: "Bxd3",
           explanation:
-            "We trade the bishops — removing White's attacking piece.",
+            "We trade — happily, because it removes White's attacking bishop and the recapture doesn't disturb our solid structure. Trade off the opponent's potential attacker when it costs you nothing.",
           isKeyMove: true,
         },
-        { san: "Qxd3", explanation: "White recaptures." },
+        {
+          san: "Qxd3",
+          explanation: "White recaptures, centralizing the queen.",
+        },
         {
           san: "Ngf6",
           explanation:
-            "We develop the kingside knight. Black has completed solid development with the bishop pair gone but an easy game.",
+            "We complete development with a sound, weakness-free position. The bishop pair is gone, but our structure is granite and every piece has a job — the Caro-Kann promise.",
         },
       ],
       continuationMoves: [
@@ -236,65 +279,87 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5 with the c-pawn.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
         {
           san: "exd5",
           explanation:
-            "White captures — the Exchange Variation. No pawn majority, just symmetry.",
+            "The Exchange Variation — White releases the tension into a symmetric structure. It's the safe, simple choice, but it surrenders any opening advantage: with no imbalance, Black equalizes easily.",
         },
         {
           san: "cxd5",
           explanation:
-            "We recapture with the c-pawn, keeping the d5 pawn firmly in place.",
+            "We recapture with the c-pawn (not the queen), keeping a solid pawn on d5 and — crucially — leaving e7 open so the c8-bishop can develop to f5 outside the chain. The Caro-Kann bishop always gets out.",
           isKeyMove: true,
           wrongMoveWarning:
             "We recapture cxd5 — keeping a solid, symmetric pawn structure.",
         },
-        { san: "Bd3", explanation: "White develops the bishop aggressively." },
+        {
+          san: "Bd3",
+          explanation: "White develops actively, the bishop aiming at h7.",
+        },
         {
           san: "Nc6",
-          explanation: "We develop the knight, fighting for the center.",
+          explanation:
+            "We develop and pressure d4, contesting the center with pieces.",
           isKeyMove: true,
         },
-        { san: "c3", explanation: "White supports d4." },
+        {
+          san: "c3",
+          explanation:
+            "White supports d4 and prepares the minority attack (b4-b5).",
+        },
         {
           san: "Nf6",
           explanation:
-            "We develop the kingside knight — development is easy in the Exchange Caro-Kann.",
+            "We develop toward the kingside — development is effortless in the symmetric Exchange structure.",
           isKeyMove: true,
         },
-        { san: "Bf4", explanation: "White develops the c1 bishop." },
+        {
+          san: "Bf4",
+          explanation:
+            "White develops the c1-bishop outside the chain (the same good-bishop idea, for White).",
+        },
         {
           san: "Bg4",
           explanation:
-            "We develop the bishop actively — it will pin the knight the moment White plays Nf3. Black fights for the initiative.",
+            "We develop the light-squared bishop actively to pin the f3-knight the moment it appears — getting our bishop OUT of the chain and fighting for the initiative rather than playing passively.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops, walking into the pin but completing the kingside.",
+        },
         {
           san: "e6",
-          explanation: "We solidify and prepare to develop the f8 bishop.",
+          explanation:
+            "NOW ...e6 is safe — both bishops are already developed outside the chain. We open the f8-bishop and prepare to castle.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "Be7",
-          explanation: "We develop and prepare to castle.",
+          explanation:
+            "We develop and prepare to castle, completing harmonious development.",
           isKeyMove: true,
         },
-        { san: "Nbd2", explanation: "White completes development." },
+        {
+          san: "Nbd2",
+          explanation:
+            "White completes development, the knight reinforcing the center.",
+        },
         {
           san: "O-O",
           explanation:
-            "We castle! Black has a very comfortable, equal position.",
+            "We castle — fully developed, no weaknesses, perfectly equal. In the Exchange, Black simply gets an easy game.",
         },
       ],
       continuationMoves: [
@@ -336,69 +401,82 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
-        { san: "exd5", explanation: "White captures." },
+        {
+          san: "exd5",
+          explanation: "White trades into a symmetric structure — for now.",
+        },
         {
           san: "cxd5",
-          explanation: "We recapture.",
+          explanation: "We recapture, keeping a pawn on d5.",
           isKeyMove: true,
         },
         {
           san: "c4",
           explanation:
-            "The Panov-Botvinnik Attack! White immediately fights for the d5 square — very ambitious.",
+            "The Panov! White transforms the position by attacking d5 with a second pawn — heading for a Queen's-Gambit-style fight where Black ends up with an isolated d-pawn. Ambitious: White trades safety for an active, structure-based battle.",
           isKeyMove: true,
         },
         {
           san: "Nf6",
-          explanation: "We develop and fight for e4.",
+          explanation:
+            "We develop and contest the d5/e4 squares, the natural reply that doesn't yet commit the structure.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Panov, Nf6 is best — developing and fighting for the center.",
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and adds pressure to d5." },
         {
           san: "e6",
           explanation:
-            "We solidify the center — preparing to develop the f8 bishop.",
+            "We back up d5 and open the f8-bishop. We accept that an isolated d-pawn may result — the trade-off being free, active pieces and open lines.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation: "White develops, eyeing the blockade square d4.",
+        },
         {
           san: "Be7",
-          explanation: "We develop the f8 bishop solidly.",
+          explanation:
+            "We develop solidly and prepare to castle, keeping the position flexible.",
           isKeyMove: true,
         },
         {
           san: "cxd5",
-          explanation: "White captures, creating the IQP for Black after Nxd5.",
+          explanation:
+            "White resolves the tension, leaving us with the isolated queen's pawn after we recapture.",
         },
         {
           san: "Nxd5",
           explanation:
-            "We recapture with the knight, occupying the strong d5 outpost. Black has active, well-placed pieces to compensate for White's queenside space.",
+            "We recapture with the knight, occupying the excellent d5 outpost. The IQP bargain: a long-term weak pawn in exchange for active, freely-developed pieces and central squares right now. Activity is the IQP's compensation.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops aggressively." },
+        {
+          san: "Bd3",
+          explanation:
+            "White develops actively, the bishop aiming at the kingside.",
+        },
         {
           san: "Nc6",
           explanation:
-            "We develop — Black has good piece activity to compensate for the IQP.",
+            "We develop with pressure on d4, getting our pieces active fast — the IQP-holder must play energetically before the pawn becomes a target.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "O-O",
           explanation:
-            "We castle! Both sides are fully developed with an interesting strategic battle ahead.",
+            "We castle, fully developed. The strategic battle is set: our piece activity vs White's long-term pressure on the d-pawn.",
         },
       ],
       continuationMoves: [
@@ -440,65 +518,81 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "dxe4",
-          explanation: "We capture on e4.",
+          explanation:
+            "We capture, releasing the tension to develop comfortably.",
           isKeyMove: true,
         },
-        { san: "Nxe4", explanation: "White recaptures." },
+        {
+          san: "Nxe4",
+          explanation: "White recaptures, centralizing the knight.",
+        },
         {
           san: "Nd7",
           explanation:
-            "The Karpov / Modern Variation! Instead of Bf5, we develop the knight to d7 — more flexible.",
+            "The Karpov/Modern move. Instead of ...Bf5, we prepare ...Ngf6 — and the point is subtle: developing the knight first means that after ...Ngf6 Nxf6+, we recapture and avoid giving White the Bd3xBf5 trade. It keeps more tension and our bishop pair. A flexible move order that denies the opponent simplifications.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Modern/Karpov Caro-Kann plays Nd7 here instead of Bf5.",
         },
-        { san: "Nf3", explanation: "White develops." },
+        {
+          san: "Nf3",
+          explanation:
+            "White develops, controlling e5 and preparing to castle.",
+        },
         {
           san: "Ngf6",
           explanation:
-            "We develop the knight. The d7 knight can now go to f8 or b6.",
+            "We develop with a hit on the e4-knight, forcing a decision and gaining time — the second knight supports the first.",
           isKeyMove: true,
         },
-        { san: "Ng3", explanation: "White repositions the knight." },
+        {
+          san: "Ng3",
+          explanation:
+            "White retreats the knight to keep it (Nxf6 would help our development), eyeing f5/h5.",
+        },
         {
           san: "e6",
           explanation:
-            "We open a path for the f8 bishop and solidify the centre before developing.",
+            "Now ...e6 opens the f8-bishop and solidifies — and note our light-squared bishop, though still home, isn't 'bad' here because the structure stays fluid for a ...c5 break.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops the bishop, eyeing h7." },
+        {
+          san: "Bd3",
+          explanation: "White develops actively, aiming the bishop at h7.",
+        },
         {
           san: "Bd6",
           explanation:
-            "We develop the bishop aggressively — it targets h2 and the kingside.",
+            "We develop our bishop aggressively, mirroring White's and contesting the b8-h2 diagonal toward White's king. Meet an attacking bishop with your own.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "O-O",
-          explanation: "We castle! The king is safe.",
+          explanation: "We castle, king safe, ready for the central break.",
           isKeyMove: true,
         },
         {
           san: "Qe2",
-          explanation: "White defends e4 and prepares queenside expansion.",
+          explanation:
+            "White connects rooks and prepares queenside or central expansion.",
         },
         {
           san: "c5",
           explanation:
-            "We counterattack d4! Black has achieved a very comfortable position.",
+            "We strike at d4 — the Caro-Kann's thematic freeing break, opening lines for our well-placed pieces and equalizing comfortably. Karpov's recipe: solid setup, then ...c5.",
           isKeyMove: true,
         },
       ],
@@ -541,71 +635,91 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
         {
           san: "f3",
           explanation:
-            "The Fantasy Variation! White supports e4 aggressively, but weakens the kingside.",
+            "The Fantasy Variation! White props up e4 with the f-pawn to keep a big center — but f3 weakens the a7-g1 diagonal and the king's cover, and it does nothing for development. We exploit both.",
         },
         {
           san: "e6",
           explanation:
-            "We play solidly — supporting d5 and preparing to develop. This is the safest response.",
+            "The safest, soundest reply: we keep the center solid and develop, daring White to over-commit. Against a dubious aggressive idea, the calm, sound move often refutes it best.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Fantasy Variation, we play e6 — solid and waiting for White to overreach.",
         },
-        { san: "Nc3", explanation: "White develops." },
+        {
+          san: "Nc3",
+          explanation: "White develops and defends e4 a second time.",
+        },
         {
           san: "Bb4",
           explanation:
-            "We pin the Nc3! This active move pressures the center and is one of the best responses.",
+            "We pin the c3-knight (a defender of e4), increasing the pressure on the center and exploiting that f3 left White's setup loose. Pin the defender of the point you're attacking.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops." },
+        {
+          san: "Bd3",
+          explanation:
+            "White develops the bishop, holding e4 and preparing to castle.",
+        },
         {
           san: "dxe4",
           explanation:
-            "We capture! Forcing White to recapture, opening the position after all.",
+            "Now we open the center — and crucially White must recapture with the f-pawn, accepting weakened kingside pawns. Open the position to expose the weakness the opponent created.",
           isKeyMove: true,
         },
         {
           san: "fxe4",
           explanation:
-            "White recaptures with the f-pawn — the position is now more open.",
+            "White recaptures with the f-pawn (Bxe4 drops a pawn to the pin), leaving him with a weakened king and no f-pawn cover.",
         },
         {
           san: "Nf6",
-          explanation: "We develop and attack the e4 pawn.",
+          explanation:
+            "We develop with pressure on e4, hitting the now-weakened center with gain of time.",
           isKeyMove: true,
         },
-        { san: "Nge2", explanation: "White defends e4." },
+        {
+          san: "Nge2",
+          explanation:
+            "White defends e4 with the knight, keeping the c3-knight in place.",
+        },
         {
           san: "O-O",
           explanation:
-            "We castle! The pin on Nc3 continues to cause discomfort.",
+            "We castle to safety, and the pin on c3 keeps nagging — our development is smooth while White is tied up.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        {
+          san: "O-O",
+          explanation:
+            "White castles, finally tucking the king away behind the loosened pawns.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack d4 — Black has excellent counterplay against White's weakened kingside.",
+            "We hit the base of the center (d4) — opening lines toward White's slightly airy king. Strike at the chain's base to convert your better structure into an attack.",
           isKeyMove: true,
         },
-        { san: "d5", explanation: "White advances." },
+        {
+          san: "d5",
+          explanation:
+            "White pushes past to keep the center closed, but this fixes a target on d5.",
+        },
         {
           san: "exd5",
           explanation:
-            "We capture — the position is sharp and dynamically balanced.",
+            "We open the position — with our pieces more active and White's kingside loosened, the resulting sharp play favors us.",
           isKeyMove: true,
         },
       ],
@@ -648,69 +762,92 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
         {
           san: "Nc3",
-          explanation: "White defends e4 with the knight.",
+          explanation:
+            "White defends e4 by developing, keeping the central tension.",
         },
         {
           san: "Nf6",
           explanation:
-            "We develop and counterattack e4 — this is the Two Knights Caro-Kann approach.",
+            "We counterattack e4 with a piece instead of releasing the tension — inviting White to push e5 and commit, after which we get active play. Develop with a counter-threat.",
           isKeyMove: true,
           wrongMoveWarning:
             "In the Two Knights Caro, we play Nf6 — fighting for e4 with a piece.",
         },
-        { san: "e5", explanation: "White advances, driving back our knight." },
+        {
+          san: "e5",
+          explanation:
+            "White advances, gaining space and kicking our knight — but the e5-pawn is now a committal target.",
+        },
         {
           san: "Ne4",
           explanation:
-            "Our knight goes to e4 — an active central square. The Two Knights theme continues.",
+            "Our knight leaps into the center rather than retreating tamely — from e4 it can trade on c3 to damage White's structure. Choose the most active square when attacked.",
           isKeyMove: true,
         },
-        { san: "f3", explanation: "White attacks the Ne4." },
+        {
+          san: "f3",
+          explanation:
+            "White attacks the e4-knight, but this further loosens his kingside and king.",
+        },
         {
           san: "Nxc3",
           explanation:
-            "We capture, doubling White's pawns — good compensation for retreating.",
+            "We capture to saddle White with doubled c-pawns — a permanent structural concession that's worth more than keeping the knight on its soon-to-be-evicted square. Trade to inflict lasting damage.",
           isKeyMove: true,
         },
-        { san: "bxc3", explanation: "White recaptures with the b-pawn." },
+        {
+          san: "bxc3",
+          explanation:
+            "White recaptures toward the center, accepting the doubled, weakened c-pawns.",
+        },
         {
           san: "e6",
-          explanation: "We solidify and prepare to develop the f8 bishop.",
+          explanation:
+            "We solidify the center and open the f8-bishop, preparing to exploit White's loose structure.",
           isKeyMove: true,
         },
-        { san: "Be3", explanation: "White develops." },
+        {
+          san: "Be3",
+          explanation:
+            "White develops, bracing d4 — but the king is still in the center.",
+        },
         {
           san: "Qh4+",
           explanation:
-            "We give check with the queen! This active queen move disrupts White's development.",
+            "The disruptive check! With White having played f3, the h4-e1 diagonal is open and the king has no good shelter — the queen forces it to move and lose castling. Exploit a weakened king before completing your own development. The whole point of the line.",
           isKeyMove: true,
         },
         {
           san: "Kd2",
-          explanation: "White's king is forced to move — a disruptive check.",
+          explanation:
+            "Forced — blocking with g3 would drop a pawn, so the king must walk, permanently losing the right to castle.",
         },
         {
           san: "c5",
           explanation:
-            "We counterattack immediately — fighting against White's pawn center.",
+            "We strike the center while White's king is stuck on d2 — opening lines against the exposed monarch is more important than safe, slow play here. Open the position against a stranded king.",
           isKeyMove: true,
         },
-        { san: "dxc5", explanation: "White captures." },
+        {
+          san: "dxc5",
+          explanation:
+            "White grabs the pawn, but the bigger story is his displaced king and ragged structure.",
+        },
         {
           san: "Nc6",
           explanation:
-            "We develop — Black has excellent compensation for the pawns.",
+            "We develop with tempo and full compensation: the c3 doubled pawns, White's stuck king, and our easy development outweigh the pawn.",
         },
       ],
       continuationMoves: [
@@ -752,64 +889,81 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
         {
           san: "Nd2",
           explanation:
-            "The Short System — White develops the knight to d2 to avoid the Bf5 pin on Nc3.",
+            "The Short System — White develops the knight to d2 (not c3) so it can't be pinned and so the c-pawn stays free. A flexible move, but it blocks White's own bishop momentarily and doesn't change our plan.",
         },
         {
           san: "dxe4",
-          explanation: "We capture on e4 — same idea as the Classical.",
+          explanation:
+            "We capture, releasing the tension to develop the bishop — same plan as the Classical, regardless of which square White's knight chose.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Short System, we still capture dxe4 and aim for Bf5.",
         },
-        { san: "Nxe4", explanation: "White recaptures." },
+        {
+          san: "Nxe4",
+          explanation: "White recaptures with the d2-knight, centralizing it.",
+        },
         {
           san: "Bf5",
           explanation:
-            "We develop the c8 bishop to f5 — the hallmark Caro-Kann move! This is always our goal.",
+            "The hallmark Caro-Kann move — the bishop develops outside the chain with tempo. Our plan is the same against every White setup: free the good bishop first.",
           isKeyMove: true,
         },
-        { san: "Ng3", explanation: "White chases the bishop." },
+        { san: "Ng3", explanation: "White kicks the bishop with tempo." },
         {
           san: "Bg6",
-          explanation: "The bishop retreats to g6, remaining active.",
+          explanation:
+            "The bishop steps back, still outside the chain and still good.",
           isKeyMove: true,
         },
-        { san: "h4", explanation: "White attacks the bishop." },
+        {
+          san: "h4",
+          explanation:
+            "White lunges with the h-pawn, threatening h5 to trap the bishop.",
+        },
         {
           san: "h6",
-          explanation: "We prevent h5 — essential to keep the bishop alive.",
+          explanation:
+            "Essential — making the h7 escape so h5 Bh7 doesn't trap the bishop.",
           isKeyMove: true,
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops the second knight." },
         {
           san: "Nd7",
           explanation:
-            "We develop the queenside knight — heading for f6 and the center.",
+            "We develop flexibly toward f6 and the center, keeping the solid Caro-Kann structure.",
           isKeyMove: true,
         },
-        { san: "Bd3", explanation: "White develops." },
+        {
+          san: "Bd3",
+          explanation: "White offers the bishop trade and eyes h7.",
+        },
         {
           san: "Bxd3",
-          explanation: "We trade the bishops, relieving the pressure.",
+          explanation:
+            "We trade off White's attacking bishop at no cost to our structure.",
           isKeyMove: true,
         },
-        { san: "Qxd3", explanation: "White recaptures." },
+        {
+          san: "Qxd3",
+          explanation: "White recaptures, centralizing the queen.",
+        },
         {
           san: "Ngf6",
           explanation:
-            "We complete development — Black has an easy, comfortable position.",
+            "We complete development — an easy, weakness-free position, identical in spirit to the Classical.",
         },
       ],
       continuationMoves: [
@@ -851,43 +1005,53 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         {
           san: "Bc4",
           explanation:
-            "The Hillbilly Attack! White develops the bishop early, similar to the Italian Game, targeting f7.",
+            "The Hillbilly Attack — White rushes the bishop toward f7. But the bishop on c4 runs straight into our planned ...d5, which hits it with tempo. Develop toward a target, not toward a pawn that's about to attack you.",
         },
         {
           san: "d5",
           explanation:
-            "We challenge the center immediately — fighting against the bishop's diagonal.",
+            "We hit the bishop AND grab the center in one move — turning the c6/d5 setup into an immediate gain of tempo. Punish a premature bishop sortie by attacking it with a pawn.",
           isKeyMove: true,
           wrongMoveWarning:
             "Against the Hillbilly, d5 is our best move — fighting for the center.",
         },
-        { san: "exd5", explanation: "White captures." },
+        {
+          san: "exd5",
+          explanation:
+            "White trades, since retreating immediately would just lose time.",
+        },
         {
           san: "cxd5",
-          explanation: "We recapture — our d5 pawn is well supported.",
+          explanation:
+            "We recapture, gaining a strong center AND hitting the c4-bishop again — it must move once more.",
           isKeyMove: true,
         },
         {
           san: "Bb3",
           explanation:
-            "White retreats the bishop — it's no longer targeting f7.",
+            "The bishop retreats to b3, where (unlike against an Italian) there's no f7 weakness to target — our solid center has neutralized it.",
         },
         {
           san: "Nf6",
           explanation:
-            "We develop and attack e4. Black's development is easy and natural.",
+            "We develop naturally, the knight defending d5 and eyeing e4. Our development is free and easy.",
           isKeyMove: true,
         },
-        { san: "d4", explanation: "White builds the center." },
+        {
+          san: "d4",
+          explanation:
+            "White builds a center, transposing toward a normal position — but a tempo down.",
+        },
         {
           san: "e6",
-          explanation: "We solidify the center and prepare to castle.",
+          explanation:
+            "We solidify d5 and open the f8-bishop, heading for a comfortable setup.",
           isKeyMove: true,
         },
         { san: "Nf3", explanation: "White develops." },
@@ -896,24 +1060,28 @@ const caroKann: Opening = {
           explanation: "We develop and prepare to castle.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "O-O",
           explanation:
-            "We castle! Black has a solid, comfortable position with no weaknesses.",
+            "We castle — a completely normal, weakness-free Caro-Kann position, with White's early bishop adventure having achieved nothing.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White develops." },
+        { san: "Nc3", explanation: "White develops and pressures d5." },
         {
           san: "Nc6",
           explanation:
-            "We develop — Black has excellent development and no problems.",
+            "We develop and contest d4 — Black is fully developed with no problems at all.",
           isKeyMove: true,
         },
-        { san: "Re1", explanation: "White reinforces e4." },
+        {
+          san: "Re1",
+          explanation: "White centralizes the rook on the e-file.",
+        },
         {
           san: "Bd6",
-          explanation: "We develop the bishop aggressively, eyeing h2.",
+          explanation:
+            "We place the bishop actively, eyeing h2 and completing a harmonious setup.",
         },
       ],
       continuationMoves: [
@@ -955,67 +1123,86 @@ const caroKann: Opening = {
         },
         {
           san: "c6",
-          explanation: "The Caro-Kann!",
+          explanation: "The Caro-Kann — preparing ...d5.",
           isKeyMove: true,
         },
         { san: "d4", explanation: "White builds the center." },
         {
           san: "d5",
-          explanation: "We challenge the center.",
+          explanation: "We challenge the center, supported by c6.",
           isKeyMove: true,
         },
-        { san: "Nc3", explanation: "White defends e4." },
+        { san: "Nc3", explanation: "White defends e4 by developing." },
         {
           san: "dxe4",
-          explanation: "We capture on e4.",
+          explanation:
+            "We capture, releasing the tension to follow a different plan.",
           isKeyMove: true,
         },
-        { san: "Nxe4", explanation: "White recaptures." },
+        {
+          san: "Nxe4",
+          explanation: "White recaptures, centralizing the knight.",
+        },
         {
           san: "g6",
           explanation:
-            "The Gurgenidze! Instead of Bf5 or Nd7, we fianchetto — creating a Dragon-like setup in the Caro-Kann.",
+            "The Gurgenidze! Instead of the usual ...Bf5, we fianchetto for a Dragon-style setup — but with ...c6 already played, the position is sturdier than a real Dragon (the b7-c6 pawns give the king extra cover). Borrow a plan from another opening, improved by your existing structure.",
           isKeyMove: true,
           wrongMoveWarning:
             "The Gurgenidze plays g6 in the Caro-Kann — creating a Dragon-like fianchetto position.",
         },
-        { san: "Nf3", explanation: "White develops." },
+        { san: "Nf3", explanation: "White develops, controlling e5." },
         {
           san: "Bg7",
           explanation:
-            "We complete the fianchetto. The g7 bishop is a powerful long-range piece.",
+            "We complete the fianchetto — the g7-bishop rakes the long diagonal toward White's queenside and center, our main long-range weapon.",
           isKeyMove: true,
         },
-        { san: "Bc4", explanation: "White develops the bishop aggressively." },
+        {
+          san: "Bc4",
+          explanation: "White develops the bishop actively toward f7.",
+        },
         {
           san: "Nf6",
-          explanation: "We develop and counterattack the knight on e4.",
+          explanation: "We develop with a hit on the e4-knight, gaining time.",
           isKeyMove: true,
         },
-        { san: "Ng3", explanation: "White retreats the knight." },
+        {
+          san: "Ng3",
+          explanation: "White retreats the knight to keep it, eyeing f5/h5.",
+        },
         {
           san: "O-O",
-          explanation: "We castle! The king is safe behind the fianchetto.",
+          explanation:
+            "We castle, king safe behind the fianchetto, before starting counterplay.",
           isKeyMove: true,
         },
-        { san: "O-O", explanation: "White castles." },
+        { san: "O-O", explanation: "White castles to safety." },
         {
           san: "Nbd7",
-          explanation: "We develop the queenside knight.",
+          explanation:
+            "We develop the last knight, supporting e5 and preparing ...Nb6 to harass the c4-bishop.",
           isKeyMove: true,
         },
-        { san: "Re1", explanation: "White reinforces e4." },
+        {
+          san: "Re1",
+          explanation: "White over-protects e4 and centralizes the rook.",
+        },
         {
           san: "Nb6",
           explanation:
-            "The knight goes to b6 to attack the Bc4 and fight for the c4 pawn.",
+            "The knight hits the c4-bishop, gaining a tempo and chasing it off its active diagonal — typical play to neutralize White's most aggressive piece.",
           isKeyMove: true,
         },
-        { san: "Bb3", explanation: "White retreats." },
+        {
+          san: "Bb3",
+          explanation:
+            "White retreats the bishop, keeping it but on a quieter square.",
+        },
         {
           san: "c5",
           explanation:
-            "We counterattack d4 — Black has excellent counterplay with the Dragon bishop.",
+            "We strike at d4 with our extra c-pawn lever, opening the long diagonal for the Bg7 — the Caro-Kann's solidity now powering a Dragon-style counterattack.",
         },
       ],
       continuationMoves: [

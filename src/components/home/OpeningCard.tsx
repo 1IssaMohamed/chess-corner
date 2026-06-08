@@ -101,7 +101,7 @@ export default function OpeningCard({ opening, store }: OpeningCardProps) {
               e.stopPropagation();
               setIsExpanded((v) => !v);
             }}
-            className="self-start text-xs mt-0.5 underline underline-offset-2 transition-opacity hover:opacity-70"
+            className="self-start text-xs py-1.5 -my-0.5 underline underline-offset-2 transition-opacity hover:opacity-70"
             style={{ color: "var(--accent-amber)" }}
           >
             {isExpanded ? "Show less" : "Show more"}

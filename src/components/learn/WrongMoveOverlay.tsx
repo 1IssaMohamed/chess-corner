@@ -1,6 +1,7 @@
-// Slides up from the bottom-right corner when you play a wrong move.
-// Fixed positioning so it floats over the layout. Width is capped at 360px
-// but also uses calc(100vw - 48px) so it doesn't overflow on small screens.
+// Wrong-move notice. On phones it's an opaque bottom sheet docked to the bottom
+// edge (full width, never covering the board); on desktop (sm+) it floats as a
+// card in the bottom-right corner. Background is a solid elevated surface — NOT
+// the translucent --danger-bg — so the text stays readable over the board.
 
 interface WrongMoveOverlayProps {
   visible: boolean;
@@ -25,17 +26,14 @@ export default function WrongMoveOverlay({
 
   return (
     <div
-      className="animate-slide-up rounded-xl border p-4"
+      className="animate-slide-up border p-4 z-50
+                 fixed inset-x-0 bottom-0 w-full rounded-t-2xl border-t-2
+                 sm:inset-x-auto sm:left-auto sm:right-6 sm:bottom-6 sm:w-[360px] sm:max-w-[calc(100vw-48px)] sm:rounded-xl sm:border-t"
       style={{
-        position: "fixed",
-        bottom: "24px",
-        right: "24px",
-        zIndex: 50,
-        width: "calc(100vw - 48px)",
-        maxWidth: "360px",
-        background: "var(--danger-bg)",
+        background: "var(--bg-elevated)",
         borderColor: "var(--danger)",
-        boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
+        boxShadow: "0 -8px 32px rgba(0,0,0,0.4)",
+        paddingBottom: "calc(1rem + env(safe-area-inset-bottom))",
       }}
     >
       <div className="flex items-start justify-between gap-4">

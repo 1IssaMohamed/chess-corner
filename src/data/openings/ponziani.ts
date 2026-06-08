@@ -24,53 +24,66 @@ const ponziani: Opening = {
         },
         {
           san: "e5",
-          explanation: "Black mirrors White, fighting for the center.",
+          explanation:
+            "Black claims an equal share of the center. The symmetric reply is principled: whoever lets the opponent build pawns on both d4 and e4 unopposed usually ends up cramped, so Black plants a pawn in the center first and worries about pieces second.",
         },
         {
           san: "Nf3",
-          explanation: "White develops the knight and attacks e5.",
+          explanation:
+            "White develops a piece AND attacks e5 in the same move — the ideal developing move, because it does a job while improving a piece. Black must now spend time defending, which is exactly how White keeps the initiative that comes with moving first.",
         },
-        { san: "Nc6", explanation: "Black defends e5 naturally." },
+        {
+          san: "Nc6",
+          explanation:
+            "Black defends e5 with a developing move, answering one threat by improving a piece. Why the knight and not ...d6 or ...Qe7? Because Nc6 is active and blocks nothing, while ...d6 would shut in the f8-bishop and ...Qe7 buries the queen. Defend with your most natural piece, not your most valuable one.",
+        },
         {
           san: "c3",
           explanation:
-            "The Ponziani. White prepares d4 to build a powerful pawn center. The c-pawn supports the coming d4 push.",
+            "The Ponziani's defining move, and it's all about preparation. Play d4 right now and ...exd4 Nxd4 just trades pieces — the center dissolves and White has nothing. With a pawn on c3 first, after ...exd4 White answers cxd4 and KEEPS a pawn on d4: a real, lasting center instead of an even swap. The price is that c3 steals the natural square from the b1-knight, so White accepts slightly clumsier development to buy a structural asset. That trade-off is the whole opening.",
           isKeyMove: true,
         },
-        { san: "Nf6", explanation: "Black develops and strikes at e4." },
+        {
+          san: "Nf6",
+          explanation:
+            "Black develops with a counter-threat — the knight hits e4. This is the right idea against a big-center plan: don't sit and let White build, punch back at the center so White has to react instead of roll forward.",
+        },
         {
           san: "d4",
           explanation:
-            "White executes the plan — a big center with both central pawns.",
+            "The payoff for c3. White builds the broad d4+e4 pawn duo, and because c3 backs up d4, Black can't win the center by capturing — the pawns stay. Occupying the center with PAWNS (not just pieces) is what turns a fleeting lead into durable space.",
           isKeyMove: true,
         },
         {
           san: "exd4",
-          explanation: "Black trades the e-pawn for White's d-pawn.",
+          explanation:
+            "Black removes one of the two big pawns rather than let White keep both and later shove e5 with tempo. It's a concession of the center, but doing nothing would let White clamp down first with d5 or e5 — releasing the tension is the lesser evil.",
         },
         {
           san: "cxd4",
           explanation:
-            "White recaptures, restoring the central pawn and opening the c-file.",
+            "The recapture that vindicates c3: White rebuilds the d4 pawn and now owns the classic d4+e4 duo plus an open c-file for the rook. This exact structure is what White has been steering toward since move three.",
         },
         {
           san: "d5",
-          explanation: "Black challenges White's center immediately.",
+          explanation:
+            "Black strikes at the center at once. The principle behind it: a big pawn center is only an asset if it can't be challenged, so Black challenges it immediately — before White finishes developing and the center hardens into a permanent rolling weapon.",
         },
         {
           san: "e5",
           explanation:
-            "White pushes forward, gaining space and kicking the knight. The pawn center is imposing.",
+            "White pushes past instead of trading. The d4-e5 chain gains space and kicks the f6-knight, and keeping the pawns locked (rather than allowing exchanges) freezes the position in White's favor: the e5 pawn cramps Black's kingside and steals the f6 and d6 squares. Space means more room for your pieces and less for the opponent's.",
           isKeyMove: true,
         },
         {
           san: "Ne4",
-          explanation: "Black's knight jumps to a strong outpost on e4.",
+          explanation:
+            "The knight leaps forward instead of retreating tamely. On e4 it sits in the heart of the board where no pawn can cheaply evict it, eyeing c3 and g3. When a piece is attacked, look first for the most ACTIVE escape square, not just the nearest safe one.",
         },
         {
           san: "Bd3",
           explanation:
-            "White attacks the knight on e4, fighting for control of the center square.",
+            "White challenges the e4-knight and develops toward the kingside at once. The bishop also takes aim down the b1-h7 diagonal toward h7 — the start of a standard attacking battery once Black castles. Contest the opponent's best-placed piece while improving your own.",
         },
       ],
       continuationMoves: [
@@ -111,65 +124,94 @@ const ponziani: Opening = {
             "The Ponziani starts with e4 e5 Nf3 Nc6 c3, and this line diverges when Black plays d6 instead of the main-line Nf6, leading to a solid but passive structure where White builds the ideal d4 center unopposed and steadily accumulates a spatial advantage that slowly squeezes Black's position into passivity.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "Black matches in the center." },
-        { san: "Nf3", explanation: "Attacks e5 and develops." },
-        { san: "Nc6", explanation: "Defends e5." },
+        {
+          san: "e5",
+          explanation:
+            "Black contests the center symmetrically — the standard, sound way to avoid being squeezed by White's two central pawns.",
+        },
+        {
+          san: "Nf3",
+          explanation:
+            "Develops and attacks e5 in one move, forcing Black to respond and handing White the initiative.",
+        },
+        {
+          san: "Nc6",
+          explanation:
+            "Defends e5 with a piece that blocks nothing and develops naturally — the most economical way to meet the threat.",
+        },
         {
           san: "c3",
-          explanation: "The Ponziani — prepares d4.",
+          explanation:
+            "The Ponziani — a quiet pawn move that prepares d4 with support, so that after a later ...exd4 White can recapture with cxd4 and keep a real pawn center rather than trading it away.",
           isKeyMove: true,
         },
         {
           san: "d6",
           explanation:
-            "Black takes a more cautious approach, bolstering e5 solidly.",
+            "Black chooses solidity over the fight: ...d6 cements e5 with a pawn so it can never be undermined. The cost is passivity — d6 hems in Black's own f8-bishop and hands White a free hand in the center. Safe, but it lets White set the agenda.",
         },
         {
           san: "d4",
-          explanation: "White expands the center as planned.",
+          explanation:
+            "White grabs the center unopposed. Because Black bolstered e5 with ...d6 instead of counter-striking with ...Nf6 or ...d5, White reaches the dream big center with no immediate challenge to it.",
           isKeyMove: true,
         },
-        { san: "exd4", explanation: "Black releases the central tension." },
+        {
+          san: "exd4",
+          explanation:
+            "Black releases the central tension; sitting still would let White choose the moment to play dxe5 or roll the pawns forward on his own terms.",
+        },
         {
           san: "cxd4",
-          explanation: "White recaptures, maintaining a broad center.",
+          explanation:
+            "White rebuilds the broad d4+e4 center and opens the c-file — the same structural win as the main line, except here Black has no active counterpunch prepared.",
         },
-        { san: "Nf6", explanation: "Black develops the knight." },
+        {
+          san: "Nf6",
+          explanation:
+            "Black develops and finally pressures e4 — but a move late, since White is already fully centralized and comfortable.",
+        },
         {
           san: "Bd3",
           explanation:
-            "White develops the bishop toward the kingside and supports e4.",
-        },
-        { san: "Be7", explanation: "Black prepares to castle." },
-        {
-          san: "O-O",
-          explanation: "White castles kingside, completing development.",
+            "White develops the bishop, defends e4, and aims at the kingside. Notice it's the bishop and not the b1-knight coming out first — c3 took that knight's square, so White builds his pieces flexibly around the pawn structure.",
         },
         {
+          san: "Be7",
+          explanation:
+            "Black develops modestly and prepares to castle. It's ...Be7 rather than the active ...Bc5 because the d6 pawn already blocks the bishop's best diagonal — solid, but cramped.",
+        },
+        {
           san: "O-O",
-          explanation: "Black castles, reaching a solid balanced position.",
+          explanation:
+            "White castles: king to safety, rook toward the center. Finish development before launching action, especially when you already hold the space and time is on your side.",
+        },
+        {
+          san: "O-O",
+          explanation:
+            "Black castles too. Material is level, but White is simply better placed — more space, easier piece play. Black's middlegame job is to free his cramped position; White's is to keep it cramped.",
         },
       ],
       continuationMoves: [
         {
           san: "h3",
-          idea: "White prevents Bg4 before pushing the center — a prophylactic move.",
+          idea: "White spends a quiet move to prevent ...Bg4 before continuing. Prophylaxis: when you have the space and no rush, deny the opponent his one active idea before it appears.",
         },
         {
           san: "Re8",
-          idea: "Black centralises the rook, supporting e5 and preparing counterplay.",
+          idea: "Black centralises the rook behind the e-file, supporting any future ...e5-break ideas and preparing counterplay.",
         },
         {
           san: "Re1",
-          idea: "White centralises the rook to the e-file, adding pressure.",
+          idea: "White answers in kind, putting his own rook on the e-file so the two heaviest pieces face off where the play will be.",
         },
         {
           san: "Nd7",
-          idea: "Black repositions the knight, planning Nf8-e6 to fight for the center.",
+          idea: "Black repositions the knight, planning Nf8-e6 to pressure d4 — the standard regrouping when your position is cramped: reroute a passive piece to a square that hits the enemy center.",
         },
         {
           san: "Nbd2",
-          idea: "White develops the last piece. The vs d6 Ponziani gives White a comfortable space advantage with a broad center — no immediate winning plan but Black is cramped and must defend for a long time.",
+          idea: "White finishes developing. The vs-d6 Ponziani gives White a comfortable space advantage and a broad center — no forced win, but Black is cramped and must defend accurately for a long time.",
         },
       ],
       continuationIdea:
@@ -188,42 +230,69 @@ const ponziani: Opening = {
             "The Ponziani starts with e4 e5 Nf3 Nc6 c3 Nf6 d4 exd4, and this line diverges when White plays the sharp 5.e5 instead of recapturing, leading to the Steinitz Variation where White sacrifices the recapture to gain space immediately — kicking the knight around and entering sharp, forcing positions where Black must find precise defensive moves.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "Black replies symmetrically." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        {
-          san: "c3",
-          explanation: "The Ponziani — prepares the d4 push.",
-          isKeyMove: true,
-        },
-        { san: "Nf6", explanation: "Black develops and hits e4." },
-        { san: "d4", explanation: "White occupies the center." },
-        { san: "exd4", explanation: "Black captures." },
         {
           san: "e5",
           explanation:
-            "The Steinitz Variation! Instead of recapturing, White kicks the knight and grabs space.",
+            "Black stakes a symmetric claim in the center — the principled reply that stops White from owning both central pawns for free.",
+        },
+        {
+          san: "Nf3",
+          explanation:
+            "Develops and attacks e5, forcing Black to react and keeping the initiative.",
+        },
+        {
+          san: "Nc6",
+          explanation:
+            "Defends e5 while developing — the natural, blocking-nothing way to meet the threat.",
+        },
+        {
+          san: "c3",
+          explanation:
+            "The Ponziani — prepares d4 with pawn support so the coming center can be kept rather than traded off.",
+          isKeyMove: true,
+        },
+        {
+          san: "Nf6",
+          explanation:
+            "Black develops and counter-attacks e4, refusing to let White build the center unchallenged.",
+        },
+        {
+          san: "d4",
+          explanation:
+            "White occupies the center, daring Black to release the tension.",
+        },
+        {
+          san: "exd4",
+          explanation:
+            "Black captures, expecting the routine cxd4 — but White has a sharper idea.",
+        },
+        {
+          san: "e5",
+          explanation:
+            "The Steinitz Variation! Rather than calmly recapturing on d4, White shoves e5 to kick the f6-knight and grab space instantly, temporarily leaving the d4 pawn alone. The idea: gain time and a space bind NOW; the pawn can be collected next move. It's a tempo-and-space play, trading a moment of material calm for initiative.",
           isKeyMove: true,
           wrongMoveWarning:
             "Try e5 instead of cxd4 — this is the sharp Steinitz line.",
         },
         {
           san: "Nd5",
-          explanation: "Black's knight retreats to the central d5 square.",
+          explanation:
+            "The kicked knight lands on the central d5 square instead of slinking back. From d5 it's well-placed and not easily challenged — when forced to move, choose the strongest square available.",
         },
         {
           san: "cxd4",
           explanation:
-            "Now White recaptures, leaving a pawn on e5 and a strong center.",
+            "Now White collects the pawn back, and the dust settles on a dream structure: a protected pawn on e5 cramping Black plus a mobile d4 pawn. The delayed recapture cost nothing and gained a big space bind.",
         },
         {
           san: "Nb6",
-          explanation: "The knight retreats again, eyeing c4 and d5.",
+          explanation:
+            "The knight steps off d5 (where it could be hit by Bc4 or c-pawn ideas) toward c4 and d5 squares. Black keeps the knight active rather than retreating to a passive home.",
         },
         {
           san: "Bc4",
           explanation:
-            "White develops the bishop aggressively, targeting the f7 pawn and maintaining central pressure.",
+            "White develops with menace, training the bishop on f7 — the weakest point in Black's camp before he castles — while keeping the central clamp. Develop toward the enemy weakness, not just toward a comfortable square.",
           isKeyMove: true,
         },
       ],
@@ -265,48 +334,68 @@ const ponziani: Opening = {
             "The Ponziani starts with e4 e5 Nf3 Nc6 c3, and this line diverges when Black plays the bold d5 counter-attack — the sharpest response — leading to immediately open positions where the d4 pawn becomes the central battleground and whoever handles the resulting tactical complications better takes control.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "Black matches." },
-        { san: "Nf3", explanation: "Develops and pressures e5." },
-        { san: "Nc6", explanation: "Defends e5." },
+        {
+          san: "e5",
+          explanation:
+            "Black contests the center symmetrically before anything else, the soundest way to avoid being squeezed.",
+        },
+        {
+          san: "Nf3",
+          explanation:
+            "Develops and attacks e5, forcing a response and seizing the initiative.",
+        },
+        {
+          san: "Nc6",
+          explanation:
+            "Defends e5 with a natural developing move that gets in nothing's way.",
+        },
         {
           san: "c3",
-          explanation: "The Ponziani — prepares d4.",
+          explanation:
+            "The Ponziani — preparing d4. But this slow pawn move also reveals the opening's one drawback: it does nothing for development and leaves e4 a touch loose, which is exactly what Black pounces on next.",
           isKeyMove: true,
         },
         {
           san: "d5",
           explanation:
-            "Black's sharpest response — immediately counter-attacking the center before White can consolidate.",
+            "Black's sharpest answer, striking the center at once. The logic is concrete: c3 was a non-developing move, so Black opens the position immediately to exploit being slightly ahead in the fight for the center, before White can consolidate.",
           isKeyMove: true,
         },
         {
           san: "exd5",
-          explanation: "White accepts the challenge and takes the pawn.",
+          explanation:
+            "White accepts the challenge and takes. Declining (e.g. allowing ...dxe4) would hand Black easy central play, so White grabs the pawn and prepares to hit the recapturing queen with tempo.",
         },
         {
           san: "Qxd5",
-          explanation: "Black recaptures with the queen, centralizing it.",
+          explanation:
+            "Black recaptures with the queen, centralizing it — the only way to regain the pawn, but it brings the queen out early where it can be harassed.",
         },
         {
           san: "d4",
           explanation:
-            "White immediately strikes at the queen and fights for the center.",
+            "The key idea: White strikes in the center and, crucially, gains time by NOT letting the queen sit comfortably. d4 fights for the center while the open position starts to favor whoever develops with threats. Develop with tempo against an exposed queen.",
           isKeyMove: true,
         },
-        { san: "exd4", explanation: "Black captures, opening the e-file." },
+        {
+          san: "exd4",
+          explanation:
+            "Black captures, opening the e-file — the position is now fully open, so development speed and king safety decide everything.",
+        },
         {
           san: "cxd4",
-          explanation: "White recaptures, building a central pawn majority.",
+          explanation:
+            "White recaptures and stands with a central pawn on d4 and ready-to-develop pieces. The structure is slightly loosened, but White's lead in coordination is the real asset.",
         },
         {
           san: "Bg4",
           explanation:
-            "Black pins White's knight, making it harder to consolidate.",
+            "Black pins the f3-knight to the queen, gluing White's pieces together and making it harder to castle and consolidate — typical counterplay in an open game where you can't yet match the opponent's development.",
         },
         {
           san: "Be2",
           explanation:
-            "White breaks the pin and prepares to castle, accepting a slightly inferior pawn structure but maintaining the initiative.",
+            "White calmly breaks the pin and prepares to castle. White accepts that taking ...Bxf3 would slightly damage the pawns, judging that completing development and getting the king safe matters more than a cosmetic structural blemish.",
         },
       ],
       continuationMoves: [
@@ -347,42 +436,66 @@ const ponziani: Opening = {
             "The Ponziani starts with e4 e5 Nf3 Nc6 c3, and this line diverges when Black develops the bishop to c5 instead of playing Nf6, leading to a lively Open Game after the Bb4+ check disrupts White's development — both sides have active pieces and the resulting unbalanced positions reward concrete calculation over theoretical preparation.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "Black mirrors." },
-        { san: "Nf3", explanation: "Develops." },
-        { san: "Nc6", explanation: "Defends e5." },
+        {
+          san: "e5",
+          explanation:
+            "Black takes his share of the center symmetrically — the sound first reply.",
+        },
+        {
+          san: "Nf3",
+          explanation: "Develops with a threat to e5, keeping the initiative.",
+        },
+        {
+          san: "Nc6",
+          explanation:
+            "Defends e5 naturally, developing a piece that blocks nothing.",
+        },
         {
           san: "c3",
-          explanation: "The Ponziani — preparing d4.",
+          explanation:
+            "The Ponziani — preparing d4. The drawback is that c3 doesn't develop a piece, which gives Black time to post a bishop actively.",
           isKeyMove: true,
         },
         {
           san: "Bc5",
           explanation:
-            "Black develops the bishop to a strong diagonal, targeting f2 and the center.",
+            "Black develops the bishop to its best diagonal, eyeing f2 and discouraging White's d4 (the c5-bishop will rake the a7-g1 diagonal once the center opens). Meet a slow plan by developing actively and creating your own pressure.",
         },
-        { san: "d4", explanation: "White pushes through as planned." },
-        { san: "exd4", explanation: "Black captures." },
-        { san: "cxd4", explanation: "White recaptures with the c-pawn." },
+        {
+          san: "d4",
+          explanation:
+            "White carries out the plan anyway, accepting that the center will open with Black's bishop staring at his kingside — the price of the Ponziani's tempo on c3.",
+        },
+        {
+          san: "exd4",
+          explanation:
+            "Black opens the center while his pieces are the more active — exactly what the Bc5 setup was aiming for.",
+        },
+        {
+          san: "cxd4",
+          explanation:
+            "White recaptures and keeps the d4 pawn, but now the c5-bishop hits d4 and the position is sharp and open.",
+        },
         {
           san: "Bb4+",
           explanation:
-            "The bishop checks the king, disrupting White's development.",
+            "The bishop checks, and the point is disruption: White can't block cleanly. Bd2 or Nc3 each have a drawback, so Black gains time and unbalances White's development. A well-timed check that forces an awkward reply is worth more than one that's easily met.",
           isKeyMove: true,
         },
         {
           san: "Nc3",
           explanation:
-            "White blocks the check and develops the queenside knight, though the pin is uncomfortable.",
+            "White blocks by developing the queenside knight — the most active block — accepting that the knight is now pinned and a little uncomfortable. Choose the interposition that at least develops a piece.",
         },
         {
           san: "Nge7",
           explanation:
-            "Black avoids the awkward ...Nf6 (which blocks the bishop) and prepares ...d5 or ...d6.",
+            "Black develops the knight to e7 rather than f6, deliberately keeping the f6-square and the long diagonal open and preparing ...d5 or ...d6. Develop where you don't block your own plans, even if it looks less natural.",
         },
         {
           san: "Bd3",
           explanation:
-            "White develops the bishop to a good diagonal, targeting h7 and preparing to castle.",
+            "White develops toward the kingside, aiming the bishop at h7 and clearing the back rank to castle. Even while dealing with the pin, White keeps improving pieces and heading for safety.",
         },
       ],
       continuationMoves: [
@@ -423,52 +536,87 @@ const ponziani: Opening = {
             "The Ponziani starts with e4 e5 Nf3 Nc6 c3 Nf6 d4 exd4 e5 Nd5 Bc4, and this line diverges when White plays the sharp Bc4 instead of cxd4, leading to the most forcing Steinitz line where Black's Nb6 d5 counter-blast is met with the dramatic en passant capture exd6, launching one of the most tactically intense positions in the entire Ponziani repertoire.",
           isKeyMove: true,
         },
-        { san: "e5", explanation: "Black replies." },
-        { san: "Nf3", explanation: "Develops and attacks e5." },
-        { san: "Nc6", explanation: "Defends e5." },
-        {
-          san: "c3",
-          explanation: "The Ponziani.",
-          isKeyMove: true,
-        },
-        { san: "Nf6", explanation: "Black develops, hitting e4." },
-        { san: "d4", explanation: "White expands." },
-        { san: "exd4", explanation: "Black captures." },
         {
           san: "e5",
           explanation:
-            "The Steinitz — White pushes the knight and grabs space.",
+            "Black claims his half of the center — the principled symmetric reply.",
+        },
+        {
+          san: "Nf3",
+          explanation: "Develops and attacks e5, keeping the initiative.",
+        },
+        {
+          san: "Nc6",
+          explanation: "Defends e5 with a natural developing move.",
+        },
+        {
+          san: "c3",
+          explanation:
+            "The Ponziani — preparing d4 so the center can be kept, not swapped.",
           isKeyMove: true,
         },
-        { san: "Nd5", explanation: "Knight retreats centrally." },
+        {
+          san: "Nf6",
+          explanation:
+            "Black develops and hits e4, counter-punching rather than letting White build freely.",
+        },
+        {
+          san: "d4",
+          explanation: "White occupies the center, inviting the tension.",
+        },
+        {
+          san: "exd4",
+          explanation:
+            "Black releases the tension, again expecting cxd4 — but the Steinitz idea comes first.",
+        },
+        {
+          san: "e5",
+          explanation:
+            "The Steinitz — White pushes past to kick the knight and grab space, leaving the d4 pawn to be collected later. Initiative and space before material recovery.",
+          isKeyMove: true,
+        },
+        {
+          san: "Nd5",
+          explanation:
+            "The knight retreats to the strong central d5 square rather than the rim.",
+        },
         {
           san: "Bc4",
           explanation:
-            "White goes for Bc4 instead of cxd4, putting immediate pressure on d5 and the kingside.",
+            "White ignores the d4 pawn for one more move to pile pressure on d5 and aim at f7 — using the initiative to keep Black on the defensive instead of cashing in too early.",
           isKeyMove: true,
         },
         {
           san: "Nb6",
-          explanation: "The d5 knight retreats, avoiding the bishop.",
+          explanation:
+            "The d5-knight steps away from the bishop's gaze, hitting the Bc4 in passing to gain a tempo of its own.",
         },
-        { san: "Bb3", explanation: "White repositions the bishop safely." },
+        {
+          san: "Bb3",
+          explanation:
+            "White tucks the bishop onto b3, keeping it trained on the a2-g8 diagonal and f7 while sidestepping the knight — retreat to where the piece still works, not just to safety.",
+        },
         {
           san: "d5",
           explanation:
-            "Black's counter-blast — the d-pawn storms forward, threatening to blow up the center.",
+            "Black's counter-blast: the d-pawn storms forward to challenge the e5 pawn and rip open the center while White's king still sits on e1. In a sharp race, the side who opens lines against the uncastled king first usually strikes first.",
           isKeyMove: true,
         },
         {
           san: "exd6",
           explanation:
-            "White captures en passant! The e5 pawn takes on d6, a rare and powerful response.",
+            "White captures en passant! Instead of letting Black build a center with ...d5, the e5 pawn snaps off on d6, keeping lines open and refusing Black the consolidating pawn. A rare but powerful resource — en passant exists precisely to stop a pawn from sliding past your reach.",
           isKeyMove: true,
         },
-        { san: "Qxd6", explanation: "Black recaptures with the queen." },
+        {
+          san: "Qxd6",
+          explanation:
+            "Black recaptures with the queen, the only way to restore material — but the queen lands on an open board where it can become a target.",
+        },
         {
           san: "Nxd4",
           explanation:
-            "White's knight captures the d4 pawn, restoring material balance in a sharp, unbalanced position.",
+            "White finally collects the d4 pawn with the knight, restoring material balance in a wide-open, piece-active position. Everything White did — e5, Bc4, exd6 — was financed by this pawn, recovered now on White's terms.",
         },
       ],
       continuationMoves: [

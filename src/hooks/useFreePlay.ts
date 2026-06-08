@@ -27,29 +27,48 @@ export function useFreePlay(
   const [score, setScore] = useState<EngineScore | null>(null);
   const [thinking, setThinking] = useState(false); // eval in progress
   const [engineThinking, setEngineThinking] = useState(false); // computing a reply
+  // Browse the move history without un-playing moves. null = follow the live
+  // position; a number is the ply being viewed (0 = start FEN).
+  const [viewIndex, setViewIndex] = useState<number | null>(null);
 
   // Starting a new position (different line/step) resets the board.
   useEffect(() => {
     setMoves([]);
     setScore(null);
+    setViewIndex(null);
   }, [startFen]);
 
   const game = useMemo(
     () => buildGameFromMoves(startFen, moves),
     [startFen, moves],
   );
-  const fen = game.fen();
   const turn: Side = game.turn() === "w" ? "white" : "black";
   const isGameOver = game.isGameOver();
 
+  // When browsing the past, the board shows an earlier position; otherwise it
+  // shows the live game. The eval bar follows whatever is on the board.
+  const isBrowsing = viewIndex !== null && viewIndex < moves.length;
+  const displayGame = useMemo(
+    () =>
+      isBrowsing
+        ? buildGameFromMoves(startFen, moves.slice(0, viewIndex ?? 0))
+        : game,
+    [isBrowsing, startFen, moves, viewIndex, game],
+  );
+  const fen = displayGame.fen();
+
   const lastMove = useMemo(() => {
-    const history = game.history({ verbose: true });
+    const history = displayGame.history({ verbose: true });
     const last = history[history.length - 1];
     return last ? { from: last.from, to: last.to } : null;
-  }, [game]);
+  }, [displayGame]);
 
+  // No moving while reviewing history — step back to the live end first.
   const isUserTurn =
-    !engineThinking && !isGameOver && (mode === "both" || turn === userSide);
+    !isBrowsing &&
+    !engineThinking &&
+    !isGameOver &&
+    (mode === "both" || turn === userSide);
 
   const playMove = useCallback(
     (from: string, to: string): boolean => {
@@ -63,6 +82,7 @@ export function useFreePlay(
       if (!result) return false;
 
       setMoves((cur) => [...cur, result.san]);
+      setViewIndex(null); // jump back to the live position after moving
 
       // In engine mode, let Stockfish answer if it's now the opponent's turn.
       const replySide: Side = chess.turn() === "w" ? "white" : "black";
@@ -97,6 +117,7 @@ export function useFreePlay(
   );
 
   const takeBack = useCallback(() => {
+    setViewIndex(null);
     setMoves((cur) => {
       if (cur.length === 0) return cur;
       const next = cur.slice(0, -1);
@@ -113,19 +134,53 @@ export function useFreePlay(
     });
   }, [mode, startFen, userSide]);
 
-  const reset = useCallback(() => setMoves([]), []);
+  const reset = useCallback(() => {
+    setViewIndex(null);
+    setMoves([]);
+  }, []);
+
+  // History browsing. Scroll/step back through played moves and forward again,
+  // without removing anything. viewForward returns to the live position at the end.
+  const viewBack = useCallback(() => {
+    setViewIndex((cur) => {
+      const base = cur === null ? moves.length : cur;
+      return Math.max(0, base - 1);
+    });
+  }, [moves.length]);
+
+  const viewForward = useCallback(() => {
+    setViewIndex((cur) => {
+      if (cur === null) return null;
+      const next = cur + 1;
+      return next >= moves.length ? null : next;
+    });
+  }, [moves.length]);
+
+  const canViewBack = (viewIndex ?? moves.length) > 0;
+  const canViewForward = isBrowsing;
 
   // Re-evaluate after every position change. The id guard means only the latest
-  // request is allowed to update the bar.
+  // request is allowed to update the bar. Scores are cached by FEN so browsing
+  // back and forth through the move history never re-runs the engine on a
+  // position it has already judged.
+  const evalCacheRef = useRef<Map<string, EngineScore>>(new Map());
   const evalIdRef = useRef(0);
   useEffect(() => {
+    const id = ++evalIdRef.current;
+    const cached = evalCacheRef.current.get(fen);
+    if (cached) {
+      setScore(cached);
+      setThinking(false);
+      return;
+    }
     const engine = engineRef.current;
     if (!engineReady || !engine) return;
-    const id = ++evalIdRef.current;
     setThinking(true);
     engine.evaluate(fen).then((raw) => {
       if (id !== evalIdRef.current) return; // a newer position superseded this
-      setScore(toWhitePerspective(raw, sideToMoveFromFen(fen)));
+      const sc = toWhitePerspective(raw, sideToMoveFromFen(fen));
+      evalCacheRef.current.set(fen, sc);
+      setScore(sc);
       setThinking(false);
     });
   }, [fen, engineReady, engineRef]);
@@ -145,5 +200,10 @@ export function useFreePlay(
     playMove,
     takeBack,
     reset,
+    viewBack,
+    viewForward,
+    canViewBack,
+    canViewForward,
+    isBrowsing,
   };
 }

@@ -10,6 +10,7 @@ import { useLearnMode } from "@/hooks/useLearnMode";
 import { useProgress } from "@/hooks/useProgress";
 import { useClickToMove } from "@/hooks/useClickToMove";
 import { useMoveSounds } from "@/hooks/useMoveSounds";
+import { useBoardHistoryNav } from "@/hooks/useBoardHistoryNav";
 import LineCompleteModal from "./LineCompleteModal";
 import { getOrderedLines } from "@/utils/progress";
 import { getExpectedSan, isUsersTurn } from "@/utils/chess";
@@ -53,36 +54,12 @@ export default function LearnPage() {
 
   useMoveSounds(state.currentStepIndex, state.phase);
 
-  // stepRef lets the keyboard and scroll handlers always read the latest step
-  // without needing to re-attach listeners every time the step changes.
-  const stepRef = useRef(state.currentStepIndex);
-  stepRef.current = state.currentStepIndex;
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") goBack();
-      if (e.key === "ArrowRight") browseTo(stepRef.current + 1);
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [goBack, browseTo]);
-
-  // Scroll wheel navigation, scoped to the board column only. passive: false is
-  // required so e.preventDefault() can stop the page from scrolling at the same
-  // time — otherwise you'd scroll through moves AND scroll the page at once.
+  // ← / → keys and scroll wheel (scoped to the board column) step through moves.
   const boardColRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = boardColRef.current;
-    if (!el) return;
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      if (e.deltaY < 0) goBack();
-      else browseTo(stepRef.current + 1);
-    };
-    el.addEventListener("wheel", handleWheel, { passive: false });
-    return () => el.removeEventListener("wheel", handleWheel);
-  }, [goBack, browseTo]);
+  useBoardHistoryNav(boardColRef, {
+    onBack: goBack,
+    onForward: () => browseTo(state.currentStepIndex + 1),
+  });
 
   // Hooks must be called before any early return — React requires consistent
   // hook call order on every render. These are safe to call with null opening/line
@@ -285,9 +262,14 @@ export default function LearnPage() {
               onPractice={() => navigate(`/practice/${opening.id}/${line.id}`)}
               onNextSeqLine={() =>
                 nextSeqLine &&
-                navigate(`/learn/${opening.id}/${nextSeqLine.id}?seq=1`)
+                navigate(
+                  `/learn/${opening.id}/${nextSeqLine.id}${isSeq ? "?seq=1" : ""}`,
+                )
               }
               onAllDone={() => navigate(`/opening/${opening.id}`)}
+              onPlayFromHere={(cstep) =>
+                navigate(`/play/${opening.id}/${line.id}?cstep=${cstep}`)
+              }
             />
           )}
         </div>
